@@ -11,8 +11,11 @@
 [ext_resource type="Script" uid="uid://bqlse54u8e0r8" path="res://Level/point_detectors.gd" id="6_nk1il"]
 [ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="8_py82k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_52x1o"]
-size = Vector2(2632, 83)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py82k"]
+size = Vector2(2471, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1teg4"]
+size = Vector2(2736, 102)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yfk6w"]
 
@@ -20,7 +23,7 @@ size = Vector2(2632, 83)
 size = Vector2(42.25, 435)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nk1il"]
-size = Vector2(38, 1375)
+size = Vector2(34, 2238.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqlfs"]
 size = Vector2(685, 726)
@@ -66,20 +69,21 @@ left_detector = NodePath("LeftDetector")
 right_detector = NodePath("RightDetector")
 
 [node name="LeftDetector" type="Area2D" parent="World/PointDetectors" unique_id=1231978417]
-position = Vector2(896, -61)
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/PointDetectors/LeftDetector" unique_id=1500246501]
-shape = SubResource("RectangleShape2D_52x1o")
+position = Vector2(1004.5, -72)
+shape = SubResource("RectangleShape2D_py82k")
 
 [node name="RightDetector" type="Area2D" parent="World/PointDetectors" unique_id=1106991513]
-position = Vector2(3696, 248)
+position = Vector2(3810, -63)
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/PointDetectors/RightDetector" unique_id=878119383]
-shape = SubResource("RectangleShape2D_52x1o")
+position = Vector2(-81, -6)
+shape = SubResource("RectangleShape2D_1teg4")
 
 [node name="Boundaries" type="Node2D" parent="World" unique_id=116601786]
 
@@ -134,7 +138,7 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/PlayerLimit" unique_id=1207909563]
-position = Vector2(-322, -267)
+position = Vector2(2, -101.25)
 shape = SubResource("RectangleShape2D_nk1il")
 
 [node name="Lights" type="Node2D" parent="World" unique_id=2105706301 node_paths=PackedStringArray("light_1", "light_2")]

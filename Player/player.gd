@@ -19,6 +19,8 @@ func set_up_player(player_type: Racket.PlayerType, skin: SkinResource, ai_area_d
 
 func set_player_hand(player_type: Racket.PlayerType):
 	if player_type == Racket.PlayerType.PLAYER_1:
+		racket.global_position = _ragdoll.Rwrist.global_position
 		_ragdoll.Rwrist.node_b = racket.get_path()
 	elif player_type == Racket.PlayerType.PLAYER_2 or player_type == Racket.PlayerType.AI_RIVAL:
+		racket.global_position = _ragdoll.Lwrist.global_position
 		_ragdoll.Lwrist.node_b = racket.get_path()
