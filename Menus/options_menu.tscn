@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8teh84y5wh6e"]
+
+[ext_resource type="Script" uid="uid://bubpf3a61b4of" path="res://Menus/options_menu.gd" id="1_mwbba"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mwbba")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2

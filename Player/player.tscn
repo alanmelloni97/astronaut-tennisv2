@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://s0tp4m1b6iun"]
+
+[ext_resource type="Script" uid="uid://beibdu44poa3t" path="res://Player/player.gd" id="1_btcbx"]
+[ext_resource type="PackedScene" uid="uid://cqgp2276rxmxf" path="res://Player/racket.tscn" id="2_gwnis"]
+[ext_resource type="PackedScene" uid="uid://b7vf83d0aqp85" path="res://Ragdoll/ragdoll.tscn" id="3_k53q1"]
+
+[node name="Player" type="Node2D" unique_id=492092250 node_paths=PackedStringArray("racket", "_ragdoll")]
+script = ExtResource("1_btcbx")
+racket = NodePath("Racket")
+_ragdoll = NodePath("Ragdoll")
+
+[node name="Racket" parent="." unique_id=1761270920 instance=ExtResource("2_gwnis")]
+position = Vector2(564, -143)
+
+[node name="Ragdoll" parent="." unique_id=62554258 instance=ExtResource("3_k53q1")]

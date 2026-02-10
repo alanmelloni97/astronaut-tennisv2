@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://do1trasu4al77"]
+
+[ext_resource type="Script" uid="uid://ckaoggq4yh8ma" path="res://UI/score_ui.gd" id="1_pcny6"]
+
+[node name="ScoreUI" type="MarginContainer" unique_id=1356947439 node_paths=PackedStringArray("label_score_1", "label_score_2")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+script = ExtResource("1_pcny6")
+label_score_1 = NodePath("Player1Score")
+label_score_2 = NodePath("Player2Score")
+
+[node name="Player1Score" type="Label" parent="." unique_id=969768816]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player2Score" type="Label" parent="." unique_id=1870054273]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cqgp2276rxmxf"]
+
+[ext_resource type="Script" uid="uid://cwb2fng2xmh8x" path="res://Player/racket.gd" id="1_gxsuo"]
+[ext_resource type="Script" uid="uid://dpisp0m00kuoc" path="res://Player/motion_component.gd" id="2_o468d"]
+[ext_resource type="Script" uid="uid://crvew7gomsi4a" path="res://Player/input_manager.gd" id="3_xsmco"]
+[ext_resource type="Script" uid="uid://ds0srr1tfxcwg" path="res://Player/ai_handler.gd" id="4_koyly"]
+[ext_resource type="Script" uid="uid://d0g5ximw8rnll" path="res://Player/movement_handler.gd" id="4_xsmco"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k7yml"]
+radius = 100.0
+
+[node name="Racket" type="RigidBody2D" unique_id=1644144030 node_paths=PackedStringArray("movement_handler")]
+collision_mask = 30
+mass = 10.0
+gravity_scale = 0.0
+script = ExtResource("1_gxsuo")
+movement_handler = NodePath("MovementHandler")
+
+[node name="MovementHandler" type="Node" parent="." unique_id=124426701 node_paths=PackedStringArray("_input_manager", "_motion_manager", "_ai_manager")]
+script = ExtResource("4_xsmco")
+_input_manager = NodePath("InputManager")
+_motion_manager = NodePath("MotionManager")
+_ai_manager = NodePath("AIManager")
+
+[node name="MotionManager" type="Node" parent="MovementHandler" unique_id=954893411 node_paths=PackedStringArray("_rb")]
+script = ExtResource("2_o468d")
+_rb = NodePath("../..")
+_FORCE_MULT = 50000
+
+[node name="InputManager" type="Node" parent="MovementHandler" unique_id=1846637120]
+script = ExtResource("3_xsmco")
+
+[node name="AIManager" type="Node2D" parent="MovementHandler" unique_id=1720895870 node_paths=PackedStringArray("ai_actor")]
+script = ExtResource("4_koyly")
+ai_actor = NodePath("../..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920572248]
+shape = SubResource("CircleShape2D_k7yml")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1074267406]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqpk3ptufqtn3"]
+
+[ext_resource type="Script" uid="uid://dvi4rqklon1g" path="res://Menus/2_player_menu.gd" id="1_ad556"]
+[ext_resource type="PackedScene" uid="uid://cld25d5sn167u" path="res://Menus/MenuElements/player_select.tscn" id="2_4gk0i"]
+
+[node name="2PlayerMenu" type="CanvasLayer"]
+script = ExtResource("1_ad556")
+
+[node name="PlayerSelect1" parent="." instance=ExtResource("2_4gk0i")]
+
+[node name="PlayerSelect2" parent="." instance=ExtResource("2_4gk0i")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StartButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

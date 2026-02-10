@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ScaleBallEffect" load_steps=2 format=3 uid="uid://7gdjbfco5nkv"]
+
+[ext_resource type="Script" uid="uid://byub6igigr88i" path="res://Ball/Effects/ScaleEffect.gd" id="1_yhgnv"]
+
+[resource]
+script = ExtResource("1_yhgnv")
+scale = 0.5
+metadata/_custom_type_script = "uid://byub6igigr88i"

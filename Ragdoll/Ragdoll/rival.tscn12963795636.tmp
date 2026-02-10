@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://4wqxqv4tefa5"]
+
+[ext_resource type="PackedScene" uid="uid://dub6k4cj6kqkp" path="res://ragdoll/ragdoll.tscn" id="1_k3oyq"]
+[ext_resource type="Script" uid="uid://p4oq32eaaji1" path="res://racket_rival.gd" id="2_tfliw"]
+
+[node name="Ragdoll" instance=ExtResource("1_k3oyq")]
+script = ExtResource("2_tfliw")
+
+[node name="Racket" parent="." index="2"]
+script = null
+
+[editable path="Body/Head"]
+[editable path="Body/Body"]
+[editable path="Body/LUpperArm"]
+[editable path="Body/LForearm"]
+[editable path="Body/RUpperArm"]
+[editable path="Body/RForearm"]
+[editable path="Body/LUpperLeg"]
+[editable path="Body/LLowerLeg"]
+[editable path="Body/RUpperLeg"]
+[editable path="Body/RLowerLeg"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://cicd5yg57nyuh"]
+
+[ext_resource type="Script" uid="uid://cmlx36a6r8b2j" path="res://Menus/game_ended_menu.gd" id="1_wvg1o"]
+
+[node name="GameOverMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_wvg1o")
+
+[node name="GameOverMessage" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "YOU LOSE"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameOverMessage"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RetryButton" type="Button" parent="GameOverMessage/HBoxContainer"]
+layout_mode = 2
+
+[node name="MainMenuButton" type="Button" parent="GameOverMessage/HBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="GameOverMessage/HBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="GameOverMessage/HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

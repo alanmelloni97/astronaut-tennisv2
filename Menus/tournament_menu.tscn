@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://csn1ndrfr635d"]
+
+[ext_resource type="Script" uid="uid://0f1vxqpagvkw" path="res://Menus/tournament_menu.gd" id="1_b4e5t"]
+[ext_resource type="PackedScene" uid="uid://ummqxjeg0p0v" path="res://Menus/MenuElements/tournament_name_spot.tscn" id="2_lfplo"]
+[ext_resource type="Script" uid="uid://bqlgxcfkf5eqv" path="res://Menus/MenuElements/tournament_table.gd" id="2_u4bc0"]
+[ext_resource type="PackedScene" uid="uid://cld25d5sn167u" path="res://Menus/MenuElements/player_select.tscn" id="3_c6e8c"]
+
+[node name="TournamentMenu" type="CanvasLayer" node_paths=PackedStringArray("_player_select", "_tournament_table", "_start_button")]
+script = ExtResource("1_b4e5t")
+_player_select = NodePath("MarginContainer/PlayerSelect")
+_tournament_table = NodePath("MarginContainer/TournamentTable")
+_start_button = NodePath("MarginContainer/HBoxContainer/StartButton")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TournamentTable" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+script = ExtResource("2_u4bc0")
+tournament_spot_sc = ExtResource("2_lfplo")
+
+[node name="PlayerSelect" parent="MarginContainer" instance=ExtResource("3_c6e8c")]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="BackButton" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "BACK"
+
+[node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "START"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

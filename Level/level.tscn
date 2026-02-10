@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://chadn3q8nxw76"]
+
+[ext_resource type="Script" uid="uid://c8pybqjk67mae" path="res://Level/level.gd" id="1_nk1il"]
+[ext_resource type="PackedScene" uid="uid://s0tp4m1b6iun" path="res://Player/player.tscn" id="1_o6mkr"]
+[ext_resource type="Script" uid="uid://dill5luto3ayb" path="res://Level/ball_logic_handler.gd" id="2_py82k"]
+[ext_resource type="Script" uid="uid://g42dx5ur7jin" path="res://Level/light_managers.gd" id="2_wqlfs"]
+[ext_resource type="Script" uid="uid://dsxp18paeb0yh" path="res://Level/points_manager.gd" id="3_52x1o"]
+[ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://Ball/ball.tscn" id="3_py82k"]
+[ext_resource type="Script" uid="uid://byy8vfben3kxo" path="res://Level/level_handler.gd" id="4_wqlfs"]
+[ext_resource type="PackedScene" uid="uid://x11muvl3x6vi" path="res://UI/main_ui.tscn" id="5_d6qko"]
+[ext_resource type="Script" uid="uid://bqlse54u8e0r8" path="res://Level/point_detectors.gd" id="6_nk1il"]
+[ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="8_py82k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52x1o"]
+size = Vector2(2632, 83)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yfk6w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6mkr"]
+size = Vector2(42.25, 435)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nk1il"]
+size = Vector2(38, 1375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqlfs"]
+size = Vector2(685, 726)
+
+[node name="Level" type="Node2D" unique_id=1489784123]
+script = ExtResource("1_nk1il")
+
+[node name="Components" type="Node" parent="." unique_id=111891771]
+
+[node name="BallHandeger" type="Node" parent="Components" unique_id=1877533181 node_paths=PackedStringArray("_lights_manager", "_point_detector", "_score_manager", "_main_UI", "_ball_spawn_point", "_level")]
+script = ExtResource("2_py82k")
+ball_sc = ExtResource("3_py82k")
+_lights_manager = NodePath("../../World/Lights")
+_point_detector = NodePath("../../World/PointDetectors")
+_score_manager = NodePath("../ScoreManager")
+_main_UI = NodePath("../../MainUI")
+_ball_spawn_point = NodePath("../../BallSpawnPoint")
+_level = NodePath("../..")
+
+[node name="ScoreManager" type="Node" parent="Components" unique_id=494718840]
+script = ExtResource("3_52x1o")
+WIN_SCORE = 8
+
+[node name="LevelHandler" type="Node" parent="Components" unique_id=632591484 node_paths=PackedStringArray("_score_manager", "_player_1", "_player_2", "_main_UI", "_ball_ai_detector", "_level")]
+script = ExtResource("4_wqlfs")
+_score_manager = NodePath("../ScoreManager")
+_player_1 = NodePath("../../Player1")
+_player_2 = NodePath("../../Player2")
+_main_UI = NodePath("../../MainUI")
+_ball_ai_detector = NodePath("../../Player2/BallAIDetector")
+_level = NodePath("../..")
+
+[node name="MainUI" parent="." unique_id=1468483608 instance=ExtResource("5_d6qko")]
+
+[node name="BallSpawnPoint" type="Marker2D" parent="." unique_id=1469462745]
+position = Vector2(2309, -2124)
+
+[node name="World" type="Node2D" parent="." unique_id=937198056]
+
+[node name="PointDetectors" type="Node2D" parent="World" unique_id=2075432708 node_paths=PackedStringArray("left_detector", "right_detector")]
+script = ExtResource("6_nk1il")
+left_detector = NodePath("LeftDetector")
+right_detector = NodePath("RightDetector")
+
+[node name="LeftDetector" type="Area2D" parent="World/PointDetectors" unique_id=1231978417]
+position = Vector2(896, -61)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/PointDetectors/LeftDetector" unique_id=1500246501]
+shape = SubResource("RectangleShape2D_52x1o")
+
+[node name="RightDetector" type="Area2D" parent="World/PointDetectors" unique_id=1106991513]
+position = Vector2(3696, 248)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/PointDetectors/RightDetector" unique_id=878119383]
+shape = SubResource("RectangleShape2D_52x1o")
+
+[node name="Boundaries" type="Node2D" parent="World" unique_id=116601786]
+
+[node name="Floor" type="StaticBody2D" parent="World/Boundaries" unique_id=85477545]
+position = Vector2(2269, 0)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/Floor" unique_id=1628691251]
+shape = SubResource("WorldBoundaryShape2D_yfk6w")
+
+[node name="RightWall" type="StaticBody2D" parent="World/Boundaries" unique_id=677459952]
+position = Vector2(4655.0005, -778.0001)
+rotation = -1.5714552
+scale = Vector2(0.99999994, 0.99999994)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/RightWall" unique_id=144836305]
+shape = SubResource("WorldBoundaryShape2D_yfk6w")
+
+[node name="LeftWall" type="StaticBody2D" parent="World/Boundaries" unique_id=2086092369]
+position = Vector2(11, -797)
+rotation = 1.5707954
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/LeftWall" unique_id=2005845739]
+shape = SubResource("WorldBoundaryShape2D_yfk6w")
+
+[node name="Roof" type="StaticBody2D" parent="World/Boundaries" unique_id=191144491]
+position = Vector2(2356, -2467)
+rotation = 3.14159
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/Roof" unique_id=1271043519]
+shape = SubResource("WorldBoundaryShape2D_yfk6w")
+
+[node name="Net" type="StaticBody2D" parent="World/Boundaries" unique_id=991656465]
+position = Vector2(2257, -130)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/Net" unique_id=69671378]
+position = Vector2(46.125, -109.5)
+shape = SubResource("RectangleShape2D_o6mkr")
+
+[node name="PlayerLimit" type="StaticBody2D" parent="World/Boundaries" unique_id=1002935705]
+position = Vector2(2298, -1522)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/PlayerLimit" unique_id=1207909563]
+position = Vector2(-322, -267)
+shape = SubResource("RectangleShape2D_nk1il")
+
+[node name="Lights" type="Node2D" parent="World" unique_id=2105706301 node_paths=PackedStringArray("light_1", "light_2")]
+script = ExtResource("2_wqlfs")
+light_1 = NodePath("PointLight1")
+light_2 = NodePath("PointLight2")
+
+[node name="PointLight1" type="PointLight2D" parent="World/Lights" unique_id=1750763901]
+position = Vector2(333, -2194)
+energy = 10000.0
+texture = ExtResource("8_py82k")
+
+[node name="PointLight2" type="PointLight2D" parent="World/Lights" unique_id=355403474]
+position = Vector2(4476, -2231)
+texture = ExtResource("8_py82k")
+
+[node name="Player1" parent="." unique_id=396626081 instance=ExtResource("1_o6mkr")]
+position = Vector2(884, -919)
+
+[node name="Player2" parent="." unique_id=24592340 instance=ExtResource("1_o6mkr")]
+position = Vector2(3794, -895)
+
+[node name="BallAIDetector" type="Area2D" parent="Player2" unique_id=277949176]
+top_level = true
+light_mask = 0
+visibility_layer = 2
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2/BallAIDetector" unique_id=87142918]
+shape = SubResource("RectangleShape2D_wqlfs")
+debug_color = Color(0.9490196, 0.6039216, 0, 0.09803922)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1380878028]
+position = Vector2(2300, -1106)
+zoom = Vector2(0.205, 0.205)

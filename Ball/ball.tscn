@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dmqyassdndgtm"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://bo2vlrktsj8yt" path="res://Ball/ball_default_physics_material.tres" id="1_l4sn5"]
+[ext_resource type="Script" uid="uid://cfiuoebp1eicf" path="res://Ball/ball.gd" id="2_65gad"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
+radius = 58.99
+
+[node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("sprite")]
+collision_layer = 2
+collision_mask = 11
+physics_material_override = ExtResource("1_l4sn5")
+script = ExtResource("2_65gad")
+collision_shape = SubResource("CircleShape2D_g3thm")
+sprite = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1368493303]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_g3thm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=480967574]

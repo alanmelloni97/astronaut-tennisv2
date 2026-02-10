@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://ummqxjeg0p0v"]
+
+[ext_resource type="Script" uid="uid://btrj5fmg22251" path="res://Menus/MenuElements/tournament_name_spot.gd" id="1_j22cx"]
+
+[node name="TorunamentNameSpot" type="HBoxContainer" node_paths=PackedStringArray("_position_number", "_player_name")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 6.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j22cx")
+_position_number = NodePath("PositionNumber")
+_player_name = NodePath("PlayerName")
+
+[node name="PositionNumber" type="Label" parent="."]
+layout_mode = 2
+text = "0"
+
+[node name="PlayerName" type="Label" parent="."]
+layout_mode = 2
+text = "RIVALNAME"

@@ -1,0 +1,125 @@
+[gd_scene load_steps=5 format=3 uid="uid://3dcptjffedp0"]
+
+[ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="1_ftls6"]
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_4taqj"]
+target_nodepath = NodePath("LegRTarget")
+tip_nodepath = NodePath("MainBone/HipR/KneeR/AnkleR")
+ccdik_data_chain_length = 2
+joint_data/0/bone_index = 3
+joint_data/0/bone2d_node = NodePath("MainBone/HipR/KneeR")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = 180.0
+joint_data/0/constraint_angle_max = 0.0
+joint_data/0/constraint_angle_invert = false
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 2
+joint_data/1/bone2d_node = NodePath("MainBone/HipR")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = false
+joint_data/1/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_ftls6"]
+target_nodepath = NodePath("LegLTarget")
+tip_nodepath = NodePath("MainBone/HipL/KneeL/AnkleL")
+ccdik_data_chain_length = 2
+joint_data/0/bone_index = 6
+joint_data/0/bone2d_node = NodePath("MainBone/HipL/KneeL")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = 180.0
+joint_data/0/constraint_angle_max = 0.0
+joint_data/0/constraint_angle_invert = true
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 5
+joint_data/1/bone2d_node = NodePath("MainBone/HipL")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = false
+joint_data/1/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_h1v3l"]
+enabled = true
+modification_count = 2
+modifications/0 = SubResource("SkeletonModification2DCCDIK_4taqj")
+modifications/1 = SubResource("SkeletonModification2DCCDIK_ftls6")
+
+[node name="PlayerSkeleton" type="Skeleton2D"]
+modification_stack = SubResource("SkeletonModificationStack2D_h1v3l")
+
+[node name="MainBone" type="Bone2D" parent="."]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="Bone2D" type="Bone2D" parent="MainBone"]
+position = Vector2(1, -199)
+rest = Transform2D(1, 0, 0, 1, 1, -199)
+
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/Bone2D"]
+position = Vector2(0, 98)
+scale = Vector2(0.203125, 1.60938)
+texture = ExtResource("1_ftls6")
+
+[node name="HipR" type="Bone2D" parent="MainBone"]
+position = Vector2(45, 0)
+rotation = -0.00749581
+scale = Vector2(0.999855, 0.999855)
+rest = Transform2D(0.999827, -0.00749465, 0.00749465, 0.999827, 45, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="KneeR" type="Bone2D" parent="MainBone/HipR"]
+position = Vector2(0.00139999, 178.081)
+scale = Vector2(1.00014, 1.00014)
+rest = Transform2D(1.00014, 0, 0, 1.00014, 0.00139999, 178.081)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="AnkleR" type="Bone2D" parent="MainBone/HipR/KneeR"]
+position = Vector2(0, 170)
+rest = Transform2D(1, 0, 0, 1, 0, 170)
+
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipR/KneeR/AnkleR"]
+position = Vector2(-0.399336, -79.1543)
+scale = Vector2(0.287335, 1.31107)
+texture = ExtResource("1_ftls6")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipR/KneeR"]
+position = Vector2(3.02895, -91.1708)
+scale = Vector2(0.360819, 1.47159)
+texture = ExtResource("1_ftls6")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipR"]
+
+[node name="HipL" type="Bone2D" parent="MainBone"]
+position = Vector2(-58, 0)
+rest = Transform2D(1, 0, 0, 1, -58, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="KneeL" type="Bone2D" parent="MainBone/HipL"]
+position = Vector2(0, 178)
+rest = Transform2D(1, 0, 0, 1, 0, 178)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="AnkleL" type="Bone2D" parent="MainBone/HipL/KneeL"]
+position = Vector2(0, 170)
+rest = Transform2D(1, 0, 0, 1, 0, 170)
+
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipL/KneeL/AnkleL"]
+position = Vector2(0.795552, -86.5873)
+scale = Vector2(0.276046, 1.32059)
+texture = ExtResource("1_ftls6")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipL/KneeL"]
+position = Vector2(0.767691, -102.75)
+scale = Vector2(0.346955, 1.13563)
+texture = ExtResource("1_ftls6")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipL"]
+
+[node name="Sprite2D" type="Sprite2D" parent="MainBone"]
+
+[node name="LegRTarget" type="Marker2D" parent="."]
+position = Vector2(48, 400)
+
+[node name="LegLTarget" type="Marker2D" parent="."]
+position = Vector2(-55, 456)

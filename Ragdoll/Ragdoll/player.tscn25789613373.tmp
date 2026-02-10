@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crnrjcuiqxdmr"]
+
+[ext_resource type="Script" uid="uid://dps138w6kq36v" path="res://ragdoll/Player.gd" id="2_geby0"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("2_geby0")
