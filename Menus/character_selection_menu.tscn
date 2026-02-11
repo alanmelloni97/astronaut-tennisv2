@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://csn1ndrfr635d"]
+
+[ext_resource type="Script" uid="uid://0f1vxqpagvkw" path="res://Menus/character_selection_menu.gd" id="1_b4e5t"]
+[ext_resource type="PackedScene" uid="uid://cld25d5sn167u" path="res://Menus/MenuElements/player_select.tscn" id="3_c6e8c"]
+[ext_resource type="PackedScene" uid="uid://cjrpkchh7pjh7" path="res://Menus/tournament_table.tscn" id="3_iapl6"]
+
+[node name="CharacterSelectionMenu" type="CanvasLayer" unique_id=1838065517 node_paths=PackedStringArray("player_1_select", "player_2_select", "_tournament_table", "_start_button")]
+script = ExtResource("1_b4e5t")
+player_1_select = NodePath("MarginContainer/HBoxContainer2/Player1Select")
+player_2_select = NodePath("MarginContainer/HBoxContainer2/Player2Select")
+_tournament_table = NodePath("MarginContainer/HBoxContainer2/TournamentTable")
+_start_button = NodePath("MarginContainer/HBoxContainer/StartButton")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=56222643]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer" unique_id=513397622]
+layout_mode = 2
+
+[node name="Player1Select" parent="MarginContainer/HBoxContainer2" unique_id=359726694 instance=ExtResource("3_c6e8c")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Player2Select" parent="MarginContainer/HBoxContainer2" unique_id=1806913641 instance=ExtResource("3_c6e8c")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TournamentTable" parent="MarginContainer/HBoxContainer2" unique_id=398236205 instance=ExtResource("3_iapl6")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=567689523]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="BackButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1022160309]
+layout_mode = 2
+size_flags_vertical = 4
+text = "BACK"
+
+[node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=313890464]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "START"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

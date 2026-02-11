@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cjrpkchh7pjh7"]
+
+[ext_resource type="Script" uid="uid://bqlgxcfkf5eqv" path="res://Menus/MenuElements/tournament_table.gd" id="1_llimf"]
+[ext_resource type="PackedScene" uid="uid://ummqxjeg0p0v" path="res://Menus/MenuElements/tournament_name_spot.tscn" id="2_6nv31"]
+
+[node name="TournamentTable" type="VBoxContainer" unique_id=398236205]
+size_flags_horizontal = 3
+script = ExtResource("1_llimf")
+tournament_spot_sc = ExtResource("2_6nv31")

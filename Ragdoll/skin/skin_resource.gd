@@ -1,4 +1,4 @@
-class_name SkinResource
+class_name CharacterSkin
 extends Resource
 
 @export var body: Texture2D

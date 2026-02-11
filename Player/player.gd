@@ -10,7 +10,7 @@ func disable_input():
 	racket.disable_input()
 
 
-func set_up_player(player_type: Racket.PlayerType, skin: SkinResource, ai_area_detector: Area2D):
+func set_up_player(player_type: Racket.PlayerType, skin: CharacterSkin, ai_area_detector: Area2D):
 	racket.movement_handler.set_player_type(player_type)
 	#racket.set_ball_detection_area(ai_area_detector)
 	set_player_hand(player_type)

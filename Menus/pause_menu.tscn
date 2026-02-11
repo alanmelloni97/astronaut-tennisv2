@@ -1,29 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfupml0vgjpdg"]
+[gd_scene format=3 uid="uid://cfupml0vgjpdg"]
 
 [ext_resource type="Script" uid="uid://bqab60yf4u2yp" path="res://Menus/pause_menu.gd" id="1_i2531"]
-[ext_resource type="PackedScene" uid="uid://b8teh84y5wh6e" path="res://Menus/options_menu.tscn" id="2_ik086"]
 
-[node name="PauseMenu" type="VBoxContainer"]
+[node name="PauseMenu" type="VBoxContainer" unique_id=357222065]
 process_mode = 2
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_i2531")
 
-[node name="ContinueButton" type="Button" parent="."]
+[node name="ContinueButton" type="Button" parent="." unique_id=1928983354]
 layout_mode = 2
 
-[node name="OptionsButton" type="Button" parent="."]
+[node name="OptionsButton" type="Button" parent="." unique_id=1806775914]
 layout_mode = 2
 
-[node name="QuitButton" type="Button" parent="."]
-layout_mode = 2
-
-[node name="OptionsMenu" parent="." instance=ExtResource("2_ik086")]
-visible = false
+[node name="QuitButton" type="Button" parent="." unique_id=2139601711]
 layout_mode = 2
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="closed_menu" from="OptionsMenu" to="." method="_on_options_menu_closed_menu"]

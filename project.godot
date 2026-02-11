@@ -14,14 +14,19 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="tenis astronauta"
-run/main_scene="uid://chadn3q8nxw76"
+config/name="tenis astronauta v2"
+run/main_scene="uid://0tguoaxhermy"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Scenes="*uid://btdxfw2ejjx0y"
+Characters="*uid://cxyudux51rjxk"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg")
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/TODO_Manager-cbacea3f2014275205dd05482f5b80c36d001dce/addons/Todo_Manager/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg")
 
 [input]
 

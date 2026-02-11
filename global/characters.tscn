@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://cxyudux51rjxk"]
+
+[ext_resource type="Script" uid="uid://ds5c4ds1qowdh" path="res://global/characters.gd" id="1_nyi4w"]
+[ext_resource type="Script" uid="uid://5rdixxdoulx3" path="res://Resources/character.gd" id="2_k1buq"]
+[ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="3_o1ipo"]
+[ext_resource type="Resource" uid="uid://dkbvy5qr47l51" path="res://Ragdoll/skin/skins/skin_astronaut_default.tres" id="4_o1ipo"]
+[ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://Ragdoll/skin/skin_resource.gd" id="5_c2d4n"]
+
+[sub_resource type="Resource" id="Resource_c2d4n"]
+script = ExtResource("2_k1buq")
+name = "IGOR"
+image = ExtResource("3_o1ipo")
+skin = ExtResource("4_o1ipo")
+unlocked = true
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2cl63"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8mtkk"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cc3by"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0hpa8"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_exe54"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ivnx7"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rt06a"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_21p8j"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gx2s2"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_idtl2"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="Resource" id="Resource_wcltm"]
+script = ExtResource("5_c2d4n")
+body = SubResource("CompressedTexture2D_8mtkk")
+left_arm = SubResource("CompressedTexture2D_cc3by")
+left_forearm = SubResource("CompressedTexture2D_0hpa8")
+right_arm = SubResource("CompressedTexture2D_rt06a")
+right_forearm = SubResource("CompressedTexture2D_21p8j")
+left_upper_leg = SubResource("CompressedTexture2D_ivnx7")
+left_lower_leg = SubResource("CompressedTexture2D_exe54")
+right_upper_leg = SubResource("CompressedTexture2D_idtl2")
+right_lower_leg = SubResource("CompressedTexture2D_gx2s2")
+metadata/_custom_type_script = "uid://v0sa452yk36s"
+
+[sub_resource type="Resource" id="Resource_82qhk"]
+script = ExtResource("2_k1buq")
+name = "IGOR"
+image = SubResource("CompressedTexture2D_2cl63")
+skin = SubResource("Resource_wcltm")
+unlocked = true
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ytvwr"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s4col"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_byi6e"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s0d6i"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kjwwx"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gie4w"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vdfe1"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c2wlr"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j6qt7"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5nx7x"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="Resource" id="Resource_xdxu0"]
+script = ExtResource("5_c2d4n")
+body = SubResource("CompressedTexture2D_s4col")
+left_arm = SubResource("CompressedTexture2D_byi6e")
+left_forearm = SubResource("CompressedTexture2D_s0d6i")
+right_arm = SubResource("CompressedTexture2D_vdfe1")
+right_forearm = SubResource("CompressedTexture2D_c2wlr")
+left_upper_leg = SubResource("CompressedTexture2D_gie4w")
+left_lower_leg = SubResource("CompressedTexture2D_kjwwx")
+right_upper_leg = SubResource("CompressedTexture2D_5nx7x")
+right_lower_leg = SubResource("CompressedTexture2D_j6qt7")
+metadata/_custom_type_script = "uid://v0sa452yk36s"
+
+[sub_resource type="Resource" id="Resource_6nkmr"]
+script = ExtResource("2_k1buq")
+name = "IGOR"
+image = SubResource("CompressedTexture2D_ytvwr")
+skin = SubResource("Resource_xdxu0")
+unlocked = true
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[node name="Characters" type="Node" unique_id=990000372]
+script = ExtResource("1_nyi4w")
+characters = Array[ExtResource("2_k1buq")]([SubResource("Resource_c2d4n"), SubResource("Resource_82qhk"), SubResource("Resource_6nkmr")])

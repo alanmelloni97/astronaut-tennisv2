@@ -1,5 +1,5 @@
-extends CanvasLayer
 class_name TournamentTable
+extends Control
 
 @export var tournament_spot_sc: PackedScene
 
@@ -15,4 +15,3 @@ func _create_tournament_spot(position: int, player_name: String):
 	var tournament_spot: TournamentNameSpot = tournament_spot_sc.instantiate()
 	tournament_spot.set_values(position, player_name)
 	add_child(tournament_spot)
-	

@@ -1,29 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://cicd5yg57nyuh"]
+[gd_scene format=3 uid="uid://cicd5yg57nyuh"]
 
 [ext_resource type="Script" uid="uid://cmlx36a6r8b2j" path="res://Menus/game_ended_menu.gd" id="1_wvg1o"]
 
-[node name="GameOverMenu" type="Control"]
+[node name="GameOverMenu" type="Control" unique_id=233575831]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_wvg1o")
 
-[node name="GameOverMessage" type="Label" parent="."]
+[node name="GameOverMessage" type="Label" parent="." unique_id=1789818643]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "YOU LOSE"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GameOverMessage"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GameOverMessage" unique_id=95787364]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="RetryButton" type="Button" parent="GameOverMessage/HBoxContainer"]
+[node name="RetryButton" type="Button" parent="GameOverMessage/HBoxContainer" unique_id=57261278]
 layout_mode = 2
 
-[node name="MainMenuButton" type="Button" parent="GameOverMessage/HBoxContainer"]
+[node name="MainMenuButton" type="Button" parent="GameOverMessage/HBoxContainer" unique_id=212531865]
 layout_mode = 2
 
 [connection signal="pressed" from="GameOverMessage/HBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

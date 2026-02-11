@@ -6,6 +6,6 @@ extends Node2D
 @export var Rwrist: PinJoint2D
 @export var Lwrist: PinJoint2D
 
-var skin: SkinResource:
+var skin: CharacterSkin:
 	set(skin):
 		_skinner_helper.set_skin(skin)

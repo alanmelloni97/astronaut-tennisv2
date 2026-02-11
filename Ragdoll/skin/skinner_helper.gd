@@ -12,7 +12,7 @@ extends Node
 @export var sprite_right_lower_leg: Sprite2D
 
 
-func set_skin(skin: SkinResource):
+func set_skin(skin: CharacterSkin):
 	pass
 	#sprite_body.texture = skin.body
 	#sprite_left_forearm.texture = skin.left_forearm

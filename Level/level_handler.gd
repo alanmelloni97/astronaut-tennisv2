@@ -37,4 +37,4 @@ func _on_game_unpaused():
 
 
 func _on_game_quit():
-	_level.game_quit.emit()
+	_level.scene_requested.emit(Scenes.main_menu)
