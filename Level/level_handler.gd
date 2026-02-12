@@ -22,9 +22,9 @@ func _ready() -> void:
 func set_up_players():
 	_player_1.set_up_player(Player.PlayerType.PLAYER_1, _level.player_1_character.skin)
 	if _level.two_player_mode:
-		_player_1.set_up_player(Player.PlayerType.PLAYER_2, _level.player_2_character.skin)
+		_player_2.set_up_player(Player.PlayerType.PLAYER_2, _level.player_2_character.skin)
 	else:
-		_player_1.set_up_player(Player.PlayerType.AI_RIVAL, _level.player_2_character.skin, _ball_ai_detector)
+		_player_2.set_up_player(Player.PlayerType.AI_RIVAL, _level.player_2_character.skin, _ball_ai_detector)
 
 
 func _on_game_finished(winner: int):
