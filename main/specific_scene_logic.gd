@@ -22,4 +22,7 @@ func manage_after_changing_scene(new_scene: Node):
 	# Set up next scene
 	if new_scene is CharacterSelectionMenu:
 		new_scene.two_players = two_players_mode
-	elif new_scene is Level:pass
+	elif new_scene is Level:
+		new_scene.player_1_character = player_1_character
+		new_scene.player_2_character = player_2_character
+		new_scene.two_player_mode = two_players_mode

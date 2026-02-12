@@ -15,15 +15,15 @@ func _physics_process(_delta: float) -> void:
 	_motion_manager.move_body(input)
 
 
-func set_player_type(type: Racket.PlayerType):
+func set_player_type(type: Player.PlayerType):
 	match type:
-		Racket.PlayerType.PLAYER_1:
+		Player.PlayerType.PLAYER_1:
 			_ai_manager.queue_free()
 			_input_manager.set_player(1)
-		Racket.PlayerType.PLAYER_2:
+		Player.PlayerType.PLAYER_2:
 			_ai_manager.queue_free()
 			_input_manager.set_player(2)
-		Racket.PlayerType.AI_RIVAL:
+		Player.PlayerType.AI_RIVAL:
 			_input_manager.queue_free()
 
 

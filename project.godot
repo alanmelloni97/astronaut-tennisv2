@@ -24,6 +24,14 @@ config/icon="res://icon.svg"
 Scenes="*uid://btdxfw2ejjx0y"
 Characters="*uid://cxyudux51rjxk"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=960
+window/size/window_height_override=540
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/TODO_Manager-cbacea3f2014275205dd05482f5b80c36d001dce/addons/Todo_Manager/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg")

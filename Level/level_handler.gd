@@ -16,10 +16,15 @@ func _ready() -> void:
 	_main_UI.game_paused.connect(_on_game_paused)
 	_main_UI.game_unpaused.connect(_on_game_unpaused)
 	_main_UI.game_quit.connect(_on_game_quit)
-	_player_1.set_up_player(Racket.PlayerType.PLAYER_1, ResourceLoader.load("res://Ragdoll/skin/skins/skin_astronaut_default.tres"), null)
-	#this info should come from pre game menu
+	set_up_players()
 
-	_player_2.set_up_player(Racket.PlayerType.PLAYER_2, ResourceLoader.load("res://Ragdoll/skin/skins/skin_astronaut_default.tres"), _ball_ai_detector)
+
+func set_up_players():
+	_player_1.set_up_player(Player.PlayerType.PLAYER_1, _level.player_1_character.skin)
+	if _level.two_player_mode:
+		_player_1.set_up_player(Player.PlayerType.PLAYER_2, _level.player_2_character.skin)
+	else:
+		_player_1.set_up_player(Player.PlayerType.AI_RIVAL, _level.player_2_character.skin, _ball_ai_detector)
 
 
 func _on_game_finished(winner: int):

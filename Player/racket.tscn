@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://d0g5ximw8rnll" path="res://Player/movement_handler.gd" id="4_xsmco"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k7yml"]
-radius = 100.0
+radius = 40.4475
 
 [node name="Racket" type="RigidBody2D" unique_id=1644144030 node_paths=PackedStringArray("movement_handler")]
 collision_mask = 30

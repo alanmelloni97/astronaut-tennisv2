@@ -2,41 +2,51 @@
 
 [ext_resource type="Script" uid="uid://cqm8uhalwtk6o" path="res://Ragdoll/ragdoll.gd" id="1_chfyy"]
 [ext_resource type="Script" uid="uid://jxh2kygs6iqf" path="res://Ragdoll/skin/skinner_helper.gd" id="2_b8rpp"]
+[ext_resource type="Texture2D" uid="uid://cuw2s43632ww" path="res://Ragdoll/skin/skins/default/LRarm.png" id="3_yox0d"]
+[ext_resource type="Texture2D" uid="uid://cq35bv3qnm2c" path="res://Ragdoll/skin/skins/default/URarm.png" id="4_4x73t"]
+[ext_resource type="Texture2D" uid="uid://bhpb88msia746" path="res://Ragdoll/skin/skins/default/LLarm.png" id="5_11wd7"]
+[ext_resource type="Texture2D" uid="uid://lymvdib43xku" path="res://Ragdoll/skin/skins/default/ULarm.png" id="6_bihph"]
+[ext_resource type="Texture2D" uid="uid://bhbml848a53sp" path="res://Ragdoll/skin/skins/default/LLleg.png" id="7_hvxwb"]
+[ext_resource type="Texture2D" uid="uid://cuxvqrqns5et3" path="res://Ragdoll/skin/skins/default/LRleg.png" id="8_4xxwn"]
+[ext_resource type="Texture2D" uid="uid://bbbyeihtofb2r" path="res://Ragdoll/skin/skins/default/URleg.png" id="9_nswpi"]
+[ext_resource type="Texture2D" uid="uid://bmb55pd7hb7qs" path="res://Ragdoll/skin/skins/default/ULleg.png" id="10_e5g7o"]
+[ext_resource type="Texture2D" uid="uid://bqv7geyui0bh4" path="res://Ragdoll/skin/skins/default/body.png" id="11_jb63k"]
+[ext_resource type="Texture2D" uid="uid://dinild5ccfovs" path="res://Ragdoll/skin/skins/default/head.png" id="12_31bng"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2vsh0"]
-radius = 26.4197
-height = 204.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uraha"]
+radius = 19.75
+height = 102.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_chfyy"]
-radius = 26.4197
-height = 204.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6r5pt"]
+radius = 19.75
+height = 102.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f2oh1"]
-radius = 26.4197
-height = 204.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nmq8d"]
+radius = 19.75
+height = 102.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vg760"]
-radius = 26.4197
-height = 204.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s7j3o"]
+radius = 19.75
+height = 102.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vsh0"]
-size = Vector2(57, 197)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kq832"]
+radius = 19.75
+height = 102.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_chfyy"]
-size = Vector2(57, 197)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ra4tn"]
+radius = 19.75
+height = 102.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2oh1"]
-size = Vector2(57, 207.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vg760"]
-size = Vector2(57, 209.5)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_raocx"]
+radius = 19.75
+height = 102.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3rqqa"]
-radius = 126.0
-height = 472.0
+radius = 56.0
+height = 192.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k1geb"]
-radius = 127.016
+radius = 48.04165
 
 [node name="Ragdoll" type="Node2D" unique_id=62554258 node_paths=PackedStringArray("_skinner_helper", "Rwrist", "Lwrist")]
 z_index = 4
@@ -46,8 +56,18 @@ Rwrist = NodePath("Body/joints/RWrist")
 Lwrist = NodePath("Body/joints/LWrist")
 metadata/_edit_lock_ = true
 
-[node name="SkinnerHelper" type="Node" parent="." unique_id=332381995]
+[node name="SkinnerHelper" type="Node" parent="." unique_id=332381995 node_paths=PackedStringArray("sprite_body", "sprite_head", "sprite_left_forearm", "sprite_left_arm", "sprite_right_forearm", "sprite_right_arm", "sprite_left_upper_leg", "sprite_left_lower_leg", "sprite_right_upper_leg", "sprite_right_lower_leg")]
 script = ExtResource("2_b8rpp")
+sprite_body = NodePath("../Body/Body/Sprite2D")
+sprite_head = NodePath("../Body/Head/Sprite2D")
+sprite_left_forearm = NodePath("../Body/ULarm/Sprite2D")
+sprite_left_arm = NodePath("../Body/LLarm/Sprite2D")
+sprite_right_forearm = NodePath("../Body/URarm/Sprite2D")
+sprite_right_arm = NodePath("../Body/LRarm/Sprite2D")
+sprite_left_upper_leg = NodePath("../Body/ULleg/Sprite2D2")
+sprite_left_lower_leg = NodePath("../Body/LLleg/Sprite2D5")
+sprite_right_upper_leg = NodePath("../Body/URleg/Sprite2D3")
+sprite_right_lower_leg = NodePath("../Body/LRleg/Sprite2D4")
 
 [node name="Body" type="Node2D" parent="." unique_id=1017080323]
 metadata/_edit_lock_ = true
@@ -55,181 +75,185 @@ metadata/_edit_lock_ = true
 [node name="joints" type="Node2D" parent="Body" unique_id=342467886]
 
 [node name="RWrist" type="PinJoint2D" parent="Body/joints" unique_id=14532273]
-position = Vector2(536, -144)
-node_a = NodePath("../../RForearm")
+position = Vector2(238, -69)
+node_a = NodePath("../../LRarm")
 
 [node name="LWrist" type="PinJoint2D" parent="Body/joints" unique_id=1254751605]
-position = Vector2(-536, -144)
-node_a = NodePath("../../LForearm")
+position = Vector2(-240, -70)
+node_a = NodePath("../../LLarm")
 
 [node name="RElbow" type="PinJoint2D" parent="Body/joints" unique_id=644015966]
-position = Vector2(309, -145)
+position = Vector2(145.00005, -71.00002)
 scale = Vector2(0.21, 0.21)
-node_a = NodePath("../../RUpperArm")
-node_b = NodePath("../../RForearm")
+node_a = NodePath("../../URarm")
+node_b = NodePath("../../LRarm")
 
 [node name="LShoulder" type="PinJoint2D" parent="Body/joints" unique_id=1079174461]
-position = Vector2(-118, -146)
+position = Vector2(-51, -75)
 node_a = NodePath("../../Body")
-node_b = NodePath("../../LUpperArm")
+node_b = NodePath("../../ULarm")
 softness = 0.2
 
 [node name="Neck" type="PinJoint2D" parent="Body/joints" unique_id=155226632]
-position = Vector2(1, -194)
+position = Vector2(0, -94)
 node_a = NodePath("../../Body")
 node_b = NodePath("../../Head")
 softness = 0.2
 
 [node name="LElbow" type="PinJoint2D" parent="Body/joints" unique_id=417429876]
-position = Vector2(-315, -145)
-node_a = NodePath("../../LForearm")
-node_b = NodePath("../../LUpperArm")
+position = Vector2(-143, -67)
+node_a = NodePath("../../LLarm")
+node_b = NodePath("../../ULarm")
 softness = 0.2
 
 [node name="RKnee" type="PinJoint2D" parent="Body/joints" unique_id=1042626798]
-position = Vector2(68, 399)
-node_a = NodePath("../../RUpperLeg")
-node_b = NodePath("../../RLowerLeg")
+position = Vector2(33, 182)
+node_a = NodePath("../../URleg")
+node_b = NodePath("../../LRleg")
 softness = 0.2
 
 [node name="LKnee" type="PinJoint2D" parent="Body/joints" unique_id=57288818]
-position = Vector2(-69, 397)
-node_a = NodePath("../../LUpperLeg")
-node_b = NodePath("../../LLowerLeg")
+position = Vector2(-31, 183)
+node_a = NodePath("../../ULleg")
+node_b = NodePath("../../LLleg")
 softness = 0.2
 
 [node name="RShoulder" type="PinJoint2D" parent="Body/joints" unique_id=1008153452]
-position = Vector2(123, -145)
+position = Vector2(55, -71)
 node_a = NodePath("../../Body")
-node_b = NodePath("../../RUpperArm")
+node_b = NodePath("../../URarm")
 
 [node name="RAbductor" type="PinJoint2D" parent="Body/joints" unique_id=1566378545]
-position = Vector2(68, 224)
+position = Vector2(32, 91)
 node_a = NodePath("../../Body")
-node_b = NodePath("../../RUpperLeg")
+node_b = NodePath("../../URleg")
 softness = 0.2
 
 [node name="LAbductor" type="PinJoint2D" parent="Body/joints" unique_id=499404346]
-position = Vector2(-71, 222)
+position = Vector2(-29, 93)
 node_a = NodePath("../../Body")
-node_b = NodePath("../../LUpperLeg")
+node_b = NodePath("../../ULleg")
 softness = 0.2
 
-[node name="RForearm" type="RigidBody2D" parent="Body" unique_id=1210649468]
-position = Vector2(432, -144)
+[node name="LRarm" type="RigidBody2D" parent="Body" unique_id=1210649468]
+position = Vector2(185, -69)
 collision_layer = 4
 collision_mask = 29
 gravity_scale = 0.2
 continuous_cd = 2
 linear_damp = 0.5
 
-[node name="Sprite2D" type="Sprite2D" parent="Body/RForearm" unique_id=1381984965]
+[node name="Sprite2D" type="Sprite2D" parent="Body/LRarm" unique_id=1381984965]
+texture = ExtResource("3_yox0d")
 flip_h = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Body/RForearm" unique_id=1745540239]
-position = Vector2(-6, 0)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Body/LRarm" unique_id=1745540239]
 rotation = 1.57079
-shape = SubResource("CapsuleShape2D_2vsh0")
+shape = SubResource("CapsuleShape2D_uraha")
 
-[node name="RUpperArm" type="RigidBody2D" parent="Body" unique_id=1765000745]
-position = Vector2(198, -144)
+[node name="URarm" type="RigidBody2D" parent="Body" unique_id=1765000745]
+position = Vector2(100, -69)
 collision_layer = 4
 collision_mask = 29
 gravity_scale = 0.3
 continuous_cd = 2
 linear_damp = 0.5
 
-[node name="Sprite2D" type="Sprite2D" parent="Body/RUpperArm" unique_id=1448816685]
+[node name="Sprite2D" type="Sprite2D" parent="Body/URarm" unique_id=1448816685]
+texture = ExtResource("4_4x73t")
 flip_h = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/RUpperArm" unique_id=1165257190]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/URarm" unique_id=1165257190]
 rotation = 4.71238
-shape = SubResource("CapsuleShape2D_chfyy")
+shape = SubResource("CapsuleShape2D_6r5pt")
 
-[node name="LForearm" type="RigidBody2D" parent="Body" unique_id=1885476458]
-position = Vector2(-430, -144)
+[node name="LLarm" type="RigidBody2D" parent="Body" unique_id=1885476458]
+position = Vector2(-189, -70)
 collision_layer = 4
 collision_mask = 29
 gravity_scale = 0.2
 continuous_cd = 2
 linear_damp = 0.5
 
-[node name="Sprite2D" type="Sprite2D" parent="Body/LForearm" unique_id=960778191]
+[node name="Sprite2D" type="Sprite2D" parent="Body/LLarm" unique_id=960778191]
+texture = ExtResource("5_11wd7")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/LForearm" unique_id=66704152]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/LLarm" unique_id=66704152]
 rotation = 1.57079
-shape = SubResource("CapsuleShape2D_f2oh1")
+shape = SubResource("CapsuleShape2D_nmq8d")
 
-[node name="LUpperArm" type="RigidBody2D" parent="Body" unique_id=1415407772]
-position = Vector2(-203, -144)
+[node name="ULarm" type="RigidBody2D" parent="Body" unique_id=1415407772]
+position = Vector2(-96, -70)
 collision_layer = 4
 collision_mask = 29
 gravity_scale = 0.3
 continuous_cd = 2
 linear_damp = 0.5
 
-[node name="Sprite2D" type="Sprite2D" parent="Body/LUpperArm" unique_id=1180460072]
+[node name="Sprite2D" type="Sprite2D" parent="Body/ULarm" unique_id=1180460072]
+texture = ExtResource("6_bihph")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/LUpperArm" unique_id=877375178]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/ULarm" unique_id=877375178]
 rotation = 1.57079
-shape = SubResource("CapsuleShape2D_vg760")
+shape = SubResource("CapsuleShape2D_s7j3o")
 
-[node name="LLowerLeg" type="RigidBody2D" parent="Body" unique_id=462889625]
-position = Vector2(-71, 491)
+[node name="LLleg" type="RigidBody2D" parent="Body" unique_id=462889625]
+position = Vector2(-33, 227)
 collision_layer = 4
 collision_mask = 29
 gravity_scale = 0.25
 continuous_cd = 2
 linear_damp = 0.5
 
-[node name="Sprite2D5" type="Sprite2D" parent="Body/LLowerLeg" unique_id=922296603]
+[node name="Sprite2D5" type="Sprite2D" parent="Body/LLleg" unique_id=922296603]
+texture = ExtResource("7_hvxwb")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/LLowerLeg" unique_id=446053858]
-shape = SubResource("RectangleShape2D_2vsh0")
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/LLleg" unique_id=446053858]
+shape = SubResource("CapsuleShape2D_kq832")
 
-[node name="RLowerLeg" type="RigidBody2D" parent="Body" unique_id=924807490]
-position = Vector2(69, 490)
+[node name="LRleg" type="RigidBody2D" parent="Body" unique_id=924807490]
+position = Vector2(34, 227)
 collision_layer = 4
 collision_mask = 29
 gravity_scale = 0.25
 continuous_cd = 2
 linear_damp = 0.5
 
-[node name="Sprite2D4" type="Sprite2D" parent="Body/RLowerLeg" unique_id=602806017]
+[node name="Sprite2D4" type="Sprite2D" parent="Body/LRleg" unique_id=602806017]
+texture = ExtResource("8_4xxwn")
 flip_h = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/RLowerLeg" unique_id=1564201038]
-shape = SubResource("RectangleShape2D_chfyy")
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/LRleg" unique_id=1564201038]
+shape = SubResource("CapsuleShape2D_ra4tn")
 
-[node name="RUpperLeg" type="RigidBody2D" parent="Body" unique_id=1671535615]
-position = Vector2(68, 284)
+[node name="URleg" type="RigidBody2D" parent="Body" unique_id=1671535615]
+position = Vector2(33, 136)
 collision_layer = 4
 collision_mask = 29
 gravity_scale = 0.3
 continuous_cd = 2
 linear_damp = 0.5
 
-[node name="Sprite2D3" type="Sprite2D" parent="Body/RUpperLeg" unique_id=198846197]
+[node name="Sprite2D3" type="Sprite2D" parent="Body/URleg" unique_id=198846197]
+texture = ExtResource("9_nswpi")
 flip_h = true
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Body/RUpperLeg" unique_id=1121752434]
-position = Vector2(0, 5.25)
-shape = SubResource("RectangleShape2D_f2oh1")
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Body/URleg" unique_id=1121752434]
+shape = SubResource("CapsuleShape2D_raocx")
 
-[node name="LUpperLeg" type="RigidBody2D" parent="Body" unique_id=1381771636]
-position = Vector2(-70, 282)
+[node name="ULleg" type="RigidBody2D" parent="Body" unique_id=1381771636]
+position = Vector2(-32, 134)
 collision_layer = 4
 collision_mask = 29
 gravity_scale = 0.3
 continuous_cd = 2
 linear_damp = 0.5
 
-[node name="Sprite2D2" type="Sprite2D" parent="Body/LUpperLeg" unique_id=1270417210]
-position = Vector2(0, 2)
+[node name="Sprite2D2" type="Sprite2D" parent="Body/ULleg" unique_id=1270417210]
+texture = ExtResource("10_e5g7o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/LUpperLeg" unique_id=346726132]
-position = Vector2(0, 6.25)
-shape = SubResource("RectangleShape2D_vg760")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/ULleg" unique_id=346726132]
+shape = SubResource("CapsuleShape2D_ra4tn")
 
 [node name="Body" type="RigidBody2D" parent="Body" unique_id=1325263749]
 collision_layer = 4
@@ -240,12 +264,13 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Body" unique_id=1403923878]
+texture = ExtResource("11_jb63k")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Body/Body" unique_id=1908738488]
 shape = SubResource("CapsuleShape2D_3rqqa")
 
 [node name="Head" type="RigidBody2D" parent="Body" unique_id=1866216087]
-position = Vector2(0, -301)
+position = Vector2(0, -133)
 collision_layer = 4
 collision_mask = 29
 gravity_scale = 0.3
@@ -253,6 +278,7 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Head" unique_id=762559089]
+texture = ExtResource("12_31bng")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Body/Head" unique_id=290123391]
 shape = SubResource("CircleShape2D_k1geb")

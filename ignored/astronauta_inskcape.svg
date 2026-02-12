@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 507.99998 285.75"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="astronauta_inskcape.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.5"
+     inkscape:cx="1099"
+     inkscape:cy="1051"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#83d3da;stroke-width:0.264583;fill-opacity:1"
+       id="rect1"
+       width="586.84583"
+       height="321.20416"
+       x="-39.158333"
+       y="-18.520834" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="astronaut">
+    <g
+       inkscape:groupmode="layer"
+       id="layer5"
+       inkscape:label="head">
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke-width:0.202405"
+         id="path10"
+         cx="88.810043"
+         cy="143.48991"
+         r="10.727491" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g2"
+       inkscape:label="body">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.202405"
+         id="rect10"
+         width="30.765636"
+         height="51.006184"
+         x="74.034439"
+         y="150.97893"
+         ry="10.120273" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g3"
+       inkscape:label="LLleg">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.202405"
+         id="rect11-8"
+         width="10.877295"
+         height="27.479479"
+         x="91.848679"
+         y="225.29341"
+         ry="5.4386473" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g4"
+       inkscape:label="LRleg">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.202405"
+         id="rect11"
+         width="10.877295"
+         height="27.479479"
+         x="77.033752"
+         y="225.4644"
+         ry="5.4386473" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g5"
+       inkscape:label="ULleg">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.202405"
+         id="rect11-8-1"
+         width="10.877295"
+         height="27.479479"
+         x="76.688271"
+         y="200.39011"
+         ry="5.4386473" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g6"
+       inkscape:label="URleg">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.202405"
+         id="rect11-1"
+         width="10.877295"
+         height="27.479479"
+         x="91.51281"
+         y="199.41614"
+         ry="5.4386473" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g7"
+       inkscape:label="LLarm">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.202405"
+         id="rect11-8-1-3"
+         width="10.877295"
+         height="27.479479"
+         x="154.05377"
+         y="-49.498775"
+         ry="5.4386473"
+         transform="rotate(90)" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g8"
+       inkscape:label="LRarm">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.202405"
+         id="rect11-4"
+         width="10.877295"
+         height="27.479479"
+         x="154.17801"
+         y="-156.93872"
+         ry="5.4386473"
+         transform="rotate(90)" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g9"
+       inkscape:label="ULarm">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.202405"
+         id="rect11-8-6"
+         width="10.877295"
+         height="27.479479"
+         x="153.66568"
+         y="-76.961235"
+         ry="5.4386473"
+         transform="rotate(90)" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g10"
+       inkscape:label="URarm">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.202405"
+         id="rect11-1-2"
+         width="10.877295"
+         height="27.479479"
+         x="154.05859"
+         y="-130.89047"
+         ry="5.4386473"
+         transform="rotate(90)" />
+    </g>
+  </g>
+</svg>

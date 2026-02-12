@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cmlx36a6r8b2j" path="res://Menus/game_ended_menu.gd" id="1_wvg1o"]
 
-[node name="GameOverMenu" type="Control" unique_id=233575831]
+[node name="GameOverMenu" type="Control" unique_id=233575831 node_paths=PackedStringArray("_game_over_label", "_retry_button")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_wvg1o")
+_game_over_label = NodePath("GameOverMessage")
+_retry_button = NodePath("GameOverMessage/HBoxContainer/RetryButton")
 
 [node name="GameOverMessage" type="Label" parent="." unique_id=1789818643]
 layout_mode = 0
