@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://Ragdoll/skin/skin_resource.gd" id="1_n6lve"]
 [ext_resource type="Texture2D" uid="uid://bhpb88msia746" path="res://Ragdoll/skin/skins/default/LLarm.png" id="2_36g2n"]
 [ext_resource type="Texture2D" uid="uid://dinild5ccfovs" path="res://Ragdoll/skin/skins/default/head.png" id="2_ctafh"]
+[ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="3_cronc"]
 [ext_resource type="Texture2D" uid="uid://bhbml848a53sp" path="res://Ragdoll/skin/skins/default/LLleg.png" id="3_ctafh"]
 [ext_resource type="Texture2D" uid="uid://cuw2s43632ww" path="res://Ragdoll/skin/skins/default/LRarm.png" id="4_cronc"]
 [ext_resource type="Texture2D" uid="uid://cuxvqrqns5et3" path="res://Ragdoll/skin/skins/default/LRleg.png" id="5_hqk5g"]
@@ -14,6 +15,7 @@
 
 [resource]
 script = ExtResource("1_n6lve")
+image = ExtResource("3_cronc")
 body = ExtResource("1_hkqnu")
 head = ExtResource("2_ctafh")
 ll_arm = ExtResource("2_36g2n")

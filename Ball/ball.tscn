@@ -2,6 +2,7 @@
 
 [ext_resource type="PhysicsMaterial" uid="uid://bo2vlrktsj8yt" path="res://Ball/ball_default_physics_material.tres" id="1_l4sn5"]
 [ext_resource type="Script" uid="uid://cfiuoebp1eicf" path="res://Ball/ball.gd" id="2_65gad"]
+[ext_resource type="Texture2D" uid="uid://b32840gkdn7lk" path="res://Ball/art/Ball.png" id="3_ngrkv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
 radius = 35.014282
@@ -19,3 +20,4 @@ position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_g3thm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=480967574]
+texture = ExtResource("3_ngrkv")

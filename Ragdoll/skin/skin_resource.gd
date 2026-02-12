@@ -1,6 +1,7 @@
 class_name CharacterSkin
 extends Resource
 
+@export var image: Texture2D
 @export var body: Texture2D
 @export var head: Texture2D
 @export var ll_arm: Texture2D

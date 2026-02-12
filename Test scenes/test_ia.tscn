@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d16x8rc3bc4se"]
+[gd_scene format=3 uid="uid://d16x8rc3bc4se"]
 
 [ext_resource type="Script" uid="uid://da21jqtafx0r0" path="res://Test scenes/test_ia.gd" id="1_l80l0"]
 [ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://Ball/ball.tscn" id="3_eya05"]
-[ext_resource type="PackedScene" uid="uid://cqgp2276rxmxf" path="res://Player/racket.tscn" id="3_l80l0"]
+[ext_resource type="PackedScene" uid="uid://cqgp2276rxmxf" path="res://Player/racket/racket.tscn" id="3_l80l0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqgaq"]
 size = Vector2(1215, 681)

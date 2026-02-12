@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CharacterSkin" format=3 uid="uid://ssk5uuu56g11"]
+
+[ext_resource type="Texture2D" uid="uid://ctmu0etyy4mbo" path="res://Ragdoll/skin/skins/vostok/body.png" id="1_hprfl"]
+[ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://Ragdoll/skin/skin_resource.gd" id="1_yjfa2"]
+[ext_resource type="Texture2D" uid="uid://ciya6yc6qqwh7" path="res://Ragdoll/skin/skins/vostok/head.png" id="2_c7tng"]
+[ext_resource type="Texture2D" uid="uid://bb8b0i661xvlr" path="res://Ragdoll/skin/skins/vostok/Vostok.png" id="3_c7tng"]
+[ext_resource type="Texture2D" uid="uid://cud0cwiyjv7fo" path="res://Ragdoll/skin/skins/vostok/LLarm.png" id="3_firkk"]
+[ext_resource type="Texture2D" uid="uid://d0t4vlij5nbiy" path="res://Ragdoll/skin/skins/vostok/LLleg.png" id="4_s38o2"]
+[ext_resource type="Texture2D" uid="uid://diffio5nk48wq" path="res://Ragdoll/skin/skins/vostok/LRarm.png" id="5_ffmfe"]
+[ext_resource type="Texture2D" uid="uid://cpncfekaprlsy" path="res://Ragdoll/skin/skins/vostok/LRleg.png" id="6_7hg64"]
+[ext_resource type="Texture2D" uid="uid://bcpoaxry2tuva" path="res://Ragdoll/skin/skins/vostok/ULarm.png" id="8_cyapo"]
+[ext_resource type="Texture2D" uid="uid://2pme0lufsyyo" path="res://Ragdoll/skin/skins/vostok/ULleg.png" id="9_17tkj"]
+[ext_resource type="Texture2D" uid="uid://kv5h4qg457nq" path="res://Ragdoll/skin/skins/vostok/URarm.png" id="10_4ednb"]
+[ext_resource type="Texture2D" uid="uid://dmd5f7o8dnvp8" path="res://Ragdoll/skin/skins/vostok/URleg.png" id="11_nhauh"]
+
+[resource]
+script = ExtResource("1_yjfa2")
+image = ExtResource("3_c7tng")
+body = ExtResource("1_hprfl")
+head = ExtResource("2_c7tng")
+ll_arm = ExtResource("3_firkk")
+ll_leg = ExtResource("4_s38o2")
+lr_arm = ExtResource("5_ffmfe")
+lr_leg = ExtResource("6_7hg64")
+ul_arm = ExtResource("8_cyapo")
+ul_leg = ExtResource("9_17tkj")
+ur_arm = ExtResource("10_4ednb")
+ur_leg = ExtResource("11_nhauh")
+metadata/_custom_type_script = "uid://v0sa452yk36s"

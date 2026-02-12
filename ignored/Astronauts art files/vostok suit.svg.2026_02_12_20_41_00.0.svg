@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 507.99998 285.75"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="vostok suit.svg"
+   inkscape:export-batch-path="..\..\Ragdoll\skin\skins\vostok"
+   inkscape:export-batch-name=""
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="223.44574"
+     inkscape:cy="700.38927"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect96"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect96-7"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect114"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect116"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect71"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect72"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect71-6"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect72-1"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect114-8"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect116-4"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect114-82"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect116-9"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect71-1"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect72-3"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect96-7-5"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect11"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect17"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient159"
+       id="linearGradient160"
+       x1="435.95386"
+       y1="-1504.3096"
+       x2="462.53363"
+       y2="-1546.8459"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient159"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop159" />
+      <stop
+         style="stop-color:#858585;stop-opacity:1;"
+         offset="1"
+         id="stop160" />
+    </linearGradient>
+  </defs>
+</svg>

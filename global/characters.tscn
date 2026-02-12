@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ds5c4ds1qowdh" path="res://global/characters.gd" id="1_nyi4w"]
 [ext_resource type="Script" uid="uid://5rdixxdoulx3" path="res://Resources/character.gd" id="2_k1buq"]
-[ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="3_o1ipo"]
-[ext_resource type="Resource" uid="uid://bvg45jr3mb3vj" path="res://Ragdoll/skin/skins/default/default_skin.tres" id="4_o1ipo"]
+[ext_resource type="Resource" uid="uid://ssk5uuu56g11" path="res://Ragdoll/skin/skins/vostok/vostok.tres" id="4_o1ipo"]
+[ext_resource type="Resource" uid="uid://cwqfpa5p37d08" path="res://Ragdoll/skin/skins/challenger/challenger.tres" id="5_2cl63"]
 [ext_resource type="Resource" uid="uid://c5box2fkunv3y" path="res://Ragdoll/skin/skins/apollo/apollo.tres" id="5_c2d4n"]
 
 [sub_resource type="Resource" id="Resource_0hpa8"]
@@ -15,17 +15,12 @@ metadata/_custom_type_script = "uid://5rdixxdoulx3"
 [sub_resource type="Resource" id="Resource_c2d4n"]
 script = ExtResource("2_k1buq")
 name = "Yuri Gagarin"
-image = ExtResource("3_o1ipo")
 skin = ExtResource("4_o1ipo")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2cl63"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
 
 [sub_resource type="Resource" id="Resource_82qhk"]
 script = ExtResource("2_k1buq")
 name = "Buzz Aldrin"
-image = SubResource("CompressedTexture2D_2cl63")
 skin = ExtResource("5_c2d4n")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
@@ -42,16 +37,19 @@ metadata/_custom_type_script = "uid://5rdixxdoulx3"
 [sub_resource type="Resource" id="Resource_cc3by"]
 script = ExtResource("2_k1buq")
 name = "Valentina Tereshkova"
+skin = ExtResource("4_o1ipo")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_exe54"]
 script = ExtResource("2_k1buq")
 name = "Sally Ride"
+skin = ExtResource("5_2cl63")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_ivnx7"]
 script = ExtResource("2_k1buq")
 name = "Ulf Merbold"
+skin = ExtResource("5_2cl63")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_rt06a"]

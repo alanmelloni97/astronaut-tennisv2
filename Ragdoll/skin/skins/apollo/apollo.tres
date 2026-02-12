@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bwcxphril1jbg" path="res://Ragdoll/skin/skins/apollo/body.png" id="1_743iq"]
 [ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://Ragdoll/skin/skin_resource.gd" id="1_bs0rt"]
 [ext_resource type="Texture2D" uid="uid://drju3tukpwrxy" path="res://Ragdoll/skin/skins/apollo/head.png" id="2_sdfdc"]
+[ext_resource type="Texture2D" uid="uid://cxtnyes3ahc7r" path="res://Ragdoll/skin/skins/apollo/Apollo.png" id="3_sdfdc"]
 [ext_resource type="Texture2D" uid="uid://drlv7tmppwupc" path="res://Ragdoll/skin/skins/apollo/LLarm.png" id="3_x4i12"]
 [ext_resource type="Texture2D" uid="uid://sqymiv7s6x0o" path="res://Ragdoll/skin/skins/apollo/LLleg.png" id="4_w5n04"]
 [ext_resource type="Texture2D" uid="uid://cxgks8vypjvsf" path="res://Ragdoll/skin/skins/apollo/LRarm.png" id="5_qkiew"]
@@ -14,6 +15,7 @@
 
 [resource]
 script = ExtResource("1_bs0rt")
+image = ExtResource("3_sdfdc")
 body = ExtResource("1_743iq")
 head = ExtResource("2_sdfdc")
 ll_arm = ExtResource("3_x4i12")

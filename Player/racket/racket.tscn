@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cqgp2276rxmxf"]
 
-[ext_resource type="Script" uid="uid://cwb2fng2xmh8x" path="res://Player/racket.gd" id="1_gxsuo"]
+[ext_resource type="Script" uid="uid://cwb2fng2xmh8x" path="res://Player/racket/racket.gd" id="1_gxsuo"]
 [ext_resource type="Script" uid="uid://dpisp0m00kuoc" path="res://Player/motion_component.gd" id="2_o468d"]
 [ext_resource type="Script" uid="uid://crvew7gomsi4a" path="res://Player/input_manager.gd" id="3_xsmco"]
 [ext_resource type="Script" uid="uid://ds0srr1tfxcwg" path="res://Player/ai_handler.gd" id="4_koyly"]
 [ext_resource type="Script" uid="uid://d0g5ximw8rnll" path="res://Player/movement_handler.gd" id="4_xsmco"]
+[ext_resource type="Texture2D" uid="uid://ywp7yqpcqbda" path="res://Player/racket/art/Racket.png" id="6_xi40t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k7yml"]
 radius = 40.4475
@@ -38,3 +39,5 @@ ai_actor = NodePath("../..")
 shape = SubResource("CircleShape2D_k7yml")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1074267406]
+position = Vector2(-1, 20)
+texture = ExtResource("6_xi40t")

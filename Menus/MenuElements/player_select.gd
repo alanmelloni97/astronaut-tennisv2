@@ -25,7 +25,7 @@ func get_current_character() -> Character:
 
 
 func update_character():
-	_player_texture.texture = get_current_character().image
+	_player_texture.texture = get_current_character().skin.image
 	if not get_current_character().skin.is_unlocked:
 		current_character_selectable = false
 	else:
