@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bqv7geyui0bh4" path="res://Ragdoll/skin/skins/default/body.png" id="1_hkqnu"]
 [ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://Ragdoll/skin/skin_resource.gd" id="1_n6lve"]
 [ext_resource type="Texture2D" uid="uid://bhpb88msia746" path="res://Ragdoll/skin/skins/default/LLarm.png" id="2_36g2n"]
+[ext_resource type="Texture2D" uid="uid://dinild5ccfovs" path="res://Ragdoll/skin/skins/default/head.png" id="2_ctafh"]
 [ext_resource type="Texture2D" uid="uid://bhbml848a53sp" path="res://Ragdoll/skin/skins/default/LLleg.png" id="3_ctafh"]
 [ext_resource type="Texture2D" uid="uid://cuw2s43632ww" path="res://Ragdoll/skin/skins/default/LRarm.png" id="4_cronc"]
 [ext_resource type="Texture2D" uid="uid://cuxvqrqns5et3" path="res://Ragdoll/skin/skins/default/LRleg.png" id="5_hqk5g"]
@@ -14,12 +15,14 @@
 [resource]
 script = ExtResource("1_n6lve")
 body = ExtResource("1_hkqnu")
+head = ExtResource("2_ctafh")
 ll_arm = ExtResource("2_36g2n")
-ul_arm = ExtResource("7_r7voh")
-lr_arm = ExtResource("4_cronc")
-ur_arm = ExtResource("9_l2lxd")
-ul_leg = ExtResource("8_6w33g")
 ll_leg = ExtResource("3_ctafh")
-ur_leg = ExtResource("10_sy6pk")
+lr_arm = ExtResource("4_cronc")
 lr_leg = ExtResource("5_hqk5g")
+ul_arm = ExtResource("7_r7voh")
+ul_leg = ExtResource("8_6w33g")
+ur_arm = ExtResource("9_l2lxd")
+ur_leg = ExtResource("10_sy6pk")
+is_unlocked = true
 metadata/_custom_type_script = "uid://v0sa452yk36s"

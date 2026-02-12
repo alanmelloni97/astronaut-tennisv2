@@ -16,6 +16,12 @@ func manage_before_changing_scene(current_scene: Node):
 	elif current_scene is CharacterSelectionMenu:
 		player_1_character = current_scene.get_selected_character_1()
 		player_2_character = current_scene.get_selected_character_2()
+	if current_scene is Level:
+		if not two_players_mode: # Tournament
+			if current_scene.winner == 1: # Player 1 won
+				if not current_scene.player_2_character.skin.is_unlocked: # skin of rival is not unlocked
+					current_scene.player_2_character.skin.is_unlocked = true
+					scene_manager.save_requested.emit()
 
 
 func manage_after_changing_scene(new_scene: Node):

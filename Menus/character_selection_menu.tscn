@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://csn1ndrfr635d"]
 
 [ext_resource type="Script" uid="uid://0f1vxqpagvkw" path="res://Menus/character_selection_menu.gd" id="1_b4e5t"]
+[ext_resource type="Script" uid="uid://ubhq31fan3rc" path="res://Menus/character_selection_menu/character_locked_handler.gd" id="2_vwdgm"]
 [ext_resource type="PackedScene" uid="uid://cld25d5sn167u" path="res://Menus/MenuElements/player_select.tscn" id="3_c6e8c"]
 [ext_resource type="PackedScene" uid="uid://cjrpkchh7pjh7" path="res://Menus/tournament_table.tscn" id="3_iapl6"]
 
@@ -10,6 +11,12 @@ player_1_select = NodePath("MarginContainer/HBoxContainer2/Player1Select")
 player_2_select = NodePath("MarginContainer/HBoxContainer2/Player2Select")
 _tournament_table = NodePath("MarginContainer/HBoxContainer2/TournamentTable")
 _start_button = NodePath("MarginContainer/HBoxContainer/StartButton")
+
+[node name="CharacterLockedHandler" type="Node" parent="." unique_id=1764109809 node_paths=PackedStringArray("_player_1_select", "_player_2_select", "_start_button")]
+script = ExtResource("2_vwdgm")
+_player_1_select = NodePath("../MarginContainer/HBoxContainer2/Player1Select")
+_player_2_select = NodePath("../MarginContainer/HBoxContainer2/Player2Select")
+_start_button = NodePath("../MarginContainer/HBoxContainer/StartButton")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=56222643]
 anchors_preset = 15

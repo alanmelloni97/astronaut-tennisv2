@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c8pybqjk67mae" path="res://Level/level.gd" id="1_nk1il"]
 [ext_resource type="PackedScene" uid="uid://s0tp4m1b6iun" path="res://Player/player.tscn" id="1_o6mkr"]
+[ext_resource type="Script" uid="uid://dq6h2sb8bfine" path="res://Level/ball_handler.gd" id="2_1teg4"]
 [ext_resource type="Script" uid="uid://dill5luto3ayb" path="res://Level/ball_logic_handler.gd" id="2_py82k"]
 [ext_resource type="Script" uid="uid://g42dx5ur7jin" path="res://Level/light_managers.gd" id="2_wqlfs"]
 [ext_resource type="Script" uid="uid://dsxp18paeb0yh" path="res://Level/points_manager.gd" id="3_52x1o"]
@@ -12,10 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="8_py82k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py82k"]
-size = Vector2(993, 10)
+size = Vector2(993, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1teg4"]
-size = Vector2(1001, 11)
+size = Vector2(1002, 29)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yfk6w"]
 
@@ -33,15 +34,18 @@ script = ExtResource("1_nk1il")
 
 [node name="Components" type="Node" parent="." unique_id=111891771]
 
-[node name="BallHandeger" type="Node" parent="Components" unique_id=1877533181 node_paths=PackedStringArray("_lights_manager", "_point_detector", "_score_manager", "_main_UI", "_ball_spawn_point", "_level")]
+[node name="BallHandler" type="Node" parent="Components" unique_id=1804297647]
+script = ExtResource("2_1teg4")
+
+[node name="BallManager" type="Node" parent="Components/BallHandler" unique_id=1877533181 node_paths=PackedStringArray("_lights_manager", "_point_detector", "_score_manager", "_main_UI", "_ball_spawn_point", "_level")]
 script = ExtResource("2_py82k")
 ball_sc = ExtResource("3_py82k")
-_lights_manager = NodePath("../../World/Lights")
-_point_detector = NodePath("../../World/PointDetectors")
-_score_manager = NodePath("../ScoreManager")
-_main_UI = NodePath("../../MainUI")
-_ball_spawn_point = NodePath("../../BallSpawnPoint")
-_level = NodePath("../..")
+_lights_manager = NodePath("../../../World/Lights")
+_point_detector = NodePath("../../../World/PointDetectors")
+_score_manager = NodePath("../../ScoreManager")
+_main_UI = NodePath("../../../MainUI")
+_ball_spawn_point = NodePath("../../../BallSpawnPoint")
+_level = NodePath("../../..")
 
 [node name="ScoreManager" type="Node" parent="Components" unique_id=494718840]
 script = ExtResource("3_52x1o")
@@ -74,7 +78,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/PointDetectors/LeftDetector" unique_id=1500246501]
-position = Vector2(334.5, 0)
+position = Vector2(334.5, -9)
 shape = SubResource("RectangleShape2D_py82k")
 
 [node name="RightDetector" type="Area2D" parent="World/PointDetectors" unique_id=1106991513]
@@ -83,7 +87,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/PointDetectors/RightDetector" unique_id=878119383]
-position = Vector2(-939.5, 27.5)
+position = Vector2(-940, 18.5)
 shape = SubResource("RectangleShape2D_1teg4")
 
 [node name="Boundaries" type="Node2D" parent="World" unique_id=116601786]

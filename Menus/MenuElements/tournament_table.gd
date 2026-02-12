@@ -11,7 +11,7 @@ func set_tournament_table(players_names: Array[String]):
 		_create_tournament_spot(i, _name)
 
 
-func _create_tournament_spot(position: int, player_name: String):
+func _create_tournament_spot(_position: int, player_name: String):
 	var tournament_spot: TournamentNameSpot = tournament_spot_sc.instantiate()
-	tournament_spot.set_values(position, player_name)
+	tournament_spot.set_values(_position, player_name)
 	add_child(tournament_spot)

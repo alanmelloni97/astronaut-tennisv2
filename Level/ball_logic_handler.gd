@@ -1,4 +1,4 @@
-class_name BallHandeger
+class_name BallManager
 extends Node
 
 @export var ball_sc: PackedScene

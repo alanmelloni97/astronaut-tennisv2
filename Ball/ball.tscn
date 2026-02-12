@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cfiuoebp1eicf" path="res://Ball/ball.gd" id="2_65gad"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
-radius = 58.99
+radius = 35.014282
 
 [node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("sprite")]
 collision_layer = 2

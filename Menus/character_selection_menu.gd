@@ -15,8 +15,9 @@ var tournament_is_won: bool = false
 func _ready() -> void:
 	player_1_select.characters = Characters.characters
 	player_2_select.characters = Characters.characters
-	player_1_select.update_texture()
-	player_2_select.update_texture()
+	player_1_select.update_character()
+	player_2_select.update_character()
+
 	set_mode()
 	if tournament_is_won:
 		_start_button.text = "NEW TOURNAMENT"

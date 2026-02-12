@@ -28,6 +28,7 @@ func set_up_players():
 
 
 func _on_game_finished(winner: int):
+	_level.winner = winner
 	_player_1.disable_input()
 	_player_2.disable_input()
 	_main_UI.show_game_over_menu(winner, player_amount)

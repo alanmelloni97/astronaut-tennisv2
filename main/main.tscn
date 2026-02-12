@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://b7xrs5qb7lfxj" path="res://main/scene_manager.gd" id="3_f6fdm"]
 [ext_resource type="Script" uid="uid://ci0bfno7m6u7h" path="res://main/specific_static_save.gd" id="3_liyct"]
 [ext_resource type="Script" uid="uid://do0w1w1hnkqgd" path="res://main/specific_scene_logic.gd" id="5_k3v36"]
-[ext_resource type="Script" uid="uid://desfrggysae5b" path="res://main/unlocks.gd" id="6_kfbq2"]
 
 [node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager")]
 script = ExtResource("1_yh5la")
@@ -26,6 +25,3 @@ specific_scene_logic = NodePath("SpecificSceneLogic")
 [node name="SpecificSceneLogic" type="Node" parent="SceneManager" unique_id=888094065 node_paths=PackedStringArray("scene_manager")]
 script = ExtResource("5_k3v36")
 scene_manager = NodePath("..")
-
-[node name="UnlocksManager" type="Node" parent="." unique_id=1835615361]
-script = ExtResource("6_kfbq2")

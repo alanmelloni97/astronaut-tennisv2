@@ -11,3 +11,4 @@ extends Resource
 @export var ul_leg: Texture2D
 @export var ur_arm: Texture2D
 @export var ur_leg: Texture2D
+@export var is_unlocked: bool = false
