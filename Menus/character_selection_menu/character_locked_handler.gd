@@ -11,8 +11,13 @@ func _ready() -> void:
 
 
 func update_start_button():
-	if _player_1_select.get_current_character().skin.is_unlocked and \
-	_player_2_select.get_current_character().skin.is_unlocked:
+	# has to cover tournament case
+	var can_play: bool = false
+	if _player_1_select.get_current_character().skin.is_unlocked:
+		can_play = true
+	if _player_2_select and not _player_2_select.get_current_character().skin.is_unlocked:
+		can_play = false
+	if can_play:
 		_start_button.disabled = false
 	else:
 		_start_button.disabled = true

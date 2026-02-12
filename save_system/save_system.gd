@@ -13,5 +13,6 @@ func save_game():
 
 
 func load_game():
-	var game_save: GameSave = ResourceLoader.load(_save_path)
-	specific_static_save.load_static(game_save)
+	if ResourceLoader.exists(_save_path):
+		var game_save: GameSave = ResourceLoader.load(_save_path)
+		specific_static_save.load_static(game_save)

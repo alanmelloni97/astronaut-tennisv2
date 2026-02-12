@@ -1,9 +1,12 @@
-extends Control
 class_name TournamentNameSpot
+extends Control
 
-@export var _position_number: Label
 @export var _player_name: Label
 
-func set_values(tournament_position: int, player_name: String):
-	_position_number.text = str(tournament_position)
-	_player_name.text = player_name
+
+func set_character(character: Character) -> void:
+	_player_name.text = character.name
+	if character == Characters.get_current_rival():
+		modulate = Color.YELLOW
+	elif not character.beated:
+		modulate = Color.RED

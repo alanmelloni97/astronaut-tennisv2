@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://byy8vfben3kxo" path="res://Level/level_handler.gd" id="4_wqlfs"]
 [ext_resource type="PackedScene" uid="uid://x11muvl3x6vi" path="res://UI/main_ui.tscn" id="5_d6qko"]
 [ext_resource type="Script" uid="uid://bqlse54u8e0r8" path="res://Level/point_detectors.gd" id="6_nk1il"]
+[ext_resource type="Script" uid="uid://c3jkt2u4aautb" path="res://Level/ui_handler.gd" id="7_i5g78"]
 [ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="8_py82k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py82k"]
@@ -32,38 +33,41 @@ size = Vector2(1045.5, 1260)
 [node name="Level" type="Node2D" unique_id=1489784123]
 script = ExtResource("1_nk1il")
 
-[node name="Components" type="Node" parent="." unique_id=111891771]
-
-[node name="BallHandler" type="Node" parent="Components" unique_id=1804297647]
-script = ExtResource("2_1teg4")
-
-[node name="BallManager" type="Node" parent="Components/BallHandler" unique_id=1877533181 node_paths=PackedStringArray("_lights_manager", "_point_detector", "_score_manager", "_main_UI", "_ball_spawn_point", "_level")]
-script = ExtResource("2_py82k")
-ball_sc = ExtResource("3_py82k")
-_lights_manager = NodePath("../../../World/Lights")
-_point_detector = NodePath("../../../World/PointDetectors")
-_score_manager = NodePath("../../ScoreManager")
-_main_UI = NodePath("../../../MainUI")
-_ball_spawn_point = NodePath("../../../BallSpawnPoint")
-_level = NodePath("../../..")
-
-[node name="ScoreManager" type="Node" parent="Components" unique_id=494718840]
-script = ExtResource("3_52x1o")
-WIN_SCORE = 8
-
-[node name="LevelHandler" type="Node" parent="Components" unique_id=632591484 node_paths=PackedStringArray("_score_manager", "_player_1", "_player_2", "_main_UI", "_ball_ai_detector", "_level")]
+[node name="LevelHandler" type="Node" parent="." unique_id=632591484 node_paths=PackedStringArray("_score_manager", "_player_1", "_player_2", "_main_UI", "_ball_ai_detector", "_level")]
 script = ExtResource("4_wqlfs")
 _score_manager = NodePath("../ScoreManager")
-_player_1 = NodePath("../../Player1")
-_player_2 = NodePath("../../Player2")
+_player_1 = NodePath("../Player1")
+_player_2 = NodePath("../Player2")
+_main_UI = NodePath("../MainUI")
+_ball_ai_detector = NodePath("../Player2/BallAIDetector")
+_level = NodePath("..")
+
+[node name="BallHandler" type="Node" parent="." unique_id=1804297647]
+script = ExtResource("2_1teg4")
+
+[node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("_lights_manager", "_point_detector", "_score_manager", "_main_UI", "_ball_spawn_point", "_level")]
+script = ExtResource("2_py82k")
+ball_sc = ExtResource("3_py82k")
+_lights_manager = NodePath("../../World/Lights")
+_point_detector = NodePath("../../World/PointDetectors")
+_score_manager = NodePath("../../ScoreManager")
 _main_UI = NodePath("../../MainUI")
-_ball_ai_detector = NodePath("../../Player2/BallAIDetector")
+_ball_spawn_point = NodePath("../../BallSpawnPoint")
 _level = NodePath("../..")
+
+[node name="ScoreManager" type="Node" parent="." unique_id=494718840]
+script = ExtResource("3_52x1o")
+WIN_SCORE = 1
 
 [node name="MainUI" parent="." unique_id=1468483608 instance=ExtResource("5_d6qko")]
 
+[node name="UIHandler" type="Node" parent="MainUI" unique_id=1149858996 node_paths=PackedStringArray("_level", "_main_ui")]
+script = ExtResource("7_i5g78")
+_level = NodePath("../..")
+_main_ui = NodePath("..")
+
 [node name="BallSpawnPoint" type="Marker2D" parent="." unique_id=1469462745]
-position = Vector2(974, 177)
+position = Vector2(1132, 805)
 
 [node name="World" type="Node2D" parent="." unique_id=937198056]
 

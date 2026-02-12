@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3vdwkubddaop"
-path="res://.godot/imported/body.png-709e162d031f5fceffe8588f792ffc6b.ctex"
+uid="uid://drlv7tmppwupc"
+path="res://.godot/imported/LLarm.png-00449fdd1573dce835a24a65262d2ea2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ragdoll/skin/skins/default red/body.png"
-dest_files=["res://.godot/imported/body.png-709e162d031f5fceffe8588f792ffc6b.ctex"]
+source_file="res://Ragdoll/skin/skins/apollo/LLarm.png"
+dest_files=["res://.godot/imported/LLarm.png-00449fdd1573dce835a24a65262d2ea2.ctex"]
 
 [params]
 

@@ -1,5 +1,5 @@
-extends Control
 class_name GameOverMenu
+extends Control
 
 signal retry_pressed
 signal main_menu_pressed
@@ -8,13 +8,13 @@ signal main_menu_pressed
 @export var _retry_button: Button
 
 
-func set_up_menu(winner: int, player_amount: int):
+func set_up_menu(winner: int, player_number: int):
 	# by default menu shows 1 player lose status (retry button visible and YOU LOSE message)
-	if player_amount == 1:
+	if player_number == 1:
 		if winner == 1:
 			_retry_button.hide()
 			_game_over_label.text = "YOU WIN!"
-	elif player_amount == 2:
+	elif player_number == 2:
 		if winner == 1:
 			_game_over_label.text = "PLAYER 1 WINS"
 		elif winner == 2:

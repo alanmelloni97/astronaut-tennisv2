@@ -1,8 +1,68 @@
 [gd_resource type="Resource" script_class="GameSave" format=3]
 
-[ext_resource type="Script" path="res://save_system/saved_data/base_saved_data.gd" id="1_vduhr"]
-[ext_resource type="Script" path="res://save_system/game_save.gd" id="2_234if"]
+[ext_resource type="Script" path="res://Resources/character.gd" id="1_vrpbx"]
+[ext_resource type="Resource" path="res://Ragdoll/skin/skins/apollo/apollo.tres" id="2_tnemm"]
+[ext_resource type="Texture2D" path="res://icon.svg" id="3_fs1mu"]
+[ext_resource type="Resource" path="res://Ragdoll/skin/skins/default/default_skin.tres" id="4_n3dpj"]
+[ext_resource type="Script" path="res://save_system/game_save.gd" id="5_ggswj"]
+[ext_resource type="Script" path="res://Ragdoll/skin/skin_resource.gd" id="6_vjjoa"]
+
+[sub_resource type="Resource" id="Resource_0hpa8"]
+script = ExtResource("1_vrpbx")
+name = "Neil Armstrong"
+skin = ExtResource("2_tnemm")
+beated = true
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_c2d4n"]
+script = ExtResource("1_vrpbx")
+name = "Yuri Gagarin"
+image = ExtResource("3_fs1mu")
+skin = ExtResource("4_n3dpj")
+beated = true
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2cl63"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="Resource" id="Resource_82qhk"]
+script = ExtResource("1_vrpbx")
+name = "Buzz Aldrin"
+image = SubResource("CompressedTexture2D_2cl63")
+skin = ExtResource("2_tnemm")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_2cl63"]
+script = ExtResource("1_vrpbx")
+name = "Alan Shepard"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_8mtkk"]
+script = ExtResource("1_vrpbx")
+name = "John Glenn"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_cc3by"]
+script = ExtResource("1_vrpbx")
+name = "Valentina Tereshkova"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_exe54"]
+script = ExtResource("1_vrpbx")
+name = "Sally Ride"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_ivnx7"]
+script = ExtResource("1_vrpbx")
+name = "Ulf Merbold"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_rt06a"]
+script = ExtResource("1_vrpbx")
+name = "Laika"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [resource]
-script = ExtResource("2_234if")
-unlocked_levels = 3
+script = ExtResource("5_ggswj")
+skins = Array[ExtResource("6_vjjoa")]([ExtResource("2_tnemm"), ExtResource("4_n3dpj"), null])
+characters = Array[ExtResource("1_vrpbx")]([SubResource("Resource_0hpa8"), SubResource("Resource_c2d4n"), SubResource("Resource_82qhk"), SubResource("Resource_2cl63"), SubResource("Resource_8mtkk"), SubResource("Resource_cc3by"), SubResource("Resource_exe54"), SubResource("Resource_ivnx7"), SubResource("Resource_rt06a")])

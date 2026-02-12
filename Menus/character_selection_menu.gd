@@ -38,7 +38,7 @@ func get_selected_character_2() -> Character:
 	if player_2_select:
 		return player_2_select.get_current_character()
 	else:
-		return null
+		return Characters.get_current_rival()
 
 
 func _on_back_button_pressed() -> void:

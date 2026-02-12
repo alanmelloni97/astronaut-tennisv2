@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wotufs3qtr1h"
-path="res://.godot/imported/ULarm.png-318d485d6584fa5ba8810af4d7e11e50.ctex"
+uid="uid://hqsoo4kfpp3s"
+path="res://.godot/imported/ULleg.png-ee6244ae4cb3de4fbb59a16e547abfac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ragdoll/skin/skins/default red/ULarm.png"
-dest_files=["res://.godot/imported/ULarm.png-318d485d6584fa5ba8810af4d7e11e50.ctex"]
+source_file="res://Ragdoll/skin/skins/apollo/ULleg.png"
+dest_files=["res://.godot/imported/ULleg.png-ee6244ae4cb3de4fbb59a16e547abfac.ctex"]
 
 [params]
 

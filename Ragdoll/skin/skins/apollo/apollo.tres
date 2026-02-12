@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CharacterSkin" format=3 uid="uid://c5box2fkunv3y"]
+
+[ext_resource type="Texture2D" uid="uid://bwcxphril1jbg" path="res://Ragdoll/skin/skins/apollo/body.png" id="1_743iq"]
+[ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://Ragdoll/skin/skin_resource.gd" id="1_bs0rt"]
+[ext_resource type="Texture2D" uid="uid://drju3tukpwrxy" path="res://Ragdoll/skin/skins/apollo/head.png" id="2_sdfdc"]
+[ext_resource type="Texture2D" uid="uid://drlv7tmppwupc" path="res://Ragdoll/skin/skins/apollo/LLarm.png" id="3_x4i12"]
+[ext_resource type="Texture2D" uid="uid://sqymiv7s6x0o" path="res://Ragdoll/skin/skins/apollo/LLleg.png" id="4_w5n04"]
+[ext_resource type="Texture2D" uid="uid://cxgks8vypjvsf" path="res://Ragdoll/skin/skins/apollo/LRarm.png" id="5_qkiew"]
+[ext_resource type="Texture2D" uid="uid://dh1afmfay6j2j" path="res://Ragdoll/skin/skins/apollo/LRleg.png" id="6_yb3sf"]
+[ext_resource type="Texture2D" uid="uid://bhfikwuqdxfp5" path="res://Ragdoll/skin/skins/apollo/ULarm.png" id="8_gswn5"]
+[ext_resource type="Texture2D" uid="uid://hqsoo4kfpp3s" path="res://Ragdoll/skin/skins/apollo/ULleg.png" id="9_2kn3s"]
+[ext_resource type="Texture2D" uid="uid://bpvejh6h6kwa7" path="res://Ragdoll/skin/skins/apollo/URarm.png" id="10_cki8q"]
+[ext_resource type="Texture2D" uid="uid://bqdi015w8wwm6" path="res://Ragdoll/skin/skins/apollo/URleg.png" id="11_2nitr"]
+
+[resource]
+script = ExtResource("1_bs0rt")
+body = ExtResource("1_743iq")
+head = ExtResource("2_sdfdc")
+ll_arm = ExtResource("3_x4i12")
+ll_leg = ExtResource("4_w5n04")
+lr_arm = ExtResource("5_qkiew")
+lr_leg = ExtResource("6_yb3sf")
+ul_arm = ExtResource("8_gswn5")
+ul_leg = ExtResource("9_2kn3s")
+ur_arm = ExtResource("10_cki8q")
+ur_leg = ExtResource("11_2nitr")
+metadata/_custom_type_script = "uid://v0sa452yk36s"

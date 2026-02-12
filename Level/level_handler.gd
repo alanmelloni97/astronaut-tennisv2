@@ -13,9 +13,7 @@ var player_amount: int = 1
 
 func _ready() -> void:
 	_score_manager.game_finished.connect(_on_game_finished)
-	_main_UI.game_paused.connect(_on_game_paused)
-	_main_UI.game_unpaused.connect(_on_game_unpaused)
-	_main_UI.game_quit.connect(_on_game_quit)
+
 	set_up_players()
 
 
@@ -32,15 +30,3 @@ func _on_game_finished(winner: int):
 	_player_1.disable_input()
 	_player_2.disable_input()
 	_main_UI.show_game_over_menu(winner, player_amount)
-
-
-func _on_game_paused():
-	get_tree().paused = true
-
-
-func _on_game_unpaused():
-	get_tree().paused = false
-
-
-func _on_game_quit():
-	_level.scene_requested.emit(Scenes.main_menu)

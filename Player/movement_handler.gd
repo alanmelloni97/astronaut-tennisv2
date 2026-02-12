@@ -12,7 +12,8 @@ func _physics_process(_delta: float) -> void:
 		input = _ai_manager.input_axis
 	else:
 		input = _input_manager.input_axis
-	_motion_manager.move_body(input)
+	if _motion_manager: # if its disabled its removed
+		_motion_manager.move_body(input)
 
 
 func set_player_type(type: Player.PlayerType):
@@ -28,4 +29,5 @@ func set_player_type(type: Player.PlayerType):
 
 
 func disable_input():
-	_motion_manager.queue_free()
+	if _motion_manager:
+		_motion_manager.queue_free()

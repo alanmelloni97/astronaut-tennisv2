@@ -4,14 +4,19 @@
 [ext_resource type="Script" uid="uid://5rdixxdoulx3" path="res://Resources/character.gd" id="2_k1buq"]
 [ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="3_o1ipo"]
 [ext_resource type="Resource" uid="uid://bvg45jr3mb3vj" path="res://Ragdoll/skin/skins/default/default_skin.tres" id="4_o1ipo"]
-[ext_resource type="Resource" uid="uid://bnbb7w6qhmpom" path="res://Ragdoll/skin/skins/default red/default_red_skin.tres" id="5_c2d4n"]
+[ext_resource type="Resource" uid="uid://c5box2fkunv3y" path="res://Ragdoll/skin/skins/apollo/apollo.tres" id="5_c2d4n"]
+
+[sub_resource type="Resource" id="Resource_0hpa8"]
+script = ExtResource("2_k1buq")
+name = "Neil Armstrong"
+skin = ExtResource("5_c2d4n")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_c2d4n"]
 script = ExtResource("2_k1buq")
-name = "IGOR"
+name = "Yuri Gagarin"
 image = ExtResource("3_o1ipo")
 skin = ExtResource("4_o1ipo")
-unlocked = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2cl63"]
@@ -19,23 +24,41 @@ load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.cte
 
 [sub_resource type="Resource" id="Resource_82qhk"]
 script = ExtResource("2_k1buq")
-name = "IGOR"
+name = "Buzz Aldrin"
 image = SubResource("CompressedTexture2D_2cl63")
 skin = ExtResource("5_c2d4n")
-unlocked = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ytvwr"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
-
-[sub_resource type="Resource" id="Resource_6nkmr"]
+[sub_resource type="Resource" id="Resource_2cl63"]
 script = ExtResource("2_k1buq")
-name = "IGOR"
-image = SubResource("CompressedTexture2D_ytvwr")
-skin = ExtResource("5_c2d4n")
-unlocked = true
+name = "Alan Shepard"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_8mtkk"]
+script = ExtResource("2_k1buq")
+name = "John Glenn"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_cc3by"]
+script = ExtResource("2_k1buq")
+name = "Valentina Tereshkova"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_exe54"]
+script = ExtResource("2_k1buq")
+name = "Sally Ride"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_ivnx7"]
+script = ExtResource("2_k1buq")
+name = "Ulf Merbold"
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_rt06a"]
+script = ExtResource("2_k1buq")
+name = "Laika"
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [node name="Characters" type="Node" unique_id=990000372]
 script = ExtResource("1_nyi4w")
-characters = Array[ExtResource("2_k1buq")]([SubResource("Resource_c2d4n"), SubResource("Resource_82qhk"), SubResource("Resource_6nkmr")])
+characters = Array[ExtResource("2_k1buq")]([SubResource("Resource_0hpa8"), SubResource("Resource_c2d4n"), SubResource("Resource_82qhk"), SubResource("Resource_2cl63"), SubResource("Resource_8mtkk"), SubResource("Resource_cc3by"), SubResource("Resource_exe54"), SubResource("Resource_ivnx7"), SubResource("Resource_rt06a")])

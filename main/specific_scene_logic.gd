@@ -19,9 +19,13 @@ func manage_before_changing_scene(current_scene: Node):
 	if current_scene is Level:
 		if not two_players_mode: # Tournament
 			if current_scene.winner == 1: # Player 1 won
+				# unlock skin if its new
 				if not current_scene.player_2_character.skin.is_unlocked: # skin of rival is not unlocked
 					current_scene.player_2_character.skin.is_unlocked = true
-					scene_manager.save_requested.emit()
+				# set next character in the list as beated
+				var current_player_2_index = Characters.characters.find(player_2_character)
+				Characters.characters[current_player_2_index].beated = true
+				scene_manager.save_requested.emit()
 
 
 func manage_after_changing_scene(new_scene: Node):

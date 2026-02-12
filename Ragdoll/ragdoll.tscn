@@ -144,6 +144,7 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/LRarm" unique_id=1381984965]
+rotation = 3.1415927
 texture = ExtResource("3_yox0d")
 flip_h = true
 

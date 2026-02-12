@@ -21,7 +21,6 @@ func _ready() -> void:
 func spawn_ball(spawn_point: Vector2, delay: float):
 	await get_tree().create_timer(delay).timeout
 	var ball: RigidBody2D = ball_sc.instantiate()
-	print(ball)
 	ball.global_position = spawn_point
 	_level.add_child(ball)
 	_ball_reference = ball

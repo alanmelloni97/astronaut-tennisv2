@@ -4,6 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://ummqxjeg0p0v" path="res://Menus/MenuElements/tournament_name_spot.tscn" id="2_6nv31"]
 
 [node name="TournamentTable" type="VBoxContainer" unique_id=398236205]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 script = ExtResource("1_llimf")
 tournament_spot_sc = ExtResource("2_6nv31")
