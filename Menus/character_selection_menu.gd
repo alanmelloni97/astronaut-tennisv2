@@ -13,10 +13,10 @@ var tournament_is_won: bool = false
 
 
 func _ready() -> void:
-	player_1_select.characters = Characters.characters
-	player_2_select.characters = Characters.characters
-	player_1_select.update_character()
-	player_2_select.update_character()
+	player_1_select.skins = Characters.skins
+	player_2_select.skins = Characters.skins
+	player_1_select.update_skin()
+	player_2_select.update_skin()
 
 	set_mode()
 	if tournament_is_won:
@@ -30,15 +30,12 @@ func set_mode():
 		player_2_select.queue_free()
 
 
-func get_selected_character_1() -> Character:
-	return player_1_select.get_current_character()
+func get_selected_skin_1() -> CharacterSkin:
+	return player_1_select.get_current_skin()
 
 
-func get_selected_character_2() -> Character:
-	if player_2_select:
-		return player_2_select.get_current_character()
-	else:
-		return Characters.get_current_rival()
+func get_selected_skin_2() -> CharacterSkin:
+	return player_2_select.get_current_skin()
 
 
 func _on_back_button_pressed() -> void:

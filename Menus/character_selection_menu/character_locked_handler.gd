@@ -6,16 +6,16 @@ extends Node
 
 
 func _ready() -> void:
-	_player_1_select.character_updated.connect(update_start_button)
-	_player_2_select.character_updated.connect(update_start_button)
+	_player_1_select.skin_updated.connect(update_start_button)
+	_player_2_select.skin_updated.connect(update_start_button)
 
 
 func update_start_button():
 	# has to cover tournament case
 	var can_play: bool = false
-	if _player_1_select.get_current_character().skin.is_unlocked:
+	if _player_1_select.get_current_skin().is_unlocked:
 		can_play = true
-	if _player_2_select and not _player_2_select.get_current_character().skin.is_unlocked:
+	if _player_2_select and not _player_2_select.get_current_skin().is_unlocked:
 		can_play = false
 	if can_play:
 		_start_button.disabled = false

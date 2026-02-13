@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dmd5f7o8dnvp8" path="res://Ragdoll/skin/skins/vostok/URleg.png" id="11_nhauh"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_yjfa2")
 image = ExtResource("3_c7tng")
 body = ExtResource("1_hprfl")

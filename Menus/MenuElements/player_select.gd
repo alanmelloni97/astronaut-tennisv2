@@ -1,43 +1,43 @@
 class_name PlayerSelect
 extends Control
 
-signal character_updated()
+signal skin_updated()
 
 @export var _player_texture: TextureRect
 
-var characters: Array[Character]
-var current_character_selectable: bool:
+var skins: Array[CharacterSkin]
+var current_skin_selectable: bool:
 	set(x):
 		if x:
 			_player_texture.modulate = Color.WHITE
 		else:
 			_player_texture.modulate = Color.DIM_GRAY
-var current_character_index: int:
+var current_skin_index: int:
 	set(x):
-		if x > characters.size() - 1 or x < -(characters.size() - 1):
-			current_character_index = 0
+		if x > skins.size() - 1 or x < -(skins.size() - 1):
+			current_skin_index = 0
 		else:
-			current_character_index = x
+			current_skin_index = x
 
 
-func get_current_character() -> Character:
-	return characters[current_character_index]
+func get_current_skin() -> CharacterSkin:
+	return skins[current_skin_index]
 
 
-func update_character():
-	_player_texture.texture = get_current_character().skin.image
-	if not get_current_character().skin.is_unlocked:
-		current_character_selectable = false
+func update_skin():
+	_player_texture.texture = get_current_skin().image
+	if not get_current_skin().is_unlocked:
+		current_skin_selectable = false
 	else:
-		current_character_selectable = true
-	character_updated.emit()
+		current_skin_selectable = true
+	skin_updated.emit()
 
 
 func _on_left_button_pressed() -> void:
-	current_character_index -= 1
-	update_character()
+	current_skin_index -= 1
+	update_skin()
 
 
 func _on_right_button_pressed() -> void:
-	current_character_index += 1
-	update_character()
+	current_skin_index += 1
+	update_skin()

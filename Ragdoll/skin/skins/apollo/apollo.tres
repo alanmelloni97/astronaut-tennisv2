@@ -14,8 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://bqdi015w8wwm6" path="res://Ragdoll/skin/skins/apollo/URleg.png" id="11_2nitr"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_bs0rt")
+name = "Apollo"
 image = ExtResource("3_sdfdc")
+is_unlocked = true
 body = ExtResource("1_743iq")
 head = ExtResource("2_sdfdc")
 ll_arm = ExtResource("3_x4i12")

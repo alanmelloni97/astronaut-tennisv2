@@ -12,5 +12,5 @@ func _ready() -> void:
 
 func main():
 	# Start game
-	#save_system.load_game()
+	save_system.load_game()
 	scene_manager._change_to_scene(Scenes.main_menu)
