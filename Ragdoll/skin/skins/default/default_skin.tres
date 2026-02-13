@@ -16,6 +16,7 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_n6lve")
+name = "default"
 image = ExtResource("3_cronc")
 body = ExtResource("1_hkqnu")
 head = ExtResource("2_ctafh")
