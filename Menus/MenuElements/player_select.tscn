@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cld25d5sn167u"]
 
 [ext_resource type="Script" uid="uid://b4068na67t3a8" path="res://Menus/MenuElements/player_select.gd" id="1_d4yoc"]
-[ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="2_1lemf"]
+[ext_resource type="Texture2D" uid="uid://cxtnyes3ahc7r" path="res://Ragdoll/skin/skins/apollo/Apollo.png" id="2_1lemf"]
+[ext_resource type="Texture2D" uid="uid://cbsj00tbqs61d" path="res://Assets/lock.webp" id="3_wfc4a"]
 
-[node name="PlayerSelect" type="Control" unique_id=1806913641 node_paths=PackedStringArray("_player_texture")]
+[node name="PlayerSelect" type="Control" unique_id=1806913641 node_paths=PackedStringArray("_player_texture", "suit_name", "lock_texture")]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -14,6 +15,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d4yoc")
 _player_texture = NodePath("VBoxContainer/HBoxContainer/PlayerTexture")
+suit_name = NodePath("VBoxContainer/SuitName")
+lock_texture = NodePath("LockTexture")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=322469083]
 layout_mode = 1
@@ -29,7 +32,7 @@ offset_bottom = 77.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PlayerName" type="Label" parent="VBoxContainer" unique_id=771017302]
+[node name="SuitName" type="Label" parent="VBoxContainer" unique_id=771017302]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -37,21 +40,44 @@ text = "ASTRONAUT"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=521412675]
 layout_mode = 2
-size_flags_horizontal = 4
 
 [node name="LeftButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1485723595]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
 text = "<"
 
 [node name="PlayerTexture" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=489337742]
+custom_minimum_size = Vector2(600, 600)
 layout_mode = 2
 texture = ExtResource("2_1lemf")
+stretch_mode = 5
 
 [node name="RightButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=665670508]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
 text = ">"
+
+[node name="LockTexture" type="TextureRect" parent="." unique_id=1067759319]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.5
+offset_top = -170.0
+offset_right = 202.5
+offset_bottom = 219.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_wfc4a")
+expand_mode = 3
+stretch_mode = 5
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/LeftButton" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/RightButton" to="." method="_on_right_button_pressed"]

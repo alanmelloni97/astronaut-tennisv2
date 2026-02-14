@@ -1,33 +1,57 @@
 [gd_scene format=3 uid="uid://be0sa4wb5k2sc"]
 
 [ext_resource type="Script" uid="uid://drvurm8tf23h1" path="res://Menus/main_menu.gd" id="1_jf8mj"]
+[ext_resource type="Texture2D" uid="uid://djg7bk1e5iuhp" path="res://Menus/Art/modern-parallax-background-d-game-animation-cartoon-illustration-cosmos-level-platforms-space-game-level-316726996.webp" id="2_p3jrs"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=2023607876]
 script = ExtResource("1_jf8mj")
 
-[node name="Buttons" type="VBoxContainer" parent="." unique_id=516999581]
+[node name="Background" type="TextureRect" parent="." unique_id=1018398562]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.1381226
+offset_right = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_p3jrs")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1202099348]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -304.5
+offset_top = -197.0
+offset_right = 304.5
+offset_bottom = 197.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="TournamentButton" type="Button" parent="Buttons" unique_id=956124202]
+[node name="Buttons" type="VBoxContainer" parent="PanelContainer" unique_id=516999581]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TournamentButton" type="Button" parent="PanelContainer/Buttons" unique_id=956124202]
 layout_mode = 2
 text = "Tournament
 "
 
-[node name="2PlayerButtton" type="Button" parent="Buttons" unique_id=1942199620]
+[node name="2PlayerButtton" type="Button" parent="PanelContainer/Buttons" unique_id=1942199620]
 layout_mode = 2
 text = "2 Players"
 
-[node name="QuitButton" type="Button" parent="Buttons" unique_id=1039137632]
+[node name="QuitButton" type="Button" parent="PanelContainer/Buttons" unique_id=1039137632]
 layout_mode = 2
 text = "Quit
 "
 
-[connection signal="pressed" from="Buttons/TournamentButton" to="." method="_on_tournament_button_pressed"]
-[connection signal="pressed" from="Buttons/2PlayerButtton" to="." method="_on_player_buttton_pressed"]
-[connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="PanelContainer/Buttons/TournamentButton" to="." method="_on_tournament_button_pressed"]
+[connection signal="pressed" from="PanelContainer/Buttons/2PlayerButtton" to="." method="_on_player_buttton_pressed"]
+[connection signal="pressed" from="PanelContainer/Buttons/QuitButton" to="." method="_on_quit_button_pressed"]

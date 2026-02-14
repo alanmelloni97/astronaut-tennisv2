@@ -24,6 +24,7 @@ func _ready() -> void:
 func _on_detector_entered(_body: PhysicsBody2D, detector: Area2D):
 	match detector:
 		left_detector:
+			ball_bounced.emit(1)
 			match ball_state:
 				BallState.NO_BOUNCE:
 					ball_state = BallState.LEFT_BOUNCE
@@ -32,9 +33,8 @@ func _on_detector_entered(_body: PhysicsBody2D, detector: Area2D):
 				BallState.LEFT_BOUNCE:
 					ball_state = BallState.NO_BOUNCE
 					ball_double_bounced.emit(1)
-
-			ball_bounced.emit(1)
 		right_detector:
+			ball_bounced.emit(2)
 			match ball_state:
 				BallState.NO_BOUNCE:
 					ball_state = BallState.RIGHT_BOUNCE
@@ -43,4 +43,3 @@ func _on_detector_entered(_body: PhysicsBody2D, detector: Area2D):
 					ball_double_bounced.emit(2)
 				BallState.LEFT_BOUNCE:
 					ball_state = BallState.NO_BOUNCE
-			ball_bounced.emit(2)

@@ -35,9 +35,10 @@ script = ExtResource("3_xsmco")
 script = ExtResource("4_koyly")
 ai_actor = NodePath("../..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920572248]
-shape = SubResource("CircleShape2D_k7yml")
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1074267406]
-position = Vector2(-1, 20)
+position = Vector2(-14, -77)
 texture = ExtResource("6_xi40t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920572248]
+position = Vector2(-17, -97)
+shape = SubResource("CircleShape2D_k7yml")

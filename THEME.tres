@@ -1,4 +1,82 @@
 [gd_resource type="Theme" format=3 uid="uid://qd2xvxleoi1v"]
 
+[ext_resource type="FontFile" uid="uid://dkmxquxm1tclm" path="res://Assets/Seven Segment.ttf" id="1_rjqg8"]
+[ext_resource type="Texture2D" uid="uid://biaxj3lhbtx5a" path="res://Assets/UI pack/Ship_Shop/Table_02.png" id="1_u1o8y"]
+[ext_resource type="Texture2D" uid="uid://gy0p2lwh4tqr" path="res://Assets/UI pack/Hangar/Dot_01.png" id="2_fxg4e"]
+[ext_resource type="Texture2D" uid="uid://dil4kc1058g84" path="res://Assets/UI pack/Hangar/Table_02.png" id="3_fxg4e"]
+[ext_resource type="FontFile" uid="uid://c6he4wrbxeyvf" path="res://Assets/UI pack/Ethnocentric-Regular.otf" id="3_rjqg8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rjqg8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ofoq3"]
+load_path = "res://.godot/imported/Table_02.png-b04b327a42a5308d687bd3950dabe533.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aloen"]
+texture = SubResource("CompressedTexture2D_ofoq3")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+modulate_color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_da70a"]
+load_path = "res://.godot/imported/Table_02.png-b04b327a42a5308d687bd3950dabe533.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ogoed"]
+texture = SubResource("CompressedTexture2D_da70a")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+modulate_color = Color(7.70092e-06, 0.69287837, 0.91748327, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8b6om"]
+texture = ExtResource("1_u1o8y")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l1t3l"]
+load_path = "res://.godot/imported/Table_02.png-b04b327a42a5308d687bd3950dabe533.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f7qtl"]
+texture = SubResource("CompressedTexture2D_l1t3l")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+modulate_color = Color(0, 0.555, 0.74, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rt3dr"]
+texture = ExtResource("2_fxg4e")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+expand_margin_left = 10.0
+expand_margin_top = 9.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rjqg8"]
+texture = ExtResource("3_fxg4e")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 35.0
+modulate_color = Color(0.64174736, 0.09411032, 1, 1)
+
 [resource]
-default_font_size = 40
+default_font = ExtResource("3_rjqg8")
+default_font_size = 50
+7SegmentLabel/base_type = &"Label"
+7SegmentLabel/colors/font_color = Color(0.8802099, 0, 0.15463024, 1)
+7SegmentLabel/font_sizes/font_size = 180
+7SegmentLabel/fonts/font = ExtResource("1_rjqg8")
+7SegmentLabel/styles/normal = SubResource("StyleBoxEmpty_rjqg8")
+Button/styles/disabled = SubResource("StyleBoxTexture_aloen")
+Button/styles/hover = SubResource("StyleBoxTexture_ogoed")
+Button/styles/normal = SubResource("StyleBoxTexture_8b6om")
+Button/styles/pressed = SubResource("StyleBoxTexture_f7qtl")
+Label/styles/normal = SubResource("StyleBoxTexture_rt3dr")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_rjqg8")
