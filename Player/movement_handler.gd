@@ -28,6 +28,7 @@ func set_player_type(type: Player.PlayerType):
 			_input_manager.queue_free()
 
 
+# HACK: should remove raycasts from player 1
 func disable_input():
 	if _motion_manager:
 		_motion_manager.queue_free()

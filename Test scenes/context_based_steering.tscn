@@ -45,7 +45,7 @@ shape = SubResource("WorldBoundaryShape2D_eh3iu")
 position = Vector2(955, 483)
 
 [node name="Marker2D" type="Marker2D" parent="Ball" unique_id=751669428]
-position = Vector2(93, 76)
+position = Vector2(7, 13)
 
 [node name="Area2D" type="Area2D" parent="Ball" unique_id=710648511]
 top_level = true
@@ -61,7 +61,7 @@ position = Vector2(1437, 498)
 gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("2_eh3iu")
-SPEED = 1000.0
+SPEED = 1200.0
 contextbasedsteering = NodePath("../contextbasedsteering")
 target = NodePath("../Ball/Marker2D")
 
@@ -72,8 +72,9 @@ shape = SubResource("CircleShape2D_haprg")
 position = Vector2(979, 556)
 zoom = Vector2(0.86, 0.86)
 
-[node name="contextbasedsteering" type="Node" parent="." unique_id=656450535 node_paths=PackedStringArray("agent")]
+[node name="contextbasedsteering" type="Node" parent="." unique_id=656450535 node_paths=PackedStringArray("agent", "ball")]
 script = ExtResource("2_cbeqk")
 agent = NodePath("../paleta")
 RAYCAST_LENGHT = 100
 num_rays = 8
+ball = NodePath("../Ball")

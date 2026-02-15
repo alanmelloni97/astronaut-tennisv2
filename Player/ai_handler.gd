@@ -1,64 +1,21 @@
 class_name RacketAIManager
-extends Node2D
+extends Node
 
-#Node2D to debug draw
-@export var ai_actor: Node2D
+@export var SPEED = 500.0
+@export var context_based_steering: ContextBasedSteering
+@export var racket: Racket
 
-var input_axis: Vector2
 var target: Node2D
-var ray_amount: int = 8
-var ray_array: Array[Vector2] = []
-var interest_array: Array[float] = []
-var danger_array: Array[float] = []
-
-
-func _ready() -> void:
-	ray_array.resize(ray_amount)
-	interest_array.resize(ray_amount)
-	danger_array.resize(ray_amount)
-	for i in ray_amount:
-		var angle = i * 2 * PI / ray_amount
-		ray_array[i] = Vector2.RIGHT.rotated(angle)
+var chosen_dir: Vector2
+var input_axis: Vector2
 
 
 func _physics_process(_delta: float) -> void:
-	if target != null:
-		_get_steering()
-		queue_redraw()
-
-
-func _draw():
-	for ray in interest_array:
-		if ray != null:
-			draw_line(ai_actor.global_position, ai_actor.global_position + choose_direction() * 2, Color.GREEN)
-
-
-func set_interest():
-	for i in ray_amount:
-		var d = ray_array[i].dot(ray_array[i].direction_to(target.global_position))
-		interest_array[i] = max(0, d) #ignore negative values
-
-
-func set_danger():
-	for i in ray_amount:
-		danger_array[i] = 0
-
-
-func choose_direction() -> Vector2:
-	for i in ray_amount:
-		if danger_array[i] > 0.0:
-			interest_array[i] = 0
-
-	var chosen_dir = Vector2.ZERO
-	for i in ray_amount:
-		chosen_dir += ray_array[i] * interest_array[i]
-	if target != null:
-		print(interest_array)
-		print(chosen_dir.normalized())
-	return chosen_dir.normalized()
-
-
-func _get_steering():
-	set_interest()
-	set_danger()
-	#var dir: Vector2 = choose_direction()
+	var ball: Ball = get_tree().get_first_node_in_group("Ball") as Ball
+	if ball:
+		target = ball.ai_marker_2d
+		context_based_steering.target_position = target.global_position
+		chosen_dir = context_based_steering.chosen_dir
+		input_axis = chosen_dir.rotated(racket.rotation) * SPEED
+	else:
+		input_axis = Vector2.ZERO

@@ -54,7 +54,7 @@ _score_ui = NodePath("../World/Scores")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
-WIN_SCORE = 1
+WIN_SCORE = 7
 
 [node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "_point_detectors", "ball_manager")]
 script = ExtResource("2_1teg4")
@@ -105,6 +105,7 @@ right_detector = NodePath("RightDetector")
 position = Vector2(122, 1053)
 collision_layer = 0
 collision_mask = 2
+priority = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/PointDetectors/LeftDetector" unique_id=1500246501]
 position = Vector2(334.5, -9)
@@ -114,6 +115,7 @@ shape = SubResource("RectangleShape2D_py82k")
 position = Vector2(2429, 1026)
 collision_layer = 0
 collision_mask = 2
+priority = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/PointDetectors/RightDetector" unique_id=878119383]
 position = Vector2(-940, 18.5)

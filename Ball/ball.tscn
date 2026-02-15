@@ -4,15 +4,19 @@
 [ext_resource type="Script" uid="uid://cfiuoebp1eicf" path="res://Ball/ball.gd" id="2_65gad"]
 [ext_resource type="Texture2D" uid="uid://b32840gkdn7lk" path="res://Ball/art/Ball.png" id="3_ngrkv"]
 [ext_resource type="Script" uid="uid://cf2trema4h72c" path="res://Ball/effects_manager.gd" id="4_4s4qd"]
+[ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://Test scenes/area_2d.gd" id="5_0t0x3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
 radius = 35.014282
 
-[node name="Ball" type="RigidBody2D" unique_id=365515873]
+[node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d") groups=["Ball"]]
 collision_layer = 2
 collision_mask = 11
+mass = 10.0
 physics_material_override = ExtResource("1_l4sn5")
+gravity_scale = 0.8
 script = ExtResource("2_65gad")
+ai_marker_2d = NodePath("AIMarker2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1368493303]
 position = Vector2(0, -1)
@@ -24,3 +28,16 @@ texture = ExtResource("3_ngrkv")
 [node name="EffectsManager" type="Node" parent="." unique_id=697484937 node_paths=PackedStringArray("_ball")]
 script = ExtResource("4_4s4qd")
 _ball = NodePath("..")
+
+[node name="AIMarker2D" type="Marker2D" parent="." unique_id=1789299442]
+position = Vector2(34, 38)
+
+[node name="AIAvoidanceArea2D" type="Area2D" parent="." unique_id=2041147643 node_paths=PackedStringArray("ball")]
+top_level = true
+collision_layer = 64
+collision_mask = 0
+script = ExtResource("5_0t0x3")
+ball = NodePath("..")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AIAvoidanceArea2D" unique_id=1916833364]
+polygon = PackedVector2Array(-219, -27, -155, -1, -112, -36, -86, -77, -24, -87, 52, -87, 85, -83, 138, -35, 165, -3, 217, 9, 275, 9, 294, -15, 304, -232, 241, -294, 148, -294, 17, -303, -57, -308, -129, -299, -164, -277, -226, -227, -232, -191, -232, -126, -232, -60, -232, -42, -219, -28, -223, -70, -209, -218, -122, -280, 225, -282, 287, -228, 280, -30, 244, -6, 165, -36, 94, -100, -41, -101, -96, -101, -169, -17)

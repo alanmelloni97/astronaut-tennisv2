@@ -5,6 +5,7 @@ extends Node
 @export var RAYCAST_LENGHT: int
 @export var num_rays: int = 32
 
+var ball: Ball
 var ray_directions: Array[Vector2]
 var interest: Array[float]
 var danger: Array[float]
@@ -28,11 +29,12 @@ func _ready() -> void:
 
 		raycast.collide_with_areas = true
 		raycast.target_position = Vector2.RIGHT.rotated(angle) * RAYCAST_LENGHT
-		agent.add_child(raycast)
 		danger_raycasts.append(raycast)
+		call_deferred("_add_raycast", raycast)
 
 
 func _physics_process(_delta):
+	ball = get_tree().get_first_node_in_group("Ball") # HACK should get reference
 	set_interest()
 	set_danger()
 	choose_direction()
@@ -40,8 +42,9 @@ func _physics_process(_delta):
 
 func set_interest():
 	if target_position.y > agent.global_position.y:
-		target_position.y += 500
-	target_position.x += $"../Ball".linear_velocity.x
+		target_position.y += 300
+
+	#target_position.x += ball.linear_velocity.x
 	for i in num_rays:
 		# rotation is the agent rotation
 		var target_direction: Vector2 = agent.global_position.direction_to(target_position)
@@ -64,3 +67,7 @@ func choose_direction():
 	for i in num_rays:
 		chosen_dir += ray_directions[i] * interest[i]
 		chosen_dir = chosen_dir.normalized()
+
+
+func _add_raycast(raycast: RayCast2D):
+	agent.add_child(raycast)

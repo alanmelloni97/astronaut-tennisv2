@@ -21,6 +21,7 @@ func _ready() -> void:
 	right_detector.body_entered.connect(_on_detector_entered.bind(right_detector))
 
 
+# FIXME: no se reinicia el estado cuando la pelota pasa de lado o cuando el otro jugador la toca
 func _on_detector_entered(_body: PhysicsBody2D, detector: Area2D):
 	match detector:
 		left_detector:

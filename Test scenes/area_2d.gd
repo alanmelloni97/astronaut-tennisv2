@@ -1,7 +1,7 @@
 extends Area2D
 
-@onready var ball: Ball = $".."
+@export var ball: Ball
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	global_position = ball.global_position
