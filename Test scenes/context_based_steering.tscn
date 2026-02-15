@@ -45,7 +45,7 @@ shape = SubResource("WorldBoundaryShape2D_eh3iu")
 position = Vector2(955, 483)
 
 [node name="Marker2D" type="Marker2D" parent="Ball" unique_id=751669428]
-position = Vector2(51, 44)
+position = Vector2(93, 76)
 
 [node name="Area2D" type="Area2D" parent="Ball" unique_id=710648511]
 top_level = true
@@ -54,12 +54,14 @@ collision_mask = 0
 script = ExtResource("2_haprg")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ball/Area2D" unique_id=218384435]
-polygon = PackedVector2Array(-162, 40, -108, -110, 69, -104, 199, 41, 413, 46, 445, -418, -386, -431, -373, 29)
+polygon = PackedVector2Array(-219, -27, -155, -1, -112, -36, -86, -77, -24, -87, 52, -87, 85, -83, 138, -35, 165, -3, 217, 9, 275, 9, 294, -15, 304, -232, 241, -294, 148, -294, 17, -303, -57, -308, -129, -299, -164, -277, -226, -227, -232, -191, -232, -126, -232, -60, -232, -42, -219, -28, -223, -70, -209, -218, -122, -280, 225, -282, 287, -228, 280, -30, 244, -6, 165, -36, 94, -100, -41, -101, -96, -101, -169, -17)
 
-[node name="paleta" type="CharacterBody2D" parent="." unique_id=553181464 node_paths=PackedStringArray("contextbasedsteering", "target")]
+[node name="paleta" type="RigidBody2D" parent="." unique_id=1620105914 node_paths=PackedStringArray("contextbasedsteering", "target")]
 position = Vector2(1437, 498)
+gravity_scale = 0.0
+lock_rotation = true
 script = ExtResource("2_eh3iu")
-SPEED = 600.0
+SPEED = 1000.0
 contextbasedsteering = NodePath("../contextbasedsteering")
 target = NodePath("../Ball/Marker2D")
 
@@ -73,5 +75,5 @@ zoom = Vector2(0.86, 0.86)
 [node name="contextbasedsteering" type="Node" parent="." unique_id=656450535 node_paths=PackedStringArray("agent")]
 script = ExtResource("2_cbeqk")
 agent = NodePath("../paleta")
-RAYCAST_LENGHT = 150
+RAYCAST_LENGHT = 100
 num_rays = 8

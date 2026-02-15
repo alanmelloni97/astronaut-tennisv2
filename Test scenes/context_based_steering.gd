@@ -41,6 +41,7 @@ func _physics_process(_delta):
 func set_interest():
 	if target_position.y > agent.global_position.y:
 		target_position.y += 500
+	target_position.x += $"../Ball".linear_velocity.x
 	for i in num_rays:
 		# rotation is the agent rotation
 		var target_direction: Vector2 = agent.global_position.direction_to(target_position)
