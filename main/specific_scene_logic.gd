@@ -18,6 +18,8 @@ func manage_before_changing_scene(current_scene: Node):
 		if two_players_mode:
 			player_2_skin = current_scene.get_selected_skin_2()
 			# rival for tournament is taken from Characters global so no need to save it here
+		if current_scene.tournament_is_won:
+			_restart_tournament()
 	if current_scene is Level:
 		if not two_players_mode: # Tournament
 			if current_scene.winner == 1: # Player 1 won
@@ -42,6 +44,11 @@ func manage_after_changing_scene(new_scene: Node):
 			new_scene.player_2_skin = player_2_skin
 		else:
 			new_scene.rival = Characters.get_current_rival()
+
+
+func _restart_tournament():
+	for character in Characters.characters:
+		character.beated = false
 
 
 func _look_for_skin_in_globals(_name: String) -> CharacterSkin:

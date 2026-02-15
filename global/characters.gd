@@ -19,4 +19,4 @@ func get_current_rival() -> Character:
 	for c in characters:
 		if not c.beated:
 			return c
-	return null # means tournament has been won
+	return characters[-1] # means tournament has been won

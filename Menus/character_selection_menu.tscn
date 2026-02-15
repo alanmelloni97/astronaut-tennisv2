@@ -13,11 +13,12 @@ player_2_select = NodePath("MarginContainer/HBoxContainer2/Player2Select")
 _tournament_table = NodePath("MarginContainer/HBoxContainer2/TournamentTable")
 _start_button = NodePath("MarginContainer/HBoxContainer/StartButton")
 
-[node name="CharacterLockedHandler" type="Node" parent="." unique_id=1764109809 node_paths=PackedStringArray("_player_1_select", "_player_2_select", "_start_button")]
+[node name="ButtonsHandler" type="Node" parent="." unique_id=1764109809 node_paths=PackedStringArray("_player_1_select", "_player_2_select", "_start_button", "_restart_tournament_button")]
 script = ExtResource("2_vwdgm")
 _player_1_select = NodePath("../MarginContainer/HBoxContainer2/Player1Select")
 _player_2_select = NodePath("../MarginContainer/HBoxContainer2/Player2Select")
 _start_button = NodePath("../MarginContainer/HBoxContainer/StartButton")
+_restart_tournament_button = NodePath("../MarginContainer/HBoxContainer/RestartTournamentButton")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1604146361]
 anchors_preset = 15
@@ -69,5 +70,11 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "START"
 
+[node name="RestartTournamentButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=465025600]
+visible = false
+layout_mode = 2
+text = "RESTART TOURNAMENT"
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/RestartTournamentButton" to="." method="_on_new_tournament_button_pressed"]

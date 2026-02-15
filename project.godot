@@ -34,7 +34,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/TODO_Manager-cbacea3f2014275205dd05482f5b80c36d001dce/addons/Todo_Manager/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/TODO_Manager-cbacea3f2014275205dd05482f5b80c36d001dce/addons/Todo_Manager/plugin.cfg")
 
 [gui]
 

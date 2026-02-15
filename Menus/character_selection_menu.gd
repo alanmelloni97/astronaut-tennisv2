@@ -6,7 +6,6 @@ signal scene_requested(scene: PackedScene)
 @export var player_1_select: PlayerSelect
 @export var player_2_select: PlayerSelect
 @export var _tournament_table: TournamentTable
-@export var _start_button: Button
 
 var two_players: bool
 var tournament_is_won: bool = false
@@ -19,8 +18,6 @@ func _ready() -> void:
 	player_2_select.update_skin()
 
 	set_mode()
-	if tournament_is_won:
-		_start_button.text = "NEW TOURNAMENT"
 
 
 func set_mode():
@@ -43,4 +40,9 @@ func _on_back_button_pressed() -> void:
 
 
 func _on_start_button_pressed() -> void:
+	scene_requested.emit(Scenes.level)
+
+
+func _on_new_tournament_button_pressed() -> void:
+	tournament_is_won = true
 	scene_requested.emit(Scenes.level)

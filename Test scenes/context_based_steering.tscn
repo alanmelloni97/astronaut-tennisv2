@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b2lqpiqo3oks8"]
+
+[ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://Ball/ball.tscn" id="1_reuv7"]
+[ext_resource type="Script" uid="uid://bxcjnblj33t8d" path="res://Test scenes/context_based_steering.gd" id="2_cbeqk"]
+[ext_resource type="Script" uid="uid://cc8g7f8rgaytb" path="res://Test scenes/paleta.gd" id="2_eh3iu"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eh3iu"]
+normal = Vector2(-0.019603876, 0.99980783)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_haprg"]
+radius = 81.78631
+
+[node name="ContextBasedSteering" type="Node2D" unique_id=1057234962]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2033143571]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=200126111]
+position = Vector2(961, 1075)
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_eh3iu")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1761078459]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=950385780]
+position = Vector2(963, 18)
+rotation = 6.2831855
+shape = SubResource("WorldBoundaryShape2D_eh3iu")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=263060507]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1235300595]
+position = Vector2(7, 494)
+rotation = 4.712389
+shape = SubResource("WorldBoundaryShape2D_eh3iu")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=661724039]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=357689003]
+position = Vector2(1896, 508)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_eh3iu")
+
+[node name="Ball" parent="." unique_id=365515873 instance=ExtResource("1_reuv7")]
+position = Vector2(955, 483)
+
+[node name="paleta" type="CharacterBody2D" parent="." unique_id=553181464 node_paths=PackedStringArray("contextbasedsteering", "target")]
+position = Vector2(1437, 498)
+script = ExtResource("2_eh3iu")
+contextbasedsteering = NodePath("contextbasedsteering")
+target = NodePath("../Ball")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paleta" unique_id=1230518301]
+shape = SubResource("CircleShape2D_haprg")
+
+[node name="contextbasedsteering" type="Node" parent="paleta" unique_id=656450535 node_paths=PackedStringArray("agent")]
+script = ExtResource("2_cbeqk")
+agent = NodePath("..")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1765415048]
+position = Vector2(979, 556)
+zoom = Vector2(0.86, 0.86)
