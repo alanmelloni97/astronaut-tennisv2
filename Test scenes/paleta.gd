@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
-
+@export var SPEED = 300.0
 @export var contextbasedsteering: ContextBasedSteering
 @export var target: Node2D
 

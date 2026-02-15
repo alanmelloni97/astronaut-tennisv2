@@ -2,13 +2,15 @@ class_name ContextBasedSteering
 extends Node
 
 @export var agent: Node2D
+@export var RAYCAST_LENGHT: int
+@export var num_rays: int = 32
 
 var ray_directions: Array[Vector2]
 var interest: Array[float]
 var danger: Array[float]
-var num_rays: int = 8
 var target_position: Vector2
 var chosen_dir: Vector2 = Vector2.ZERO
+var danger_raycasts: Array[RayCast2D]
 
 
 func _ready() -> void:
@@ -19,15 +21,26 @@ func _ready() -> void:
 		var angle = i * 2 * PI / num_rays
 		ray_directions[i] = Vector2.RIGHT.rotated(angle)
 
+		# set raycast
+		var raycast = RayCast2D.new()
+		raycast.set_collision_mask_value(1, false) # 1 is by default set
+		raycast.set_collision_mask_value(7, true) # ContextSteering mask
+
+		raycast.collide_with_areas = true
+		raycast.target_position = Vector2.RIGHT.rotated(angle) * RAYCAST_LENGHT
+		agent.add_child(raycast)
+		danger_raycasts.append(raycast)
+
 
 func _physics_process(_delta):
 	set_interest()
 	set_danger()
 	choose_direction()
-	print(ray_directions, interest, chosen_dir)
 
 
 func set_interest():
+	if target_position.y > agent.global_position.y:
+		target_position.y += 500
 	for i in num_rays:
 		# rotation is the agent rotation
 		var target_direction: Vector2 = agent.global_position.direction_to(target_position)
@@ -36,7 +49,8 @@ func set_interest():
 
 
 func set_danger():
-	pass
+	for i in num_rays:
+		danger[i] = 1.0 if danger_raycasts[i].is_colliding() else 0.0
 
 
 func choose_direction():

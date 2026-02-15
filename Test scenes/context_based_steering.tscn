@@ -3,12 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://Ball/ball.tscn" id="1_reuv7"]
 [ext_resource type="Script" uid="uid://bxcjnblj33t8d" path="res://Test scenes/context_based_steering.gd" id="2_cbeqk"]
 [ext_resource type="Script" uid="uid://cc8g7f8rgaytb" path="res://Test scenes/paleta.gd" id="2_eh3iu"]
+[ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://Test scenes/area_2d.gd" id="2_haprg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eh3iu"]
 normal = Vector2(-0.019603876, 0.99980783)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_haprg"]
-radius = 81.78631
+radius = 43.737854
 
 [node name="ContextBasedSteering" type="Node2D" unique_id=1057234962]
 
@@ -43,19 +44,34 @@ shape = SubResource("WorldBoundaryShape2D_eh3iu")
 [node name="Ball" parent="." unique_id=365515873 instance=ExtResource("1_reuv7")]
 position = Vector2(955, 483)
 
+[node name="Marker2D" type="Marker2D" parent="Ball" unique_id=751669428]
+position = Vector2(51, 44)
+
+[node name="Area2D" type="Area2D" parent="Ball" unique_id=710648511]
+top_level = true
+collision_layer = 64
+collision_mask = 0
+script = ExtResource("2_haprg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ball/Area2D" unique_id=218384435]
+polygon = PackedVector2Array(-162, 40, -108, -110, 69, -104, 199, 41, 413, 46, 445, -418, -386, -431, -373, 29)
+
 [node name="paleta" type="CharacterBody2D" parent="." unique_id=553181464 node_paths=PackedStringArray("contextbasedsteering", "target")]
 position = Vector2(1437, 498)
 script = ExtResource("2_eh3iu")
-contextbasedsteering = NodePath("contextbasedsteering")
-target = NodePath("../Ball")
+SPEED = 600.0
+contextbasedsteering = NodePath("../contextbasedsteering")
+target = NodePath("../Ball/Marker2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paleta" unique_id=1230518301]
 shape = SubResource("CircleShape2D_haprg")
 
-[node name="contextbasedsteering" type="Node" parent="paleta" unique_id=656450535 node_paths=PackedStringArray("agent")]
-script = ExtResource("2_cbeqk")
-agent = NodePath("..")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1765415048]
 position = Vector2(979, 556)
 zoom = Vector2(0.86, 0.86)
+
+[node name="contextbasedsteering" type="Node" parent="." unique_id=656450535 node_paths=PackedStringArray("agent")]
+script = ExtResource("2_cbeqk")
+agent = NodePath("../paleta")
+RAYCAST_LENGHT = 150
+num_rays = 8
