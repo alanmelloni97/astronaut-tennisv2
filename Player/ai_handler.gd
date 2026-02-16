@@ -1,7 +1,6 @@
 class_name RacketAIManager
 extends Node
 
-@export var SPEED = 500.0
 @export var context_based_steering: ContextBasedSteering
 @export var racket: Racket
 
@@ -16,6 +15,6 @@ func _physics_process(_delta: float) -> void:
 		target = ball.ai_marker_2d
 		context_based_steering.target_position = target.global_position
 		chosen_dir = context_based_steering.chosen_dir
-		input_axis = chosen_dir.rotated(racket.rotation) * SPEED
+		input_axis = chosen_dir.rotated(racket.rotation)
 	else:
 		input_axis = Vector2.ZERO

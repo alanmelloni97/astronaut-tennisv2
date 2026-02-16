@@ -1,13 +1,13 @@
 class_name ScoreHandler
 extends Node
 
-@export var point_detectors: PointDetector
+@export var bounce_detector: BounceDetector
 @export var _score_manager: ScoreManager
 @export var _score_ui: ScoreUI #HACK should have its handler
 
 
 func _ready() -> void:
-	point_detectors.ball_double_bounced.connect(_on_double_bounced)
+	bounce_detector.ball_double_bounced.connect(_on_double_bounced)
 
 
 func _on_double_bounced(side: int):

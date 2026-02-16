@@ -2,12 +2,12 @@ class_name BallHandler
 extends Node
 
 @export var _score_manager: ScoreManager
-@export var _point_detectors: PointDetector
+@export var bounce_detector: BounceDetector
 @export var ball_manager: BallManager
 
 
 func _ready() -> void:
-	_point_detectors.ball_double_bounced.connect(_on_ball_double_bounced)
+	bounce_detector.ball_double_bounced.connect(_on_ball_double_bounced)
 	_score_manager.game_finished.connect(_on_game_finished)
 
 

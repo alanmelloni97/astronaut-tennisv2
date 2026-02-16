@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://0g8h07ct0gia"]
+
+[ext_resource type="Script" uid="uid://dxsedyp6pjs4w" path="res://Ball/PowerUp/ball_powerup.gd" id="1_fqi1l"]
+[ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="2_d2kg3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yk81r"]
+
+[node name="BallPowerUp" type="Area2D" unique_id=538669833 node_paths=PackedStringArray("sprite_2d")]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_fqi1l")
+sprite_2d = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1907335016]
+shape = SubResource("CircleShape2D_yk81r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=291481709]
+texture = ExtResource("2_d2kg3")

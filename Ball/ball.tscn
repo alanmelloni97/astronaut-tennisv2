@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dmqyassdndgtm"]
 
-[ext_resource type="PhysicsMaterial" uid="uid://bo2vlrktsj8yt" path="res://Ball/ball_default_physics_material.tres" id="1_l4sn5"]
+[ext_resource type="PhysicsMaterial" uid="uid://bo2vlrktsj8yt" path="res://Ball/physics materials/default.tres" id="1_l4sn5"]
 [ext_resource type="Script" uid="uid://cfiuoebp1eicf" path="res://Ball/ball.gd" id="2_65gad"]
 [ext_resource type="Texture2D" uid="uid://b32840gkdn7lk" path="res://Ball/art/Ball.png" id="3_ngrkv"]
 [ext_resource type="Script" uid="uid://cf2trema4h72c" path="res://Ball/effects_manager.gd" id="4_4s4qd"]
@@ -9,14 +9,17 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
 radius = 35.014282
 
-[node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d") groups=["Ball"]]
+[node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "collision_shape", "sprite") groups=["Ball"]]
 collision_layer = 2
 collision_mask = 11
-mass = 10.0
+mass = 3.0
 physics_material_override = ExtResource("1_l4sn5")
 gravity_scale = 0.8
 script = ExtResource("2_65gad")
 ai_marker_2d = NodePath("AIMarker2D")
+effects_manager = NodePath("EffectsManager")
+collision_shape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1368493303]
 position = Vector2(0, -1)
@@ -25,9 +28,9 @@ shape = SubResource("CircleShape2D_g3thm")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=480967574]
 texture = ExtResource("3_ngrkv")
 
-[node name="EffectsManager" type="Node" parent="." unique_id=697484937 node_paths=PackedStringArray("_ball")]
+[node name="EffectsManager" type="Node" parent="." unique_id=697484937 node_paths=PackedStringArray("_affected_node")]
 script = ExtResource("4_4s4qd")
-_ball = NodePath("..")
+_affected_node = NodePath("..")
 
 [node name="AIMarker2D" type="Marker2D" parent="." unique_id=1789299442]
 position = Vector2(34, 38)

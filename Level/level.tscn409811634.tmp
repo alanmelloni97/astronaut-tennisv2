@@ -15,65 +15,7 @@
 [ext_resource type="Script" uid="uid://c3jkt2u4aautb" path="res://Level/ui_handler.gd" id="7_i5g78"]
 [ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="8_py82k"]
 [ext_resource type="Texture2D" uid="uid://cpi6fmcqutm33" path="res://Assets/background_game.png" id="9_q47le"]
-[ext_resource type="Script" uid="uid://b615mceneh7q" path="res://Ball/PowerUp/powerup_data.gd" id="12_am3y4"]
-[ext_resource type="PackedScene" uid="uid://0g8h07ct0gia" path="res://Ball/PowerUp/ball_powerup.tscn" id="12_k8npl"]
 [ext_resource type="Script" uid="uid://ckaoggq4yh8ma" path="res://UI/score_ui.gd" id="13_dx36h"]
-[ext_resource type="Script" uid="uid://byub6igigr88i" path="res://Ball/Effects/ScaleEffect.gd" id="13_jghi6"]
-[ext_resource type="Texture2D" uid="uid://lsmv8f5agbq1" path="res://Assets/UI pack/Pause/Ok_BTN.png" id="14_3opgi"]
-[ext_resource type="Texture2D" uid="uid://d0chbtvn2ytr8" path="res://Assets/UI pack/Hangar/Dot_02.png" id="15_ys2en"]
-[ext_resource type="PhysicsMaterial" uid="uid://n201dib0xrmv" path="res://Ball/physics materials/bouncy.tres" id="16_cqvaw"]
-[ext_resource type="Script" uid="uid://dy6cpapp40twb" path="res://Ball/Effects/BounceEffect.gd" id="17_232uv"]
-[ext_resource type="Script" uid="uid://d2yxgudywfyhc" path="res://Level/power_up_spawner.gd" id="17_luomk"]
-[ext_resource type="Texture2D" uid="uid://b32840gkdn7lk" path="res://Ball/art/Ball.png" id="18_6uec0"]
-[ext_resource type="PhysicsMaterial" uid="uid://c1o0wcja6b3ln" path="res://Ball/physics materials/no_bouncy.tres" id="19_r0jbq"]
-[ext_resource type="Texture2D" uid="uid://bbbyeihtofb2r" path="res://Ragdoll/skin/skins/default/URleg.png" id="20_816bt"]
-
-[sub_resource type="Resource" id="Resource_du4cn"]
-script = ExtResource("13_jghi6")
-scale = 2.0
-metadata/_custom_type_script = "uid://byub6igigr88i"
-
-[sub_resource type="Resource" id="Resource_l5n2q"]
-script = ExtResource("12_am3y4")
-effect = SubResource("Resource_du4cn")
-texture = ExtResource("14_3opgi")
-metadata/_custom_type_script = "uid://b615mceneh7q"
-
-[sub_resource type="Resource" id="Resource_wfwu7"]
-script = ExtResource("13_jghi6")
-scale = 0.5
-metadata/_custom_type_script = "uid://byub6igigr88i"
-
-[sub_resource type="Resource" id="Resource_cqvaw"]
-script = ExtResource("12_am3y4")
-effect = SubResource("Resource_wfwu7")
-texture = ExtResource("15_ys2en")
-metadata/_custom_type_script = "uid://b615mceneh7q"
-
-[sub_resource type="Resource" id="Resource_mddns"]
-script = ExtResource("17_232uv")
-phyisics_material = ExtResource("16_cqvaw")
-metadata/_custom_type_script = "uid://dy6cpapp40twb"
-
-[sub_resource type="Resource" id="Resource_x31ef"]
-script = ExtResource("12_am3y4")
-effect = SubResource("Resource_mddns")
-texture = ExtResource("18_6uec0")
-metadata/_custom_type_script = "uid://b615mceneh7q"
-
-[sub_resource type="Resource" id="Resource_i4n7n"]
-script = ExtResource("17_232uv")
-phyisics_material = ExtResource("19_r0jbq")
-metadata/_custom_type_script = "uid://dy6cpapp40twb"
-
-[sub_resource type="Resource" id="Resource_pt1jg"]
-script = ExtResource("12_am3y4")
-effect = SubResource("Resource_i4n7n")
-texture = ExtResource("20_816bt")
-metadata/_custom_type_script = "uid://b615mceneh7q"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_luomk"]
-size = Vector2(1683, 620)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py82k"]
 size = Vector2(993, 28)
@@ -104,9 +46,9 @@ _main_UI = NodePath("../MainUI")
 _ball_ai_detector = NodePath("../Player2/BallAIDetector")
 _level = NodePath("..")
 
-[node name="ScoreHandler" type="Node" parent="." unique_id=2106818377 node_paths=PackedStringArray("bounce_detector", "_score_manager", "_score_ui")]
+[node name="ScoreHandler" type="Node" parent="." unique_id=2106818377 node_paths=PackedStringArray("point_detectors", "_score_manager", "_score_ui")]
 script = ExtResource("3_uqeto")
-bounce_detector = NodePath("../BounceDetector")
+point_detectors = NodePath("../World/BounceDetectors")
 _score_manager = NodePath("ScoreManager")
 _score_ui = NodePath("../World/Scores")
 
@@ -114,10 +56,10 @@ _score_ui = NodePath("../World/Scores")
 script = ExtResource("3_52x1o")
 WIN_SCORE = 7
 
-[node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "bounce_detector", "ball_manager")]
+[node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "_point_detectors", "ball_manager")]
 script = ExtResource("2_1teg4")
 _score_manager = NodePath("../ScoreHandler/ScoreManager")
-bounce_detector = NodePath("../BounceDetector")
+_point_detectors = NodePath("../World/BounceDetectors")
 ball_manager = NodePath("BallManager")
 
 [node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("_ball_spawn_point", "_level")]
@@ -126,10 +68,10 @@ ball_sc = ExtResource("3_py82k")
 _ball_spawn_point = NodePath("../../BallSpawnPoint")
 _level = NodePath("../..")
 
-[node name="LightsHandler" type="Node" parent="." unique_id=2121215875 node_paths=PackedStringArray("_lights_manager", "bounce_detector")]
+[node name="LightsHandler" type="Node" parent="." unique_id=2121215875 node_paths=PackedStringArray("_lights_manager", "point_detectors")]
 script = ExtResource("7_1p6h5")
 _lights_manager = NodePath("LightsManager")
-bounce_detector = NodePath("../BounceDetector")
+point_detectors = NodePath("../World/BounceDetectors")
 metadata/_custom_type_script = "uid://g42dx5ur7jin"
 
 [node name="LightsManager" type="Node" parent="LightsHandler" unique_id=279595935 node_paths=PackedStringArray("light_1", "light_2")]
@@ -143,21 +85,6 @@ left_detector = NodePath("../World/BounceDetectors/LeftDetector")
 right_detector = NodePath("../World/BounceDetectors/RightDetector")
 player_1 = NodePath("../Player1")
 player_2 = NodePath("../Player2")
-
-[node name="PowerUpSpawner" type="Node" parent="." unique_id=2083690736 node_paths=PackedStringArray("collision_shape_2d", "timer")]
-script = ExtResource("17_luomk")
-powerups = Array[ExtResource("12_am3y4")]([SubResource("Resource_l5n2q"), SubResource("Resource_cqvaw"), SubResource("Resource_x31ef"), SubResource("Resource_pt1jg")])
-power_up_sc = ExtResource("12_k8npl")
-collision_shape_2d = NodePath("CollisionShape2D")
-MIN_TIME_BETWEEN_SPAWNS = 20
-MAX_TIME_BETWEEN_SPAWNS = 40
-timer = NodePath("Timer")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
-position = Vector2(957.5, 416)
-shape = SubResource("RectangleShape2D_luomk")
-
-[node name="Timer" type="Timer" parent="PowerUpSpawner" unique_id=136537762]
 
 [node name="MainUI" parent="." unique_id=1468483608 instance=ExtResource("5_d6qko")]
 
