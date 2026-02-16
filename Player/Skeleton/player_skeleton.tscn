@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://3dcptjffedp0"]
+[gd_scene format=3 uid="uid://3dcptjffedp0"]
 
 [ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="1_ftls6"]
 
@@ -46,80 +46,80 @@ modification_count = 2
 modifications/0 = SubResource("SkeletonModification2DCCDIK_4taqj")
 modifications/1 = SubResource("SkeletonModification2DCCDIK_ftls6")
 
-[node name="PlayerSkeleton" type="Skeleton2D"]
+[node name="PlayerSkeleton" type="Skeleton2D" unique_id=390702850]
 modification_stack = SubResource("SkeletonModificationStack2D_h1v3l")
 
-[node name="MainBone" type="Bone2D" parent="."]
+[node name="MainBone" type="Bone2D" parent="." unique_id=1088396521]
 rest = Transform2D(1, 0, 0, 1, 0, 0)
 
-[node name="Bone2D" type="Bone2D" parent="MainBone"]
+[node name="Bone2D" type="Bone2D" parent="MainBone" unique_id=527556792]
 position = Vector2(1, -199)
 rest = Transform2D(1, 0, 0, 1, 1, -199)
 
-[node name="Sprite2D" type="Sprite2D" parent="MainBone/Bone2D"]
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/Bone2D" unique_id=651152209]
 position = Vector2(0, 98)
 scale = Vector2(0.203125, 1.60938)
 texture = ExtResource("1_ftls6")
 
-[node name="HipR" type="Bone2D" parent="MainBone"]
+[node name="HipR" type="Bone2D" parent="MainBone" unique_id=788557565]
 position = Vector2(45, 0)
 rotation = -0.00749581
 scale = Vector2(0.999855, 0.999855)
 rest = Transform2D(0.999827, -0.00749465, 0.00749465, 0.999827, 45, 0)
 metadata/_local_pose_override_enabled_ = true
 
-[node name="KneeR" type="Bone2D" parent="MainBone/HipR"]
+[node name="KneeR" type="Bone2D" parent="MainBone/HipR" unique_id=437783786]
 position = Vector2(0.00139999, 178.081)
 scale = Vector2(1.00014, 1.00014)
 rest = Transform2D(1.00014, 0, 0, 1.00014, 0.00139999, 178.081)
 metadata/_local_pose_override_enabled_ = true
 
-[node name="AnkleR" type="Bone2D" parent="MainBone/HipR/KneeR"]
+[node name="AnkleR" type="Bone2D" parent="MainBone/HipR/KneeR" unique_id=396017429]
 position = Vector2(0, 170)
 rest = Transform2D(1, 0, 0, 1, 0, 170)
 
-[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipR/KneeR/AnkleR"]
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipR/KneeR/AnkleR" unique_id=1449754978]
 position = Vector2(-0.399336, -79.1543)
 scale = Vector2(0.287335, 1.31107)
 texture = ExtResource("1_ftls6")
 
-[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipR/KneeR"]
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipR/KneeR" unique_id=935018716]
 position = Vector2(3.02895, -91.1708)
 scale = Vector2(0.360819, 1.47159)
 texture = ExtResource("1_ftls6")
 
-[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipR"]
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipR" unique_id=97435092]
 
-[node name="HipL" type="Bone2D" parent="MainBone"]
+[node name="HipL" type="Bone2D" parent="MainBone" unique_id=749682153]
 position = Vector2(-58, 0)
 rest = Transform2D(1, 0, 0, 1, -58, 0)
 metadata/_local_pose_override_enabled_ = true
 
-[node name="KneeL" type="Bone2D" parent="MainBone/HipL"]
+[node name="KneeL" type="Bone2D" parent="MainBone/HipL" unique_id=848856122]
 position = Vector2(0, 178)
 rest = Transform2D(1, 0, 0, 1, 0, 178)
 metadata/_local_pose_override_enabled_ = true
 
-[node name="AnkleL" type="Bone2D" parent="MainBone/HipL/KneeL"]
+[node name="AnkleL" type="Bone2D" parent="MainBone/HipL/KneeL" unique_id=1659444104]
 position = Vector2(0, 170)
 rest = Transform2D(1, 0, 0, 1, 0, 170)
 
-[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipL/KneeL/AnkleL"]
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipL/KneeL/AnkleL" unique_id=2013534261]
 position = Vector2(0.795552, -86.5873)
 scale = Vector2(0.276046, 1.32059)
 texture = ExtResource("1_ftls6")
 
-[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipL/KneeL"]
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipL/KneeL" unique_id=38505586]
 position = Vector2(0.767691, -102.75)
 scale = Vector2(0.346955, 1.13563)
 texture = ExtResource("1_ftls6")
 
-[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipL"]
+[node name="Sprite2D" type="Sprite2D" parent="MainBone/HipL" unique_id=1533811258]
 
-[node name="Sprite2D" type="Sprite2D" parent="MainBone"]
+[node name="Sprite2D" type="Sprite2D" parent="MainBone" unique_id=345228071]
 
-[node name="LegRTarget" type="Marker2D" parent="."]
+[node name="LegRTarget" type="Marker2D" parent="." unique_id=572791030]
 position = Vector2(48, 400)
 
-[node name="LegLTarget" type="Marker2D" parent="."]
+[node name="LegLTarget" type="Marker2D" parent="." unique_id=1933057095]
 position = Vector2(-55, 456)

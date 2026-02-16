@@ -6,12 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://btfjlt26hxghv" path="res://Assets/8be9bf86876587.5da6fa714ce06.png" id="3_ho01r"]
 [ext_resource type="PackedScene" uid="uid://cjrpkchh7pjh7" path="res://Menus/tournament_table.tscn" id="3_iapl6"]
 
-[node name="CharacterSelectionMenu" type="CanvasLayer" unique_id=1838065517 node_paths=PackedStringArray("player_1_select", "player_2_select", "_tournament_table", "_start_button")]
+[node name="CharacterSelectionMenu" type="CanvasLayer" unique_id=1838065517 node_paths=PackedStringArray("player_1_select", "player_2_select", "_tournament_table")]
 script = ExtResource("1_b4e5t")
 player_1_select = NodePath("MarginContainer/HBoxContainer2/Player1Select")
 player_2_select = NodePath("MarginContainer/HBoxContainer2/Player2Select")
 _tournament_table = NodePath("MarginContainer/HBoxContainer2/TournamentTable")
-_start_button = NodePath("MarginContainer/HBoxContainer/StartButton")
 
 [node name="ButtonsHandler" type="Node" parent="." unique_id=1764109809 node_paths=PackedStringArray("_player_1_select", "_player_2_select", "_start_button", "_restart_tournament_button")]
 script = ExtResource("2_vwdgm")

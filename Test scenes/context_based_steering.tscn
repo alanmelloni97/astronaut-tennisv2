@@ -72,9 +72,8 @@ shape = SubResource("CircleShape2D_haprg")
 position = Vector2(979, 556)
 zoom = Vector2(0.86, 0.86)
 
-[node name="contextbasedsteering" type="Node" parent="." unique_id=656450535 node_paths=PackedStringArray("agent", "ball")]
+[node name="contextbasedsteering" type="Node" parent="." unique_id=656450535 node_paths=PackedStringArray("agent")]
 script = ExtResource("2_cbeqk")
 agent = NodePath("../paleta")
 RAYCAST_LENGHT = 100
 num_rays = 8
-ball = NodePath("../Ball")

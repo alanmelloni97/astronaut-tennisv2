@@ -4,9 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cfupml0vgjpdg" path="res://Menus/pause_menu.tscn" id="3_u7gx0"]
 [ext_resource type="PackedScene" uid="uid://cicd5yg57nyuh" path="res://Menus/game_over_menu.tscn" id="4_afxui"]
 
-[node name="MainUI" type="CanvasLayer" unique_id=97663169 node_paths=PackedStringArray("score_UI", "_pause_menu", "_game_over_menu")]
+[node name="MainUI" type="CanvasLayer" unique_id=97663169 node_paths=PackedStringArray("_pause_menu", "_game_over_menu")]
 script = ExtResource("1_qr26y")
-score_UI = NodePath("")
 _pause_menu = NodePath("PauseMenu")
 _game_over_menu = NodePath("GameOverMenu")
 

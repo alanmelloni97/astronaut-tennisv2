@@ -256,5 +256,3 @@ gravity = 100.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1080088760]
 position = Vector2(481.5, 518)
 shape = SubResource("RectangleShape2D_3va0a")
-
-[node name="BallPowerUp" parent="." unique_id=538669833 instance=ExtResource("21_lmsl0")]
