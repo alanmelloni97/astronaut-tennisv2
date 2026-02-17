@@ -17,3 +17,5 @@ func apply_effect(ball: Ball):
 func remove_effect(ball: Ball):
 	ball.collision_shape.shape.radius = _initial_radius
 	ball.sprite.scale = _initial_scale
+	print(_initial_radius, _initial_scale)
+# FIXME la collision shape de la pelota quede en grande para las nuevas pelotas

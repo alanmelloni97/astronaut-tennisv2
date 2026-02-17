@@ -2,7 +2,7 @@
 class_name Effect
 extends Resource
 
-var time: float = 30
+var time: float = 200
 
 
 @abstract func apply_effect(ball: Ball)

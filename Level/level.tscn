@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://b32840gkdn7lk" path="res://Ball/art/Ball.png" id="18_6uec0"]
 [ext_resource type="PhysicsMaterial" uid="uid://c1o0wcja6b3ln" path="res://Ball/physics materials/no_bouncy.tres" id="19_r0jbq"]
 [ext_resource type="Texture2D" uid="uid://bbbyeihtofb2r" path="res://Ragdoll/skin/skins/default/URleg.png" id="20_816bt"]
+[ext_resource type="Script" uid="uid://d1bu3vy2qkidn" path="res://Level/continious_collision_detector.gd" id="25_232uv"]
 
 [sub_resource type="Resource" id="Resource_du4cn"]
 script = ExtResource("13_jghi6")
@@ -76,7 +77,7 @@ metadata/_custom_type_script = "uid://b615mceneh7q"
 size = Vector2(1683, 620)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py82k"]
-size = Vector2(993, 28)
+size = Vector2(993, 441)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1teg4"]
 size = Vector2(1002, 29)
@@ -120,11 +121,10 @@ _score_manager = NodePath("../ScoreHandler/ScoreManager")
 bounce_detector = NodePath("../BounceDetector")
 ball_manager = NodePath("BallManager")
 
-[node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("_ball_spawn_point", "_level")]
+[node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("_ball_spawn_point")]
 script = ExtResource("2_py82k")
 ball_sc = ExtResource("3_py82k")
 _ball_spawn_point = NodePath("../../BallSpawnPoint")
-_level = NodePath("../..")
 
 [node name="LightsHandler" type="Node" parent="." unique_id=2121215875 node_paths=PackedStringArray("_lights_manager", "bounce_detector")]
 script = ExtResource("7_1p6h5")
@@ -137,20 +137,20 @@ script = ExtResource("2_wqlfs")
 light_1 = NodePath("../../World/Lights/PointLight1")
 light_2 = NodePath("../../World/Lights/PointLight2")
 
-[node name="BounceDetector" type="Node" parent="." unique_id=130199060 node_paths=PackedStringArray("left_detector", "right_detector", "player_1", "player_2")]
+[node name="BounceDetector" type="Node" parent="." unique_id=130199060 node_paths=PackedStringArray("player_1", "player_2", "left_detector", "right_detector")]
 script = ExtResource("6_nk1il")
-left_detector = NodePath("../World/BounceDetectors/LeftDetector")
-right_detector = NodePath("../World/BounceDetectors/RightDetector")
 player_1 = NodePath("../Player1")
 player_2 = NodePath("../Player2")
+left_detector = NodePath("../World/BounceDetectors/LeftDetector")
+right_detector = NodePath("../World/BounceDetectors/RightDetector")
 
 [node name="PowerUpSpawner" type="Node" parent="." unique_id=2083690736 node_paths=PackedStringArray("collision_shape_2d", "timer")]
 script = ExtResource("17_luomk")
 powerups = Array[ExtResource("12_am3y4")]([SubResource("Resource_l5n2q"), SubResource("Resource_cqvaw"), SubResource("Resource_x31ef"), SubResource("Resource_pt1jg")])
 power_up_sc = ExtResource("12_k8npl")
 collision_shape_2d = NodePath("CollisionShape2D")
-MIN_TIME_BETWEEN_SPAWNS = 20
-MAX_TIME_BETWEEN_SPAWNS = 40
+MIN_TIME_BETWEEN_SPAWNS = 15
+MAX_TIME_BETWEEN_SPAWNS = 60
 timer = NodePath("Timer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
@@ -172,7 +172,7 @@ texture = ExtResource("9_q47le")
 metadata/_edit_lock_ = true
 
 [node name="BallSpawnPoint" type="Marker2D" parent="." unique_id=1469462745]
-position = Vector2(960, 153)
+position = Vector2(715, 141)
 
 [node name="World" type="Node2D" parent="." unique_id=937198056]
 
@@ -183,9 +183,10 @@ position = Vector2(122, 1053)
 collision_layer = 0
 collision_mask = 2
 priority = 9
+script = ExtResource("25_232uv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/BounceDetectors/LeftDetector" unique_id=1500246501]
-position = Vector2(334.5, -9)
+position = Vector2(334.5, -215.5)
 shape = SubResource("RectangleShape2D_py82k")
 
 [node name="RightDetector" type="Area2D" parent="World/BounceDetectors" unique_id=1106991513]
@@ -193,6 +194,7 @@ position = Vector2(2429, 1026)
 collision_layer = 0
 collision_mask = 2
 priority = 9
+script = ExtResource("25_232uv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/BounceDetectors/RightDetector" unique_id=878119383]
 position = Vector2(-940, 18.5)

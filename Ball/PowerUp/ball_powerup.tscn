@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="2_d2kg3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yk81r"]
+radius = 68.0
 
 [node name="BallPowerUp" type="Area2D" unique_id=538669833 node_paths=PackedStringArray("sprite_2d")]
 collision_layer = 0

@@ -6,12 +6,8 @@
 [ext_resource type="Script" uid="uid://b615mceneh7q" path="res://Ball/PowerUp/powerup_data.gd" id="12_rtsle"]
 [ext_resource type="Script" uid="uid://byub6igigr88i" path="res://Ball/Effects/ScaleEffect.gd" id="13_rr5p8"]
 [ext_resource type="Texture2D" uid="uid://lsmv8f5agbq1" path="res://Assets/UI pack/Pause/Ok_BTN.png" id="14_j1qq6"]
-[ext_resource type="Texture2D" uid="uid://d0chbtvn2ytr8" path="res://Assets/UI pack/Hangar/Dot_02.png" id="15_aiphv"]
-[ext_resource type="PhysicsMaterial" uid="uid://n201dib0xrmv" path="res://Ball/physics materials/bouncy.tres" id="16_h8uyi"]
-[ext_resource type="Script" uid="uid://dy6cpapp40twb" path="res://Ball/Effects/BounceEffect.gd" id="17_slr7p"]
-[ext_resource type="Texture2D" uid="uid://b32840gkdn7lk" path="res://Ball/art/Ball.png" id="18_xu8es"]
-[ext_resource type="PhysicsMaterial" uid="uid://c1o0wcja6b3ln" path="res://Ball/physics materials/no_bouncy.tres" id="19_muuc5"]
-[ext_resource type="Texture2D" uid="uid://bbbyeihtofb2r" path="res://Ragdoll/skin/skins/default/URleg.png" id="20_ssm2d"]
+[ext_resource type="Texture2D" uid="uid://dinild5ccfovs" path="res://Ragdoll/skin/skins/default/head.png" id="19_bwpcm"]
+[ext_resource type="Texture2D" uid="uid://cuxvqrqns5et3" path="res://Ragdoll/skin/skins/default/LRleg.png" id="20_w8y07"]
 [ext_resource type="PackedScene" uid="uid://0g8h07ct0gia" path="res://Ball/PowerUp/ball_powerup.tscn" id="21_lmsl0"]
 [ext_resource type="PackedScene" uid="uid://x11muvl3x6vi" path="res://UI/main_ui.tscn" id="22_fns7e"]
 [ext_resource type="Script" uid="uid://c3jkt2u4aautb" path="res://Level/ui_handler.gd" id="23_t8q4n"]
@@ -28,39 +24,6 @@ metadata/_custom_type_script = "uid://byub6igigr88i"
 script = ExtResource("12_rtsle")
 effect = SubResource("Resource_du4cn")
 texture = ExtResource("14_j1qq6")
-metadata/_custom_type_script = "uid://b615mceneh7q"
-
-[sub_resource type="Resource" id="Resource_wfwu7"]
-script = ExtResource("13_rr5p8")
-scale = 0.5
-metadata/_custom_type_script = "uid://byub6igigr88i"
-
-[sub_resource type="Resource" id="Resource_cqvaw"]
-script = ExtResource("12_rtsle")
-effect = SubResource("Resource_wfwu7")
-texture = ExtResource("15_aiphv")
-metadata/_custom_type_script = "uid://b615mceneh7q"
-
-[sub_resource type="Resource" id="Resource_mddns"]
-script = ExtResource("17_slr7p")
-phyisics_material = ExtResource("16_h8uyi")
-metadata/_custom_type_script = "uid://dy6cpapp40twb"
-
-[sub_resource type="Resource" id="Resource_x31ef"]
-script = ExtResource("12_rtsle")
-effect = SubResource("Resource_mddns")
-texture = ExtResource("18_xu8es")
-metadata/_custom_type_script = "uid://b615mceneh7q"
-
-[sub_resource type="Resource" id="Resource_i4n7n"]
-script = ExtResource("17_slr7p")
-phyisics_material = ExtResource("19_muuc5")
-metadata/_custom_type_script = "uid://dy6cpapp40twb"
-
-[sub_resource type="Resource" id="Resource_pt1jg"]
-script = ExtResource("12_rtsle")
-effect = SubResource("Resource_i4n7n")
-texture = ExtResource("20_ssm2d")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_luomk"]
@@ -83,6 +46,28 @@ size = Vector2(12, 1590.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3va0a"]
 size = Vector2(983, 1056)
 
+[sub_resource type="Resource" id="Resource_w8y07"]
+script = ExtResource("13_rr5p8")
+scale = 0.35
+metadata/_custom_type_script = "uid://byub6igigr88i"
+
+[sub_resource type="Resource" id="Resource_ocwiu"]
+script = ExtResource("12_rtsle")
+effect = SubResource("Resource_w8y07")
+texture = ExtResource("19_bwpcm")
+metadata/_custom_type_script = "uid://b615mceneh7q"
+
+[sub_resource type="Resource" id="Resource_jx0pj"]
+script = ExtResource("13_rr5p8")
+scale = 2.0
+metadata/_custom_type_script = "uid://byub6igigr88i"
+
+[sub_resource type="Resource" id="Resource_j2i6u"]
+script = ExtResource("12_rtsle")
+effect = SubResource("Resource_jx0pj")
+texture = ExtResource("20_w8y07")
+metadata/_custom_type_script = "uid://b615mceneh7q"
+
 [node name="Level" type="Node2D" unique_id=1489784123]
 
 [node name="BallHandler" type="Node" parent="." unique_id=1804297647]
@@ -94,11 +79,11 @@ _ball_spawn_point = NodePath("../../BallSpawnPoint")
 
 [node name="PowerUpSpawner" type="Node" parent="." unique_id=2083690736 node_paths=PackedStringArray("collision_shape_2d", "timer")]
 script = ExtResource("11_o1u0y")
-powerups = Array[ExtResource("12_rtsle")]([SubResource("Resource_l5n2q"), SubResource("Resource_cqvaw"), SubResource("Resource_x31ef"), SubResource("Resource_pt1jg")])
+powerups = Array[ExtResource("12_rtsle")]([SubResource("Resource_l5n2q")])
 power_up_sc = ExtResource("21_lmsl0")
 collision_shape_2d = NodePath("CollisionShape2D")
-MIN_TIME_BETWEEN_SPAWNS = 1
-MAX_TIME_BETWEEN_SPAWNS = 1
+MIN_TIME_BETWEEN_SPAWNS = 5
+MAX_TIME_BETWEEN_SPAWNS = 5
 timer = NodePath("Timer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
@@ -256,3 +241,11 @@ gravity = 100.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1080088760]
 position = Vector2(481.5, 518)
 shape = SubResource("RectangleShape2D_3va0a")
+
+[node name="BallPowerUp" parent="Area2D" unique_id=538669833 instance=ExtResource("21_lmsl0")]
+position = Vector2(480, 705)
+power_up_data = SubResource("Resource_ocwiu")
+
+[node name="BallPowerUp2" parent="Area2D" unique_id=1137329248 instance=ExtResource("21_lmsl0")]
+position = Vector2(712, 355)
+power_up_data = SubResource("Resource_j2i6u")

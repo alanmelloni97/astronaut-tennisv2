@@ -11,10 +11,10 @@ enum BallState {
 	RIGHT_BOUNCE,
 }
 
-@export var left_detector: Area2D
-@export var right_detector: Area2D
 @export var player_1: Player
 @export var player_2: Player
+@export var left_detector: ContiniousCollisionDetector
+@export var right_detector: ContiniousCollisionDetector
 
 var ball_state: BallState = BallState.NO_BOUNCE
 
@@ -22,6 +22,8 @@ var ball_state: BallState = BallState.NO_BOUNCE
 func _ready() -> void:
 	left_detector.body_entered.connect(_on_detector_entered.bind(left_detector))
 	right_detector.body_entered.connect(_on_detector_entered.bind(right_detector))
+	left_detector.continuous_collision_detected.connect(_on_continious_collision_detected.bind(left_detector))
+	right_detector.continuous_collision_detected.connect(_on_continious_collision_detected.bind(right_detector))
 	player_1.racket.body_entered.connect(_on_player_touched_ball.bind(player_1))
 	player_2.racket.body_entered.connect(_on_player_touched_ball.bind(player_2))
 
@@ -62,3 +64,15 @@ func _on_player_touched_ball(_body: PhysicsBody2D, player: Player):
 			if ball_state == BallState.LEFT_BOUNCE:
 				ball_state = BallState.NO_BOUNCE
 				reset_bounce.emit()
+
+
+func _on_continious_collision_detected(detector: ContiniousCollisionDetector):
+	match detector:
+		left_detector:
+			ball_state = BallState.NO_BOUNCE
+			reset_bounce.emit()
+			ball_double_bounced.emit(1)
+		right_detector:
+			ball_state = BallState.NO_BOUNCE
+			reset_bounce.emit()
+			ball_double_bounced.emit(2)

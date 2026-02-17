@@ -2,8 +2,7 @@ class_name BallPowerUp
 extends Area2D
 
 @export var sprite_2d: Sprite2D
-
-var power_up_data: PowerUpData:
+@export var power_up_data: PowerUpData: # export for testing
 	set(x):
 		power_up_data = x
 		sprite_2d.texture = power_up_data.texture

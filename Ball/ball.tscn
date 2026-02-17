@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://Test scenes/area_2d.gd" id="5_0t0x3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
+resource_local_to_scene = true
 radius = 35.014282
 
 [node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "collision_shape", "sprite") groups=["Ball"]]
@@ -14,7 +15,7 @@ collision_layer = 2
 collision_mask = 11
 mass = 3.0
 physics_material_override = ExtResource("1_l4sn5")
-gravity_scale = 0.8
+gravity_scale = 0.7
 script = ExtResource("2_65gad")
 ai_marker_2d = NodePath("AIMarker2D")
 effects_manager = NodePath("EffectsManager")
