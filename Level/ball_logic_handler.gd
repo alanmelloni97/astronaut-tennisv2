@@ -5,7 +5,7 @@ extends Node
 @export var _ball_spawn_point: Marker2D
 
 var enabled: bool = true
-var _ball_reference: RigidBody2D
+var _ball_reference: Ball
 
 
 func _ready() -> void:
@@ -13,7 +13,7 @@ func _ready() -> void:
 
 
 func destroy_ball():
-	_ball_reference.queue_free()
+	_ball_reference.remove()
 
 
 func spawn_ball(delay: float):

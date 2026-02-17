@@ -77,7 +77,7 @@ metadata/_custom_type_script = "uid://b615mceneh7q"
 size = Vector2(1683, 620)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py82k"]
-size = Vector2(993, 441)
+size = Vector2(993, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1teg4"]
 size = Vector2(1002, 29)
@@ -92,6 +92,9 @@ size = Vector2(12, 1590.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqlfs"]
 size = Vector2(1045.5, 1260)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_232uv"]
+polygon = PackedVector2Array(72, 1023, 1848, 1025, 1848, 57, 2019, 49, 2000, 1216, -197, 1131, -35, 124, 73, 126)
 
 [node name="Level" type="Node2D" unique_id=1489784123]
 script = ExtResource("1_nk1il")
@@ -186,7 +189,7 @@ priority = 9
 script = ExtResource("25_232uv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/BounceDetectors/LeftDetector" unique_id=1500246501]
-position = Vector2(334.5, -215.5)
+position = Vector2(334.5, -8.5)
 shape = SubResource("RectangleShape2D_py82k")
 
 [node name="RightDetector" type="Area2D" parent="World/BounceDetectors" unique_id=1106991513]
@@ -320,3 +323,6 @@ collision_mask = 2
 position = Vector2(1494, 547)
 shape = SubResource("RectangleShape2D_wqlfs")
 debug_color = Color(0.9490196, 0.6039216, 0, 0.09803922)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1642094665]
+occluder = SubResource("OccluderPolygon2D_232uv")
