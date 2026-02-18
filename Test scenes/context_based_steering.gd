@@ -41,10 +41,7 @@ func _physics_process(_delta):
 
 
 func set_interest():
-	if target_position.y > agent.global_position.y:
-		target_position.y += 300
-
-	#target_position.x += ball.linear_velocity.x
+	_set_custom_interest_parameters()
 	for i in num_rays:
 		# rotation is the agent rotation
 		var target_direction: Vector2 = agent.global_position.direction_to(target_position)
@@ -67,6 +64,13 @@ func choose_direction():
 	for i in num_rays:
 		chosen_dir += ray_directions[i] * interest[i]
 		chosen_dir = chosen_dir.normalized()
+
+
+func _set_custom_interest_parameters():
+	# TODO retocar esto
+	if target_position.y > agent.global_position.y:
+		target_position.y += 300
+	#target_position.x += ball.linear_velocity.x
 
 
 func _add_raycast(raycast: RayCast2D):

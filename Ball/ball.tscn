@@ -41,7 +41,6 @@ collision_bounce = 0.9
 [node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "collision_shape", "sprite") groups=["Ball"]]
 collision_layer = 2
 collision_mask = 11
-mass = 3.0
 physics_material_override = ExtResource("1_l4sn5")
 gravity_scale = 0.7
 script = ExtResource("2_65gad")

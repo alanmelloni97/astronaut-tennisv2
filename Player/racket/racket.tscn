@@ -24,6 +24,7 @@ physics_material_override = SubResource("PhysicsMaterial_wwm6y")
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 5
+linear_damp = 1.0
 script = ExtResource("1_gxsuo")
 movement_handler = NodePath("MovementHandler")
 
@@ -36,7 +37,7 @@ _ai_manager = NodePath("AIManager")
 [node name="MotionManager" type="Node" parent="MovementHandler" unique_id=954893411 node_paths=PackedStringArray("_rb")]
 script = ExtResource("2_o468d")
 _rb = NodePath("../..")
-_FORCE_MULT = 40000
+_FORCE_MULT = 20000
 
 [node name="InputManager" type="Node" parent="MovementHandler" unique_id=1846637120]
 script = ExtResource("3_xsmco")

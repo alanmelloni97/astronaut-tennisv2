@@ -9,15 +9,17 @@ script = ExtResource("1_qr26y")
 _pause_menu = NodePath("PauseMenu")
 _game_over_menu = NodePath("GameOverMenu")
 
-[node name="PauseButton" type="TextureButton" parent="." unique_id=1317644554]
+[node name="PauseButton" type="Button" parent="." unique_id=1685986786]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -8.0
-offset_bottom = 8.0
+offset_left = -293.0
+offset_bottom = 107.0
 grow_horizontal = 0
+text = "PAUSE"
 
 [node name="PauseMenu" parent="." unique_id=733302398 instance=ExtResource("3_u7gx0")]
+visible = false
 
 [node name="GameOverMenu" parent="." unique_id=1942799696 instance=ExtResource("4_afxui")]
 visible = false

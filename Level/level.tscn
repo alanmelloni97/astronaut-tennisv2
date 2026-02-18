@@ -77,10 +77,10 @@ metadata/_custom_type_script = "uid://b615mceneh7q"
 size = Vector2(1683, 620)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py82k"]
-size = Vector2(993, 27)
+size = Vector2(998, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1teg4"]
-size = Vector2(1002, 29)
+size = Vector2(1006, 13)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yfk6w"]
 
@@ -94,7 +94,7 @@ size = Vector2(12, 1590.25)
 size = Vector2(1045.5, 1260)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_232uv"]
-polygon = PackedVector2Array(72, 1023, 1848, 1025, 1848, 57, 2019, 49, 2000, 1216, -197, 1131, -35, 124, 73, 126)
+polygon = PackedVector2Array(72, 1023, 960, 1025, 962, 750, 979, 751, 979, 1025, 1848, 1025, 1848, 57, 2019, 49, 2000, 1216, -197, 1131, -35, 124, 73, 126)
 
 [node name="Level" type="Node2D" unique_id=1489784123]
 script = ExtResource("1_nk1il")
@@ -116,7 +116,7 @@ _score_ui = NodePath("../World/Scores")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
-WIN_SCORE = 7
+WIN_SCORE = 1
 
 [node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "bounce_detector", "ball_manager")]
 script = ExtResource("2_1teg4")
@@ -127,6 +127,7 @@ ball_manager = NodePath("BallManager")
 [node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("_ball_spawn_point")]
 script = ExtResource("2_py82k")
 ball_sc = ExtResource("3_py82k")
+INITIAL_IMPULSE = Vector2(500, -50)
 _ball_spawn_point = NodePath("../../BallSpawnPoint")
 
 [node name="LightsHandler" type="Node" parent="." unique_id=2121215875 node_paths=PackedStringArray("_lights_manager", "bounce_detector")]
@@ -175,7 +176,7 @@ texture = ExtResource("9_q47le")
 metadata/_edit_lock_ = true
 
 [node name="BallSpawnPoint" type="Marker2D" parent="." unique_id=1469462745]
-position = Vector2(715, 141)
+position = Vector2(968, 129)
 
 [node name="World" type="Node2D" parent="." unique_id=937198056]
 
@@ -189,7 +190,7 @@ priority = 9
 script = ExtResource("25_232uv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/BounceDetectors/LeftDetector" unique_id=1500246501]
-position = Vector2(334.5, -8.5)
+position = Vector2(337, -1)
 shape = SubResource("RectangleShape2D_py82k")
 
 [node name="RightDetector" type="Area2D" parent="World/BounceDetectors" unique_id=1106991513]
@@ -200,7 +201,7 @@ priority = 9
 script = ExtResource("25_232uv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/BounceDetectors/RightDetector" unique_id=878119383]
-position = Vector2(-940, 18.5)
+position = Vector2(-942, 26.5)
 shape = SubResource("RectangleShape2D_1teg4")
 
 [node name="Boundaries" type="Node2D" parent="World" unique_id=116601786]
