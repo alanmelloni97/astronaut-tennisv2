@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Scenes="*uid://btdxfw2ejjx0y"
 Characters="*uid://cxyudux51rjxk"
+Signal_Debugger="*uid://csnlieyhcrp3b"
 
 [display]
 
@@ -30,7 +31,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/TODO_Manager-cbacea3f2014275205dd05482f5b80c36d001dce/addons/Todo_Manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/SignalVisualizer/plugin.cfg", "res://addons/TODO_Manager-cbacea3f2014275205dd05482f5b80c36d001dce/addons/Todo_Manager/plugin.cfg")
 
 [global_group]
 
@@ -100,3 +101,7 @@ pointing/emulate_touch_from_mouse=true
 [physics]
 
 2d/default_gravity=400.0
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

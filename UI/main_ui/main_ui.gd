@@ -7,7 +7,6 @@ signal game_quit
 signal game_ended
 signal retry_requested
 
-@export var score_UI: ScoreUI
 @export var _pause_menu: PauseMenu
 @export var _game_over_menu: GameOverMenu
 

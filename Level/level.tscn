@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://Ball/ball.tscn" id="3_py82k"]
 [ext_resource type="Script" uid="uid://byuw8vbpfsr3f" path="res://Level/score_handler.gd" id="3_uqeto"]
 [ext_resource type="Script" uid="uid://byy8vfben3kxo" path="res://Level/level_handler.gd" id="4_wqlfs"]
-[ext_resource type="PackedScene" uid="uid://x11muvl3x6vi" path="res://UI/main_ui.tscn" id="5_d6qko"]
+[ext_resource type="PackedScene" uid="uid://x11muvl3x6vi" path="res://UI/main_ui/main_ui.tscn" id="5_d6qko"]
 [ext_resource type="Script" uid="uid://bqlse54u8e0r8" path="res://Level/bounce_detector.gd" id="6_nk1il"]
 [ext_resource type="Script" uid="uid://yjd3fkfu48mi" path="res://Level/lights_handler.gd" id="7_1p6h5"]
 [ext_resource type="Script" uid="uid://c3jkt2u4aautb" path="res://Level/ui_handler.gd" id="7_i5g78"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://cpi6fmcqutm33" path="res://Assets/background_game.png" id="9_q47le"]
 [ext_resource type="Script" uid="uid://b615mceneh7q" path="res://Ball/PowerUp/powerup_data.gd" id="12_am3y4"]
 [ext_resource type="PackedScene" uid="uid://0g8h07ct0gia" path="res://Ball/PowerUp/ball_powerup.tscn" id="12_k8npl"]
-[ext_resource type="Script" uid="uid://ckaoggq4yh8ma" path="res://UI/score_ui.gd" id="13_dx36h"]
 [ext_resource type="Script" uid="uid://byub6igigr88i" path="res://Ball/Effects/ScaleEffect.gd" id="13_jghi6"]
 [ext_resource type="Texture2D" uid="uid://lsmv8f5agbq1" path="res://Assets/UI pack/Pause/Ok_BTN.png" id="14_3opgi"]
 [ext_resource type="Texture2D" uid="uid://d0chbtvn2ytr8" path="res://Assets/UI pack/Hangar/Dot_02.png" id="15_ys2en"]
@@ -27,7 +26,9 @@
 [ext_resource type="Texture2D" uid="uid://b32840gkdn7lk" path="res://Ball/art/Ball.png" id="18_6uec0"]
 [ext_resource type="PhysicsMaterial" uid="uid://c1o0wcja6b3ln" path="res://Ball/physics materials/no_bouncy.tres" id="19_r0jbq"]
 [ext_resource type="Texture2D" uid="uid://bbbyeihtofb2r" path="res://Ragdoll/skin/skins/default/URleg.png" id="20_816bt"]
+[ext_resource type="PackedScene" uid="uid://b8nmqou14j2ss" path="res://UI/Virtual joystick/touch_joysticks.tscn" id="24_6uec0"]
 [ext_resource type="Script" uid="uid://d1bu3vy2qkidn" path="res://Level/continious_collision_detector.gd" id="25_232uv"]
+[ext_resource type="Script" uid="uid://duoytmh0h0bgk" path="res://UI/score_ui.gd" id="26_232uv"]
 
 [sub_resource type="Resource" id="Resource_du4cn"]
 script = ExtResource("13_jghi6")
@@ -116,7 +117,7 @@ _score_ui = NodePath("../World/Scores")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
-WIN_SCORE = 1
+WIN_SCORE = 10
 
 [node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "bounce_detector", "ball_manager")]
 script = ExtResource("2_1teg4")
@@ -127,8 +128,8 @@ ball_manager = NodePath("BallManager")
 [node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("_ball_spawn_point")]
 script = ExtResource("2_py82k")
 ball_sc = ExtResource("3_py82k")
-INITIAL_IMPULSE = Vector2(500, -50)
 _ball_spawn_point = NodePath("../../BallSpawnPoint")
+INITIAL_IMPULSE = Vector2(500, -50)
 
 [node name="LightsHandler" type="Node" parent="." unique_id=2121215875 node_paths=PackedStringArray("_lights_manager", "bounce_detector")]
 script = ExtResource("7_1p6h5")
@@ -169,6 +170,8 @@ shape = SubResource("RectangleShape2D_luomk")
 script = ExtResource("7_i5g78")
 _level = NodePath("../..")
 _main_ui = NodePath("..")
+
+[node name="TouchJoysticks" parent="." unique_id=25295857 instance=ExtResource("24_6uec0")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1058688654]
 position = Vector2(960, 540)
@@ -265,7 +268,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("13_dx36h")
+script = ExtResource("26_232uv")
 label_score_1 = NodePath("Score1")
 label_score_2 = NodePath("Score2")
 

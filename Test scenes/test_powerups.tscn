@@ -9,10 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dinild5ccfovs" path="res://Ragdoll/skin/skins/default/head.png" id="19_bwpcm"]
 [ext_resource type="Texture2D" uid="uid://cuxvqrqns5et3" path="res://Ragdoll/skin/skins/default/LRleg.png" id="20_w8y07"]
 [ext_resource type="PackedScene" uid="uid://0g8h07ct0gia" path="res://Ball/PowerUp/ball_powerup.tscn" id="21_lmsl0"]
-[ext_resource type="PackedScene" uid="uid://x11muvl3x6vi" path="res://UI/main_ui.tscn" id="22_fns7e"]
+[ext_resource type="PackedScene" uid="uid://x11muvl3x6vi" path="res://UI/main_ui/main_ui.tscn" id="22_fns7e"]
 [ext_resource type="Script" uid="uid://c3jkt2u4aautb" path="res://Level/ui_handler.gd" id="23_t8q4n"]
 [ext_resource type="Texture2D" uid="uid://cpi6fmcqutm33" path="res://Assets/background_game.png" id="24_xtgm0"]
-[ext_resource type="Script" uid="uid://ckaoggq4yh8ma" path="res://UI/score_ui.gd" id="25_r323i"]
 [ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="26_8nnns"]
 
 [sub_resource type="Resource" id="Resource_du4cn"]
@@ -42,6 +41,21 @@ size = Vector2(16.125, 296)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nk1il"]
 size = Vector2(12, 1590.25)
+
+[sub_resource type="GDScript" id="GDScript_cqvaw"]
+script/source = "extends Control
+class_name ScoreUI
+
+@export var label_score_1: Label
+@export var label_score_2: Label
+
+func update_score(player: int, score: int):
+	match player:
+		1:
+			label_score_1.text = str(score)
+		2:
+			label_score_2.text = str(score)
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3va0a"]
 size = Vector2(983, 1056)
@@ -192,7 +206,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("25_r323i")
+script = SubResource("GDScript_cqvaw")
 label_score_1 = NodePath("Score1")
 label_score_2 = NodePath("Score2")
 

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b3njyc6swylap"]
+
+[ext_resource type="Script" uid="uid://bkgrjdkqsj2vf" path="res://Test scenes/test_ball_sounds.gd" id="1_xj6sx"]
+[ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://Ball/ball.tscn" id="1_yae4k"]
+[ext_resource type="PackedScene" uid="uid://cqgp2276rxmxf" path="res://Player/racket/racket.tscn" id="2_8xfu0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8xfu0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yae4k"]
+bounce = 0.7
+
+[node name="TestBallSounds" type="Node2D" unique_id=417751191]
+script = ExtResource("1_xj6sx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=944105001]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1416845452]
+position = Vector2(993, 1050)
+shape = SubResource("WorldBoundaryShape2D_8xfu0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2057875896]
+position = Vector2(-65, -811)
+rotation = 0.05967322
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2127800811]
+position = Vector2(993, 1050)
+rotation = 3.091491
+shape = SubResource("WorldBoundaryShape2D_8xfu0")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=837001779]
+position = Vector2(-916, -456)
+rotation = 0.10237784
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=977052075]
+position = Vector2(1178.5676, 933.43896)
+rotation = 1.4869322
+shape = SubResource("WorldBoundaryShape2D_8xfu0")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1735007560]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1362430475]
+position = Vector2(1869, 616)
+rotation = -1.6488498
+shape = SubResource("WorldBoundaryShape2D_8xfu0")
+
+[node name="Ball" parent="." unique_id=365515873 instance=ExtResource("1_yae4k")]
+position = Vector2(982, 936)
+physics_material_override = SubResource("PhysicsMaterial_yae4k")
+
+[node name="Racket" parent="." unique_id=1644144030 instance=ExtResource("2_8xfu0")]
+position = Vector2(690, 585)
+
+[editable path="Racket"]
