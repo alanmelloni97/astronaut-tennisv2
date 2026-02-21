@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://b8nmqou14j2ss" path="res://UI/Virtual joystick/touch_joysticks.tscn" id="24_6uec0"]
 [ext_resource type="Script" uid="uid://d1bu3vy2qkidn" path="res://Level/continious_collision_detector.gd" id="25_232uv"]
 [ext_resource type="Script" uid="uid://duoytmh0h0bgk" path="res://UI/score_ui.gd" id="26_232uv"]
+[ext_resource type="Script" uid="uid://cbvlk0m26qlvt" path="res://Level/tutorial_manager.gd" id="30_r0jbq"]
 
 [sub_resource type="Resource" id="Resource_du4cn"]
 script = ExtResource("13_jghi6")
@@ -91,11 +92,11 @@ size = Vector2(16.125, 296)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nk1il"]
 size = Vector2(12, 1590.25)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqlfs"]
-size = Vector2(1045.5, 1260)
-
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_232uv"]
 polygon = PackedVector2Array(72, 1023, 960, 1025, 962, 750, 979, 751, 979, 1025, 1848, 1025, 1848, 57, 2019, 49, 2000, 1216, -197, 1131, -35, 124, 73, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqlfs"]
+size = Vector2(1045.5, 1260)
 
 [node name="Level" type="Node2D" unique_id=1489784123]
 script = ExtResource("1_nk1il")
@@ -117,7 +118,7 @@ _score_ui = NodePath("../World/Scores")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
-WIN_SCORE = 10
+WIN_SCORE = 1
 
 [node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "bounce_detector", "ball_manager")]
 script = ExtResource("2_1teg4")
@@ -154,8 +155,8 @@ script = ExtResource("17_luomk")
 powerups = Array[ExtResource("12_am3y4")]([SubResource("Resource_l5n2q"), SubResource("Resource_cqvaw"), SubResource("Resource_x31ef"), SubResource("Resource_pt1jg")])
 power_up_sc = ExtResource("12_k8npl")
 collision_shape_2d = NodePath("CollisionShape2D")
-MIN_TIME_BETWEEN_SPAWNS = 15
-MAX_TIME_BETWEEN_SPAWNS = 60
+MIN_TIME_BETWEEN_SPAWNS = 1
+MAX_TIME_BETWEEN_SPAWNS = 1
 timer = NodePath("Timer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
@@ -163,6 +164,22 @@ position = Vector2(957.5, 416)
 shape = SubResource("RectangleShape2D_luomk")
 
 [node name="Timer" type="Timer" parent="PowerUpSpawner" unique_id=136537762]
+
+[node name="TutorialManager" type="Node" parent="." unique_id=1685807822 node_paths=PackedStringArray("player_1", "player_2", "wasd_sprite", "arrows_sprite", "level")]
+script = ExtResource("30_r0jbq")
+player_1 = NodePath("../Player1")
+player_2 = NodePath("../Player2")
+wasd_sprite = NodePath("WASDSprite")
+arrows_sprite = NodePath("ArrowsSprite")
+level = NodePath("..")
+
+[node name="WASDSprite" type="Sprite2D" parent="TutorialManager" unique_id=542582892]
+position = Vector2(486, 483)
+texture = ExtResource("8_py82k")
+
+[node name="ArrowsSprite" type="Sprite2D" parent="TutorialManager" unique_id=448350962]
+position = Vector2(1429, 496)
+texture = ExtResource("8_py82k")
 
 [node name="MainUI" parent="." unique_id=1468483608 instance=ExtResource("5_d6qko")]
 
@@ -310,6 +327,9 @@ color = Color(0.80308235, 0, 0.16148603, 1)
 energy = 100000000.0
 texture = ExtResource("8_py82k")
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World" unique_id=1642094665]
+occluder = SubResource("OccluderPolygon2D_232uv")
+
 [node name="Player1" parent="." unique_id=396626081 instance=ExtResource("1_o6mkr")]
 position = Vector2(277, 561)
 
@@ -327,6 +347,3 @@ collision_mask = 2
 position = Vector2(1494, 547)
 shape = SubResource("RectangleShape2D_wqlfs")
 debug_color = Color(0.9490196, 0.6039216, 0, 0.09803922)
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1642094665]
-occluder = SubResource("OccluderPolygon2D_232uv")

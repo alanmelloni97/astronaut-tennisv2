@@ -3,9 +3,11 @@
 [ext_resource type="PhysicsMaterial" uid="uid://bo2vlrktsj8yt" path="res://Ball/physics materials/default.tres" id="1_l4sn5"]
 [ext_resource type="Script" uid="uid://cfiuoebp1eicf" path="res://Ball/ball.gd" id="2_65gad"]
 [ext_resource type="Texture2D" uid="uid://b32840gkdn7lk" path="res://Ball/art/Ball.png" id="3_ngrkv"]
+[ext_resource type="Script" uid="uid://bh2kguq210h0h" path="res://Ball/ball_sound_manager.gd" id="3_rg84v"]
 [ext_resource type="Script" uid="uid://cf2trema4h72c" path="res://Ball/effects_manager.gd" id="4_4s4qd"]
 [ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://Test scenes/area_2d.gd" id="5_0t0x3"]
 [ext_resource type="Script" uid="uid://l67cfjetdf8j" path="res://Ball/remove_particles.gd" id="6_hbi5u"]
+[ext_resource type="AudioStream" uid="uid://yrvx2tolssav" path="res://Ball/sounds/51461__andrenascimento__basket_ball_02_bounce.wav" id="8_hsaat"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
 resource_local_to_scene = true
@@ -43,11 +45,26 @@ collision_layer = 2
 collision_mask = 11
 physics_material_override = ExtResource("1_l4sn5")
 gravity_scale = 0.7
+contact_monitor = true
+max_contacts_reported = 5
 script = ExtResource("2_65gad")
 ai_marker_2d = NodePath("AIMarker2D")
 effects_manager = NodePath("EffectsManager")
 collision_shape = NodePath("CollisionShape2D")
 sprite = NodePath("Sprite2D")
+
+[node name="SoundManager" type="Node" parent="." unique_id=1060499892 node_paths=PackedStringArray("audio_stream_player_2d", "ball")]
+script = ExtResource("3_rg84v")
+audio_stream_player_2d = NodePath("../AudioStreamPlayer2D")
+ball = NodePath("..")
+MAX_PITCH = 1.0
+MIN_PITCH = 1.5
+MIN_VOLUME_DB = -10.0
+MAX_SPEED_DIFF = 1000.0
+
+[node name="EffectsManager" type="Node" parent="." unique_id=697484937 node_paths=PackedStringArray("_affected_node")]
+script = ExtResource("4_4s4qd")
+_affected_node = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1368493303]
 position = Vector2(0, -1)
@@ -55,10 +72,6 @@ shape = SubResource("CircleShape2D_g3thm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=480967574]
 texture = ExtResource("3_ngrkv")
-
-[node name="EffectsManager" type="Node" parent="." unique_id=697484937 node_paths=PackedStringArray("_affected_node")]
-script = ExtResource("4_4s4qd")
-_affected_node = NodePath("..")
 
 [node name="AIMarker2D" type="Marker2D" parent="." unique_id=1789299442]
 position = Vector2(34, 38)
@@ -82,5 +95,8 @@ explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_0t0x3")
 script = ExtResource("6_hbi5u")
 ball = NodePath("..")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1835798592]
+stream = ExtResource("8_hsaat")
 
 [connection signal="finished" from="RemoveParticles" to="RemoveParticles" method="_on_finished"]

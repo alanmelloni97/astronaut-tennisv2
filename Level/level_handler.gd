@@ -8,8 +8,6 @@ extends Node
 @export var _ball_ai_detector: Area2D
 @export var _level: Level
 
-var player_amount: int = 1
-
 
 func _ready() -> void:
 	_score_manager.game_finished.connect(_on_game_finished)
@@ -28,4 +26,4 @@ func _on_game_finished(winner: int):
 	_level.winner = winner
 	_player_1.disable_input()
 	_player_2.disable_input()
-	_main_UI.show_game_over_menu(winner, player_amount)
+	_main_UI.show_game_over_menu(winner, _level.two_player_mode)

@@ -5,11 +5,15 @@
 [ext_resource type="Script" uid="uid://b7xrs5qb7lfxj" path="res://main/scene_manager.gd" id="3_f6fdm"]
 [ext_resource type="Script" uid="uid://ci0bfno7m6u7h" path="res://main/specific_static_save.gd" id="3_liyct"]
 [ext_resource type="Script" uid="uid://do0w1w1hnkqgd" path="res://main/specific_scene_logic.gd" id="5_k3v36"]
+[ext_resource type="Script" uid="uid://b0dvddvx114dr" path="res://main/music_manager.gd" id="6_4dugh"]
+[ext_resource type="AudioStream" uid="uid://c0mlha55t8lel" path="res://Assets/music/redproductions-groove-fitness-fashion-lounge-chill-upbeat-corporate-music-16500.mp3" id="7_67ri8"]
 
-[node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager")]
+[node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager", "specific_scene_logic", "music_manager")]
 script = ExtResource("1_yh5la")
 save_system = NodePath("SaveSystem")
 scene_manager = NodePath("SceneManager")
+specific_scene_logic = NodePath("SceneManager/SpecificSceneLogic")
+music_manager = NodePath("MusicManager")
 
 [node name="SaveSystem" type="Node" parent="." unique_id=980112996 node_paths=PackedStringArray("specific_static_save")]
 script = ExtResource("2_qvhan")
@@ -25,3 +29,15 @@ specific_scene_logic = NodePath("SpecificSceneLogic")
 [node name="SpecificSceneLogic" type="Node" parent="SceneManager" unique_id=888094065 node_paths=PackedStringArray("scene_manager")]
 script = ExtResource("5_k3v36")
 scene_manager = NodePath("..")
+
+[node name="MusicManager" type="Node" parent="." unique_id=124095115 node_paths=PackedStringArray("audio_stream_player")]
+process_mode = 3
+script = ExtResource("6_4dugh")
+audio_stream_player = NodePath("AudioStreamPlayer")
+FADE_IN_SECONDS = 4.0
+FADE_OUT_SECONDS = 1.0
+FADE_DB = -70
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicManager" unique_id=1866995240]
+stream = ExtResource("7_67ri8")
+autoplay = true

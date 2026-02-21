@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://bxcjnblj33t8d" path="res://Test scenes/context_based_steering.gd" id="6_wwm6y"]
 [ext_resource type="Texture2D" uid="uid://ywp7yqpcqbda" path="res://Player/racket/art/Racket.png" id="6_xi40t"]
 [ext_resource type="AudioStream" uid="uid://djl5nll5gmmaf" path="res://Player/racket/sounds/505628__highpixel__basketballbounce.wav" id="8_2bxvs"]
-[ext_resource type="Script" uid="uid://t4befjvx46oq" path="res://Player/racket/sound_manager.gd" id="9_uvl4i"]
+[ext_resource type="Script" uid="uid://t4befjvx46oq" path="res://Player/racket/racket_sound_manager.gd" id="9_uvl4i"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wwm6y"]
 friction = 0.0
@@ -38,6 +38,7 @@ MAX_PITCH = 2.0
 MIN_PITCH = 1.5
 MIN_VOLUME_DB = -20.0
 MAX_SPEED_DIFF = 1000.0
+MAX_SPEED_ADD = 1000.0
 
 [node name="MovementHandler" type="Node" parent="." unique_id=124426701 node_paths=PackedStringArray("_input_manager", "_motion_manager", "_ai_manager")]
 script = ExtResource("4_xsmco")

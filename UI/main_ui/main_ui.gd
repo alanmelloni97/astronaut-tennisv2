@@ -16,9 +16,9 @@ func _ready() -> void:
 	_game_over_menu.retry_pressed.connect(retry_requested.emit)
 
 
-func show_game_over_menu(winner: int, player_number: int):
+func show_game_over_menu(winner: int, two_players: bool):
 	_game_over_menu.show()
-	_game_over_menu.set_up_menu(winner, player_number)
+	_game_over_menu.set_up_menu(winner, two_players)
 
 
 func _on_pause_button_pressed() -> void:

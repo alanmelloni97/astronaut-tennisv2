@@ -1,6 +1,5 @@
 "
 TODO:
-	poner player 1 wins en vez de you win y you lost
 	efectos:
 		paleta grande y chica
 		pelota de vidrio que si toca el cuerpo perdes el punto
@@ -8,6 +7,7 @@ TODO:
 	sonidos
 	timer para que un jugador no la tenga todo el timepo
 BUGS
+	virtual joystick anda mal, mucho deadzone
 
 FUTURO:
 

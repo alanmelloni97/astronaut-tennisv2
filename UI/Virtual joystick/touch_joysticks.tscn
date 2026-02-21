@@ -8,10 +8,11 @@ script = ExtResource("1_2x380")
 
 [node name="Virtual joystick left" parent="." unique_id=897090110 instance=ExtResource("1_nm4ss")]
 modulate = Color(1, 1, 1, 0.168627)
-offset_left = 10.0
-offset_top = -1068.0
+offset_left = 632.0
+offset_top = -342.0
 offset_right = 969.0
 offset_bottom = -11.0
+deadzone_size = 0.0
 joystick_mode = 1
 visibility_mode = 2
 action_left = "move_left_1"
@@ -29,6 +30,7 @@ offset_top = -1075.0
 offset_right = -18.0
 offset_bottom = -28.0
 grow_horizontal = 0
+deadzone_size = 0.0
 joystick_mode = 1
 visibility_mode = 2
 action_left = "move_left_2"

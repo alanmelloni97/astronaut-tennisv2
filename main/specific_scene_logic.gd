@@ -1,6 +1,9 @@
 class_name SpecificSceneLogic
 extends Node
 
+signal request_music_play
+signal request_music_stop
+
 # script that checks game specific things
 @export var scene_manager: SceneManager
 
@@ -21,6 +24,7 @@ func manage_before_changing_scene(current_scene: Node):
 		if current_scene.tournament_is_won:
 			_restart_tournament()
 	if current_scene is Level:
+		request_music_play.emit()
 		if not two_players_mode: # Tournament
 			if current_scene.winner == 1: # Player 1 won
 				# unlock skin if its new
@@ -38,6 +42,7 @@ func manage_after_changing_scene(new_scene: Node):
 	if new_scene is CharacterSelectionMenu:
 		new_scene.two_players = two_players_mode
 	elif new_scene is Level:
+		request_music_stop.emit()
 		new_scene.player_1_skin = player_1_skin
 		new_scene.two_player_mode = two_players_mode
 		if two_players_mode:
