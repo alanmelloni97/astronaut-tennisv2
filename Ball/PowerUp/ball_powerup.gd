@@ -3,7 +3,8 @@ extends Area2D
 
 @export var audio_stream_player_2d: AudioStreamPlayer2D
 @export var sprite_2d: Sprite2D
-@export var power_up_data: PowerUpData: # export for testing
+
+var power_up_data: PowerUpData:
 	set(x):
 		power_up_data = x
 		sprite_2d.texture = power_up_data.texture

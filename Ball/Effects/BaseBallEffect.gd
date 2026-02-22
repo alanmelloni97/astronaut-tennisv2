@@ -2,7 +2,9 @@
 class_name Effect
 extends Resource
 
-var time: float = 200
+@export var sound: AudioStream
+
+var time: float = 20
 
 
 @abstract func apply_effect(ball: Ball)
