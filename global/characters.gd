@@ -12,7 +12,6 @@ func _ready() -> void:
 			skins.append(character.skin)
 	# now the skins resources are linked to the ones saved on //res. I have to make them unique
 	skins = skins.duplicate_deep() #make skins have unique resources
-	print(skins[0])
 
 
 func get_current_rival() -> Character:

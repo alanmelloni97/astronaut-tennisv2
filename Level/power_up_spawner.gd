@@ -5,6 +5,7 @@ extends Node
 @export var collision_shape_2d: CollisionShape2D
 @export var MIN_TIME_BETWEEN_SPAWNS: int
 @export var MAX_TIME_BETWEEN_SPAWNS: int
+@export var MAX_SIMULTANEOUS_POWERUPS: int
 @export var timer: Timer
 
 var rectangle: RectangleShape2D
@@ -30,9 +31,10 @@ func spawn():
 	powerup.global_position = spawn_point
 	powerup.power_up_data = powerup_data
 	get_tree().root.add_child(powerup)
-	print(get_tree().root)
 
 
 func _on_timer_timeout():
-	spawn()
+	var powerups_amount: int = get_tree().get_node_count_in_group("Powerups")
+	if powerups_amount < MAX_SIMULTANEOUS_POWERUPS:
+		spawn()
 	timer.wait_time = randf_range(MIN_TIME_BETWEEN_SPAWNS, MAX_TIME_BETWEEN_SPAWNS)

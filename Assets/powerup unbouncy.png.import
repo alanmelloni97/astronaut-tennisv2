@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ywp7yqpcqbda"
-path="res://.godot/imported/Racket.png-0a075e646baaccc3dd589da2b97b2c50.ctex"
+uid="uid://cr1rbcp7y74lm"
+path="res://.godot/imported/powerup unbouncy.png-ca996bc2f3a28ea66b264ca11fcc9c64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/racket/art/Racket.png"
-dest_files=["res://.godot/imported/Racket.png-0a075e646baaccc3dd589da2b97b2c50.ctex"]
+source_file="res://Assets/powerup unbouncy.png"
+dest_files=["res://.godot/imported/powerup unbouncy.png-ca996bc2f3a28ea66b264ca11fcc9c64.ctex"]
 
 [params]
 

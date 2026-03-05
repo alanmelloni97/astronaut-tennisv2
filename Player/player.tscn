@@ -10,6 +10,6 @@ racket = NodePath("Racket")
 _ragdoll = NodePath("Ragdoll")
 
 [node name="Racket" parent="." unique_id=1761270920 instance=ExtResource("2_gwnis")]
-position = Vector2(141, -235)
+position = Vector2(146, 144)
 
 [node name="Ragdoll" parent="." unique_id=62554258 instance=ExtResource("3_k53q1")]

@@ -8,6 +8,11 @@ signal _removed
 # used by effects:
 @export var collision_shape: CollisionShape2D
 @export var sprite: Sprite2D
+@export var initial_color: Color
+
+
+func _ready() -> void:
+	modulate = initial_color
 
 
 # WRAPPER

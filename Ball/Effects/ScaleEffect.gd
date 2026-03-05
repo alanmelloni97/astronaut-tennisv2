@@ -7,6 +7,10 @@ var _initial_radius: float
 var _initial_scale: Vector2
 
 
+func _init() -> void:
+	effect_type = EffectTypes.SCALE
+
+
 func apply_effect(ball: Ball):
 	_initial_radius = ball.collision_shape.shape.radius
 	_initial_scale = ball.sprite.scale

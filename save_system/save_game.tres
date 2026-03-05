@@ -98,7 +98,6 @@ metadata/_custom_type_script = "uid://5rdixxdoulx3"
 script = ExtResource("1_l6jf8")
 name = "Sally Ride"
 skin = ExtResource("5_t2tj1")
-beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_ivnx7"]

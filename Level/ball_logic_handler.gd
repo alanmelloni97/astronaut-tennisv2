@@ -24,7 +24,7 @@ func spawn_ball(delay: float):
 	var ball: RigidBody2D = ball_sc.instantiate()
 	ball.global_position = _ball_spawn_point.global_position
 	# add sideways velocity to ball
-	var impulse_x: float = randf_range(-INITIAL_IMPULSE.x, INITIAL_IMPULSE.x)
+	var impulse_x: float = randf_range(-INITIAL_IMPULSE.x, 0)
 	ball.apply_central_impulse(Vector2(impulse_x, INITIAL_IMPULSE.y))
 	owner.add_child(ball)
 

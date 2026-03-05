@@ -25,6 +25,6 @@ func _on_timer_timeout(effect: Effect):
 func _remove_current_effect_if_duplicate(effect: Effect):
 	# if there is an active effect of the same type, remove it
 	for current_effect in current_effects:
-		if current_effect.get_script() == effect.get_script():
+		if current_effect.effect_type == effect.effect_type:
 			current_effect.remove_effect(_affected_node)
 			current_effects.erase(current_effect)

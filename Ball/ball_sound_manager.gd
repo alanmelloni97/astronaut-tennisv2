@@ -18,7 +18,6 @@ func _on_body_entered(body: PhysicsBody2D):
 	if body is not Racket:
 		_set_audio_parameters()
 		audio_stream_player_2d.play()
-		print(body)
 
 
 func _set_audio_parameters():

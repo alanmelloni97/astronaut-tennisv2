@@ -1,12 +1,12 @@
-class_name BounceBallEffect
+class_name MassBallEffect
 extends Effect
 
-@export var phyisics_material: PhysicsMaterial
+@export var mass: float
 @export var sound: AudioStream
 @export var color: Color
 
-var initial_physics_material: PhysicsMaterial
 var initial_color: Color
+var initial_mass: float
 
 
 func _init() -> void:
@@ -14,12 +14,12 @@ func _init() -> void:
 
 
 func apply_effect(ball: Ball):
-	initial_physics_material = ball.physics_material_override
+	initial_mass = ball.mass
 	initial_color = ball.modulate
-	ball.physics_material_override = phyisics_material
+	ball.mass = mass
 	ball.modulate = color
 
 
 func remove_effect(ball: Ball):
-	ball.physics_material_override = initial_physics_material
+	ball.mass = initial_mass
 	ball.modulate = initial_color

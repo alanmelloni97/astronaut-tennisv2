@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://qd2xvxleoi1v"]
 
-[ext_resource type="FontFile" uid="uid://dkmxquxm1tclm" path="res://Assets/Seven Segment.ttf" id="1_rjqg8"]
+[ext_resource type="FontFile" uid="uid://b2c36202budqv" path="res://Assets/fonts/seven-segment-display-lcd.otf" id="1_rjqg8"]
 [ext_resource type="Texture2D" uid="uid://biaxj3lhbtx5a" path="res://Assets/UI pack/Ship_Shop/Table_02.png" id="1_u1o8y"]
 [ext_resource type="Texture2D" uid="uid://gy0p2lwh4tqr" path="res://Assets/UI pack/Hangar/Dot_01.png" id="2_fxg4e"]
 [ext_resource type="Texture2D" uid="uid://dil4kc1058g84" path="res://Assets/UI pack/Hangar/Table_02.png" id="3_fxg4e"]
@@ -71,7 +71,7 @@ default_font = ExtResource("3_rjqg8")
 default_font_size = 50
 7SegmentLabel/base_type = &"Label"
 7SegmentLabel/colors/font_color = Color(0.8802099, 0, 0.15463024, 1)
-7SegmentLabel/font_sizes/font_size = 180
+7SegmentLabel/font_sizes/font_size = 120
 7SegmentLabel/fonts/font = ExtResource("1_rjqg8")
 7SegmentLabel/styles/normal = SubResource("StyleBoxEmpty_rjqg8")
 Button/styles/disabled = SubResource("StyleBoxTexture_aloen")

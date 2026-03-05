@@ -2,8 +2,9 @@
 class_name Effect
 extends Resource
 
-@export var sound: AudioStream
+enum EffectTypes { SCALE, PHYSICS }
 
+var effect_type: EffectTypes
 var time: float = 20
 
 

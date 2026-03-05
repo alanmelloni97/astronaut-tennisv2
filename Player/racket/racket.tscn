@@ -6,20 +6,22 @@
 [ext_resource type="Script" uid="uid://ds0srr1tfxcwg" path="res://Player/ai_handler.gd" id="4_koyly"]
 [ext_resource type="Script" uid="uid://d0g5ximw8rnll" path="res://Player/movement_handler.gd" id="4_xsmco"]
 [ext_resource type="Script" uid="uid://bxcjnblj33t8d" path="res://Test scenes/context_based_steering.gd" id="6_wwm6y"]
-[ext_resource type="Texture2D" uid="uid://ywp7yqpcqbda" path="res://Player/racket/art/Racket.png" id="6_xi40t"]
 [ext_resource type="AudioStream" uid="uid://djl5nll5gmmaf" path="res://Player/racket/sounds/505628__highpixel__basketballbounce.wav" id="8_2bxvs"]
+[ext_resource type="Texture2D" uid="uid://83kt02x3ifyv" path="res://Assets/Racket.png" id="8_uvl4i"]
 [ext_resource type="Script" uid="uid://t4befjvx46oq" path="res://Player/racket/racket_sound_manager.gd" id="9_uvl4i"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wwm6y"]
 friction = 0.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_k7yml"]
-radius = 40.4475
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nbxvu"]
+radius = 52.0
+height = 118.0
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wwm6y"]
-polygon = PackedVector2Array(-13.700001, -78, -23.7, -73, -25.9, -73, -35.9, -64, -37.5, -64, -37.5, -61.4, -38.9, -60, -40.1, -60, -44.1, -52, -45.2, -52, -49.5, -38.4, -49.5, -10.900002, -47.5, -5, -47.5, -1.699997, -44.5, 2.300003, -44.5, 5.4000015, -39.5, 11.300003, -39.5, 13.5, -35.5, 16.5, -35.5, 18.5, -24.5, 26.5, -24.5, 27.699997, -5.700001, 35, 0.5, 76.100006, 0.5, 78, 16.699997, 78, 22.5, 76, 26.699997, 76, 24.5, 60.899994, 24.5, 52.899994, 20.5, 31.800003, 20.5, 30.599998, 25.699997, 28, 27.900002, 28, 37.9, 18, 39.1, 18, 45.1, 6, 46.300003, 6, 48.300003, -3, 49.5, -3, 49.5, -32.7, 48.5, -35.2, 48.5, -39.2, 41.5, -53.2, 41.5, -55.4, 35.5, -61.4, 35.5, -63.5, 27.5, -69.5, 27.5, -70.6, 19.5, -74.6, 19.5, -75.8, 10.5, -77.9)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ysqc3"]
+polygon = PackedVector2Array(18.900002, -86, -18.900002, -86, -28.1, -81, -30.4, -81, -42.4, -68, -43.7, -68, -52.5, -50.5, -52.5, -2, -44.5, 12.400002, -44.5, 14.900002, -31.5, 26.900002, -31.5, 28.199997, -17, 36, -15.5, 36, -14.5, 82, -14.5, 86, 13.699997, 86, 15.5, 82.5, 15.5, 35.199997, 28, 29, 30.400002, 29, 42.4, 16, 43.800003, 16, 52.5, -3.4000015, 52.5, -50.1, 44.5, -64.5, 44.5, -66.9, 31.5, -79, 31.5, -80.3)
 
 [node name="Racket" type="RigidBody2D" unique_id=1644144030 node_paths=PackedStringArray("movement_handler")]
+z_index = 3
 collision_mask = 30
 mass = 10.0
 physics_material_override = SubResource("PhysicsMaterial_wwm6y")
@@ -38,7 +40,6 @@ MAX_PITCH = 2.0
 MIN_PITCH = 1.5
 MIN_VOLUME_DB = -20.0
 MAX_SPEED_DIFF = 1000.0
-MAX_SPEED_ADD = 1000.0
 
 [node name="MovementHandler" type="Node" parent="." unique_id=124426701 node_paths=PackedStringArray("_input_manager", "_motion_manager", "_ai_manager")]
 script = ExtResource("4_xsmco")
@@ -67,15 +68,15 @@ num_rays = 16
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1074267406]
 position = Vector2(-14, -77)
-texture = ExtResource("6_xi40t")
+texture = ExtResource("8_uvl4i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920572248]
-position = Vector2(-17, -97)
-shape = SubResource("CircleShape2D_k7yml")
+position = Vector2(-14, -104)
+shape = SubResource("CapsuleShape2D_nbxvu")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1734480468]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=234241448]
 position = Vector2(-14, -77)
-occluder = SubResource("OccluderPolygon2D_wwm6y")
+occluder = SubResource("OccluderPolygon2D_ysqc3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=781712119]
 stream = ExtResource("8_2bxvs")

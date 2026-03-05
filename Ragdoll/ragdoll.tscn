@@ -49,7 +49,7 @@ height = 192.0
 radius = 48.04165
 
 [node name="Ragdoll" type="Node2D" unique_id=62554258 node_paths=PackedStringArray("_skinner_helper", "Rwrist", "Lwrist")]
-z_index = 4
+z_index = 2
 script = ExtResource("1_chfyy")
 _skinner_helper = NodePath("SkinnerHelper")
 Rwrist = NodePath("Body/joints/RWrist")

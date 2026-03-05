@@ -2,16 +2,16 @@
 
 [ext_resource type="PhysicsMaterial" uid="uid://bo2vlrktsj8yt" path="res://Ball/physics materials/default.tres" id="1_l4sn5"]
 [ext_resource type="Script" uid="uid://cfiuoebp1eicf" path="res://Ball/ball.gd" id="2_65gad"]
-[ext_resource type="Texture2D" uid="uid://b32840gkdn7lk" path="res://Ball/art/Ball.png" id="3_ngrkv"]
 [ext_resource type="Script" uid="uid://bh2kguq210h0h" path="res://Ball/ball_sound_manager.gd" id="3_rg84v"]
 [ext_resource type="Script" uid="uid://cf2trema4h72c" path="res://Ball/effects_manager.gd" id="4_4s4qd"]
 [ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://Test scenes/area_2d.gd" id="5_0t0x3"]
+[ext_resource type="Texture2D" uid="uid://u78bf1elgyhg" path="res://Assets/pelota.png" id="5_hsaat"]
 [ext_resource type="Script" uid="uid://l67cfjetdf8j" path="res://Ball/remove_particles.gd" id="6_hbi5u"]
 [ext_resource type="AudioStream" uid="uid://yrvx2tolssav" path="res://Ball/sounds/51461__andrenascimento__basket_ball_02_bounce.wav" id="8_hsaat"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
 resource_local_to_scene = true
-radius = 35.014282
+radius = 37.01351
 
 [sub_resource type="Curve" id="Curve_0t0x3"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.6883562, 0.9909091), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -41,6 +41,7 @@ collision_friction = 0.0
 collision_bounce = 0.9
 
 [node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "collision_shape", "sprite") groups=["Ball"]]
+z_index = 99
 collision_layer = 2
 collision_mask = 11
 physics_material_override = ExtResource("1_l4sn5")
@@ -52,6 +53,7 @@ ai_marker_2d = NodePath("AIMarker2D")
 effects_manager = NodePath("EffectsManager")
 collision_shape = NodePath("CollisionShape2D")
 sprite = NodePath("Sprite2D")
+initial_color = Color(0.5882353, 0.29411766, 0.039215688, 1)
 
 [node name="SoundManager" type="Node" parent="." unique_id=1060499892 node_paths=PackedStringArray("audio_stream_player_2d", "ball")]
 script = ExtResource("3_rg84v")
@@ -66,12 +68,12 @@ MAX_SPEED_DIFF = 1000.0
 script = ExtResource("4_4s4qd")
 _affected_node = NodePath("..")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=480967574]
+texture = ExtResource("5_hsaat")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1368493303]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_g3thm")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=480967574]
-texture = ExtResource("3_ngrkv")
 
 [node name="AIMarker2D" type="Marker2D" parent="." unique_id=1789299442]
 position = Vector2(34, 38)
