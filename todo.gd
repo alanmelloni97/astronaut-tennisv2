@@ -10,12 +10,6 @@ BUGS
 	virtual joystick anda mal, mucho deadzone
 
 FUTURO:
-	traducciones
 	android export
-
-
-
-
-
 
 "
