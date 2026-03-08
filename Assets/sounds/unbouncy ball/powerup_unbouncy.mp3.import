@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjquir1x2lrgh"
+path="res://.godot/imported/powerup_unbouncy.mp3-68368966bc3e6758ff643d3bfcf8f021.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/unbouncy ball/powerup_unbouncy.mp3"
+dest_files=["res://.godot/imported/powerup_unbouncy.mp3-68368966bc3e6758ff643d3bfcf8f021.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -21,11 +21,12 @@ func spawn_ball(delay: float):
 	if not enabled:
 		return
 	await get_tree().create_timer(delay).timeout
-	var ball: RigidBody2D = ball_sc.instantiate()
+	var ball: Ball = ball_sc.instantiate()
 	ball.global_position = _ball_spawn_point.global_position
+	owner.add_child(ball)
 	# add sideways velocity to ball
+	await ball.anim_finished
 	var impulse_x: float = randf_range(-INITIAL_IMPULSE.x, 0)
 	ball.apply_central_impulse(Vector2(impulse_x, INITIAL_IMPULSE.y))
-	owner.add_child(ball)
 
 	_ball_reference = ball

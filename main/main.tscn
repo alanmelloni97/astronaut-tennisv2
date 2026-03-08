@@ -34,7 +34,7 @@ scene_manager = NodePath("..")
 process_mode = 3
 script = ExtResource("6_4dugh")
 audio_stream_player = NodePath("AudioStreamPlayer")
-FADE_IN_SECONDS = 4.0
+FADE_IN_SECONDS = 2.0
 FADE_OUT_SECONDS = 1.0
 FADE_DB = -70
 

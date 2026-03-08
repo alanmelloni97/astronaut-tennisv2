@@ -85,10 +85,6 @@ move_right_2={
 ]
 }
 
-[input_devices]
-
-pointing/emulate_touch_from_mouse=true
-
 [layer_names]
 
 2d_physics/layer_1="Racket"
@@ -101,6 +97,7 @@ pointing/emulate_touch_from_mouse=true
 
 [physics]
 
+2d/physics_engine="Rapier2D"
 2d/default_gravity=400.0
 
 [rendering]

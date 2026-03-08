@@ -13,47 +13,64 @@
 [ext_resource type="Script" uid="uid://bqlse54u8e0r8" path="res://Level/bounce_detector.gd" id="6_nk1il"]
 [ext_resource type="Script" uid="uid://yjd3fkfu48mi" path="res://Level/lights_handler.gd" id="7_1p6h5"]
 [ext_resource type="Script" uid="uid://c3jkt2u4aautb" path="res://Level/ui_handler.gd" id="7_i5g78"]
-[ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="8_py82k"]
-[ext_resource type="Texture2D" uid="uid://cpi6fmcqutm33" path="res://Assets/background_game.png" id="9_q47le"]
 [ext_resource type="Script" uid="uid://b615mceneh7q" path="res://Ball/PowerUp/powerup_data.gd" id="12_am3y4"]
 [ext_resource type="PackedScene" uid="uid://0g8h07ct0gia" path="res://Ball/PowerUp/ball_powerup.tscn" id="12_k8npl"]
 [ext_resource type="Script" uid="uid://byub6igigr88i" path="res://Ball/Effects/ScaleEffect.gd" id="13_jghi6"]
+[ext_resource type="AudioStream" uid="uid://bdjd7cos87lkp" path="res://Assets/sounds/scale ball/big ball.mp3" id="14_mpxfd"]
+[ext_resource type="Texture2D" uid="uid://cuf1llgs2dgqe" path="res://Assets/powerup big.png" id="15_vb7dm"]
 [ext_resource type="PhysicsMaterial" uid="uid://n201dib0xrmv" path="res://Ball/physics materials/bouncy.tres" id="16_cqvaw"]
+[ext_resource type="AudioStream" uid="uid://cgbbp45r1von7" path="res://Assets/sounds/bouncy ball/146264__setuniman__boing-0h_16m.wav" id="16_pt1jg"]
+[ext_resource type="AudioStream" uid="uid://b3f844hajayky" path="res://Assets/sounds/scale ball/small ball.mp3" id="16_xqwpk"]
 [ext_resource type="Script" uid="uid://b4ap0fr8j47m8" path="res://Ball/Effects/MassEffect.gd" id="17_6uec0"]
 [ext_resource type="Script" uid="uid://dy6cpapp40twb" path="res://Ball/Effects/BounceEffect.gd" id="17_232uv"]
+[ext_resource type="Texture2D" uid="uid://bo001fadk20m4" path="res://Assets/powerup small.png" id="17_ex85q"]
+[ext_resource type="AudioStream" uid="uid://dm7dipyv1a18k" path="res://Assets/sounds/bouncy ball/powerup_bouncy.mp3" id="17_lemr6"]
 [ext_resource type="Script" uid="uid://d2yxgudywfyhc" path="res://Level/power_up_spawner.gd" id="17_luomk"]
 [ext_resource type="Texture2D" uid="uid://71doputtau3a" path="res://Assets/pelota bouncy.png" id="18_816bt"]
 [ext_resource type="Texture2D" uid="uid://cc61481tcaau7" path="res://Assets/powerup metal.png" id="18_r0jbq"]
 [ext_resource type="PhysicsMaterial" uid="uid://c1o0wcja6b3ln" path="res://Ball/physics materials/no_bouncy.tres" id="19_r0jbq"]
+[ext_resource type="AudioStream" uid="uid://p0ilsjmhcpip" path="res://Assets/sounds/metal ball/anvil_bounce.wav" id="20_mddns"]
 [ext_resource type="Texture2D" uid="uid://dvkdpdb8ugqal" path="res://Assets/pelota unbouncy.png" id="21_mddns"]
+[ext_resource type="AudioStream" uid="uid://btj2jhnja6xwm" path="res://Assets/sounds/metal ball/anvil.wav" id="21_x31ef"]
 [ext_resource type="PackedScene" uid="uid://b8nmqou14j2ss" path="res://UI/Virtual joystick/touch_joysticks.tscn" id="24_6uec0"]
+[ext_resource type="AudioStream" uid="uid://di2no4vjdm8i1" path="res://Assets/sounds/unbouncy ball/fart.mp3" id="24_32dyk"]
 [ext_resource type="Script" uid="uid://d1bu3vy2qkidn" path="res://Level/continious_collision_detector.gd" id="25_232uv"]
+[ext_resource type="AudioStream" uid="uid://bjquir1x2lrgh" path="res://Assets/sounds/unbouncy ball/powerup_unbouncy.mp3" id="25_gt2lo"]
 [ext_resource type="Script" uid="uid://duoytmh0h0bgk" path="res://UI/score_ui.gd" id="26_232uv"]
+[ext_resource type="Texture2D" uid="uid://ciidw7i5yd55g" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="30_816bt"]
 [ext_resource type="Script" uid="uid://cbvlk0m26qlvt" path="res://Level/tutorial_manager.gd" id="30_r0jbq"]
+[ext_resource type="Texture2D" uid="uid://jq8rhks8begq" path="res://Assets/tutorial/WASD.png" id="33_vb7dm"]
+[ext_resource type="Texture2D" uid="uid://cab86s78gxmyn" path="res://Assets/tutorial/FLECHAS.png" id="34_xqwpk"]
+[ext_resource type="Texture2D" uid="uid://2x3c4sxafnfj" path="res://Assets/backgrounds/background_game.png" id="38_vb7dm"]
 
 [sub_resource type="Resource" id="Resource_du4cn"]
 script = ExtResource("13_jghi6")
-scale = 2.0
+scale = 1.7
 metadata/_custom_type_script = "uid://byub6igigr88i"
 
 [sub_resource type="Resource" id="Resource_l5n2q"]
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_du4cn")
+texture = ExtResource("15_vb7dm")
+sound = ExtResource("14_mpxfd")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="Resource" id="Resource_wfwu7"]
 script = ExtResource("13_jghi6")
-scale = 0.5
+scale = 0.7
 metadata/_custom_type_script = "uid://byub6igigr88i"
 
 [sub_resource type="Resource" id="Resource_cqvaw"]
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_wfwu7")
+texture = ExtResource("17_ex85q")
+sound = ExtResource("16_xqwpk")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="Resource" id="Resource_mddns"]
 script = ExtResource("17_232uv")
 phyisics_material = ExtResource("16_cqvaw")
+sound = ExtResource("16_pt1jg")
 color = Color(0, 1, 1, 1)
 metadata/_custom_type_script = "uid://dy6cpapp40twb"
 
@@ -61,11 +78,13 @@ metadata/_custom_type_script = "uid://dy6cpapp40twb"
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_mddns")
 texture = ExtResource("18_816bt")
+sound = ExtResource("17_lemr6")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="Resource" id="Resource_i4n7n"]
 script = ExtResource("17_232uv")
 phyisics_material = ExtResource("19_r0jbq")
+sound = ExtResource("24_32dyk")
 color = Color(0.7372549, 0.827451, 0.37254903, 1)
 metadata/_custom_type_script = "uid://dy6cpapp40twb"
 
@@ -73,11 +92,13 @@ metadata/_custom_type_script = "uid://dy6cpapp40twb"
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_i4n7n")
 texture = ExtResource("21_mddns")
+sound = ExtResource("25_gt2lo")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="Resource" id="Resource_816bt"]
 script = ExtResource("17_6uec0")
 mass = 10.0
+sound = ExtResource("20_mddns")
 color = Color(0.5019608, 0.5019608, 0.5019608, 1)
 metadata/_custom_type_script = "uid://b4ap0fr8j47m8"
 
@@ -85,10 +106,11 @@ metadata/_custom_type_script = "uid://b4ap0fr8j47m8"
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_816bt")
 texture = ExtResource("18_r0jbq")
+sound = ExtResource("21_x31ef")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_luomk"]
-size = Vector2(1683, 620)
+size = Vector2(1683, 535)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py82k"]
 size = Vector2(998, 12)
@@ -172,13 +194,13 @@ script = ExtResource("17_luomk")
 powerups = Array[ExtResource("12_am3y4")]([SubResource("Resource_l5n2q"), SubResource("Resource_cqvaw"), SubResource("Resource_x31ef"), SubResource("Resource_pt1jg"), SubResource("Resource_lemr6")])
 power_up_sc = ExtResource("12_k8npl")
 collision_shape_2d = NodePath("CollisionShape2D")
-MIN_TIME_BETWEEN_SPAWNS = 20
-MAX_TIME_BETWEEN_SPAWNS = 40
-MAX_SIMULTANEOUS_POWERUPS = 3
+MIN_TIME_BETWEEN_SPAWNS = 1
+MAX_TIME_BETWEEN_SPAWNS = 1
+MAX_SIMULTANEOUS_POWERUPS = 70
 timer = NodePath("Timer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
-position = Vector2(957.5, 416)
+position = Vector2(957.5, 373.5)
 shape = SubResource("RectangleShape2D_luomk")
 
 [node name="Timer" type="Timer" parent="PowerUpSpawner" unique_id=136537762]
@@ -192,12 +214,16 @@ arrows_sprite = NodePath("ArrowsSprite")
 level = NodePath("..")
 
 [node name="WASDSprite" type="Sprite2D" parent="TutorialManager" unique_id=542582892]
+z_index = 9
 position = Vector2(486, 483)
-texture = ExtResource("8_py82k")
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("33_vb7dm")
 
 [node name="ArrowsSprite" type="Sprite2D" parent="TutorialManager" unique_id=448350962]
+z_index = 9
 position = Vector2(1429, 496)
-texture = ExtResource("8_py82k")
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("34_xqwpk")
 
 [node name="MainUI" parent="." unique_id=1468483608 instance=ExtResource("5_d6qko")]
 
@@ -210,11 +236,11 @@ _main_ui = NodePath("..")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1058688654]
 position = Vector2(960, 540)
-texture = ExtResource("9_q47le")
+texture = ExtResource("38_vb7dm")
 metadata/_edit_lock_ = true
 
 [node name="BallSpawnPoint" type="Marker2D" parent="." unique_id=1469462745]
-position = Vector2(968, 129)
+position = Vector2(959, 192)
 
 [node name="World" type="Node2D" parent="." unique_id=937198056]
 
@@ -373,20 +399,20 @@ horizontal_alignment = 1
 [node name="Lights" type="Node2D" parent="World" unique_id=245549183]
 
 [node name="PointLight1" type="PointLight2D" parent="World/Lights" unique_id=1750763901]
-position = Vector2(320, 106)
-scale = Vector2(0.28125, 0.28125)
+position = Vector2(335.5, 128.5)
+scale = Vector2(0.22265619, 0.22265624)
 enabled = false
-color = Color(0.80308235, 0, 0.16148603, 1)
-energy = 100000000.0
-texture = ExtResource("8_py82k")
+color = Color(0.82459205, 0.858649, 0, 1)
+energy = 5.0
+texture = ExtResource("30_816bt")
 
 [node name="PointLight2" type="PointLight2D" parent="World/Lights" unique_id=857232675]
-position = Vector2(1615, 106)
-scale = Vector2(0.28125, 0.28125)
+position = Vector2(1582.5, 127.50001)
+scale = Vector2(0.2148438, 0.2148438)
 enabled = false
-color = Color(0.80308235, 0, 0.16148603, 1)
-energy = 100000000.0
-texture = ExtResource("8_py82k")
+color = Color(0.8235294, 0.85882354, 0, 1)
+energy = 5.0
+texture = ExtResource("30_816bt")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="World" unique_id=1642094665]
 occluder = SubResource("OccluderPolygon2D_r0jbq")

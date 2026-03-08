@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dleupvcvvknii"
-path="res://.godot/imported/Challenger.png-797af009fd43c8fdd47da3dee2031304.ctex"
+uid="uid://cdumpnue7nsd4"
+path="res://.godot/imported/challenger.png-2c660fc6b02c93f7129c4c38b78facba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ragdoll/skin/skins/challenger/Challenger.png"
-dest_files=["res://.godot/imported/Challenger.png-797af009fd43c8fdd47da3dee2031304.ctex"]
+source_file="res://Ragdoll/skin/skins/challenger/challenger.png"
+dest_files=["res://.godot/imported/challenger.png-2c660fc6b02c93f7129c4c38b78facba.ctex"]
 
 [params]
 

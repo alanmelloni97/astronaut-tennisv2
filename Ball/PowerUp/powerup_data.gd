@@ -3,3 +3,4 @@ extends Resource
 
 @export var effect: Effect
 @export var texture: Texture2D
+@export var sound: AudioStream

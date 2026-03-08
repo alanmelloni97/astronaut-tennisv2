@@ -2,6 +2,7 @@ class_name TournamentTable
 extends Control
 
 @export var tournament_spot_sc: PackedScene
+@export var tournament_table: VBoxContainer
 
 
 func _ready() -> void:
@@ -19,4 +20,4 @@ func set_tournament_table(characters: Array[Character]):
 func _create_tournament_spot(character: Character):
 	var tournament_spot: TournamentNameSpot = tournament_spot_sc.instantiate()
 	tournament_spot.set_character(character)
-	add_child(tournament_spot)
+	tournament_table.add_child(tournament_spot)

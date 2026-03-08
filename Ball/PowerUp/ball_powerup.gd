@@ -11,6 +11,7 @@ var power_up_data: PowerUpData:
 	set(x):
 		power_up_data = x
 		inner_sprite.texture = power_up_data.texture
+		audio_stream_player_2d.stream = power_up_data.sound
 
 
 func _ready() -> void:
@@ -24,7 +25,6 @@ func _physics_process(delta: float) -> void:
 
 func destroy():
 	audio_stream_player_2d.play()
-
 	audio_stream_player_2d.reparent(get_parent())
 	queue_free()
 

@@ -1,5 +1,7 @@
 extends Node
 
+static var first_play: bool = true
+
 @export var player_1: Player
 @export var player_2: Player
 @export var wasd_sprite: Sprite2D
@@ -17,6 +19,9 @@ var arrows_hidden: bool = false:
 
 
 func _physics_process(_delta: float) -> void:
+	# check if this is not the first time the script is ran
+	if not first_play:
+		queue_free()
 	if DisplayServer.is_touchscreen_available():
 		arrows_hidden = true
 		wasd_hidden = true
@@ -29,4 +34,5 @@ func _physics_process(_delta: float) -> void:
 		if player_2.racket.movement_handler._input_manager.input_axis != Vector2.ZERO:
 			arrows_hidden = true
 	if wasd_hidden and arrows_hidden:
+		first_play = false
 		queue_free()

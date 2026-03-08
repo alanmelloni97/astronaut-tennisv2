@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb8b0i661xvlr"
-path="res://.godot/imported/Vostok.png-2d674eec542162f62b21fd45ba8d76d8.ctex"
+uid="uid://b3mmnddjaf0nk"
+path="res://.godot/imported/vostok.png-7ceed1048c0557f25ead475e957841a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ragdoll/skin/skins/vostok/Vostok.png"
-dest_files=["res://.godot/imported/Vostok.png-2d674eec542162f62b21fd45ba8d76d8.ctex"]
+source_file="res://Ragdoll/skin/skins/vostok/vostok.png"
+dest_files=["res://.godot/imported/vostok.png-7ceed1048c0557f25ead475e957841a7.ctex"]
 
 [params]
 
