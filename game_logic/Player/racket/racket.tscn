@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cqgp2276rxmxf"]
+
+[ext_resource type="Script" uid="uid://cwb2fng2xmh8x" path="res://game_logic/Player/racket/racket.gd" id="1_gxsuo"]
+[ext_resource type="Script" uid="uid://dpisp0m00kuoc" path="res://game_logic/Player/motion_component.gd" id="2_o468d"]
+[ext_resource type="Script" uid="uid://crvew7gomsi4a" path="res://game_logic/Player/input_manager.gd" id="3_xsmco"]
+[ext_resource type="Script" uid="uid://ds0srr1tfxcwg" path="res://game_logic/Player/ai_handler.gd" id="4_koyly"]
+[ext_resource type="Script" uid="uid://d0g5ximw8rnll" path="res://game_logic/Player/movement_handler.gd" id="4_xsmco"]
+[ext_resource type="Script" uid="uid://bxcjnblj33t8d" path="res://Test scenes/context_based_steering.gd" id="6_wwm6y"]
+[ext_resource type="AudioStream" uid="uid://djl5nll5gmmaf" path="res://game_logic/Player/racket/sounds/505628__highpixel__basketballbounce.wav" id="8_2bxvs"]
+[ext_resource type="Script" uid="uid://ctqw5ccky8d7e" path="res://game_logic/Player/racket/pid_controller.gd" id="8_8cr5i"]
+[ext_resource type="Texture2D" uid="uid://83kt02x3ifyv" path="res://Assets/Racket.png" id="8_uvl4i"]
+[ext_resource type="Script" uid="uid://dx28a4ktkylb1" path="res://game_logic/Player/racket/debug_point.gd" id="9_24dna"]
+[ext_resource type="Script" uid="uid://t4befjvx46oq" path="res://game_logic/Player/racket/racket_sound_manager.gd" id="9_uvl4i"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wwm6y"]
+friction = 0.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nbxvu"]
+radius = 52.0
+height = 118.0
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ysqc3"]
+polygon = PackedVector2Array(18.900002, -86, -18.900002, -86, -28.1, -81, -30.4, -81, -42.4, -68, -43.7, -68, -52.5, -50.5, -52.5, -2, -44.5, 12.400002, -44.5, 14.900002, -31.5, 26.900002, -31.5, 28.199997, -17, 36, -15.5, 36, -14.5, 82, -14.5, 86, 13.699997, 86, 15.5, 82.5, 15.5, 35.199997, 28, 29, 30.400002, 29, 42.4, 16, 43.800003, 16, 52.5, -3.4000015, 52.5, -50.1, 44.5, -64.5, 44.5, -66.9, 31.5, -79, 31.5, -80.3)
+
+[node name="Racket" type="RigidBody2D" unique_id=1644144030 node_paths=PackedStringArray("movement_handler")]
+z_index = 3
+collision_mask = 26
+mass = 10.0
+physics_material_override = SubResource("PhysicsMaterial_wwm6y")
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 5
+linear_damp = 10.0
+script = ExtResource("1_gxsuo")
+movement_handler = NodePath("MovementHandler")
+
+[node name="SoundManager" type="Node" parent="." unique_id=2039874068 node_paths=PackedStringArray("racket", "audio_stream_player_2d")]
+script = ExtResource("9_uvl4i")
+racket = NodePath("..")
+audio_stream_player_2d = NodePath("../AudioStreamPlayer2D")
+MAX_PITCH = 2.0
+MIN_PITCH = 1.5
+MIN_VOLUME_DB = -20.0
+MAX_SPEED_DIFF = 1000.0
+
+[node name="MovementHandler" type="Node" parent="." unique_id=124426701 node_paths=PackedStringArray("_input_manager", "_motion_manager", "_ai_manager")]
+script = ExtResource("4_xsmco")
+_input_manager = NodePath("InputManager")
+_motion_manager = NodePath("MotionManager")
+_ai_manager = NodePath("AIManager")
+
+[node name="MotionManager" type="Node" parent="MovementHandler" unique_id=954893411 node_paths=PackedStringArray("_rb")]
+script = ExtResource("2_o468d")
+_rb = NodePath("../..")
+_FORCE_MULT = 80000
+
+[node name="InputManager" type="Node" parent="MovementHandler" unique_id=1846637120]
+script = ExtResource("3_xsmco")
+
+[node name="AIManager" type="Node" parent="MovementHandler" unique_id=2068937680 node_paths=PackedStringArray("context_based_steering", "racket")]
+script = ExtResource("4_koyly")
+context_based_steering = NodePath("ContextBasedSteering")
+racket = NodePath("../..")
+
+[node name="ContextBasedSteering" type="Node" parent="MovementHandler/AIManager" unique_id=1925146466 node_paths=PackedStringArray("agent", "debug_point")]
+script = ExtResource("6_wwm6y")
+agent = NodePath("../../..")
+RAYCAST_LENGHT = 100
+num_rays = 16
+debug_point = NodePath("DebugPoint")
+
+[node name="PIDx" type="Node" parent="MovementHandler/AIManager/ContextBasedSteering" unique_id=2131374266]
+script = ExtResource("8_8cr5i")
+
+[node name="PIDy" type="Node" parent="MovementHandler/AIManager/ContextBasedSteering" unique_id=1526711636]
+script = ExtResource("8_8cr5i")
+
+[node name="DebugPoint" type="Node2D" parent="MovementHandler/AIManager/ContextBasedSteering" unique_id=1502049882]
+script = ExtResource("9_24dna")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1074267406]
+position = Vector2(-0.5, 26)
+texture = ExtResource("8_uvl4i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920572248]
+position = Vector2(-0.5, -1)
+shape = SubResource("CapsuleShape2D_nbxvu")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=234241448]
+position = Vector2(-0.5, 26)
+occluder = SubResource("OccluderPolygon2D_ysqc3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=781712119]
+stream = ExtResource("8_2bxvs")
+pitch_scale = 2.0

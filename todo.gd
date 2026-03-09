@@ -1,6 +1,5 @@
 "
 TODO:
-	musica no se va si restarteo rapido
 	mejorar ia
 	laika
 	cambiar ruido de cuadno hay punto

@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dfao2a6vs434d"]
+
+[ext_resource type="PackedScene" uid="uid://b7vf83d0aqp85" path="res://game_logic/Ragdoll/ragdoll.tscn" id="1_1yskv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1yskv"]
+radius = 19.75
+height = 102.0
+
+[node name="DogRagdoll" unique_id=62554258 instance=ExtResource("1_1yskv")]
+
+[node name="RWrist" parent="Body/joints" parent_id_path=PackedInt32Array(342467886) index="0" unique_id=14532273]
+position = Vector2(115, -37)
+
+[node name="LWrist" parent="Body/joints" parent_id_path=PackedInt32Array(342467886) index="1" unique_id=1254751605]
+position = Vector2(-107, -31)
+
+[node name="RKnee" parent="Body/joints" parent_id_path=PackedInt32Array(342467886) index="6" unique_id=1042626798]
+position = Vector2(44, 131)
+
+[node name="LKnee" parent="Body/joints" parent_id_path=PackedInt32Array(342467886) index="7" unique_id=57288818]
+position = Vector2(-63, 129)
+
+[node name="RShoulder" parent="Body/joints" parent_id_path=PackedInt32Array(342467886) index="8" unique_id=1008153452]
+position = Vector2(141, -6)
+
+[node name="RAbductor" parent="Body/joints" parent_id_path=PackedInt32Array(342467886) index="9" unique_id=1566378545]
+position = Vector2(52, 57)
+
+[node name="LAbductor" parent="Body/joints" parent_id_path=PackedInt32Array(342467886) index="10" unique_id=499404346]
+position = Vector2(-57, 52)
+
+[node name="LRarm" parent="Body" parent_id_path=PackedInt32Array(1017080323) index="1" unique_id=1210649468]
+sleeping = true
+
+[node name="Sprite2D" parent="Body/LRarm" index="0" unique_id=1381984965]
+texture = null
+
+[node name="CollisionShape2D2" parent="Body/LRarm" index="1" unique_id=1745540239]
+shape = null
+
+[node name="URarm" parent="Body" parent_id_path=PackedInt32Array(1017080323) index="2" unique_id=1765000745]
+sleeping = true
+
+[node name="Sprite2D" parent="Body/URarm" index="0" unique_id=1448816685]
+texture = null
+
+[node name="CollisionShape2D3" parent="Body/URarm" index="1" unique_id=1165257190]
+shape = null
+
+[node name="LLarm" parent="Body" parent_id_path=PackedInt32Array(1017080323) index="3" unique_id=1885476458]
+sleeping = true
+
+[node name="Sprite2D" parent="Body/LLarm" index="0" unique_id=960778191]
+texture = null
+
+[node name="CollisionShape2D3" parent="Body/LLarm" index="1" unique_id=66704152]
+shape = null
+
+[node name="ULarm" parent="Body" parent_id_path=PackedInt32Array(1017080323) index="4" unique_id=1415407772]
+sleeping = true
+
+[node name="Sprite2D" parent="Body/ULarm" index="0" unique_id=1180460072]
+texture = null
+
+[node name="CollisionShape2D3" parent="Body/ULarm" index="1" unique_id=877375178]
+shape = null
+
+[node name="LLleg" parent="Body" parent_id_path=PackedInt32Array(1017080323) index="5" unique_id=462889625]
+position = Vector2(-66, 163)
+
+[node name="CollisionShape2D3" parent="Body/LLleg" index="1" unique_id=446053858]
+position = Vector2(-1, 2)
+shape = SubResource("CapsuleShape2D_1yskv")
+
+[node name="LRleg" parent="Body" parent_id_path=PackedInt32Array(1017080323) index="6" unique_id=924807490]
+position = Vector2(35, 180)
+
+[node name="CollisionShape2D3" parent="Body/LRleg" index="1" unique_id=1564201038]
+position = Vector2(0, 2)
+
+[node name="URleg" parent="Body" parent_id_path=PackedInt32Array(1017080323) index="7" unique_id=1671535615]
+position = Vector2(54, 83)
+
+[node name="CollisionShape2D4" parent="Body/URleg" index="1" unique_id=1121752434]
+position = Vector2(0, -3)
+
+[node name="ULleg" parent="Body" parent_id_path=PackedInt32Array(1017080323) index="8" unique_id=1381771636]
+position = Vector2(-57, 84)
+
+[node name="Body" parent="Body" parent_id_path=PackedInt32Array(1017080323) index="9" unique_id=1325263749]
+rotation = -1.5707964
+
+[node name="CollisionShape2D2" parent="Body/Body" index="1" unique_id=1908738488]
+position = Vector2(0, -1)
+rotation = -3.1415927
+
+[node name="Head" parent="Body" parent_id_path=PackedInt32Array(1017080323) index="10" unique_id=1866216087]
+position = Vector2(-115, -32)
+
+[node name="CollisionShape2D4" parent="Body/Head" index="1" unique_id=290123391]
+position = Vector2(0, 1)

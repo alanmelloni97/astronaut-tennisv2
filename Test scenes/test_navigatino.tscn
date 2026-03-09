@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://bqknpsig4feid"]
+
+[ext_resource type="Script" uid="uid://b7p0m6inuka8f" path="res://Test scenes/test_navigatino.gd" id="1_yshm4"]
+[ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://game_logic/Ball/ball.tscn" id="2_tow4p"]
+[ext_resource type="Script" uid="uid://bxcjnblj33t8d" path="res://Test scenes/context_based_steering.gd" id="9_68cff"]
+[ext_resource type="Texture2D" uid="uid://83kt02x3ifyv" path="res://Assets/Racket.png" id="11_lgi27"]
+[ext_resource type="AudioStream" uid="uid://djl5nll5gmmaf" path="res://game_logic/Player/racket/sounds/505628__highpixel__basketballbounce.wav" id="12_eeolk"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_84qll"]
+vertices = PackedVector2Array(1145.4688, 647.71094, 1249.0469, 654.78125, 1944.9375, 1109.8594, -41.34375, 1084.1172, 779.28906, 651.15625, 856.78906, 649.9297, 1939.0469, 2.75, 1230.1016, 451.8672, -80.640625, -47.726563, 773.71094, 458.14063, 1038.7891, 537.03906, 948.77344, 537.9531)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 2, 1, 7), PackedInt32Array(8, 6, 7, 9), PackedInt32Array(3, 8, 9, 4), PackedInt32Array(10, 0, 5, 11)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-51, 1094, -91, -58, 1949, -7, 1955, 1120)])
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8xfu0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yae4k"]
+bounce = 0.7
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nbxvu"]
+radius = 52.0
+height = 118.0
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ysqc3"]
+polygon = PackedVector2Array(18.900002, -86, -18.900002, -86, -28.1, -81, -30.4, -81, -42.4, -68, -43.7, -68, -52.5, -50.5, -52.5, -2, -44.5, 12.400002, -44.5, 14.900002, -31.5, 26.900002, -31.5, 28.199997, -17, 36, -15.5, 36, -14.5, 82, -14.5, 86, 13.699997, 86, 15.5, 82.5, 15.5, 35.199997, 28, 29, 30.400002, 29, 42.4, 16, 43.800003, 16, 52.5, -3.4000015, 52.5, -50.1, 44.5, -64.5, 44.5, -66.9, 31.5, -79, 31.5, -80.3)
+
+[node name="TestBallSounds" type="Node2D" unique_id=417751191]
+script = ExtResource("1_yshm4")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1492727030]
+navigation_polygon = SubResource("NavigationPolygon_84qll")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1750456792]
+position = Vector2(1302, 405)
+vertices = PackedVector2Array(-63, 118, -57, -46, 52, -50, 52, 4, 182, 72, 185, -140, -211, -138, -203, 97)
+affect_navigation_mesh = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=944105001]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1416845452]
+position = Vector2(993, 1050)
+shape = SubResource("WorldBoundaryShape2D_8xfu0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2057875896]
+position = Vector2(-65, -811)
+rotation = 0.05967322
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2127800811]
+position = Vector2(993, 1050)
+rotation = 3.091491
+shape = SubResource("WorldBoundaryShape2D_8xfu0")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=837001779]
+position = Vector2(-916, -456)
+rotation = 0.10237784
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=977052075]
+position = Vector2(1178.5676, 933.43896)
+rotation = 1.4869322
+shape = SubResource("WorldBoundaryShape2D_8xfu0")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1735007560]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1362430475]
+position = Vector2(1869, 616)
+rotation = -1.6488498
+shape = SubResource("WorldBoundaryShape2D_8xfu0")
+
+[node name="Ball" parent="." unique_id=365515873 instance=ExtResource("2_tow4p")]
+position = Vector2(1301, 355)
+physics_material_override = SubResource("PhysicsMaterial_yae4k")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Ball" unique_id=1353900724]
+position = Vector2(1, 50)
+remote_path = NodePath("../../NavigationRegion2D/NavigationObstacle2D")
+update_rotation = false
+update_scale = false
+
+[node name="Marker2D" type="Marker2D" parent="Ball" unique_id=761600252]
+position = Vector2(40, 43)
+
+[node name="Racket" type="RigidBody2D" parent="." unique_id=1286491703]
+z_index = 3
+position = Vector2(343, 493)
+collision_mask = 26
+mass = 10.0
+linear_damp = 1.0
+script = ExtResource("9_68cff")
+
+[node name="Sprite2D" type="Sprite2D" parent="Racket" unique_id=1074267406]
+position = Vector2(-0.5, 26)
+texture = ExtResource("11_lgi27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Racket" unique_id=920572248]
+position = Vector2(-0.5, -1)
+shape = SubResource("CapsuleShape2D_nbxvu")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Racket" unique_id=234241448]
+position = Vector2(-0.5, 26)
+occluder = SubResource("OccluderPolygon2D_ysqc3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Racket" unique_id=781712119]
+stream = ExtResource("12_eeolk")
+pitch_scale = 2.0
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Racket" unique_id=510541420]
+path_desired_distance = 100.0
+target_desired_distance = 60.0
+radius = 50.0
+max_speed = 999999.0
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[connection signal="velocity_computed" from="Racket/NavigationAgent2D" to="Racket" method="_on_navigation_agent_2d_velocity_computed"]

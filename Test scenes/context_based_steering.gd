@@ -1,77 +1,32 @@
 class_name ContextBasedSteering
-extends Node
+extends RigidBody2D
 
-@export var agent: Node2D
-@export var RAYCAST_LENGHT: int
-@export var num_rays: int = 32
+var movement_speed: float = 15000.0
 
-var ball: Ball
-var ray_directions: Array[Vector2]
-var interest: Array[float]
-var danger: Array[float]
-var target_position: Vector2
-var chosen_dir: Vector2 = Vector2.ZERO
-var danger_raycasts: Array[RayCast2D]
+@onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
 
-func _ready() -> void:
-	ray_directions.resize(num_rays)
-	interest.resize(num_rays)
-	danger.resize(num_rays)
-	for i in num_rays:
-		var angle = i * 2 * PI / num_rays
-		ray_directions[i] = Vector2.RIGHT.rotated(angle)
+func _ready():
+	# These values need to be adjusted for the actor's speed
+	# and the navigation layout.
 
-		# set raycast
-		var raycast = RayCast2D.new()
-		raycast.set_collision_mask_value(1, false) # 1 is by default set
-		raycast.set_collision_mask_value(7, true) # ContextSteering mask
-
-		raycast.collide_with_areas = true
-		raycast.target_position = Vector2.RIGHT.rotated(angle) * RAYCAST_LENGHT
-		danger_raycasts.append(raycast)
-		call_deferred("_add_raycast", raycast)
+	navigation_agent.target_position = $"../Ball".global_position
+	# Make sure to not await during _ready.
+	actor_setup.call_deferred()
 
 
-func _physics_process(_delta):
-	ball = get_tree().get_first_node_in_group("Ball") # HACK should get reference
-	set_interest()
-	set_danger()
-	choose_direction()
+func _physics_process(delta):
+	#if navigation_agent.is_navigation_finished():
+	#return
+	navigation_agent.target_position = $"../Ball/Marker2D".global_position
+
+	var current_agent_position: Vector2 = global_position
+	var next_path_position: Vector2 = navigation_agent.get_next_path_position()
+
+	var force = current_agent_position.direction_to(next_path_position) * movement_speed
+	apply_central_force(force)
 
 
-func set_interest():
-	_set_custom_interest_parameters()
-	for i in num_rays:
-		# rotation is the agent rotation
-		var target_direction: Vector2 = agent.global_position.direction_to(target_position)
-		var d = ray_directions[i].rotated(agent.rotation).dot(target_direction)
-		interest[i] = max(0, d)
-
-
-func set_danger():
-	for i in num_rays:
-		danger[i] = 1.0 if danger_raycasts[i].is_colliding() else 0.0
-
-
-func choose_direction():
-	# Eliminate interest in slots with danger
-	for i in num_rays:
-		if danger[i] > 0.0:
-			interest[i] = 0.0
-	# Choose direction based on remaining interest
-	chosen_dir = Vector2.ZERO
-	for i in num_rays:
-		chosen_dir += ray_directions[i] * interest[i]
-		chosen_dir = chosen_dir.normalized()
-
-
-func _set_custom_interest_parameters():
-	# TODO retocar esto
-	if target_position.y > agent.global_position.y:
-		target_position.y += 300
-	#target_position.x += ball.linear_velocity.x
-
-
-func _add_raycast(raycast: RayCast2D):
-	agent.add_child(raycast)
+func actor_setup():
+	# Wait for the first physics frame so the NavigationServer can sync.
+	await get_tree().physics_frame

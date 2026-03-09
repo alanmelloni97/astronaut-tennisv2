@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2lqpiqo3oks8"]
 
-[ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://Ball/ball.tscn" id="1_reuv7"]
+[ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://game_logic/Ball/ball.tscn" id="1_reuv7"]
 [ext_resource type="Script" uid="uid://bxcjnblj33t8d" path="res://Test scenes/context_based_steering.gd" id="2_cbeqk"]
 [ext_resource type="Script" uid="uid://cc8g7f8rgaytb" path="res://Test scenes/paleta.gd" id="2_eh3iu"]
 [ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://Test scenes/area_2d.gd" id="2_haprg"]
