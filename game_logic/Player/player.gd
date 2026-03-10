@@ -20,11 +20,6 @@ func set_up_player(player_type: PlayerType, skin: CharacterSkin):
 	racket.movement_handler.set_player_type(player_type)
 	set_player_hand(player_type)
 	_ragdoll.skin = skin
-	# make limbs weightless if AI
-	if player_type == PlayerType.AI_RIVAL:
-		for child in _ragdoll.body.get_children(true):
-			if child is RigidBody2D:
-				child.mass = 0.1
 
 
 func set_player_hand(player_type: PlayerType):

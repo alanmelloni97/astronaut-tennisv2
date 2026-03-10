@@ -7,3 +7,4 @@ extends Node
 
 func move_body(force: Vector2):
 	_rb.apply_central_force(force * _FORCE_MULT)
+	print(force * _FORCE_MULT)

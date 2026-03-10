@@ -5,11 +5,8 @@
 [ext_resource type="Script" uid="uid://crvew7gomsi4a" path="res://game_logic/Player/input_manager.gd" id="3_xsmco"]
 [ext_resource type="Script" uid="uid://ds0srr1tfxcwg" path="res://game_logic/Player/ai_handler.gd" id="4_koyly"]
 [ext_resource type="Script" uid="uid://d0g5ximw8rnll" path="res://game_logic/Player/movement_handler.gd" id="4_xsmco"]
-[ext_resource type="Script" uid="uid://bxcjnblj33t8d" path="res://Test scenes/context_based_steering.gd" id="6_wwm6y"]
 [ext_resource type="AudioStream" uid="uid://djl5nll5gmmaf" path="res://game_logic/Player/racket/sounds/505628__highpixel__basketballbounce.wav" id="8_2bxvs"]
-[ext_resource type="Script" uid="uid://ctqw5ccky8d7e" path="res://game_logic/Player/racket/pid_controller.gd" id="8_8cr5i"]
 [ext_resource type="Texture2D" uid="uid://83kt02x3ifyv" path="res://Assets/Racket.png" id="8_uvl4i"]
-[ext_resource type="Script" uid="uid://dx28a4ktkylb1" path="res://game_logic/Player/racket/debug_point.gd" id="9_24dna"]
 [ext_resource type="Script" uid="uid://t4befjvx46oq" path="res://game_logic/Player/racket/racket_sound_manager.gd" id="9_uvl4i"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wwm6y"]
@@ -30,7 +27,7 @@ physics_material_override = SubResource("PhysicsMaterial_wwm6y")
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 5
-linear_damp = 10.0
+linear_damp = 1.0
 script = ExtResource("1_gxsuo")
 movement_handler = NodePath("MovementHandler")
 
@@ -52,44 +49,36 @@ _ai_manager = NodePath("AIManager")
 [node name="MotionManager" type="Node" parent="MovementHandler" unique_id=954893411 node_paths=PackedStringArray("_rb")]
 script = ExtResource("2_o468d")
 _rb = NodePath("../..")
-_FORCE_MULT = 80000
+_FORCE_MULT = 25000
 
 [node name="InputManager" type="Node" parent="MovementHandler" unique_id=1846637120]
 script = ExtResource("3_xsmco")
 
-[node name="AIManager" type="Node" parent="MovementHandler" unique_id=2068937680 node_paths=PackedStringArray("context_based_steering", "racket")]
+[node name="AIManager" type="Node" parent="MovementHandler" unique_id=2068937680 node_paths=PackedStringArray("racket", "navigation_agent")]
 script = ExtResource("4_koyly")
-context_based_steering = NodePath("ContextBasedSteering")
 racket = NodePath("../..")
-
-[node name="ContextBasedSteering" type="Node" parent="MovementHandler/AIManager" unique_id=1925146466 node_paths=PackedStringArray("agent", "debug_point")]
-script = ExtResource("6_wwm6y")
-agent = NodePath("../../..")
-RAYCAST_LENGHT = 100
-num_rays = 16
-debug_point = NodePath("DebugPoint")
-
-[node name="PIDx" type="Node" parent="MovementHandler/AIManager/ContextBasedSteering" unique_id=2131374266]
-script = ExtResource("8_8cr5i")
-
-[node name="PIDy" type="Node" parent="MovementHandler/AIManager/ContextBasedSteering" unique_id=1526711636]
-script = ExtResource("8_8cr5i")
-
-[node name="DebugPoint" type="Node2D" parent="MovementHandler/AIManager/ContextBasedSteering" unique_id=1502049882]
-script = ExtResource("9_24dna")
+navigation_agent = NodePath("../../navigation_position/NavigationAgent2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1074267406]
-position = Vector2(-0.5, 26)
+position = Vector2(-0.5, -55)
 texture = ExtResource("8_uvl4i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920572248]
-position = Vector2(-0.5, -1)
+position = Vector2(-0.5, -82)
 shape = SubResource("CapsuleShape2D_nbxvu")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=234241448]
-position = Vector2(-0.5, 26)
+position = Vector2(-0.5, -55)
 occluder = SubResource("OccluderPolygon2D_ysqc3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=781712119]
 stream = ExtResource("8_2bxvs")
 pitch_scale = 2.0
+
+[node name="navigation_position" type="Marker2D" parent="." unique_id=804598265]
+position = Vector2(0, -82)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="navigation_position" unique_id=934491734]
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(1, 0, 0, 1)

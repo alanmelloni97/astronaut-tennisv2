@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cfiuoebp1eicf" path="res://game_logic/Ball/ball.gd" id="2_65gad"]
 [ext_resource type="Script" uid="uid://bh2kguq210h0h" path="res://game_logic/Ball/ball_sound_manager.gd" id="3_rg84v"]
 [ext_resource type="Script" uid="uid://cf2trema4h72c" path="res://game_logic/Ball/effects_manager.gd" id="4_4s4qd"]
-[ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://Test scenes/area_2d.gd" id="5_0t0x3"]
+[ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://components/independent_transform.gd" id="5_0t0x3"]
 [ext_resource type="Texture2D" uid="uid://u78bf1elgyhg" path="res://Assets/pelota.png" id="5_hsaat"]
 [ext_resource type="Script" uid="uid://l67cfjetdf8j" path="res://game_logic/Ball/remove_particles.gd" id="6_hbi5u"]
 [ext_resource type="Texture2D" uid="uid://dtxb5xc02o5wo" path="res://Assets/ball pieces/spritesheet particles.png" id="7_oompg"]
@@ -109,7 +109,7 @@ _data = {
 &"spawn": SubResource("Animation_o177p")
 }
 
-[node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "remove_sound", "collision_shape", "sprite", "bounce_sound") groups=["Ball"]]
+[node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "remove_sound", "navigation_obstacle_2d", "collision_shape", "sprite", "bounce_sound") groups=["Ball"]]
 z_index = 99
 collision_layer = 2
 collision_mask = 11
@@ -121,6 +121,7 @@ script = ExtResource("2_65gad")
 ai_marker_2d = NodePath("AIMarker2D")
 effects_manager = NodePath("EffectsManager")
 remove_sound = NodePath("RemoveSound")
+navigation_obstacle_2d = NodePath("NavigationObstacle2D")
 collision_shape = NodePath("CollisionShape2D")
 sprite = NodePath("Sprite2D")
 bounce_sound = NodePath("BounceSound")
@@ -153,6 +154,15 @@ script = ExtResource("5_0t0x3")
 parent = NodePath("..")
 
 [node name="AIObstacle" type="RemoteTransform2D" parent="." unique_id=1013503540]
+remote_path = NodePath("../NavigationObstacle2D")
+update_rotation = false
+update_scale = false
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=167345837 node_paths=PackedStringArray("parent")]
+vertices = PackedVector2Array(-334, 38, -266, 241, -84, 234, 75, 227, 12, 126, -51, 46, -75, -52, 63, -51, 196, -16, 157, -108, 85, -129, -236, -170)
+affect_navigation_mesh = true
+script = ExtResource("5_0t0x3")
+parent = NodePath("..")
 
 [node name="RemoveParticles" type="GPUParticles2D" parent="." unique_id=690285847 node_paths=PackedStringArray("ball")]
 material = SubResource("CanvasItemMaterial_bjqt2")

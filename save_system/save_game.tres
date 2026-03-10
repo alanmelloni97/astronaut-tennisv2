@@ -1,0 +1,206 @@
+[gd_resource type="Resource" script_class="GameSave" format=3]
+
+[ext_resource type="Script" path="res://game_logic/Resources/character.gd" id="1_ak7m2"]
+[ext_resource type="Resource" path="res://game_logic/Ragdoll/skin/skins/apollo/apollo.tres" id="2_42vow"]
+[ext_resource type="Resource" path="res://game_logic/Ragdoll/skin/skins/vostok/vostok.tres" id="3_kqivm"]
+[ext_resource type="Resource" path="res://game_logic/Ragdoll/skin/skins/mercury/mercury_skin.tres" id="4_h0rxb"]
+[ext_resource type="Resource" path="res://game_logic/Ragdoll/skin/skins/challenger/challenger.tres" id="5_4wi0w"]
+[ext_resource type="Resource" path="res://game_logic/Ragdoll/skin/skins/default/default_skin.tres" id="6_kuywi"]
+[ext_resource type="Script" path="res://save_system/game_save.gd" id="7_4op50"]
+[ext_resource type="Script" path="res://game_logic/Ragdoll/skin/skin_resource.gd" id="8_uqc5n"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/body.png" id="9_gy8mg"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/head.png" id="10_hag74"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/apollo.png" id="11_a0byu"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/LLarm.png" id="12_t0gr3"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/LLleg.png" id="13_uc783"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/LRarm.png" id="14_8i875"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/LRleg.png" id="15_n4c3f"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/ULarm.png" id="16_acfvb"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/ULleg.png" id="17_ck4rg"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/URarm.png" id="18_wfdhn"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/apollo/URleg.png" id="19_73lbp"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/body.png" id="20_0cr68"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/head.png" id="21_1lob8"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/vostok.png" id="22_m12yn"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/LLarm.png" id="23_pqs5e"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/LLleg.png" id="24_yob6k"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/LRarm.png" id="25_046kj"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/LRleg.png" id="26_uy725"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/ULarm.png" id="27_qvtf4"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/ULleg.png" id="28_xrh5q"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/URarm.png" id="29_lgh6u"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/vostok/URleg.png" id="30_fojsu"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/body.png" id="31_nds2k"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/head.png" id="32_4ce7f"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/mercury.png" id="33_bhkk4"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/LLarm.png" id="34_66bjn"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/LLleg.png" id="35_eyhi7"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/LRarm.png" id="36_k0ssn"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/LRleg.png" id="37_l8rk5"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/ULarm.png" id="38_uwo2o"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/ULleg.png" id="39_qomgv"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/URarm.png" id="40_35ksk"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/mercury/URleg.png" id="41_ytt26"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/body.png" id="42_lfde7"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/head.png" id="43_j6l6j"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/challenger.png" id="44_ypr5f"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/LLarm.png" id="45_fiwx4"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/LLleg.png" id="46_h3t66"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/LRarm.png" id="47_gem8w"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/LRleg.png" id="48_cio5j"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/ULarm.png" id="49_1xf4q"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/ULleg.png" id="50_68qu5"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/URarm.png" id="51_px3id"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/challenger/URleg.png" id="52_bxb6e"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/default/body.png" id="53_q3ky5"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/default/head.png" id="54_vyc5s"]
+[ext_resource type="Texture2D" path="res://icon.svg" id="55_jk5nt"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/default/LLarm.png" id="56_8xx47"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/default/LLleg.png" id="57_wopf0"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/default/LRarm.png" id="58_4qqx5"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/default/LRleg.png" id="59_oqvxs"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/default/ULarm.png" id="60_e0bby"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/default/ULleg.png" id="61_bybvc"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/default/URarm.png" id="62_tu2gy"]
+[ext_resource type="Texture2D" path="res://game_logic/Ragdoll/skin/skins/default/URleg.png" id="63_idua4"]
+
+[sub_resource type="Resource" id="Resource_0hpa8"]
+script = ExtResource("1_ak7m2")
+name = "Neil Armstrong"
+skin = ExtResource("2_42vow")
+beated = true
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_c2d4n"]
+script = ExtResource("1_ak7m2")
+name = "Yuri Gagarin"
+skin = ExtResource("3_kqivm")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_82qhk"]
+script = ExtResource("1_ak7m2")
+name = "Buzz Aldrin"
+skin = ExtResource("2_42vow")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_2cl63"]
+script = ExtResource("1_ak7m2")
+name = "Alan Shepard"
+skin = ExtResource("4_h0rxb")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_8mtkk"]
+script = ExtResource("1_ak7m2")
+name = "John Glenn"
+skin = ExtResource("4_h0rxb")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_cc3by"]
+script = ExtResource("1_ak7m2")
+name = "Valentina Tereshkova"
+skin = ExtResource("3_kqivm")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_exe54"]
+script = ExtResource("1_ak7m2")
+name = "Sally Ride"
+skin = ExtResource("5_4wi0w")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_ivnx7"]
+script = ExtResource("1_ak7m2")
+name = "Ulf Merbold"
+skin = ExtResource("5_4wi0w")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_rt06a"]
+script = ExtResource("1_ak7m2")
+name = "Laika"
+skin = ExtResource("6_kuywi")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
+[sub_resource type="Resource" id="Resource_02htj"]
+script = ExtResource("8_uqc5n")
+name = "Apollo"
+image = ExtResource("11_a0byu")
+is_unlocked = true
+body = ExtResource("9_gy8mg")
+head = ExtResource("10_hag74")
+ll_arm = ExtResource("12_t0gr3")
+ll_leg = ExtResource("13_uc783")
+lr_arm = ExtResource("14_8i875")
+lr_leg = ExtResource("15_n4c3f")
+ul_arm = ExtResource("16_acfvb")
+ul_leg = ExtResource("17_ck4rg")
+ur_arm = ExtResource("18_wfdhn")
+ur_leg = ExtResource("19_73lbp")
+metadata/_custom_type_script = "uid://v0sa452yk36s"
+
+[sub_resource type="Resource" id="Resource_4j20r"]
+script = ExtResource("8_uqc5n")
+name = "Vostok"
+image = ExtResource("22_m12yn")
+body = ExtResource("20_0cr68")
+head = ExtResource("21_1lob8")
+ll_arm = ExtResource("23_pqs5e")
+ll_leg = ExtResource("24_yob6k")
+lr_arm = ExtResource("25_046kj")
+lr_leg = ExtResource("26_uy725")
+ul_arm = ExtResource("27_qvtf4")
+ul_leg = ExtResource("28_xrh5q")
+ur_arm = ExtResource("29_lgh6u")
+ur_leg = ExtResource("30_fojsu")
+metadata/_custom_type_script = "uid://v0sa452yk36s"
+
+[sub_resource type="Resource" id="Resource_5t7ht"]
+script = ExtResource("8_uqc5n")
+name = "Mercury"
+image = ExtResource("33_bhkk4")
+body = ExtResource("31_nds2k")
+head = ExtResource("32_4ce7f")
+ll_arm = ExtResource("34_66bjn")
+ll_leg = ExtResource("35_eyhi7")
+lr_arm = ExtResource("36_k0ssn")
+lr_leg = ExtResource("37_l8rk5")
+ul_arm = ExtResource("38_uwo2o")
+ul_leg = ExtResource("39_qomgv")
+ur_arm = ExtResource("40_35ksk")
+ur_leg = ExtResource("41_ytt26")
+metadata/_custom_type_script = "uid://v0sa452yk36s"
+
+[sub_resource type="Resource" id="Resource_idwbp"]
+script = ExtResource("8_uqc5n")
+name = "Challenger"
+image = ExtResource("44_ypr5f")
+body = ExtResource("42_lfde7")
+head = ExtResource("43_j6l6j")
+ll_arm = ExtResource("45_fiwx4")
+ll_leg = ExtResource("46_h3t66")
+lr_arm = ExtResource("47_gem8w")
+lr_leg = ExtResource("48_cio5j")
+ul_arm = ExtResource("49_1xf4q")
+ul_leg = ExtResource("50_68qu5")
+ur_arm = ExtResource("51_px3id")
+ur_leg = ExtResource("52_bxb6e")
+metadata/_custom_type_script = "uid://v0sa452yk36s"
+
+[sub_resource type="Resource" id="Resource_a26xs"]
+script = ExtResource("8_uqc5n")
+name = "default"
+image = ExtResource("55_jk5nt")
+body = ExtResource("53_q3ky5")
+head = ExtResource("54_vyc5s")
+ll_arm = ExtResource("56_8xx47")
+ll_leg = ExtResource("57_wopf0")
+lr_arm = ExtResource("58_4qqx5")
+lr_leg = ExtResource("59_oqvxs")
+ul_arm = ExtResource("60_e0bby")
+ul_leg = ExtResource("61_bybvc")
+ur_arm = ExtResource("62_tu2gy")
+ur_leg = ExtResource("63_idua4")
+metadata/_custom_type_script = "uid://v0sa452yk36s"
+
+[resource]
+script = ExtResource("7_4op50")
+skins = Array[ExtResource("8_uqc5n")]([SubResource("Resource_02htj"), SubResource("Resource_4j20r"), SubResource("Resource_5t7ht"), SubResource("Resource_idwbp"), SubResource("Resource_a26xs")])
+characters = Array[ExtResource("1_ak7m2")]([SubResource("Resource_0hpa8"), SubResource("Resource_c2d4n"), SubResource("Resource_82qhk"), SubResource("Resource_2cl63"), SubResource("Resource_8mtkk"), SubResource("Resource_cc3by"), SubResource("Resource_exe54"), SubResource("Resource_ivnx7"), SubResource("Resource_rt06a")])

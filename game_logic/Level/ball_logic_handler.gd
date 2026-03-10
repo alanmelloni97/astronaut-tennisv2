@@ -2,6 +2,7 @@ class_name BallManager
 extends Node
 
 @export var ball_sc: PackedScene
+@export var navigation_region: NavigationRegion2D
 @export var _ball_spawn_point: Marker2D
 @export var INITIAL_IMPULSE: Vector2
 
@@ -23,7 +24,7 @@ func spawn_ball(delay: float):
 	await get_tree().create_timer(delay).timeout
 	var ball: Ball = ball_sc.instantiate()
 	ball.global_position = _ball_spawn_point.global_position
-	owner.add_child(ball)
+	navigation_region.add_child(ball)
 	# add sideways velocity to ball
 	await ball.anim_finished
 	var impulse_x: float = randf_range(0, INITIAL_IMPULSE.x)

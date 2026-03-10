@@ -29,7 +29,9 @@ script = ExtResource("1_yshm4")
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1492727030]
 navigation_polygon = SubResource("NavigationPolygon_84qll")
 
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1750456792]
+[node name="Node2D" type="Node2D" parent="NavigationRegion2D" unique_id=178604923]
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D/Node2D" unique_id=1750456792]
 position = Vector2(1302, 405)
 vertices = PackedVector2Array(-63, 118, -57, -46, 52, -50, 52, 4, 176, 7, 185, -140, -211, -138, -203, 97)
 affect_navigation_mesh = true
@@ -79,7 +81,7 @@ physics_material_override = SubResource("PhysicsMaterial_yae4k")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Ball" unique_id=1353900724]
 position = Vector2(1, 50)
-remote_path = NodePath("../../NavigationRegion2D/NavigationObstacle2D")
+remote_path = NodePath("../../NavigationRegion2D/Node2D/NavigationObstacle2D")
 update_rotation = false
 update_scale = false
 

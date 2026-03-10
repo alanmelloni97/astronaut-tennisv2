@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://jq8rhks8begq" path="res://Assets/tutorial/WASD.png" id="33_vb7dm"]
 [ext_resource type="Texture2D" uid="uid://cab86s78gxmyn" path="res://Assets/tutorial/FLECHAS.png" id="34_xqwpk"]
 [ext_resource type="Texture2D" uid="uid://2x3c4sxafnfj" path="res://Assets/backgrounds/background_game.png" id="38_vb7dm"]
+[ext_resource type="Script" uid="uid://d3wjxv138x665" path="res://game_logic/Level/navigation_region_2d.gd" id="39_t3ka0"]
 
 [sub_resource type="Resource" id="Resource_du4cn"]
 script = ExtResource("13_jghi6")
@@ -112,6 +113,11 @@ metadata/_custom_type_script = "uid://b615mceneh7q"
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_luomk"]
 size = Vector2(1683, 535)
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_0cmfq"]
+vertices = PackedVector2Array(1957.4063, -15.09375, 2008.5234, 1176.1875, 952.96094, 1097.7109, 949.03125, -24.898438)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(943, 1107, 939, -35, 1967, -25, 2019, 1187)])
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py82k"]
 size = Vector2(998, 21)
 
@@ -161,9 +167,10 @@ _score_manager = NodePath("../ScoreHandler/ScoreManager")
 bounce_detector = NodePath("../BounceDetector")
 ball_manager = NodePath("BallManager")
 
-[node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("_ball_spawn_point")]
+[node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("navigation_region", "_ball_spawn_point")]
 script = ExtResource("2_py82k")
 ball_sc = ExtResource("3_py82k")
+navigation_region = NodePath("../../NavigationRegion2D")
 _ball_spawn_point = NodePath("../../BallSpawnPoint")
 INITIAL_IMPULSE = Vector2(500, -50)
 
@@ -237,6 +244,10 @@ metadata/_edit_lock_ = true
 
 [node name="BallSpawnPoint" type="Marker2D" parent="." unique_id=1469462745]
 position = Vector2(959, 192)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1176074455]
+navigation_polygon = SubResource("NavigationPolygon_0cmfq")
+script = ExtResource("39_t3ka0")
 
 [node name="World" type="Node2D" parent="." unique_id=937198056]
 
