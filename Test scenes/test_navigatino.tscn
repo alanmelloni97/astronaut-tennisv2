@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b7p0m6inuka8f" path="res://Test scenes/test_navigatino.gd" id="1_yshm4"]
 [ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://game_logic/Ball/ball.tscn" id="2_tow4p"]
-[ext_resource type="Script" uid="uid://bxcjnblj33t8d" path="res://Test scenes/context_based_steering.gd" id="9_68cff"]
+[ext_resource type="Script" uid="uid://bkl6atvap0wjf" path="res://Test scenes/racket.gd" id="3_yshm4"]
 [ext_resource type="Texture2D" uid="uid://83kt02x3ifyv" path="res://Assets/Racket.png" id="11_lgi27"]
 [ext_resource type="AudioStream" uid="uid://djl5nll5gmmaf" path="res://game_logic/Player/racket/sounds/505628__highpixel__basketballbounce.wav" id="12_eeolk"]
 
@@ -31,7 +31,7 @@ navigation_polygon = SubResource("NavigationPolygon_84qll")
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1750456792]
 position = Vector2(1302, 405)
-vertices = PackedVector2Array(-63, 118, -57, -46, 52, -50, 52, 4, 182, 72, 185, -140, -211, -138, -203, 97)
+vertices = PackedVector2Array(-63, 118, -57, -46, 52, -50, 52, 4, 176, 7, 185, -140, -211, -138, -203, 97)
 affect_navigation_mesh = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=944105001]
@@ -92,7 +92,7 @@ position = Vector2(343, 493)
 collision_mask = 26
 mass = 10.0
 linear_damp = 1.0
-script = ExtResource("9_68cff")
+script = ExtResource("3_yshm4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Racket" unique_id=1074267406]
 position = Vector2(-0.5, 26)

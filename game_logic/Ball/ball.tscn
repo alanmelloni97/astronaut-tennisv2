@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dtxb5xc02o5wo" path="res://Assets/ball pieces/spritesheet particles.png" id="7_oompg"]
 [ext_resource type="AudioStream" uid="uid://yrvx2tolssav" path="res://game_logic/Ball/sounds/51461__andrenascimento__basket_ball_02_bounce.wav" id="8_hsaat"]
 [ext_resource type="Script" uid="uid://dqtcdtkcbulfb" path="res://game_logic/Ball/spawner_manager.gd" id="10_bjqt2"]
-[ext_resource type="Script" uid="uid://bjlcvpkv506yg" path="res://game_logic/Ball/auto_free_audio_player.gd" id="10_o177p"]
 [ext_resource type="AudioStream" uid="uid://di2no4vjdm8i1" path="res://Assets/sounds/unbouncy ball/fart.mp3" id="10_yip81"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
@@ -153,16 +152,7 @@ z_index = 1
 script = ExtResource("5_0t0x3")
 parent = NodePath("..")
 
-[node name="AIAvoidanceArea2D" type="Area2D" parent="." unique_id=2041147643 node_paths=PackedStringArray("parent")]
-top_level = true
-collision_layer = 64
-collision_mask = 0
-script = ExtResource("5_0t0x3")
-parent = NodePath("..")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AIAvoidanceArea2D" unique_id=1916833364]
-position = Vector2(7, 19)
-polygon = PackedVector2Array(-133, -67, -109, -67, 44, -69, 88, -69, 38, -92, -121, -82, -132, -71)
+[node name="AIObstacle" type="RemoteTransform2D" parent="." unique_id=1013503540]
 
 [node name="RemoveParticles" type="GPUParticles2D" parent="." unique_id=690285847 node_paths=PackedStringArray("ball")]
 material = SubResource("CanvasItemMaterial_bjqt2")
@@ -182,7 +172,6 @@ stream = ExtResource("8_hsaat")
 
 [node name="RemoveSound" type="AudioStreamPlayer2D" parent="." unique_id=1305614402]
 stream = ExtResource("10_yip81")
-script = ExtResource("10_o177p")
 
 [node name="SpawnerManager" type="Node" parent="." unique_id=1222965515 node_paths=PackedStringArray("ball", "animation_player")]
 script = ExtResource("10_bjqt2")

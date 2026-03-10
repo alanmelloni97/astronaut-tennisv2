@@ -3,7 +3,7 @@ extends Resource
 
 
 # Global helper functions
-static func get_random_point_in_rect(rect: Rect2):
+static func get_random_point_in_rect(rect: Rect2) -> Vector2:
 	var x = randf_range(rect.position.x, rect.position.x + rect.size.x)
 	var y = randf_range(rect.position.y, rect.position.y + rect.size.y)
 	return Vector2(x, y)
@@ -27,3 +27,9 @@ static func duplicate_astar_grid(old_grid: AStarGrid2D) -> AStarGrid2D:
 		if old_point.solid:
 			new_grid.set_point_solid(old_point.id)
 	return new_grid
+
+
+static func play_audio_post_mortem(audio_stream_player: AudioStreamPlayer2D) -> void:
+	audio_stream_player.play()
+	audio_stream_player.reparent(audio_stream_player.get_parent())
+	audio_stream_player.finished.connect(audio_stream_player.queue_free)
