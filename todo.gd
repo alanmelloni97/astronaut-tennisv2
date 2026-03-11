@@ -2,14 +2,11 @@
 TODO:
 	laika
 	cambiar ruido de cuadno hay punto
-BUGS
-	virtual joystick anda mal, mucho deadzone
 
 FUTURO:
 	sonidos
-
+	ui, pause button
 	android export
-	ball spawn para derecha tambien
 
 
 MAYBE:

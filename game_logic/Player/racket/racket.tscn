@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://d0g5ximw8rnll" path="res://game_logic/Player/movement_handler.gd" id="4_xsmco"]
 [ext_resource type="AudioStream" uid="uid://djl5nll5gmmaf" path="res://game_logic/Player/racket/sounds/505628__highpixel__basketballbounce.wav" id="8_2bxvs"]
 [ext_resource type="Texture2D" uid="uid://83kt02x3ifyv" path="res://Assets/Racket.png" id="8_uvl4i"]
+[ext_resource type="Script" uid="uid://4xq1pwo5nsb4" path="res://game_logic/Player/racket/mobile_config.gd" id="9_eay6m"]
 [ext_resource type="Script" uid="uid://t4befjvx46oq" path="res://game_logic/Player/racket/racket_sound_manager.gd" id="9_uvl4i"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wwm6y"]
@@ -90,3 +91,9 @@ simplify_epsilon = 5.0
 debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0, 0, 1)
+
+[node name="MobileConfig" type="Node" parent="." unique_id=244560580 node_paths=PackedStringArray("racket")]
+script = ExtResource("9_eay6m")
+racket = NodePath("..")
+DAMP = 5.0
+FORCE = 30000
