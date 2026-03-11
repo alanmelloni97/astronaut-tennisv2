@@ -8,6 +8,7 @@ var aux_gravity: float
 
 
 func _ready() -> void:
+	ball.hide()
 	ball.ready.connect(_spawn_animation)
 	animation_player.animation_finished.connect(_on_animation_finished)
 
@@ -17,6 +18,7 @@ func _spawn_animation():
 	aux_gravity = ball.gravity_scale
 	ball.gravity_scale = 0.0
 	animation_player.play("spawn")
+	ball.show()
 
 
 func _on_animation_finished(_anim_name: StringName):

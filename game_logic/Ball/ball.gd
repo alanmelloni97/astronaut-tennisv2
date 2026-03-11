@@ -18,6 +18,7 @@ signal _removed
 
 func _ready() -> void:
 	modulate = initial_color
+	show()
 
 
 # WRAPPER

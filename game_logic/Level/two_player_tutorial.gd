@@ -1,6 +1,8 @@
+class_name TwoPlayerTutorial
 extends Node
 
-static var first_play: bool = true
+# static so that its saved between changing levels
+static var two_player_tutorial_completed: bool
 
 @export var player_1: Player
 @export var player_2: Player
@@ -20,19 +22,17 @@ var arrows_hidden: bool = false:
 
 func _physics_process(_delta: float) -> void:
 	# check if this is not the first time the script is ran
-	if not first_play:
+	if two_player_tutorial_completed:
 		queue_free()
 	if DisplayServer.is_touchscreen_available():
 		arrows_hidden = true
 		wasd_hidden = true
 		return
-	if not arrows_hidden and not level.two_player_mode:
-		arrows_hidden = true
+
 	if player_1.racket.movement_handler._input_manager.input_axis != Vector2.ZERO:
 		wasd_hidden = true
 	if player_2.racket.movement_handler._input_manager:
 		if player_2.racket.movement_handler._input_manager.input_axis != Vector2.ZERO:
 			arrows_hidden = true
 	if wasd_hidden and arrows_hidden:
-		first_play = false
-		queue_free()
+		two_player_tutorial_completed = true

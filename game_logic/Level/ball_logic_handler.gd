@@ -27,7 +27,7 @@ func spawn_ball(delay: float):
 	navigation_region.add_child(ball)
 	# add sideways velocity to ball
 	await ball.anim_finished
-	var impulse_x: float = randf_range(0, INITIAL_IMPULSE.x)
+	var impulse_x: float = randf_range(-INITIAL_IMPULSE.x, INITIAL_IMPULSE.x)
 	ball.apply_central_impulse(Vector2(impulse_x, INITIAL_IMPULSE.y))
 
 	_ball_reference = ball

@@ -1,7 +1,5 @@
 "
 TODO:
-	bug pelota al salir
-	bug lues transparentan
 	laika
 	cambiar ruido de cuadno hay punto
 BUGS

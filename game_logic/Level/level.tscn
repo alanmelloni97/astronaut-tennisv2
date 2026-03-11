@@ -38,7 +38,9 @@
 [ext_resource type="AudioStream" uid="uid://bjquir1x2lrgh" path="res://Assets/sounds/unbouncy ball/powerup_unbouncy.mp3" id="25_gt2lo"]
 [ext_resource type="Script" uid="uid://duoytmh0h0bgk" path="res://game_logic/UI/score_ui.gd" id="26_232uv"]
 [ext_resource type="Texture2D" uid="uid://ciidw7i5yd55g" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="30_816bt"]
-[ext_resource type="Script" uid="uid://cbvlk0m26qlvt" path="res://game_logic/Level/tutorial_manager.gd" id="30_r0jbq"]
+[ext_resource type="Script" uid="uid://cbvlk0m26qlvt" path="res://game_logic/Level/tournament_tutorial.gd" id="30_r0jbq"]
+[ext_resource type="Script" uid="uid://djqsokdco83fu" path="res://game_logic/Level/two_player_tutorial.gd" id="32_0cmfq"]
+[ext_resource type="Script" uid="uid://bqff6nk6p8ecf" path="res://game_logic/Level/tutorials.gd" id="32_qk0lb"]
 [ext_resource type="Texture2D" uid="uid://jq8rhks8begq" path="res://Assets/tutorial/WASD.png" id="33_vb7dm"]
 [ext_resource type="Texture2D" uid="uid://cab86s78gxmyn" path="res://Assets/tutorial/FLECHAS.png" id="34_xqwpk"]
 [ext_resource type="Texture2D" uid="uid://2x3c4sxafnfj" path="res://Assets/backgrounds/background_game.png" id="38_vb7dm"]
@@ -159,7 +161,7 @@ _score_ui = NodePath("../World/Scores")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
-WIN_SCORE = 99
+WIN_SCORE = 7
 
 [node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "bounce_detector", "ball_manager")]
 script = ExtResource("2_1teg4")
@@ -172,7 +174,7 @@ script = ExtResource("2_py82k")
 ball_sc = ExtResource("3_py82k")
 navigation_region = NodePath("../../NavigationRegion2D")
 _ball_spawn_point = NodePath("../../BallSpawnPoint")
-INITIAL_IMPULSE = Vector2(500, -50)
+INITIAL_IMPULSE = Vector2(700, -50)
 
 [node name="LightsHandler" type="Node" parent="." unique_id=2121215875 node_paths=PackedStringArray("_lights_manager", "bounce_detector")]
 script = ExtResource("7_1p6h5")
@@ -208,25 +210,43 @@ shape = SubResource("RectangleShape2D_luomk")
 
 [node name="Timer" type="Timer" parent="PowerUpSpawner" unique_id=136537762]
 
-[node name="TutorialManager" type="Node" parent="." unique_id=1685807822 node_paths=PackedStringArray("player_1", "player_2", "wasd_sprite", "arrows_sprite", "level")]
-script = ExtResource("30_r0jbq")
-player_1 = NodePath("../Player1")
-player_2 = NodePath("../Player2")
-wasd_sprite = NodePath("WASDSprite")
-arrows_sprite = NodePath("ArrowsSprite")
+[node name="Tutorials" type="Node" parent="." unique_id=124927822 node_paths=PackedStringArray("two_player_tutorial", "tournament_tutorial", "level")]
+script = ExtResource("32_qk0lb")
+two_player_tutorial = NodePath("TwoPlayerTutorial")
+tournament_tutorial = NodePath("TournamentTutorial")
 level = NodePath("..")
 
-[node name="WASDSprite" type="Sprite2D" parent="TutorialManager" unique_id=542582892]
+[node name="TwoPlayerTutorial" type="Node" parent="Tutorials" unique_id=1685807822 node_paths=PackedStringArray("player_1", "player_2", "wasd_sprite", "arrows_sprite", "level")]
+script = ExtResource("32_0cmfq")
+player_1 = NodePath("../../Player1")
+player_2 = NodePath("../../Player2")
+wasd_sprite = NodePath("WASDSprite")
+arrows_sprite = NodePath("ArrowsSprite")
+level = NodePath("../..")
+
+[node name="WASDSprite" type="Sprite2D" parent="Tutorials/TwoPlayerTutorial" unique_id=542582892]
 z_index = 9
-position = Vector2(486, 483)
-scale = Vector2(0.765, 0.765)
+position = Vector2(486, 163.40799)
+scale = Vector2(0.51066643, 0.51066643)
 texture = ExtResource("33_vb7dm")
 
-[node name="ArrowsSprite" type="Sprite2D" parent="TutorialManager" unique_id=448350962]
+[node name="ArrowsSprite" type="Sprite2D" parent="Tutorials/TwoPlayerTutorial" unique_id=448350962]
 z_index = 9
-position = Vector2(1429, 496)
-scale = Vector2(0.765, 0.765)
+position = Vector2(1429, 176.40799)
+scale = Vector2(0.51066643, 0.51066643)
 texture = ExtResource("34_xqwpk")
+
+[node name="TournamentTutorial" type="Node" parent="Tutorials" unique_id=1982380707 node_paths=PackedStringArray("player_1", "wasd_sprite", "level")]
+script = ExtResource("30_r0jbq")
+player_1 = NodePath("../../Player1")
+wasd_sprite = NodePath("WASDSprite")
+level = NodePath("../..")
+
+[node name="WASDSprite" type="Sprite2D" parent="Tutorials/TournamentTutorial" unique_id=178514690]
+z_index = 9
+position = Vector2(486, 163.40799)
+scale = Vector2(0.51066643, 0.51066643)
+texture = ExtResource("33_vb7dm")
 
 [node name="MainUI" parent="." unique_id=1468483608 instance=ExtResource("5_d6qko")]
 
@@ -238,6 +258,7 @@ _main_ui = NodePath("..")
 [node name="TouchJoysticks" parent="." unique_id=25295857 instance=ExtResource("24_6uec0")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1058688654]
+light_mask = 2
 position = Vector2(960, 540)
 texture = ExtResource("38_vb7dm")
 metadata/_edit_lock_ = true
@@ -411,6 +432,7 @@ scale = Vector2(0.22265619, 0.22265624)
 enabled = false
 color = Color(0.82459205, 0.858649, 0, 1)
 energy = 5.0
+range_item_cull_mask = 2
 texture = ExtResource("30_816bt")
 
 [node name="PointLight2" type="PointLight2D" parent="World/Lights" unique_id=857232675]
@@ -419,6 +441,7 @@ scale = Vector2(0.2148438, 0.2148438)
 enabled = false
 color = Color(0.8235294, 0.85882354, 0, 1)
 energy = 5.0
+range_item_cull_mask = 2
 texture = ExtResource("30_816bt")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="World" unique_id=1642094665]

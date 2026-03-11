@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func _on_ball_double_bounced(_side: int): # side 1: left, side 2: right
 	ball_manager.destroy_ball()
-	ball_manager.spawn_ball(0.5)
+	ball_manager.spawn_ball(0)
 
 
 func _on_game_finished(_player):
