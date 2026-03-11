@@ -18,7 +18,7 @@ func set_up_players():
 	if _level.two_player_mode:
 		_player_2.set_up_player(Player.PlayerType.PLAYER_2, _level.player_2_skin)
 	else:
-		_player_2.set_up_player(Player.PlayerType.AI_RIVAL, _level.rival.skin)
+		_player_2.set_up_player(Player.PlayerType.AI_RIVAL, _level.rival.skin, _level.rival.ai_level)
 
 
 func _on_game_finished(winner: int):

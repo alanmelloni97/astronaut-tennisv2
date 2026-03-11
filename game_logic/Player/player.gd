@@ -16,10 +16,12 @@ func disable_input():
 	racket.movement_handler.disable_input()
 
 
-func set_up_player(player_type: PlayerType, skin: CharacterSkin):
+func set_up_player(player_type: PlayerType, skin: CharacterSkin, ai_level: AILevel = null):
 	racket.movement_handler.set_player_type(player_type)
 	set_player_hand(player_type)
 	_ragdoll.skin = skin
+	if player_type == PlayerType.AI_RIVAL:
+		racket.apply_ai_level(ai_level)
 
 
 func set_player_hand(player_type: PlayerType):

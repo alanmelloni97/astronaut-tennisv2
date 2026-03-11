@@ -150,6 +150,7 @@ shape = SubResource("CircleShape2D_g3thm")
 [node name="AIMarker2D" type="Marker2D" parent="." unique_id=1789299442 node_paths=PackedStringArray("parent")]
 top_level = true
 z_index = 1
+position = Vector2(35, 38)
 script = ExtResource("5_0t0x3")
 parent = NodePath("..")
 
@@ -159,7 +160,7 @@ update_rotation = false
 update_scale = false
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=167345837 node_paths=PackedStringArray("parent")]
-vertices = PackedVector2Array(-334, 38, -266, 241, -84, 234, 75, 227, 12, 126, -51, 46, -75, -52, 63, -51, 196, -16, 157, -108, 85, -129, -236, -170)
+vertices = PackedVector2Array(-334, 38, -311, 125, -160, 182, 17, 156, -51, 46, -75, -52, 63, -51, 196, -16, 157, -108, 85, -129, -236, -170)
 affect_navigation_mesh = true
 script = ExtResource("5_0t0x3")
 parent = NodePath("..")

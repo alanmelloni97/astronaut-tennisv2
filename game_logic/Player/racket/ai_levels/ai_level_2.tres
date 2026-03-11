@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AILevel" format=3 uid="uid://c36p6p0vx2phn"]
+
+[ext_resource type="Script" uid="uid://b0srrh86idhao" path="res://game_logic/Player/racket/ai_levels/ai_level.gd" id="1_b8ykf"]
+
+[resource]
+script = ExtResource("1_b8ykf")
+damp = 10.0
+force = 50000
+metadata/_custom_type_script = "uid://b0srrh86idhao"

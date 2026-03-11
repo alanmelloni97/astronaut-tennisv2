@@ -1,6 +1,6 @@
 "
 TODO:
-	mejorar ia
+	agregar niveles de ia
 	laika
 	cambiar ruido de cuadno hay punto
 BUGS

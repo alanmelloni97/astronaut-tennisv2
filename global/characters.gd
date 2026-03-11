@@ -2,11 +2,12 @@ extends Node
 
 # Characters should be put in order of the tourament: characters[0] will be the first opponent
 @export var characters: Array[Character]
-@export var skins: Array[CharacterSkin]
+
+var skins: Array[CharacterSkin]
 
 
 func _ready() -> void:
-	# Get skins from characters. this is only used before any saves, after skins will be overriden by loader
+	# Get skins from characters. this is only used when there is no save, after skins will be overriden by loader
 	for character in Characters.characters:
 		if character.skin != null and character.skin not in skins:
 			skins.append(character.skin)
