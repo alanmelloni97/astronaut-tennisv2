@@ -21,7 +21,12 @@ func set_up_player(player_type: PlayerType, skin: CharacterSkin, ai_level: AILev
 	set_player_hand(player_type)
 	_ragdoll.skin = skin
 	if player_type == PlayerType.AI_RIVAL:
+		# set ai level
 		racket.apply_ai_level(ai_level)
+		# reduce mass of ai
+		for child in _ragdoll.body.get_children(true):
+			if child is RigidBody2D:
+				child.mass = 0.1
 
 
 func set_player_hand(player_type: PlayerType):

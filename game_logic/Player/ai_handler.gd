@@ -23,6 +23,8 @@ func _physics_process(_delta: float) -> void:
 		var current_agent_position: Vector2 = racket.global_position
 		var next_path_position: Vector2 = navigation_agent.get_next_path_position()
 		input_axis = current_agent_position.direction_to(next_path_position)
+	else:
+		input_axis = Vector2.DOWN
 
 
 func actor_setup():

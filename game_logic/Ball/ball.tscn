@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bh2kguq210h0h" path="res://game_logic/Ball/ball_sound_manager.gd" id="3_rg84v"]
 [ext_resource type="Script" uid="uid://cf2trema4h72c" path="res://game_logic/Ball/effects_manager.gd" id="4_4s4qd"]
 [ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://components/independent_transform.gd" id="5_0t0x3"]
+[ext_resource type="Script" uid="uid://do5ow3kwhws2f" path="res://game_logic/Ball/ai_obstacle_manager.gd" id="5_fxsfa"]
 [ext_resource type="Texture2D" uid="uid://u78bf1elgyhg" path="res://Assets/pelota.png" id="5_hsaat"]
 [ext_resource type="Script" uid="uid://l67cfjetdf8j" path="res://game_logic/Ball/remove_particles.gd" id="6_hbi5u"]
 [ext_resource type="Texture2D" uid="uid://dtxb5xc02o5wo" path="res://Assets/ball pieces/spritesheet particles.png" id="7_oompg"]
@@ -121,7 +122,7 @@ script = ExtResource("2_65gad")
 ai_marker_2d = NodePath("AIMarker2D")
 effects_manager = NodePath("EffectsManager")
 remove_sound = NodePath("RemoveSound")
-navigation_obstacle_2d = NodePath("NavigationObstacle2D")
+navigation_obstacle_2d = NodePath("AIObstacleUp")
 collision_shape = NodePath("CollisionShape2D")
 sprite = NodePath("Sprite2D")
 bounce_sound = NodePath("BounceSound")
@@ -140,6 +141,12 @@ MAX_SPEED_DIFF = 1000.0
 script = ExtResource("4_4s4qd")
 _affected_node = NodePath("..")
 
+[node name="AIObstacleManager" type="Node" parent="." unique_id=731804709 node_paths=PackedStringArray("ball", "ai_obstacle_up", "ai_obstacle_down")]
+script = ExtResource("5_fxsfa")
+ball = NodePath("..")
+ai_obstacle_up = NodePath("../AIObstacleUp")
+ai_obstacle_down = NodePath("../AIObstacleDown")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=480967574]
 texture = ExtResource("5_hsaat")
 
@@ -150,18 +157,22 @@ shape = SubResource("CircleShape2D_g3thm")
 [node name="AIMarker2D" type="Marker2D" parent="." unique_id=1789299442 node_paths=PackedStringArray("parent")]
 top_level = true
 z_index = 1
-position = Vector2(35, 38)
 script = ExtResource("5_0t0x3")
 parent = NodePath("..")
 
 [node name="AIObstacle" type="RemoteTransform2D" parent="." unique_id=1013503540]
-remote_path = NodePath("../NavigationObstacle2D")
+remote_path = NodePath("../AIObstacleUp")
 update_rotation = false
 update_scale = false
 
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="." unique_id=167345837 node_paths=PackedStringArray("parent")]
-vertices = PackedVector2Array(-334, 38, -311, 125, -160, 182, 17, 156, -51, 46, -75, -52, 63, -51, 196, -16, 157, -108, 85, -129, -236, -170)
+[node name="AIObstacleUp" type="NavigationObstacle2D" parent="." unique_id=167345837 node_paths=PackedStringArray("parent")]
+vertices = PackedVector2Array(-186, -11, -164, 73, -108, 178, -24, 174, 1, 116, -51, 55, -44, -42, 61, -65, 129, -40, 174, -67, 157, -108, 85, -129, -152, -90)
 affect_navigation_mesh = true
+script = ExtResource("5_0t0x3")
+parent = NodePath("..")
+
+[node name="AIObstacleDown" type="NavigationObstacle2D" parent="." unique_id=1785859760 node_paths=PackedStringArray("parent")]
+vertices = PackedVector2Array(-65, -57, 1, -63, 61, -54, 107, -75, 85, -110, 3, -123, -92, -113, -324, -84)
 script = ExtResource("5_0t0x3")
 parent = NodePath("..")
 

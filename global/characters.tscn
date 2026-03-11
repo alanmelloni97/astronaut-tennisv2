@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ds5c4ds1qowdh" path="res://global/characters.gd" id="1_nyi4w"]
 [ext_resource type="Script" uid="uid://5rdixxdoulx3" path="res://game_logic/Resources/character.gd" id="2_k1buq"]
-[ext_resource type="Script" uid="uid://b0srrh86idhao" path="res://game_logic/Player/racket/ai_levels/ai_level.gd" id="3_21p8j"]
 [ext_resource type="Resource" uid="uid://bck813abj3e6u" path="res://game_logic/Player/racket/ai_levels/ai_level_1.tres" id="3_rt06a"]
 [ext_resource type="Resource" uid="uid://ssk5uuu56g11" path="res://game_logic/Ragdoll/skin/skins/vostok/vostok.tres" id="4_o1ipo"]
 [ext_resource type="Resource" uid="uid://cwqfpa5p37d08" path="res://game_logic/Ragdoll/skin/skins/challenger/challenger.tres" id="5_2cl63"]
@@ -14,20 +13,12 @@
 [ext_resource type="Resource" uid="uid://iv25ufihs276" path="res://game_logic/Player/racket/ai_levels/ai_level_4.tres" id="9_idtl2"]
 [ext_resource type="Resource" uid="uid://b7xe1bwim7ah7" path="res://game_logic/Player/racket/ai_levels/ai_level_5.tres" id="11_wcltm"]
 
-[sub_resource type="Resource" id="Resource_21p8j"]
-resource_local_to_scene = true
-script = ExtResource("3_21p8j")
-damp = 1.0
-force = 25000
-metadata/_custom_type_script = "uid://b0srrh86idhao"
-
 [sub_resource type="Resource" id="Resource_0hpa8"]
 resource_local_to_scene = true
 script = ExtResource("2_k1buq")
 name = "Neil Armstrong"
 skin = ExtResource("5_c2d4n")
-beated = true
-ai_level = SubResource("Resource_21p8j")
+ai_level = ExtResource("3_rt06a")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_c2d4n"]

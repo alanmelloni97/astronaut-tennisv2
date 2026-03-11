@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_c0gpv")
 damp = 5.0
-force = 40000
+force = 30000
 metadata/_custom_type_script = "uid://b0srrh86idhao"

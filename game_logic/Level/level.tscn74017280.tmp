@@ -159,7 +159,7 @@ _score_ui = NodePath("../World/Scores")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
-WIN_SCORE = 99
+WIN_SCORE = 3
 
 [node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "bounce_detector", "ball_manager")]
 script = ExtResource("2_1teg4")
@@ -170,9 +170,9 @@ ball_manager = NodePath("BallManager")
 [node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("navigation_region", "_ball_spawn_point")]
 script = ExtResource("2_py82k")
 ball_sc = ExtResource("3_py82k")
+INITIAL_IMPULSE = Vector2(500, -50)
 navigation_region = NodePath("../../NavigationRegion2D")
 _ball_spawn_point = NodePath("../../BallSpawnPoint")
-INITIAL_IMPULSE = Vector2(500, -50)
 
 [node name="LightsHandler" type="Node" parent="." unique_id=2121215875 node_paths=PackedStringArray("_lights_manager", "bounce_detector")]
 script = ExtResource("7_1p6h5")

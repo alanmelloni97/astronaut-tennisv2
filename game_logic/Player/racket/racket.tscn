@@ -81,6 +81,8 @@ pitch_scale = 2.0
 position = Vector2(0, -82)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="navigation_position" unique_id=934491734]
+path_desired_distance = 50.0
+target_desired_distance = 50.0
 debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0, 0, 1)
