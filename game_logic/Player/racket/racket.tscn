@@ -27,7 +27,7 @@ physics_material_override = SubResource("PhysicsMaterial_wwm6y")
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 5
-linear_damp = 5.0
+linear_damp = 10.0
 script = ExtResource("1_gxsuo")
 movement_handler = NodePath("MovementHandler")
 motion_manager = NodePath("MovementHandler/MotionManager")
@@ -51,7 +51,7 @@ _ai_manager = NodePath("AIManager")
 [node name="MotionManager" type="Node" parent="MovementHandler" unique_id=954893411 node_paths=PackedStringArray("_rb")]
 script = ExtResource("2_o468d")
 _rb = NodePath("../..")
-_FORCE_MULT = 40001
+_FORCE_MULT = 80000
 
 [node name="InputManager" type="Node" parent="MovementHandler" unique_id=1846637120]
 script = ExtResource("3_xsmco")
@@ -81,8 +81,11 @@ pitch_scale = 2.0
 position = Vector2(0, -82)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="navigation_position" unique_id=934491734]
-path_desired_distance = 50.0
+path_desired_distance = 100.0
 target_desired_distance = 50.0
+path_max_distance = 300.0
+simplify_path = true
+simplify_epsilon = 5.0
 debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0, 0, 1)

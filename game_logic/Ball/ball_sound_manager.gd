@@ -23,5 +23,5 @@ func _on_body_entered(body: PhysicsBody2D):
 func _set_audio_parameters():
 	var pitch: float = remap(ball.linear_velocity.length(), 0, MAX_SPEED_DIFF, MIN_PITCH, MAX_PITCH)
 	var volume_db: float = remap(ball.linear_velocity.length(), 0, MAX_SPEED_DIFF, MIN_VOLUME_DB, MAX_VOLUME_DB)
-	audio_stream_player_2d.pitch_scale = pitch
+	audio_stream_player_2d.pitch_scale = max(1, pitch)
 	audio_stream_player_2d.volume_db = volume_db

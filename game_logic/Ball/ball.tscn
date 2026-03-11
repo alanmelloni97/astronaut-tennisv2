@@ -122,7 +122,7 @@ script = ExtResource("2_65gad")
 ai_marker_2d = NodePath("AIMarker2D")
 effects_manager = NodePath("EffectsManager")
 remove_sound = NodePath("RemoveSound")
-navigation_obstacle_2d = NodePath("AIObstacleUp")
+navigation_obstacle_2d = NodePath("")
 collision_shape = NodePath("CollisionShape2D")
 sprite = NodePath("Sprite2D")
 bounce_sound = NodePath("BounceSound")
@@ -161,18 +161,18 @@ script = ExtResource("5_0t0x3")
 parent = NodePath("..")
 
 [node name="AIObstacle" type="RemoteTransform2D" parent="." unique_id=1013503540]
-remote_path = NodePath("../AIObstacleUp")
 update_rotation = false
 update_scale = false
 
-[node name="AIObstacleUp" type="NavigationObstacle2D" parent="." unique_id=167345837 node_paths=PackedStringArray("parent")]
-vertices = PackedVector2Array(-186, -11, -164, 73, -108, 178, -24, 174, 1, 116, -51, 55, -44, -42, 61, -65, 129, -40, 174, -67, 157, -108, 85, -129, -152, -90)
+[node name="AIObstacleUp" type="NavigationObstacle2D" parent="." unique_id=286408937 node_paths=PackedStringArray("parent")]
+vertices = PackedVector2Array(-174, 42, -101, 135, -3, 202, 47, 196, 46, 145, 12, 126, -34, 42, -31, -33, 63, -38, 148, -29, 165, -63, 105, -100, -128, -91)
 affect_navigation_mesh = true
 script = ExtResource("5_0t0x3")
 parent = NodePath("..")
 
 [node name="AIObstacleDown" type="NavigationObstacle2D" parent="." unique_id=1785859760 node_paths=PackedStringArray("parent")]
-vertices = PackedVector2Array(-65, -57, 1, -63, 61, -54, 107, -75, 85, -110, 3, -123, -92, -113, -324, -84)
+position = Vector2(0, 22)
+vertices = PackedVector2Array(-65, -57, 1, -63, 61, -54, 86, -73, 85, -110, 3, -123, -92, -113, -93, -74)
 script = ExtResource("5_0t0x3")
 parent = NodePath("..")
 
