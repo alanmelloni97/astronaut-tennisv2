@@ -165,7 +165,7 @@ update_rotation = false
 update_scale = false
 
 [node name="AIObstacleUp" type="NavigationObstacle2D" parent="." unique_id=286408937 node_paths=PackedStringArray("parent")]
-vertices = PackedVector2Array(-174, 42, -101, 135, -3, 202, 47, 196, 46, 145, 12, 126, -34, 42, -31, -33, 63, -38, 148, -29, 165, -63, 105, -100, -128, -91)
+vertices = PackedVector2Array(-174, 42, -101, 135, -3, 202, 67, 190, 67, 144, 46, 86, 4, 42, -17, -18, 68, -12, 148, -29, 165, -63, 105, -100, -128, -91)
 affect_navigation_mesh = true
 script = ExtResource("5_0t0x3")
 parent = NodePath("..")

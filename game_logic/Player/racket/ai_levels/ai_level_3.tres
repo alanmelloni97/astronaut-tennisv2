@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_c448v")
-damp = 3.0
-force = 35000.0
+damp = 10.0
+force = 80000
 always_navigate = true
 metadata/_custom_type_script = "uid://b0srrh86idhao"

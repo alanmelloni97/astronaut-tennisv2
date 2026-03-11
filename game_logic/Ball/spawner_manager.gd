@@ -13,13 +13,13 @@ func _ready() -> void:
 
 
 func _spawn_animation():
-	ball.contact_monitor = false
+	ball.collision_shape.disabled = true
 	aux_gravity = ball.gravity_scale
 	ball.gravity_scale = 0.0
 	animation_player.play("spawn")
 
 
 func _on_animation_finished(_anim_name: StringName):
-	ball.contact_monitor = true
+	ball.collision_shape.disabled = false
 	ball.gravity_scale = aux_gravity
 	ball.anim_finished.emit()
