@@ -110,7 +110,7 @@ _data = {
 &"spawn": SubResource("Animation_o177p")
 }
 
-[node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "remove_sound", "navigation_obstacle_2d", "collision_shape", "sprite", "bounce_sound") groups=["Ball"]]
+[node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "remove_sound", "collision_shape", "sprite", "bounce_sound") groups=["Ball"]]
 z_index = 99
 collision_layer = 2
 collision_mask = 11
@@ -122,7 +122,6 @@ script = ExtResource("2_65gad")
 ai_marker_2d = NodePath("AIMarker2D")
 effects_manager = NodePath("EffectsManager")
 remove_sound = NodePath("RemoveSound")
-navigation_obstacle_2d = NodePath("")
 collision_shape = NodePath("CollisionShape2D")
 sprite = NodePath("Sprite2D")
 bounce_sound = NodePath("BounceSound")
@@ -166,7 +165,7 @@ update_rotation = false
 update_scale = false
 
 [node name="AIObstacleUp" type="NavigationObstacle2D" parent="." unique_id=286408937 node_paths=PackedStringArray("parent")]
-vertices = PackedVector2Array(-174, 42, -101, 135, -3, 202, 67, 190, 67, 144, 46, 86, 4, 42, -17, -18, 68, -12, 148, -29, 165, -63, 105, -100, -128, -91)
+vertices = PackedVector2Array(-125, 44, -74, 123, 4, 128, 46, 86, 4, 42, -17, -18, 80, 7, 172, -4, 165, -63, 105, -100, -95, -76)
 affect_navigation_mesh = true
 script = ExtResource("5_0t0x3")
 parent = NodePath("..")
