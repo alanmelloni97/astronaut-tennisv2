@@ -7,8 +7,8 @@ FUTURO:
 	sonidos
 	ui, pause button
 	android export
+	mejorar traje mercury
 
 
 MAYBE:
-	timer para que un jugador no la tenga todo el timepo
 "

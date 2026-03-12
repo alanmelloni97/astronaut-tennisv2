@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cld25d5sn167u"]
 
 [ext_resource type="Script" uid="uid://b4068na67t3a8" path="res://game_logic/Menus/menu_elements/player_select.gd" id="1_d4yoc"]
-[ext_resource type="Texture2D" uid="uid://br7j7b2sdsmxs" path="res://game_logic/Ragdoll/skin/skins/apollo/apollo.png" id="2_1lemf"]
+[ext_resource type="Texture2D" uid="uid://br7j7b2sdsmxs" path="res://Assets/skins/apollo/apollo.png" id="2_1lemf"]
 [ext_resource type="Texture2D" uid="uid://cbsj00tbqs61d" path="res://Assets/lock.webp" id="3_wfc4a"]
 
 [node name="PlayerSelect" type="Control" unique_id=1806913641 node_paths=PackedStringArray("_player_texture", "suit_name", "lock_texture")]
