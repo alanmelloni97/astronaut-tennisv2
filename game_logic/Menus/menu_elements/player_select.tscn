@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://b4068na67t3a8" path="res://game_logic/Menus/menu_elements/player_select.gd" id="1_d4yoc"]
 [ext_resource type="Texture2D" uid="uid://br7j7b2sdsmxs" path="res://Assets/skins/apollo/apollo.png" id="2_1lemf"]
+[ext_resource type="Texture2D" uid="uid://bldbfw8ikhqnx" path="res://Assets/ui/button arrow.png" id="2_ku4ym"]
+[ext_resource type="Texture2D" uid="uid://dbnvon1pe1lfj" path="res://Assets/ui/button arrow pressed.png" id="3_0ttw0"]
 [ext_resource type="Texture2D" uid="uid://cbsj00tbqs61d" path="res://Assets/lock.webp" id="3_wfc4a"]
+[ext_resource type="Texture2D" uid="uid://ct62nl8fq474l" path="res://Assets/ui/button arrow hover.png" id="4_fbr1a"]
 
-[node name="PlayerSelect" type="Control" unique_id=1806913641 node_paths=PackedStringArray("_player_texture", "suit_name", "lock_texture")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ku4ym"]
+
+[node name="PlayerSelect" type="Control" unique_id=1806913641 node_paths=PackedStringArray("_player_texture", "suit_name", "lock_control")]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -14,9 +19,9 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d4yoc")
-_player_texture = NodePath("VBoxContainer/HBoxContainer/PlayerTexture")
+_player_texture = NodePath("VBoxContainer/HBoxContainer/Control/PlayerTexture")
 suit_name = NodePath("VBoxContainer/SuitName")
-lock_texture = NodePath("LockTexture")
+lock_control = NodePath("VBoxContainer/HBoxContainer/Control/LockControl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=322469083]
 layout_mode = 1
@@ -35,49 +40,92 @@ grow_vertical = 2
 [node name="SuitName" type="Label" parent="VBoxContainer" unique_id=771017302]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 0
+size_flags_vertical = 1
 text = "ASTRONAUT"
+uppercase = true
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=426288173]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=521412675]
 layout_mode = 2
 
-[node name="LeftButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1485723595]
+[node name="LeftButton" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=1448726480]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 4
-text = "<"
+texture_normal = ExtResource("2_ku4ym")
+texture_pressed = ExtResource("3_0ttw0")
+texture_hover = ExtResource("4_fbr1a")
+flip_h = true
 
-[node name="PlayerTexture" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=489337742]
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=2143215719]
 custom_minimum_size = Vector2(600, 600)
 layout_mode = 2
-texture = ExtResource("2_1lemf")
-stretch_mode = 5
+size_flags_horizontal = 3
 
-[node name="RightButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=665670508]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-size_flags_horizontal = 10
-size_flags_vertical = 4
-text = ">"
-
-[node name="LockTexture" type="TextureRect" parent="." unique_id=1067759319]
-modulate = Color(0, 0, 0, 1)
+[node name="PlayerTexture" type="TextureRect" parent="VBoxContainer/HBoxContainer/Control" unique_id=489337742]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -202.5
-offset_top = -170.0
-offset_right = 202.5
-offset_bottom = 219.0
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 300.0
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_1lemf")
+stretch_mode = 5
+
+[node name="LockControl" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Control" unique_id=921016599]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -187.5
+offset_right = 150.0
+offset_bottom = 187.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LockTexture" type="TextureRect" parent="VBoxContainer/HBoxContainer/Control/LockControl" unique_id=1067759319]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
 texture = ExtResource("3_wfc4a")
 expand_mode = 3
 stretch_mode = 5
 
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Control/LockControl" unique_id=1213784193]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ku4ym")
+text = "Play tournament to unlock skin"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="LeftButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=451160084]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("2_ku4ym")
+texture_pressed = ExtResource("3_0ttw0")
+texture_hover = ExtResource("4_fbr1a")
+
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/LeftButton" to="." method="_on_left_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/RightButton" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/LeftButton2" to="." method="_on_left_button_pressed"]

@@ -27,6 +27,6 @@ func add_effect(effect: Effect):
 
 
 func remove():
-	Utilities.play_audio_post_mortem(remove_sound)
+	Utilities.play_audio_post_mortem(remove_sound, get_parent())
 	_removed.emit()
 	queue_free()

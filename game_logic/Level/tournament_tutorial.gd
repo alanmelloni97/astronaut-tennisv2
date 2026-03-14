@@ -8,6 +8,7 @@ static var tournament_tutorial_completed: bool
 @export var wasd_sprite: Sprite2D
 @export var level: Level
 
+var tween: Tween
 var wasd_hidden: bool = false:
 	set(x):
 		wasd_hidden = x

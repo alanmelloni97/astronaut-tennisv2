@@ -5,8 +5,9 @@ signal skin_updated()
 
 @export var _player_texture: TextureRect
 @export var suit_name: Label
-@export var lock_texture: TextureRect
+@export var lock_control: Control
 
+var tween: Tween
 var skins: Array[CharacterSkin]
 var current_skin_selectable: bool:
 	set = set_current_skin_selectable
@@ -26,11 +27,11 @@ func set_current_skin_selectable(selectable: bool):
 	if selectable:
 		_player_texture.modulate = Color.WHITE
 		suit_name.modulate = Color.WHITE
-		lock_texture.hide()
+		lock_control.hide()
 	else:
-		_player_texture.modulate = Color.DIM_GRAY
-		suit_name.modulate = Color.DIM_GRAY
-		lock_texture.show()
+		_player_texture.modulate = Color(0.307, 0.307, 0.307)
+		suit_name.modulate = Color(0.307, 0.307, 0.307)
+		lock_control.show()
 
 
 func update_skin():
@@ -41,6 +42,11 @@ func update_skin():
 	else:
 		current_skin_selectable = true
 	skin_updated.emit()
+
+	if tween and tween.is_running():
+		tween.kill()
+	tween = get_tree().create_tween()
+	tween.tween_property(_player_texture, "modulate", _player_texture.modulate, 0.5).from(Color.TRANSPARENT)
 
 
 func _on_left_button_pressed() -> void:

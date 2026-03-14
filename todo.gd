@@ -1,7 +1,6 @@
 "
 TODO:
-	laika
-	cambiar ruido de cuadno hay punto
+	ultimo traje
 
 FUTURO:
 	sonidos

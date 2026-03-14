@@ -32,6 +32,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer" unique_id=513397622]
 layout_mode = 2

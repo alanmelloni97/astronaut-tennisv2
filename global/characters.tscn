@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ds5c4ds1qowdh" path="res://global/characters.gd" id="1_nyi4w"]
 [ext_resource type="Script" uid="uid://5rdixxdoulx3" path="res://game_logic/Resources/character.gd" id="2_k1buq"]
+[ext_resource type="Resource" uid="uid://b7xe1bwim7ah7" path="res://game_logic/Player/racket/ai_levels/ai_level_1.tres" id="3_ivnx7"]
 [ext_resource type="Resource" uid="uid://ikwxwmujax5d" path="res://Assets/skins/laika/laika_skin.tres" id="4_ivnx7"]
 [ext_resource type="Resource" uid="uid://ssk5uuu56g11" path="res://Assets/skins/vostok/vostok.tres" id="4_o1ipo"]
 [ext_resource type="Resource" uid="uid://cwqfpa5p37d08" path="res://Assets/skins/challenger/challenger.tres" id="5_2cl63"]
@@ -10,28 +11,21 @@
 [ext_resource type="Resource" uid="uid://c36p6p0vx2phn" path="res://game_logic/Player/racket/ai_levels/ai_level_2.tres" id="6_21p8j"]
 [ext_resource type="Resource" uid="uid://ce7ab6b1at6ts" path="res://game_logic/Player/racket/ai_levels/ai_level_3.tres" id="8_gx2s2"]
 [ext_resource type="Resource" uid="uid://iv25ufihs276" path="res://game_logic/Player/racket/ai_levels/ai_level_4.tres" id="9_idtl2"]
-[ext_resource type="Resource" uid="uid://b7xe1bwim7ah7" path="res://game_logic/Player/racket/ai_levels/ai_level_5.tres" id="11_wcltm"]
-
-[sub_resource type="Resource" id="Resource_rt06a"]
-script = ExtResource("2_k1buq")
-name = "Laika"
-skin = ExtResource("4_ivnx7")
-ai_level = ExtResource("11_wcltm")
-metadata/_custom_type_script = "uid://5rdixxdoulx3"
+[ext_resource type="Resource" uid="uid://brw64sxvhdpia" path="res://Assets/skins/ax 3/ax 3.tres" id="12_rt06a"]
 
 [sub_resource type="Resource" id="Resource_0hpa8"]
 resource_local_to_scene = true
 script = ExtResource("2_k1buq")
 name = "Neil Armstrong"
 skin = ExtResource("5_c2d4n")
-ai_level = ExtResource("11_wcltm")
+ai_level = ExtResource("3_ivnx7")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_c2d4n"]
 script = ExtResource("2_k1buq")
 name = "Yuri Gagarin"
 skin = ExtResource("4_o1ipo")
-ai_level = ExtResource("11_wcltm")
+ai_level = ExtResource("3_ivnx7")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_82qhk"]
@@ -76,6 +70,14 @@ skin = ExtResource("5_2cl63")
 ai_level = ExtResource("9_idtl2")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
+[sub_resource type="Resource" id="Resource_rt06a"]
+script = ExtResource("2_k1buq")
+name = "Laika"
+skin = ExtResource("4_ivnx7")
+ai_level = ExtResource("9_idtl2")
+metadata/_custom_type_script = "uid://5rdixxdoulx3"
+
 [node name="Characters" type="Node" unique_id=990000372]
 script = ExtResource("1_nyi4w")
-characters = Array[ExtResource("2_k1buq")]([SubResource("Resource_rt06a"), SubResource("Resource_0hpa8"), SubResource("Resource_c2d4n"), SubResource("Resource_82qhk"), SubResource("Resource_2cl63"), SubResource("Resource_8mtkk"), SubResource("Resource_cc3by"), SubResource("Resource_exe54"), SubResource("Resource_ivnx7")])
+characters = Array[ExtResource("2_k1buq")]([SubResource("Resource_0hpa8"), SubResource("Resource_c2d4n"), SubResource("Resource_82qhk"), SubResource("Resource_2cl63"), SubResource("Resource_8mtkk"), SubResource("Resource_cc3by"), SubResource("Resource_exe54"), SubResource("Resource_ivnx7"), SubResource("Resource_rt06a")])
+ax_3 = ExtResource("12_rt06a")

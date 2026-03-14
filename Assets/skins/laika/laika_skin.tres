@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://game_logic/Ragdoll/skin/skin_resource.gd" id="1_vovb5"]
 [ext_resource type="Texture2D" uid="uid://b52vlv8dpd60x" path="res://Assets/skins/laika/head.png" id="2_xiqb4"]
 [ext_resource type="Texture2D" uid="uid://db5x2uypu7xpq" path="res://Assets/skins/laika/LLleg.png" id="3_nnvmd"]
+[ext_resource type="Texture2D" uid="uid://dh0yir5ufgaq" path="res://Assets/skins/laika/laika.png" id="3_xiqb4"]
 [ext_resource type="Texture2D" uid="uid://dkdsfg4ho37f7" path="res://Assets/skins/laika/LRleg.png" id="4_hdsiq"]
 [ext_resource type="Texture2D" uid="uid://20sli81na3xb" path="res://Assets/skins/laika/ULleg.png" id="6_7rffb"]
 [ext_resource type="Texture2D" uid="uid://fqava700mpf7" path="res://Assets/skins/laika/URleg.png" id="7_dv1qy"]
@@ -11,6 +12,7 @@
 [resource]
 script = ExtResource("1_vovb5")
 name = "Laika"
+image = ExtResource("3_xiqb4")
 dog = true
 body = ExtResource("1_d4se3")
 head = ExtResource("2_xiqb4")

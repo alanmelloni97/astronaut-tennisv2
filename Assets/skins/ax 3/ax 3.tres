@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CharacterSkin" format=3 uid="uid://brw64sxvhdpia"]
+
+[ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://game_logic/Ragdoll/skin/skin_resource.gd" id="1_v3htk"]
+[ext_resource type="Texture2D" uid="uid://bfu4hyjdproa" path="res://Assets/skins/ax 3/body.png" id="1_w6y08"]
+[ext_resource type="Texture2D" uid="uid://c4wop7u11go8e" path="res://Assets/skins/ax 3/head.png" id="2_y8pgj"]
+[ext_resource type="Texture2D" uid="uid://cs6nlypar3pga" path="res://Assets/skins/ax 3/ax3.png" id="3_56taq"]
+[ext_resource type="Texture2D" uid="uid://f1ut0wt53i64" path="res://Assets/skins/ax 3/LLarm.png" id="4_7hphf"]
+[ext_resource type="Texture2D" uid="uid://c2fuof41qyo2w" path="res://Assets/skins/ax 3/LLleg.png" id="5_s7wq3"]
+[ext_resource type="Texture2D" uid="uid://bvballqygmt4b" path="res://Assets/skins/ax 3/LRarm.png" id="6_otae3"]
+[ext_resource type="Texture2D" uid="uid://dvt7knlm7daq5" path="res://Assets/skins/ax 3/LRleg.png" id="7_5cp77"]
+[ext_resource type="Texture2D" uid="uid://hmfto8em4yto" path="res://Assets/skins/ax 3/ULarm.png" id="9_cepvn"]
+[ext_resource type="Texture2D" uid="uid://b07fhp13pfuue" path="res://Assets/skins/ax 3/ULleg.png" id="10_q3wvh"]
+[ext_resource type="Texture2D" uid="uid://bnq74w2i5a2v5" path="res://Assets/skins/ax 3/URarm.png" id="11_gueyt"]
+[ext_resource type="Texture2D" uid="uid://c3e5bim1n3pnd" path="res://Assets/skins/ax 3/URleg.png" id="12_gqusk"]
+
+[resource]
+script = ExtResource("1_v3htk")
+name = "AX 3"
+image = ExtResource("3_56taq")
+body = ExtResource("1_w6y08")
+head = ExtResource("2_y8pgj")
+ll_arm = ExtResource("4_7hphf")
+ll_leg = ExtResource("5_s7wq3")
+lr_arm = ExtResource("6_otae3")
+lr_leg = ExtResource("7_5cp77")
+ul_arm = ExtResource("9_cepvn")
+ul_leg = ExtResource("10_q3wvh")
+ur_arm = ExtResource("11_gueyt")
+ur_leg = ExtResource("12_gqusk")
+metadata/_custom_type_script = "uid://v0sa452yk36s"

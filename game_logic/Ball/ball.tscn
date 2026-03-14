@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dtxb5xc02o5wo" path="res://Assets/ball pieces/spritesheet particles.png" id="7_oompg"]
 [ext_resource type="AudioStream" uid="uid://yrvx2tolssav" path="res://game_logic/Ball/sounds/51461__andrenascimento__basket_ball_02_bounce.wav" id="8_hsaat"]
 [ext_resource type="Script" uid="uid://dqtcdtkcbulfb" path="res://game_logic/Ball/spawner_manager.gd" id="10_bjqt2"]
-[ext_resource type="AudioStream" uid="uid://di2no4vjdm8i1" path="res://Assets/sounds/unbouncy ball/fart.mp3" id="10_yip81"]
+[ext_resource type="AudioStream" uid="uid://ba7w2n5indkh" path="res://Assets/sounds/forceField_000.ogg" id="11_fxsfa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
 resource_local_to_scene = true
@@ -193,7 +193,7 @@ ball = NodePath("..")
 stream = ExtResource("8_hsaat")
 
 [node name="RemoveSound" type="AudioStreamPlayer2D" parent="." unique_id=1305614402]
-stream = ExtResource("10_yip81")
+stream = ExtResource("11_fxsfa")
 
 [node name="SpawnerManager" type="Node" parent="." unique_id=1222965515 node_paths=PackedStringArray("ball", "animation_player")]
 script = ExtResource("10_bjqt2")

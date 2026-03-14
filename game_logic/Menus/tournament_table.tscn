@@ -31,6 +31,6 @@ theme_override_constants/separation = 13
 [node name="Tournament" type="Label" parent="TournamentTable" unique_id=1108026394]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_llimf")
-text = "RIVALS TABLE"
+text = "TOURNAMENT TABLE"
 horizontal_alignment = 1
 vertical_alignment = 1

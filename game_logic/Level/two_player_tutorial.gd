@@ -10,6 +10,7 @@ static var two_player_tutorial_completed: bool
 @export var arrows_sprite: Sprite2D
 @export var level: Level
 
+var tween: Tween
 var wasd_hidden: bool = false:
 	set(x):
 		wasd_hidden = x
