@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://c36p6p0vx2phn" path="res://game_logic/Player/racket/ai_levels/ai_level_2.tres" id="6_21p8j"]
 [ext_resource type="Resource" uid="uid://ce7ab6b1at6ts" path="res://game_logic/Player/racket/ai_levels/ai_level_3.tres" id="8_gx2s2"]
 [ext_resource type="Resource" uid="uid://iv25ufihs276" path="res://game_logic/Player/racket/ai_levels/ai_level_4.tres" id="9_idtl2"]
+[ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://game_logic/Ragdoll/skin/skin_resource.gd" id="12_21p8j"]
 [ext_resource type="Resource" uid="uid://brw64sxvhdpia" path="res://Assets/skins/ax 3/ax 3.tres" id="12_rt06a"]
 
 [sub_resource type="Resource" id="Resource_0hpa8"]
@@ -80,4 +81,4 @@ metadata/_custom_type_script = "uid://5rdixxdoulx3"
 [node name="Characters" type="Node" unique_id=990000372]
 script = ExtResource("1_nyi4w")
 characters = Array[ExtResource("2_k1buq")]([SubResource("Resource_0hpa8"), SubResource("Resource_c2d4n"), SubResource("Resource_82qhk"), SubResource("Resource_2cl63"), SubResource("Resource_8mtkk"), SubResource("Resource_cc3by"), SubResource("Resource_exe54"), SubResource("Resource_ivnx7"), SubResource("Resource_rt06a")])
-ax_3 = ExtResource("12_rt06a")
+skins = Array[ExtResource("12_21p8j")]([ExtResource("12_rt06a"), ExtResource("5_c2d4n"), ExtResource("4_o1ipo"), ExtResource("5_cc3by"), ExtResource("5_2cl63"), ExtResource("4_ivnx7")])

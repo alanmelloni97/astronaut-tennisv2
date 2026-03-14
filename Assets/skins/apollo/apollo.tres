@@ -17,7 +17,6 @@
 script = ExtResource("1_bs0rt")
 name = "Apollo"
 image = ExtResource("3_sdfdc")
-is_unlocked = true
 body = ExtResource("1_743iq")
 head = ExtResource("2_sdfdc")
 ll_arm = ExtResource("3_x4i12")

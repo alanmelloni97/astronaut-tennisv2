@@ -39,11 +39,12 @@ layout_mode = 2
 
 [node name="RetryButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=57261278]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "RETRY"
 
 [node name="MainMenuButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=212531865]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 3
 text = "MAIN MENU"
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

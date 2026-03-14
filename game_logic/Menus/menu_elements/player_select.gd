@@ -13,6 +13,7 @@ var current_skin_selectable: bool:
 	set = set_current_skin_selectable
 var current_skin_index: int:
 	set(x):
+		# account for over/underflow of the array
 		if x > skins.size() - 1 or x < -(skins.size() - 1):
 			current_skin_index = 0
 		else:

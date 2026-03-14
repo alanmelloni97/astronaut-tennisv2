@@ -24,7 +24,6 @@ texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
-modulate_color = Color(7.70092e-06, 0.69287837, 0.91748327, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8b6om"]
 texture = ExtResource("4_ogoed")
@@ -39,7 +38,6 @@ texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
-modulate_color = Color(0, 0.555, 0.74, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rt3dr"]
 texture = ExtResource("6_da70a")

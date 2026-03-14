@@ -10,10 +10,6 @@ var enabled: bool = true
 var _ball_reference: Ball
 
 
-func _ready() -> void:
-	spawn_ball(0)
-
-
 func destroy_ball():
 	_ball_reference.remove()
 

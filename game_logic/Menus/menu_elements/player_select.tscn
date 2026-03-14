@@ -118,7 +118,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 uppercase = true
 
-[node name="LeftButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=451160084]
+[node name="RightButton" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=451160084]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 2
@@ -128,4 +128,4 @@ texture_pressed = ExtResource("3_0ttw0")
 texture_hover = ExtResource("4_fbr1a")
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/LeftButton" to="." method="_on_left_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/LeftButton2" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/RightButton" to="." method="_on_right_button_pressed"]
