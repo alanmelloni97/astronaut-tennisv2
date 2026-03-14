@@ -17,6 +17,6 @@ func _physics_process(_delta: float) -> void:
 		frame_count += 1
 		if frame_count % 500 == 0:
 			frame_count = 0
-			if ball_velocity_acum == 0:
+			if ball_velocity_acum < 10: # moved less than 10 pixels in last 500 frames
 				ball_stalled.emit()
 			ball_velocity_acum = 0 # restart count

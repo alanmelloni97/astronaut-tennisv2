@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl61bxitpyyqg"
-path="res://.godot/imported/apollo.png-b94217787d1b0e99101656f07534d3d3.ctex"
+uid="uid://bpmpucleigbu5"
+path="res://.godot/imported/URleg.png-43608bf04ab97d6f6e190e3c1ac47285.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/skins/apollo/apollo.png"
-dest_files=["res://.godot/imported/apollo.png-b94217787d1b0e99101656f07534d3d3.ctex"]
+source_file="res://Ragdoll/skin/skins/mercury/URleg.png"
+dest_files=["res://.godot/imported/URleg.png-43608bf04ab97d6f6e190e3c1ac47285.ctex"]
 
 [params]
 

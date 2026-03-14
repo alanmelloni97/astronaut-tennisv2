@@ -5,7 +5,7 @@ extends Resource
 enum EffectTypes { SCALE, PHYSICS }
 
 var effect_type: EffectTypes
-var time: float = 20
+var time: float = 60
 
 
 @abstract func apply_effect(ball: Ball)

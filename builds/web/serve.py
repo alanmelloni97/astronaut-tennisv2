@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#python serve.py --root .
 
 import argparse
 import contextlib

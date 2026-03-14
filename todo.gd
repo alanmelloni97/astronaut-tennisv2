@@ -1,10 +1,8 @@
 "
 TODO:
-	ultimo traje
 
 FUTURO:
-	sonidos
-	ui, pause button
+	sonidos normalizar
 	android export
 	mejorar traje mercury
 

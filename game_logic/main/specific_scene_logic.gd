@@ -54,6 +54,7 @@ func manage_after_changing_scene(new_scene: Node):
 func _restart_tournament():
 	for character in Characters.characters:
 		character.beated = false
+	scene_manager.save_requested.emit()
 
 
 func _look_for_skin_in_globals(_name: String) -> CharacterSkin:
