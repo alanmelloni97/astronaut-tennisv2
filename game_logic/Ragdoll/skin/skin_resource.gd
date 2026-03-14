@@ -3,7 +3,7 @@ extends Resource
 
 @export var name: String
 @export var image: Texture2D
-@export var is_unlocked: bool = false
+@export var dog: bool
 @export var body: Texture2D
 @export var head: Texture2D
 @export var ll_arm: Texture2D
@@ -14,3 +14,5 @@ extends Resource
 @export var ul_leg: Texture2D
 @export var ur_arm: Texture2D
 @export var ur_leg: Texture2D
+@export_group("Save only")
+@export var is_unlocked: bool = false

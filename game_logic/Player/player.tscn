@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://s0tp4m1b6iun"]
 
 [ext_resource type="Script" uid="uid://beibdu44poa3t" path="res://game_logic/Player/player.gd" id="1_btcbx"]
+[ext_resource type="PackedScene" uid="uid://dfao2a6vs434d" path="res://game_logic/Ragdoll/dog_ragdoll.tscn" id="2_ey132"]
 [ext_resource type="PackedScene" uid="uid://cqgp2276rxmxf" path="res://game_logic/Player/racket/racket.tscn" id="2_gwnis"]
 [ext_resource type="PackedScene" uid="uid://b7vf83d0aqp85" path="res://game_logic/Ragdoll/ragdoll.tscn" id="3_k53q1"]
 
@@ -8,6 +9,7 @@
 script = ExtResource("1_btcbx")
 racket = NodePath("Racket")
 _ragdoll = NodePath("Ragdoll")
+_dog_ragdoll_sc = ExtResource("2_ey132")
 
 [node name="Racket" parent="." unique_id=1761270920 instance=ExtResource("2_gwnis")]
 position = Vector2(146, 144)
