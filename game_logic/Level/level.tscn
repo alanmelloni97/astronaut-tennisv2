@@ -27,17 +27,17 @@
 [ext_resource type="Texture2D" uid="uid://bo001fadk20m4" path="res://Assets/powerup small.png" id="17_ex85q"]
 [ext_resource type="AudioStream" uid="uid://dm7dipyv1a18k" path="res://Assets/sounds/bouncy ball/powerup_bouncy.mp3" id="17_lemr6"]
 [ext_resource type="Script" uid="uid://d2yxgudywfyhc" path="res://game_logic/Level/power_up_spawner.gd" id="17_luomk"]
-[ext_resource type="Texture2D" uid="uid://71doputtau3a" path="res://Assets/pelota bouncy.png" id="18_816bt"]
 [ext_resource type="Texture2D" uid="uid://cc61481tcaau7" path="res://Assets/powerup metal.png" id="18_r0jbq"]
 [ext_resource type="PhysicsMaterial" uid="uid://c1o0wcja6b3ln" path="res://game_logic/Ball/physics materials/no_bouncy.tres" id="19_r0jbq"]
 [ext_resource type="AudioStream" uid="uid://p0ilsjmhcpip" path="res://Assets/sounds/metal ball/anvil_bounce.wav" id="20_mddns"]
-[ext_resource type="Texture2D" uid="uid://dvkdpdb8ugqal" path="res://Assets/pelota unbouncy.png" id="21_mddns"]
 [ext_resource type="AudioStream" uid="uid://btj2jhnja6xwm" path="res://Assets/sounds/metal ball/anvil.wav" id="21_x31ef"]
+[ext_resource type="Texture2D" path="res://Assets/powerup bouncy.png" id="23_bhu2o"]
 [ext_resource type="PackedScene" uid="uid://b8nmqou14j2ss" path="res://game_logic/UI/Virtual joystick/touch_joysticks.tscn" id="24_6uec0"]
 [ext_resource type="AudioStream" uid="uid://di2no4vjdm8i1" path="res://Assets/sounds/unbouncy ball/fart.mp3" id="24_32dyk"]
 [ext_resource type="Script" uid="uid://d1bu3vy2qkidn" path="res://game_logic/Level/continious_collision_detector.gd" id="25_232uv"]
 [ext_resource type="AudioStream" uid="uid://bjquir1x2lrgh" path="res://Assets/sounds/unbouncy ball/powerup_unbouncy.mp3" id="25_gt2lo"]
 [ext_resource type="Script" uid="uid://duoytmh0h0bgk" path="res://game_logic/UI/score_ui.gd" id="26_232uv"]
+[ext_resource type="Texture2D" path="res://Assets/powerup unbouncy.png" id="27_shv3i"]
 [ext_resource type="Texture2D" uid="uid://ciidw7i5yd55g" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="30_816bt"]
 [ext_resource type="Script" uid="uid://cbvlk0m26qlvt" path="res://game_logic/Level/tournament_tutorial.gd" id="30_r0jbq"]
 [ext_resource type="Script" uid="uid://djqsokdco83fu" path="res://game_logic/Level/two_player_tutorial.gd" id="32_0cmfq"]
@@ -81,7 +81,7 @@ metadata/_custom_type_script = "uid://dy6cpapp40twb"
 [sub_resource type="Resource" id="Resource_x31ef"]
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_mddns")
-texture = ExtResource("18_816bt")
+texture = ExtResource("23_bhu2o")
 sound = ExtResource("17_lemr6")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
@@ -95,7 +95,7 @@ metadata/_custom_type_script = "uid://dy6cpapp40twb"
 [sub_resource type="Resource" id="Resource_pt1jg"]
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_i4n7n")
-texture = ExtResource("21_mddns")
+texture = ExtResource("27_shv3i")
 sound = ExtResource("25_gt2lo")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 

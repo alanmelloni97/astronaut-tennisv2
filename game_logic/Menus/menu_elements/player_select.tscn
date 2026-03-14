@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cld25d5sn167u"]
 
 [ext_resource type="Script" uid="uid://b4068na67t3a8" path="res://game_logic/Menus/menu_elements/player_select.gd" id="1_d4yoc"]
-[ext_resource type="Texture2D" uid="uid://br7j7b2sdsmxs" path="res://Assets/skins/apollo/apollo.png" id="2_1lemf"]
 [ext_resource type="Texture2D" uid="uid://bldbfw8ikhqnx" path="res://Assets/ui/button arrow.png" id="2_ku4ym"]
 [ext_resource type="Texture2D" uid="uid://dbnvon1pe1lfj" path="res://Assets/ui/button arrow pressed.png" id="3_0ttw0"]
 [ext_resource type="Texture2D" uid="uid://cbsj00tbqs61d" path="res://Assets/lock.webp" id="3_wfc4a"]
@@ -79,7 +78,6 @@ offset_right = 300.0
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_1lemf")
 stretch_mode = 5
 
 [node name="LockControl" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Control" unique_id=921016599]

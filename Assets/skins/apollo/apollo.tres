@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bwcxphril1jbg" path="res://Assets/skins/apollo/body.png" id="1_743iq"]
 [ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://game_logic/Ragdoll/skin/skin_resource.gd" id="1_bs0rt"]
 [ext_resource type="Texture2D" uid="uid://drju3tukpwrxy" path="res://Assets/skins/apollo/head.png" id="2_sdfdc"]
-[ext_resource type="Texture2D" uid="uid://br7j7b2sdsmxs" path="res://Assets/skins/apollo/apollo.png" id="3_sdfdc"]
+[ext_resource type="Texture2D" uid="uid://dl61bxitpyyqg" path="res://Assets/skins/apollo/apollo.png" id="3_sdfdc"]
 [ext_resource type="Texture2D" uid="uid://drlv7tmppwupc" path="res://Assets/skins/apollo/LLarm.png" id="3_x4i12"]
 [ext_resource type="Texture2D" uid="uid://sqymiv7s6x0o" path="res://Assets/skins/apollo/LLleg.png" id="4_w5n04"]
 [ext_resource type="Texture2D" uid="uid://cxgks8vypjvsf" path="res://Assets/skins/apollo/LRarm.png" id="5_qkiew"]
