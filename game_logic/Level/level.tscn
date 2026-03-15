@@ -17,27 +17,27 @@
 [ext_resource type="Script" uid="uid://b615mceneh7q" path="res://game_logic/Ball/PowerUp/powerup_data.gd" id="12_am3y4"]
 [ext_resource type="PackedScene" uid="uid://0g8h07ct0gia" path="res://game_logic/Ball/PowerUp/ball_powerup.tscn" id="12_k8npl"]
 [ext_resource type="Script" uid="uid://byub6igigr88i" path="res://game_logic/Ball/Effects/ScaleEffect.gd" id="13_jghi6"]
-[ext_resource type="AudioStream" uid="uid://bdjd7cos87lkp" path="res://Assets/sounds/scale ball/big ball.mp3" id="14_mpxfd"]
+[ext_resource type="AudioStream" uid="uid://ctfbf50lxuvq6" path="res://Assets/sounds/powerup_big.wav" id="15_bhu2o"]
 [ext_resource type="Texture2D" uid="uid://cuf1llgs2dgqe" path="res://Assets/powerup big.png" id="15_vb7dm"]
 [ext_resource type="PhysicsMaterial" uid="uid://n201dib0xrmv" path="res://game_logic/Ball/physics materials/bouncy.tres" id="16_cqvaw"]
-[ext_resource type="AudioStream" uid="uid://cgbbp45r1von7" path="res://Assets/sounds/bouncy ball/146264__setuniman__boing-0h_16m.wav" id="16_pt1jg"]
-[ext_resource type="AudioStream" uid="uid://b3f844hajayky" path="res://Assets/sounds/scale ball/small ball.mp3" id="16_xqwpk"]
+[ext_resource type="AudioStream" uid="uid://f0woqda6bxmo" path="res://Assets/sounds/hit_bouncy.wav" id="16_pt1jg"]
 [ext_resource type="Script" uid="uid://b4ap0fr8j47m8" path="res://game_logic/Ball/Effects/MassEffect.gd" id="17_6uec0"]
 [ext_resource type="Script" uid="uid://dy6cpapp40twb" path="res://game_logic/Ball/Effects/BounceEffect.gd" id="17_232uv"]
 [ext_resource type="Texture2D" uid="uid://bo001fadk20m4" path="res://Assets/powerup small.png" id="17_ex85q"]
-[ext_resource type="AudioStream" uid="uid://dm7dipyv1a18k" path="res://Assets/sounds/bouncy ball/powerup_bouncy.mp3" id="17_lemr6"]
 [ext_resource type="Script" uid="uid://d2yxgudywfyhc" path="res://game_logic/Level/power_up_spawner.gd" id="17_luomk"]
+[ext_resource type="AudioStream" uid="uid://ccy1uob5dljw2" path="res://Assets/sounds/powerup_small.wav" id="17_shv3i"]
 [ext_resource type="Texture2D" uid="uid://cc61481tcaau7" path="res://Assets/powerup metal.png" id="18_r0jbq"]
 [ext_resource type="PhysicsMaterial" uid="uid://c1o0wcja6b3ln" path="res://game_logic/Ball/physics materials/no_bouncy.tres" id="19_r0jbq"]
-[ext_resource type="AudioStream" uid="uid://p0ilsjmhcpip" path="res://Assets/sounds/metal ball/anvil_bounce.wav" id="20_mddns"]
-[ext_resource type="AudioStream" uid="uid://btj2jhnja6xwm" path="res://Assets/sounds/metal ball/anvil.wav" id="21_x31ef"]
-[ext_resource type="Texture2D" path="res://Assets/powerup bouncy.png" id="23_bhu2o"]
+[ext_resource type="AudioStream" uid="uid://dwcsopnfo5yaw" path="res://Assets/sounds/hit_metal.wav" id="20_mddns"]
+[ext_resource type="AudioStream" uid="uid://b7orb1sym8sce" path="res://Assets/sounds/powerup_metal.wav" id="21_x31ef"]
+[ext_resource type="AudioStream" uid="uid://ds87lr4vcg1dt" path="res://Assets/sounds/powerup_bouncy.wav" id="22_03h4c"]
+[ext_resource type="Texture2D" uid="uid://c0k7luyfuq4tt" path="res://Assets/powerup bouncy.png" id="23_bhu2o"]
 [ext_resource type="PackedScene" uid="uid://b8nmqou14j2ss" path="res://game_logic/UI/Virtual joystick/touch_joysticks.tscn" id="24_6uec0"]
-[ext_resource type="AudioStream" uid="uid://di2no4vjdm8i1" path="res://Assets/sounds/unbouncy ball/fart.mp3" id="24_32dyk"]
 [ext_resource type="Script" uid="uid://d1bu3vy2qkidn" path="res://game_logic/Level/continious_collision_detector.gd" id="25_232uv"]
-[ext_resource type="AudioStream" uid="uid://bjquir1x2lrgh" path="res://Assets/sounds/unbouncy ball/powerup_unbouncy.mp3" id="25_gt2lo"]
+[ext_resource type="AudioStream" uid="uid://b2c0jtagax61j" path="res://Assets/sounds/hit_unbouncy.wav" id="25_fcifm"]
+[ext_resource type="AudioStream" uid="uid://btcdd3x5ngd0g" path="res://Assets/sounds/powerup_unbouncy.wav" id="26_50hjx"]
 [ext_resource type="Script" uid="uid://duoytmh0h0bgk" path="res://game_logic/UI/score_ui.gd" id="26_232uv"]
-[ext_resource type="Texture2D" path="res://Assets/powerup unbouncy.png" id="27_shv3i"]
+[ext_resource type="Texture2D" uid="uid://cr1rbcp7y74lm" path="res://Assets/powerup unbouncy.png" id="27_shv3i"]
 [ext_resource type="Texture2D" uid="uid://ciidw7i5yd55g" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="30_816bt"]
 [ext_resource type="Script" uid="uid://cbvlk0m26qlvt" path="res://game_logic/Level/tournament_tutorial.gd" id="30_r0jbq"]
 [ext_resource type="Script" uid="uid://djqsokdco83fu" path="res://game_logic/Level/two_player_tutorial.gd" id="32_0cmfq"]
@@ -56,7 +56,7 @@ metadata/_custom_type_script = "uid://byub6igigr88i"
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_du4cn")
 texture = ExtResource("15_vb7dm")
-sound = ExtResource("14_mpxfd")
+sound = ExtResource("15_bhu2o")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="Resource" id="Resource_wfwu7"]
@@ -68,7 +68,7 @@ metadata/_custom_type_script = "uid://byub6igigr88i"
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_wfwu7")
 texture = ExtResource("17_ex85q")
-sound = ExtResource("16_xqwpk")
+sound = ExtResource("17_shv3i")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="Resource" id="Resource_mddns"]
@@ -82,13 +82,13 @@ metadata/_custom_type_script = "uid://dy6cpapp40twb"
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_mddns")
 texture = ExtResource("23_bhu2o")
-sound = ExtResource("17_lemr6")
+sound = ExtResource("22_03h4c")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="Resource" id="Resource_i4n7n"]
 script = ExtResource("17_232uv")
 phyisics_material = ExtResource("19_r0jbq")
-sound = ExtResource("24_32dyk")
+sound = ExtResource("25_fcifm")
 color = Color(0.7372549, 0.827451, 0.37254903, 1)
 metadata/_custom_type_script = "uid://dy6cpapp40twb"
 
@@ -96,7 +96,7 @@ metadata/_custom_type_script = "uid://dy6cpapp40twb"
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_i4n7n")
 texture = ExtResource("27_shv3i")
-sound = ExtResource("25_gt2lo")
+sound = ExtResource("26_50hjx")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="Resource" id="Resource_816bt"]

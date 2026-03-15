@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dtxb5xc02o5wo" path="res://Assets/ball pieces/spritesheet particles.png" id="7_oompg"]
 [ext_resource type="AudioStream" uid="uid://yrvx2tolssav" path="res://game_logic/Ball/sounds/51461__andrenascimento__basket_ball_02_bounce.wav" id="8_hsaat"]
 [ext_resource type="Script" uid="uid://dqtcdtkcbulfb" path="res://game_logic/Ball/spawner_manager.gd" id="10_bjqt2"]
-[ext_resource type="AudioStream" uid="uid://ba7w2n5indkh" path="res://Assets/sounds/forceField_000.ogg" id="11_fxsfa"]
+[ext_resource type="AudioStream" uid="uid://pdtbnx2ipyy6" path="res://Assets/sounds/point.wav" id="11_fxsfa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3thm"]
 resource_local_to_scene = true

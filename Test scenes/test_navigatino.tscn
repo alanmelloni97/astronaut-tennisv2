@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://game_logic/Ball/ball.tscn" id="2_tow4p"]
 [ext_resource type="Script" uid="uid://bkl6atvap0wjf" path="res://Test scenes/racket.gd" id="3_yshm4"]
 [ext_resource type="Texture2D" uid="uid://83kt02x3ifyv" path="res://Assets/Racket.png" id="11_lgi27"]
-[ext_resource type="AudioStream" uid="uid://djl5nll5gmmaf" path="res://game_logic/Player/racket/sounds/505628__highpixel__basketballbounce.wav" id="12_eeolk"]
+[ext_resource type="AudioStream" uid="uid://xky4f6qn7hpm" path="res://Assets/sounds/racket.wav" id="12_eeolk"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_84qll"]
 vertices = PackedVector2Array(1145.4688, 647.71094, 1249.0469, 654.78125, 1944.9375, 1109.8594, -41.34375, 1084.1172, 779.28906, 651.15625, 856.78906, 649.9297, 1939.0469, 2.75, 1230.1016, 451.8672, -80.640625, -47.726563, 773.71094, 458.14063, 1038.7891, 537.03906, 948.77344, 537.9531)

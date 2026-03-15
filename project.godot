@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="tenis astronauta v2"
+config/name="tenis astronauta"
 run/main_scene="uid://0tguoaxhermy"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
+boot_splash/image="uid://c0k7luyfuq4tt"
+config/icon="uid://dh0yir5ufgaq"
+boot_splash/minimum_display_time=1000
 
 [autoload]
 
@@ -28,6 +30,7 @@ window/size/viewport_height=1080
 window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 
@@ -105,4 +108,6 @@ common/physics_interpolation=true
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true

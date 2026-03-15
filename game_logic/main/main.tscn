@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://do0w1w1hnkqgd" path="res://game_logic/main/specific_scene_logic.gd" id="5_k3v36"]
 [ext_resource type="Script" uid="uid://b0dvddvx114dr" path="res://game_logic/main/music_manager.gd" id="6_4dugh"]
 [ext_resource type="AudioStream" uid="uid://cebnl430nkr3" path="res://Assets/music/ivantraveso-competition-music-challenge-music-129796.mp3" id="7_bldp5"]
+[ext_resource type="PackedScene" uid="uid://bvo06k07h5pvx" path="res://game_logic/main/preloading.tscn" id="8_620kg"]
 
 [node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager", "specific_scene_logic", "music_manager")]
 script = ExtResource("1_yh5la")
@@ -41,3 +42,5 @@ FADE_DB = -70
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicManager" unique_id=1866995240]
 stream = ExtResource("7_bldp5")
 autoplay = true
+
+[node name="Preloading" parent="." unique_id=731860452 instance=ExtResource("8_620kg")]

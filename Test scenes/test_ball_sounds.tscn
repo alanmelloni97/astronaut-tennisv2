@@ -61,9 +61,4 @@ position = Vector2(343, 493)
 [node name="MotionManager" parent="Racket/MovementHandler" parent_id_path=PackedInt32Array(1644144030, 124426701) index="0" unique_id=954893411]
 _FORCE_MULT = 40000
 
-[node name="ContextBasedSteering" parent="Racket/MovementHandler/AIManager" parent_id_path=PackedInt32Array(1644144030, 2068937680) index="0" unique_id=1925146466 node_paths=PackedStringArray("pid_x", "pid_y")]
-num_rays = 30
-pid_x = NodePath("PIDx")
-pid_y = NodePath("PIDy")
-
 [editable path="Racket"]

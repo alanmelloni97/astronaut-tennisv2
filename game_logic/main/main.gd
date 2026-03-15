@@ -5,6 +5,7 @@ extends Node
 @export var scene_manager: SceneManager
 @export var specific_scene_logic: SpecificSceneLogic
 @export var music_manager: MusicManager
+@export var preloading: Node
 
 
 func _ready() -> void:
