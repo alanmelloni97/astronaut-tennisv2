@@ -10,6 +10,8 @@ enum PlayerType {
 @export var racket: Racket
 @export var _ragdoll: Ragdoll
 @export var _dog_ragdoll_sc: PackedScene
+@export var racket_1_texture: Texture2D
+@export var racket_2_texture: Texture2D
 
 
 # WRAPPERS
@@ -20,8 +22,16 @@ func disable_input():
 func set_up_player(player_type: PlayerType, skin: CharacterSkin, ai_level: AILevel = null):
 	racket.movement_handler.set_player_type(player_type)
 	_set_ragdoll(player_type, skin)
+	_set_racket(player_type)
 	if player_type == PlayerType.AI_RIVAL:
 		_set_ai(ai_level, skin)
+
+
+func _set_racket(player_type: PlayerType):
+	if player_type == PlayerType.PLAYER_1:
+		racket.sprite.texture = racket_1_texture
+	else:
+		racket.sprite.texture = racket_2_texture
 
 
 func _set_ragdoll(player_type: PlayerType, skin: CharacterSkin):

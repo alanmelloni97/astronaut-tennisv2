@@ -3,13 +3,17 @@
 [ext_resource type="Script" uid="uid://beibdu44poa3t" path="res://game_logic/Player/player.gd" id="1_btcbx"]
 [ext_resource type="PackedScene" uid="uid://dfao2a6vs434d" path="res://game_logic/Ragdoll/dog_ragdoll.tscn" id="2_ey132"]
 [ext_resource type="PackedScene" uid="uid://cqgp2276rxmxf" path="res://game_logic/Player/racket/racket.tscn" id="2_gwnis"]
+[ext_resource type="Texture2D" uid="uid://bvudjmnqmuaa7" path="res://Assets/Racket_1.png" id="3_funin"]
 [ext_resource type="PackedScene" uid="uid://b7vf83d0aqp85" path="res://game_logic/Ragdoll/ragdoll.tscn" id="3_k53q1"]
+[ext_resource type="Texture2D" uid="uid://ck8h1mskfak6x" path="res://Assets/Racket_2.png" id="4_cqq80"]
 
 [node name="Player" type="Node2D" unique_id=492092250 node_paths=PackedStringArray("racket", "_ragdoll")]
 script = ExtResource("1_btcbx")
 racket = NodePath("Racket")
 _ragdoll = NodePath("Ragdoll")
 _dog_ragdoll_sc = ExtResource("2_ey132")
+racket_1_texture = ExtResource("3_funin")
+racket_2_texture = ExtResource("4_cqq80")
 
 [node name="Racket" parent="." unique_id=1761270920 instance=ExtResource("2_gwnis")]
 position = Vector2(146, 144)

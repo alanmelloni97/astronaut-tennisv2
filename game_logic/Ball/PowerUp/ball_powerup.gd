@@ -6,6 +6,7 @@ extends Area2D
 @export var background_sprite: Sprite2D
 @export var inner_sprite: Sprite2D
 @export var ROTATION: float
+@export var timer: Timer
 
 var power_up_data: PowerUpData:
 	set(x):
@@ -15,7 +16,8 @@ var power_up_data: PowerUpData:
 
 
 func _ready() -> void:
-	_connect_signals()
+	body_entered.connect(_on_body_entered)
+	timer.timeout.connect(_fade_out)
 	_fade_in()
 
 
@@ -30,13 +32,14 @@ func destroy():
 
 
 func _fade_in():
-	powerup_sprites.scale = Vector2.ZERO
 	var tween: Tween = get_tree().create_tween()
-	tween.tween_property(powerup_sprites, "scale", Vector2.ONE, 1.5).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
+	tween.tween_property(powerup_sprites, "scale", Vector2.ONE, 1.5).from(Vector2.ZERO).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
 
 
-func _connect_signals():
-	body_entered.connect(_on_body_entered)
+func _fade_out():
+	var tween: Tween = get_tree().create_tween()
+	tween.tween_property(powerup_sprites, "scale", Vector2.ZERO, 1.5).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	tween.tween_callback(queue_free)
 
 
 func _on_body_entered(body: Node):

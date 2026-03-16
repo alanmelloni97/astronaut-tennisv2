@@ -2,9 +2,11 @@
 TODO:
 
 FUTURO:
-	pelota metal cambiar textura
-	android export
-	mejorar traje mercury
 	reduce size build
 MAYBE:
+	musica de fondo
+	mejorar traje mercury
+	mejorar logo
+	mejorar fondo de menu principal
+	
 "
