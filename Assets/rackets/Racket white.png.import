@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://83kt02x3ifyv"
-path="res://.godot/imported/Racket.png-267dd581a4ba5b7d49c4c17871e0d415.ctex"
+uid="uid://dcy2c1njpse5t"
+path="res://.godot/imported/Racket white.png-ed92ebeefbdc1ba94f4c5b498e6b9de3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Racket.png"
-dest_files=["res://.godot/imported/Racket.png-267dd581a4ba5b7d49c4c17871e0d415.ctex"]
+source_file="res://Assets/rackets/Racket white.png"
+dest_files=["res://.godot/imported/Racket white.png-ed92ebeefbdc1ba94f4c5b498e6b9de3.ctex"]
 
 [params]
 

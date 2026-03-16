@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://ds0srr1tfxcwg" path="res://game_logic/Player/ai_handler.gd" id="4_koyly"]
 [ext_resource type="Script" uid="uid://d0g5ximw8rnll" path="res://game_logic/Player/movement_handler.gd" id="4_xsmco"]
 [ext_resource type="AudioStream" uid="uid://xky4f6qn7hpm" path="res://Assets/sounds/racket.wav" id="8_2bxvs"]
-[ext_resource type="Texture2D" uid="uid://83kt02x3ifyv" path="res://Assets/Racket.png" id="8_uvl4i"]
 [ext_resource type="Script" uid="uid://4xq1pwo5nsb4" path="res://game_logic/Player/racket/mobile_config.gd" id="9_eay6m"]
 [ext_resource type="Script" uid="uid://t4befjvx46oq" path="res://game_logic/Player/racket/racket_sound_manager.gd" id="9_uvl4i"]
 
@@ -68,7 +67,6 @@ navigation_agent = NodePath("../../navigation_position/NavigationAgent2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1074267406]
 position = Vector2(-0.5, -55)
-texture = ExtResource("8_uvl4i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920572248]
 position = Vector2(0, -82)

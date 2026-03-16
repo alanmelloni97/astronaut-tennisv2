@@ -1,0 +1,44 @@
+class_name Selector
+extends Control
+
+signal skin_updated()
+
+@export var texture_rect: TextureRect
+@export var skins: Array[Texture2D]
+
+var tween: Tween
+var current_skin_index: int:
+	set(x):
+		# account for over/underflow of the array
+		if x > skins.size() - 1 or x < -(skins.size() - 1):
+			current_skin_index = 0
+		else:
+			current_skin_index = x
+
+
+func _ready() -> void:
+	update_skin()
+
+
+func get_current_skin() -> Texture2D:
+	return skins[current_skin_index]
+
+
+func update_skin():
+	texture_rect.texture = get_current_skin()
+	skin_updated.emit()
+
+	if tween and tween.is_running():
+		tween.kill()
+	tween = get_tree().create_tween()
+	tween.tween_property(texture_rect, "modulate", texture_rect.modulate, 0.5).from(Color.TRANSPARENT)
+
+
+func _on_left_button_pressed() -> void:
+	current_skin_index -= 1
+	update_skin()
+
+
+func _on_right_button_pressed() -> void:
+	current_skin_index += 1
+	update_skin()

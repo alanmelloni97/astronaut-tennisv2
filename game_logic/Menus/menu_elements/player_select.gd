@@ -6,6 +6,7 @@ signal skin_updated()
 @export var _player_texture: TextureRect
 @export var suit_name: Label
 @export var lock_control: Control
+@export var racket_select: Selector
 
 var tween: Tween
 var skins: Array[CharacterSkin]

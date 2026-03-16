@@ -10,6 +10,8 @@ signal request_music_stop
 var two_players_mode: bool = false
 var player_1_skin: CharacterSkin
 var player_2_skin: CharacterSkin
+var racket_1_skin: Texture2D
+var racket_2_skin: Texture2D
 
 
 func manage_before_changing_scene(current_scene: Node):
@@ -17,9 +19,11 @@ func manage_before_changing_scene(current_scene: Node):
 	if current_scene is MainMenu:
 		two_players_mode = current_scene.two_players_requested
 	elif current_scene is CharacterSelectionMenu:
+		racket_1_skin = current_scene.get_selected_racket_1()
 		player_1_skin = current_scene.get_selected_skin_1()
 		if two_players_mode:
 			player_2_skin = current_scene.get_selected_skin_2()
+			racket_2_skin = current_scene.get_selected_racket_2()
 			# rival for tournament is taken from Characters global so no need to save it here
 		if current_scene.tournament_is_won:
 			_restart_tournament()
@@ -43,12 +47,15 @@ func manage_after_changing_scene(new_scene: Node):
 		new_scene.two_players = two_players_mode
 	elif new_scene is Level:
 		request_music_stop.emit()
+		new_scene.racket_1_skin = racket_1_skin
 		new_scene.player_1_skin = player_1_skin
 		new_scene.two_player_mode = two_players_mode
 		if two_players_mode:
 			new_scene.player_2_skin = player_2_skin
+			new_scene.racket_2_skin = racket_2_skin
 		else:
 			new_scene.rival = Characters.get_current_rival()
+			new_scene.racket_2_skin = load("res://Assets/rackets/Racket red.png")
 
 
 func _restart_tournament():

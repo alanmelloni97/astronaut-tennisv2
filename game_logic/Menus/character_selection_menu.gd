@@ -35,6 +35,14 @@ func get_selected_skin_2() -> CharacterSkin:
 	return player_2_select.get_current_skin()
 
 
+func get_selected_racket_1() -> Texture2D:
+	return player_1_select.racket_select.get_current_skin()
+
+
+func get_selected_racket_2() -> Texture2D:
+	return player_2_select.racket_select.get_current_skin()
+
+
 func _on_back_button_pressed() -> void:
 	scene_requested.emit(Scenes.main_menu)
 

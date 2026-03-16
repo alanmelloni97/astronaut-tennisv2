@@ -17,11 +17,11 @@ func _ready() -> void:
 
 func set_up_players():
 	# account for laika
-	_player_1.set_up_player(Player.PlayerType.PLAYER_1, _level.player_1_skin, null)
+	_player_1.set_up_player(Player.PlayerType.PLAYER_1, _level.player_1_skin, _level.racket_1_skin, null)
 	if _level.two_player_mode:
-		_player_2.set_up_player(Player.PlayerType.PLAYER_2, _level.player_2_skin, null)
+		_player_2.set_up_player(Player.PlayerType.PLAYER_2, _level.player_2_skin, _level.racket_2_skin, null)
 	else:
-		_player_2.set_up_player(Player.PlayerType.AI_RIVAL, _level.rival.skin, _level.rival.ai_level)
+		_player_2.set_up_player(Player.PlayerType.AI_RIVAL, _level.rival.skin, _level.racket_2_skin, _level.rival.ai_level)
 
 
 func _on_game_finished(winner: int):

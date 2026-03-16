@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvudjmnqmuaa7"
-path="res://.godot/imported/Racket_1.png-192a887489b866f70182366bff78a025.ctex"
+uid="uid://c1al8kkxkkxlc"
+path="res://.godot/imported/carbon rod.png-70b9823531b1d4ea6ab30f29613ec76b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Racket_1.png"
-dest_files=["res://.godot/imported/Racket_1.png-192a887489b866f70182366bff78a025.ctex"]
+source_file="res://Assets/rackets/carbon rod.png"
+dest_files=["res://.godot/imported/carbon rod.png-70b9823531b1d4ea6ab30f29613ec76b.ctex"]
 
 [params]
 
