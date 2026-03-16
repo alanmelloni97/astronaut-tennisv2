@@ -254,14 +254,14 @@ position = Vector2(486, 163.40799)
 scale = Vector2(0.51066643, 0.51066643)
 texture = ExtResource("33_vb7dm")
 
+[node name="TouchJoysticks" parent="." unique_id=25295857 instance=ExtResource("24_6uec0")]
+
 [node name="MainUI" parent="." unique_id=1468483608 instance=ExtResource("5_d6qko")]
 
 [node name="UIHandler" type="Node" parent="MainUI" unique_id=1149858996 node_paths=PackedStringArray("_level", "_main_ui")]
 script = ExtResource("7_i5g78")
 _level = NodePath("../..")
 _main_ui = NodePath("..")
-
-[node name="TouchJoysticks" parent="." unique_id=25295857 instance=ExtResource("24_6uec0")]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1058688654]
 light_mask = 2

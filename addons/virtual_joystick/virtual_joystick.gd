@@ -13,14 +13,8 @@ enum Visibility_mode {
 	TOUCHSCREEN_ONLY, ## Visible on touch screens only
 	WHEN_TOUCHED, ## Visible only when touched
 }
-# EXPORTED VARIABLE
-# added by me to accound for button touch without activating joystick
-enum Joystick_side {
-	LEFT,
-	RIGHT,
-}
 
-@export var side: Joystick_side
+# EXPORTED VARIABLE
 ## The color of the button when the joystick is pressed.
 @export var pressed_color := Color.GRAY
 ## If the input is inside this range, the output is zero.
@@ -38,7 +32,6 @@ enum Joystick_side {
 @export var action_up := "ui_up"
 @export var action_down := "ui_down"
 
-var two_players: bool = false
 # PUBLIC VARIABLES
 ## If the joystick is receiving inputs.
 var is_pressed := false
@@ -68,7 +61,7 @@ func _ready() -> void:
 		hide()
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:
 		if event.pressed:
 			if _is_point_inside_joystick_area(event.position) and _touch_index == -1:
@@ -101,13 +94,9 @@ func _move_tip(new_position: Vector2) -> void:
 
 
 func _is_point_inside_joystick_area(point: Vector2) -> bool:
-	if side == Joystick_side.LEFT:
-		if two_players:
-			return point.x < get_viewport_rect().end.x / 2
-		else:
-			return point.x < get_viewport_rect().end.x
-	else:
-		return point.x > get_viewport_rect().end.x / 2
+	var x: bool = point.x >= global_position.x and point.x <= global_position.x + (size.x * get_global_transform_with_canvas().get_scale().x)
+	var y: bool = point.y >= global_position.y and point.y <= global_position.y + (size.y * get_global_transform_with_canvas().get_scale().y)
+	return x and y
 
 
 func _get_base_radius() -> Vector2:
