@@ -38,7 +38,7 @@ enum Joystick_side {
 @export var action_up := "ui_up"
 @export var action_down := "ui_down"
 
-var two_players: bool
+var two_players: bool = false
 # PUBLIC VARIABLES
 ## If the joystick is receiving inputs.
 var is_pressed := false
@@ -102,11 +102,10 @@ func _move_tip(new_position: Vector2) -> void:
 
 func _is_point_inside_joystick_area(point: Vector2) -> bool:
 	if side == Joystick_side.LEFT:
-		if G_GameManager.game_type == G_GlobalEnums.G_E_GameType.TWO_PLAYER:
+		if two_players:
 			return point.x < get_viewport_rect().end.x / 2
 		else:
 			return point.x < get_viewport_rect().end.x
-
 	else:
 		return point.x > get_viewport_rect().end.x / 2
 
