@@ -463,6 +463,8 @@ occluder = SubResource("OccluderPolygon2D_r0jbq")
 
 [node name="Player1" parent="." unique_id=396626081 instance=ExtResource("1_o6mkr")]
 position = Vector2(277, 561)
+_dog_ragdoll_sc = null
 
 [node name="Player2" parent="." unique_id=24592340 instance=ExtResource("1_o6mkr")]
 position = Vector2(1561, 557)
+_dog_ragdoll_sc = null
