@@ -1,3 +1,4 @@
+class_name TouchJoysticks
 extends CanvasLayer
 
 @export var _joystick_right: VirtualJoystick

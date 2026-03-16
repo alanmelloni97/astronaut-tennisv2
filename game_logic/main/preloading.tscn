@@ -2,18 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dsxqhy2yc5ld3" path="res://game_logic/main/preloading.gd" id="1_o6vmr"]
 [ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://game_logic/Ball/ball.tscn" id="2_4l6ej"]
-[ext_resource type="Texture2D" uid="uid://ciidw7i5yd55g" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="3_4l6ej"]
-[ext_resource type="Texture2D" uid="uid://2x3c4sxafnfj" path="res://Assets/backgrounds/background_game.png" id="4_1adj6"]
 
 [node name="Preloading" type="Node" unique_id=731860452]
 script = ExtResource("1_o6vmr")
 
 [node name="Ball" parent="." unique_id=365515873 instance=ExtResource("2_4l6ej")]
 position = Vector2(-1620, 232)
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=320195469]
-texture = ExtResource("3_4l6ej")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=498473181]
-position = Vector2(-1884, -152)
-texture = ExtResource("4_1adj6")

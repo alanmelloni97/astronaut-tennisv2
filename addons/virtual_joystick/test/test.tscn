@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="1_4k4lh"]
 [ext_resource type="Texture2D" uid="uid://bm6paknagomao" path="res://icon.svg" id="2_44wa8"]
-[ext_resource type="Script" uid="uid://bhil1e0lxy4y6" path="res://addons/virtual_joystick/test/player.gd" id="3_dsmxw"]
+[ext_resource type="Script" uid="uid://ck3hjyvjl7rct" path="res://addons/virtual_joystick/test/player2.gd" id="3_uvybk"]
 
 [node name="Test" type="Node2D" unique_id=1796463648]
 
@@ -22,9 +22,13 @@ grow_horizontal = 0
 joystick_mode = 1
 use_input_actions = false
 
-[node name="Player" type="Sprite2D" parent="." unique_id=1669810120 node_paths=PackedStringArray("joystick_left", "joystick_right")]
+[node name="Player" type="Sprite2D" parent="." unique_id=1669810120]
 position = Vector2(600, 300)
 texture = ExtResource("2_44wa8")
-script = ExtResource("3_dsmxw")
-joystick_left = NodePath("../UI/Virtual joystick left")
-joystick_right = NodePath("../UI/Virtual joystick right")
+script = ExtResource("3_uvybk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1946233410]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=30468607]
+offset_right = 308.0
+offset_bottom = 265.0

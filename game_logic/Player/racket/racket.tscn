@@ -94,7 +94,7 @@ simplify_epsilon = 5.0
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0, 0, 1)
 
-[node name="MobileConfig" type="Node" parent="." unique_id=244560580 node_paths=PackedStringArray("racket")]
+[node name="BuildConfig" type="Node" parent="." unique_id=244560580 node_paths=PackedStringArray("racket")]
 script = ExtResource("9_eay6m")
 racket = NodePath("..")
 DAMP = 5.0

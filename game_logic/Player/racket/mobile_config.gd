@@ -1,4 +1,4 @@
-class_name MobileRacketConfig
+class_name RacketBuildConfig
 extends Node
 
 @export var racket: Racket

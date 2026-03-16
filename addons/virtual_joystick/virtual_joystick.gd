@@ -13,8 +13,14 @@ enum Visibility_mode {
 	TOUCHSCREEN_ONLY, ## Visible on touch screens only
 	WHEN_TOUCHED, ## Visible only when touched
 }
-
 # EXPORTED VARIABLE
+# added by me to accound for button touch without activating joystick
+enum Joystick_side {
+	LEFT,
+	RIGHT,
+}
+
+@export var side: Joystick_side
 ## The color of the button when the joystick is pressed.
 @export var pressed_color := Color.GRAY
 ## If the input is inside this range, the output is zero.
@@ -32,6 +38,7 @@ enum Visibility_mode {
 @export var action_up := "ui_up"
 @export var action_down := "ui_down"
 
+var two_players: bool
 # PUBLIC VARIABLES
 ## If the joystick is receiving inputs.
 var is_pressed := false
@@ -94,9 +101,14 @@ func _move_tip(new_position: Vector2) -> void:
 
 
 func _is_point_inside_joystick_area(point: Vector2) -> bool:
-	var x: bool = point.x >= global_position.x and point.x <= global_position.x + (size.x * get_global_transform_with_canvas().get_scale().x)
-	var y: bool = point.y >= global_position.y and point.y <= global_position.y + (size.y * get_global_transform_with_canvas().get_scale().y)
-	return x and y
+	if side == Joystick_side.LEFT:
+		if G_GameManager.game_type == G_GlobalEnums.G_E_GameType.TWO_PLAYER:
+			return point.x < get_viewport_rect().end.x / 2
+		else:
+			return point.x < get_viewport_rect().end.x
+
+	else:
+		return point.x > get_viewport_rect().end.x / 2
 
 
 func _get_base_radius() -> Vector2:

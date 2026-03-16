@@ -6,11 +6,13 @@ extends Node
 @export var _player_2: Player
 @export var _main_UI: MainUI
 @export var _level: Level
+@export var touch_joysticks: TouchJoysticks
 
 
 func _ready() -> void:
 	_score_manager.game_finished.connect(_on_game_finished)
 	set_up_players()
+	touch_joysticks.two_players = _level.two_player_mode
 
 
 func set_up_players():

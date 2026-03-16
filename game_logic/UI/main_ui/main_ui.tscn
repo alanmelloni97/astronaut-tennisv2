@@ -41,6 +41,8 @@ size_flags_vertical = 4
 visible = false
 layout_mode = 2
 
+[connection signal="button_down" from="MarginContainer/PauseButton" to="MarginContainer/PauseButton" method="_on_button_down"]
 [connection signal="pressed" from="MarginContainer/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PauseButton" to="MarginContainer/PauseButton" method="_on_pressed"]
 [connection signal="quit_game" from="MarginContainer/PauseMenu" to="." method="_on_pause_menu_quit_game"]
 [connection signal="unpaused" from="MarginContainer/PauseMenu" to="." method="_on_pause_menu_unpaused"]
