@@ -28,9 +28,10 @@ func update_skin():
 	texture_rect.texture = get_current_skin()
 	skin_updated.emit()
 
-	if tween and tween.is_running():
+	if tween:
 		tween.kill()
-	tween = get_tree().create_tween()
+	texture_rect.modulate = Color.WHITE # if tween was killed in the middle of animation restore original modulate
+	tween = create_tween()
 	tween.tween_property(texture_rect, "modulate", texture_rect.modulate, 0.5).from(Color.TRANSPARENT)
 
 

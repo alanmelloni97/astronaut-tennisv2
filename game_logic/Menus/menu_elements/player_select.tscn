@@ -15,7 +15,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ku4ym"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rovc6"]
-load_path = "res://.godot/imported/Racket.png-267dd581a4ba5b7d49c4c17871e0d415.ctex"
 
 [node name="PlayerSelect" type="Control" unique_id=1806913641 node_paths=PackedStringArray("_player_texture", "suit_name", "lock_control", "racket_select")]
 layout_mode = 3
