@@ -5,16 +5,14 @@
 [ext_resource type="Script" uid="uid://crvew7gomsi4a" path="res://game_logic/Player/input_manager.gd" id="3_xsmco"]
 [ext_resource type="Script" uid="uid://ds0srr1tfxcwg" path="res://game_logic/Player/ai_handler.gd" id="4_koyly"]
 [ext_resource type="Script" uid="uid://d0g5ximw8rnll" path="res://game_logic/Player/movement_handler.gd" id="4_xsmco"]
+[ext_resource type="Texture2D" uid="uid://inydcigwru2l" path="res://Assets/rackets/Racket yellow.png" id="7_8cr5i"]
+[ext_resource type="Script" uid="uid://dlc4mpd2ivtp4" path="res://game_logic/Player/racket/sprite_2d.gd" id="7_eay6m"]
 [ext_resource type="AudioStream" uid="uid://xky4f6qn7hpm" path="res://Assets/sounds/racket.wav" id="8_2bxvs"]
 [ext_resource type="Script" uid="uid://4xq1pwo5nsb4" path="res://game_logic/Player/racket/mobile_config.gd" id="9_eay6m"]
 [ext_resource type="Script" uid="uid://t4befjvx46oq" path="res://game_logic/Player/racket/racket_sound_manager.gd" id="9_uvl4i"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wwm6y"]
 friction = 0.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nbxvu"]
-radius = 52.0
-height = 118.0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ysqc3"]
 polygon = PackedVector2Array(18.900002, -86, -18.900002, -86, -28.1, -81, -30.4, -81, -42.4, -68, -43.7, -68, -52.5, -50.5, -52.5, -2, -44.5, 12.400002, -44.5, 14.900002, -31.5, 26.900002, -31.5, 28.199997, -17, 36, -15.5, 36, -14.5, 82, -14.5, 86, 13.699997, 86, 15.5, 82.5, 15.5, 35.199997, 28, 29, 30.400002, 29, 42.4, 16, 43.800003, 16, 52.5, -3.4000015, 52.5, -50.1, 44.5, -64.5, 44.5, -66.9, 31.5, -79, 31.5, -80.3)
@@ -34,7 +32,7 @@ movement_handler = NodePath("MovementHandler")
 motion_manager = NodePath("MovementHandler/MotionManager")
 ai_manager = NodePath("MovementHandler/AIManager")
 sprite = NodePath("Sprite2D")
-collision_shape_2d = NodePath("CollisionShape2D")
+collision_shape_2d = NodePath("")
 navigation_position = NodePath("navigation_position")
 
 [node name="SoundManager" type="Node" parent="." unique_id=2039874068 node_paths=PackedStringArray("racket", "audio_stream_player_2d")]
@@ -65,12 +63,12 @@ script = ExtResource("4_koyly")
 racket = NodePath("../..")
 navigation_agent = NodePath("../../navigation_position/NavigationAgent2D")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1074267406]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1074267406 node_paths=PackedStringArray("_sprite_2d", "_parent")]
 position = Vector2(-0.5, -55)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920572248]
-position = Vector2(0, -82)
-shape = SubResource("CapsuleShape2D_nbxvu")
+texture = ExtResource("7_8cr5i")
+script = ExtResource("7_eay6m")
+_sprite_2d = NodePath(".")
+_parent = NodePath("..")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=234241448]
 position = Vector2(-0.5, -55)
