@@ -10,13 +10,13 @@ var ball_velocity_acum: float
 var frame_count: int
 
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if get_tree().get_node_count_in_group("Ball") > 0:
 		ball = get_tree().get_first_node_in_group("Ball")
-		ball_velocity_acum += ball.linear_velocity.length()
+		ball_velocity_acum += ball.linear_velocity.length() * delta
 		frame_count += 1
-		if frame_count % 500 == 0:
+		if frame_count % 300 == 0:
 			frame_count = 0
-			if ball_velocity_acum < 10: # moved less than 10 pixels in last 500 frames
+			if ball_velocity_acum < 50: # moved less than 50 pixels in last 500 frames
 				ball_stalled.emit()
 			ball_velocity_acum = 0 # restart count

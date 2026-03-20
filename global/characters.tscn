@@ -18,14 +18,14 @@
 script = ExtResource("2_k1buq")
 name = "Ulf Merbold"
 skin = ExtResource("5_2cl63")
-ai_level = ExtResource("9_idtl2")
+ai_level = ExtResource("3_ivnx7")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_cc3by"]
 script = ExtResource("2_k1buq")
 name = "Valentina Tereshkova"
 skin = ExtResource("4_o1ipo")
-ai_level = ExtResource("8_gx2s2")
+ai_level = ExtResource("3_ivnx7")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_82qhk"]
@@ -46,7 +46,7 @@ metadata/_custom_type_script = "uid://5rdixxdoulx3"
 script = ExtResource("2_k1buq")
 name = "Sally Ride"
 skin = ExtResource("5_2cl63")
-ai_level = ExtResource("9_idtl2")
+ai_level = ExtResource("8_gx2s2")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_8mtkk"]
@@ -60,7 +60,7 @@ metadata/_custom_type_script = "uid://5rdixxdoulx3"
 script = ExtResource("2_k1buq")
 name = "Yuri Gagarin"
 skin = ExtResource("4_o1ipo")
-ai_level = ExtResource("3_ivnx7")
+ai_level = ExtResource("9_idtl2")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_0hpa8"]
@@ -68,7 +68,7 @@ resource_local_to_scene = true
 script = ExtResource("2_k1buq")
 name = "Neil Armstrong"
 skin = ExtResource("5_c2d4n")
-ai_level = ExtResource("3_ivnx7")
+ai_level = ExtResource("9_idtl2")
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_rt06a"]

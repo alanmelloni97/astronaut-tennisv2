@@ -8,7 +8,6 @@ signal _removed
 @export var ai_marker_2d: Marker2D
 @export var effects_manager: EffectsManager
 @export var remove_sound: AudioStreamPlayer2D
-@export var navigation_obstacle_2d: NavigationObstacle2D
 # used by effects:
 @export var collision_shape: CollisionShape2D
 @export var sprite: Sprite2D
