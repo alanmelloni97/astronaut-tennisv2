@@ -65,11 +65,19 @@ layout_mode = 2
 size_flags_vertical = 4
 text = "BACK"
 
+[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1062086887]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
 [node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=313890464]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "START"
+
+[node name="Spacer2" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1791784119]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
 
 [node name="RestartTournamentButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=465025600]
 visible = false

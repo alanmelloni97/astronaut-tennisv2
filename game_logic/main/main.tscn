@@ -8,6 +8,9 @@
 [ext_resource type="Script" uid="uid://b0dvddvx114dr" path="res://game_logic/main/music_manager.gd" id="6_4dugh"]
 [ext_resource type="AudioStream" uid="uid://cebnl430nkr3" path="res://Assets/music/ivantraveso-competition-music-challenge-music-129796.mp3" id="7_bldp5"]
 [ext_resource type="PackedScene" uid="uid://bvo06k07h5pvx" path="res://game_logic/main/preloading.tscn" id="8_620kg"]
+[ext_resource type="Script" uid="uid://d3ddtgq87jpug" path="res://game_logic/main/platform_config.gd" id="9_phvla"]
+[ext_resource type="Script" uid="uid://daspn2nksgh1t" path="res://game_logic/main/specific_config.gd" id="10_u3llg"]
+[ext_resource type="Script" uid="uid://cn3qv486giv3t" path="res://game_logic/main/debug_version_warning.gd" id="10_yyosa"]
 
 [node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager", "specific_scene_logic", "music_manager")]
 script = ExtResource("1_yh5la")
@@ -44,3 +47,25 @@ stream = ExtResource("7_bldp5")
 autoplay = true
 
 [node name="Preloading" parent="." unique_id=731860452 instance=ExtResource("8_620kg")]
+
+[node name="PlatformConfig" type="Node" parent="." unique_id=1742208959]
+script = ExtResource("9_phvla")
+desktop_fullscreen = true
+mobile_fullscreen = true
+
+[node name="SpecificConfig" type="Node" parent="PlatformConfig" unique_id=1798769233]
+script = ExtResource("10_u3llg")
+
+[node name="DebugVersionWarning" type="CanvasLayer" parent="." unique_id=1587077865 node_paths=PackedStringArray("label")]
+script = ExtResource("10_yyosa")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="DebugVersionWarning" unique_id=1520612531]
+visible = false
+offset_left = 750.0
+offset_top = 36.0
+offset_right = 2344.0
+offset_bottom = 197.0
+theme_type_variation = &"7SegmentLabel"
+theme_override_font_sizes/font_size = 30
+text = "THIS IS A DEBUG VERSION"
