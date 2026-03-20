@@ -9,8 +9,11 @@
 [ext_resource type="AudioStream" uid="uid://cebnl430nkr3" path="res://Assets/music/ivantraveso-competition-music-challenge-music-129796.mp3" id="7_bldp5"]
 [ext_resource type="PackedScene" uid="uid://bvo06k07h5pvx" path="res://game_logic/main/preloading.tscn" id="8_620kg"]
 [ext_resource type="Script" uid="uid://d3ddtgq87jpug" path="res://game_logic/main/platform_config.gd" id="9_phvla"]
+[ext_resource type="AudioStream" uid="uid://b2c0jtagax61j" path="res://Assets/sounds/hit_unbouncy.wav" id="10_6jl4q"]
 [ext_resource type="Script" uid="uid://daspn2nksgh1t" path="res://game_logic/main/specific_config.gd" id="10_u3llg"]
 [ext_resource type="Script" uid="uid://cn3qv486giv3t" path="res://game_logic/main/debug_version_warning.gd" id="10_yyosa"]
+[ext_resource type="Script" uid="uid://byrxmi71fifpd" path="res://game_logic/main/ui_sound_player.gd" id="12_ntpxs"]
+[ext_resource type="AudioStream" uid="uid://pdtbnx2ipyy6" path="res://Assets/sounds/point.wav" id="13_rrgxr"]
 
 [node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager", "specific_scene_logic", "music_manager")]
 script = ExtResource("1_yh5la")
@@ -45,6 +48,17 @@ FADE_DB = -70
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicManager" unique_id=1866995240]
 stream = ExtResource("7_bldp5")
 autoplay = true
+
+[node name="UISoundPlayer" type="Node" parent="." unique_id=489840397 node_paths=PackedStringArray("button_pressed_sound", "button_hovered_sound")]
+script = ExtResource("12_ntpxs")
+button_pressed_sound = NodePath("ButtonPressedSound")
+button_hovered_sound = NodePath("ButtonHoveredSound")
+
+[node name="ButtonPressedSound" type="AudioStreamPlayer" parent="UISoundPlayer" unique_id=1205195677]
+stream = ExtResource("13_rrgxr")
+
+[node name="ButtonHoveredSound" type="AudioStreamPlayer" parent="UISoundPlayer" unique_id=1106751165]
+stream = ExtResource("10_6jl4q")
 
 [node name="Preloading" parent="." unique_id=731860452 instance=ExtResource("8_620kg")]
 
