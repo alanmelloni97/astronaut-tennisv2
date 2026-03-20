@@ -6,6 +6,7 @@ signal scene_requested(scene: PackedScene)
 @export var player_1_select: PlayerSelect
 @export var player_2_select: PlayerSelect
 @export var _tournament_table: TournamentTable
+@export var restart_tournament_button: Button
 
 var two_players: bool
 var tournament_is_won: bool = false
@@ -23,6 +24,7 @@ func _ready() -> void:
 func set_mode():
 	if two_players:
 		_tournament_table.queue_free()
+		restart_tournament_button.queue_free()
 	else:
 		player_2_select.queue_free()
 

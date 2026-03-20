@@ -40,6 +40,8 @@ func _set_ragdoll(player_type: PlayerType, skin: CharacterSkin):
 		_ragdoll.Rwrist.node_b = racket.get_path()
 		racket.collision_shape_2d.shape = _ragdoll.dog_head_collision_shape
 		racket.collision_shape_2d.position = Vector2.ZERO
+		if player_type == PlayerType.PLAYER_1:
+			_ragdoll.mirrored = true
 	else:
 		_set_player_hand(player_type)
 		_ragdoll.skin = skin

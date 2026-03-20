@@ -47,7 +47,6 @@ func update_skin():
 
 	if tween and tween.is_running():
 		tween.kill()
-	print(_player_texture.modulate)
 	tween = get_tree().create_tween()
 	tween.tween_property(_player_texture, "modulate", _player_texture.modulate, 0.5).from(Color.TRANSPARENT)
 

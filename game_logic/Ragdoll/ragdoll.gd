@@ -7,8 +7,12 @@ extends Node2D
 @export var Lwrist: PinJoint2D
 @export var body: Node2D
 @export var head_cs: CollisionShape2D
+@export var mirror_manager: MirrorManager
 
 # only used if dog
+var mirrored: bool:
+	set(x):
+		mirror_manager.mirrored = x
 var dog_head_collision_shape: Shape2D
 var skin: CharacterSkin:
 	set(skin):

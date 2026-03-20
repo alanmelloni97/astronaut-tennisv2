@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://jxh2kygs6iqf" path="res://game_logic/Ragdoll/skin/skinner_helper.gd" id="2_12ayb"]
 [ext_resource type="Texture2D" uid="uid://cm1dyxe0b13hu" path="res://Assets/skins/laika/tail.png" id="3_12ayb"]
 [ext_resource type="Texture2D" uid="uid://dkdsfg4ho37f7" path="res://Assets/skins/laika/LRleg.png" id="3_124gt"]
+[ext_resource type="Script" uid="uid://7uillgivpddp" path="res://game_logic/Ragdoll/mirror_manager.gd" id="3_dlou7"]
 [ext_resource type="Texture2D" uid="uid://fqava700mpf7" path="res://Assets/skins/laika/URleg.png" id="4_12ayb"]
 [ext_resource type="Texture2D" uid="uid://20sli81na3xb" path="res://Assets/skins/laika/ULleg.png" id="5_dlou7"]
 [ext_resource type="Texture2D" uid="uid://clet8oqqdd0v3" path="res://Assets/skins/laika/body.png" id="6_fcorv"]
@@ -38,13 +39,14 @@ height = 84.4032
 radius = 13.0
 height = 82.0
 
-[node name="DogRagdoll" type="Node2D" unique_id=62554258 node_paths=PackedStringArray("_skinner_helper", "Rwrist", "body", "head_cs")]
+[node name="DogRagdoll" type="Node2D" unique_id=62554258 node_paths=PackedStringArray("_skinner_helper", "Rwrist", "body", "head_cs", "mirror_manager")]
 z_index = 2
 script = ExtResource("1_124gt")
 _skinner_helper = NodePath("SkinnerHelper")
 Rwrist = NodePath("Body/joints/Wrist")
 body = NodePath("Body")
 head_cs = NodePath("Body/Head/CollisionShape2D4")
+mirror_manager = NodePath("MirrorManager")
 metadata/_edit_lock_ = true
 
 [node name="SkinnerHelper" type="Node" parent="." unique_id=332381995 node_paths=PackedStringArray("sprite_body", "sprite_head", "sprite_left_upper_leg", "sprite_left_lower_leg", "sprite_right_upper_leg", "sprite_right_lower_leg")]
@@ -55,6 +57,10 @@ sprite_left_upper_leg = NodePath("../Body/ULleg/Sprite2D2")
 sprite_left_lower_leg = NodePath("../Body/LLleg/Sprite2D5")
 sprite_right_upper_leg = NodePath("../Body/URleg/Sprite2D3")
 sprite_right_lower_leg = NodePath("../Body/LRleg/Sprite2D4")
+
+[node name="MirrorManager" type="Node" parent="." unique_id=689014291 node_paths=PackedStringArray("dog_ragdoll")]
+script = ExtResource("3_dlou7")
+dog_ragdoll = NodePath("..")
 
 [node name="Body" type="Node2D" parent="." unique_id=1017080323]
 metadata/_edit_lock_ = true
@@ -145,7 +151,6 @@ linear_damp = 0.5
 texture = ExtResource("7_v1lwt")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Body/Head" unique_id=290123391]
-position = Vector2(0, 1)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_e133w")
 
@@ -181,7 +186,7 @@ position = Vector2(8, 7)
 shape = SubResource("CapsuleShape2D_ra4tn")
 
 [node name="URleg" type="RigidBody2D" parent="Body" unique_id=1671535615]
-position = Vector2(107, 51)
+position = Vector2(100, 55)
 rotation = -0.7853982
 collision_layer = 4
 collision_mask = 28
@@ -190,11 +195,11 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D3" type="Sprite2D" parent="Body/URleg" unique_id=198846197]
+rotation = 0.7853982
 texture = ExtResource("4_12ayb")
-flip_h = true
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Body/URleg" unique_id=1121752434]
-position = Vector2(-0.7071041, -0.7071061)
+position = Vector2(2.3841858e-06, 4.2426414)
 rotation = 0.26919413
 shape = SubResource("CapsuleShape2D_raocx")
 
@@ -211,3 +216,5 @@ texture = ExtResource("5_dlou7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/ULleg" unique_id=346726132]
 shape = SubResource("CapsuleShape2D_124gt")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=901532545]
