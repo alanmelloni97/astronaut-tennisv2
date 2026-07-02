@@ -36,10 +36,10 @@ func _set_ragdoll(player_type: PlayerType, skin: CharacterSkin):
 		add_child(_ragdoll)
 		_ragdoll.skin = skin
 		racket.sprite.hide()
-		racket.global_position = _ragdoll.Rwrist.global_position
+		racket.racket_shape.shape = _ragdoll.head_cs.shape
+		racket.racket_shape.position = Vector2.ZERO
 		_ragdoll.Rwrist.node_b = racket.get_path()
-		racket.collision_shape_2d.shape = _ragdoll.dog_head_collision_shape
-		racket.collision_shape_2d.position = Vector2.ZERO
+		
 		if player_type == PlayerType.PLAYER_1:
 			_ragdoll.mirrored = true
 	else:

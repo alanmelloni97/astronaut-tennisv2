@@ -12,6 +12,5 @@ _ragdoll = NodePath("Ragdoll")
 _dog_ragdoll_sc = ExtResource("2_ey132")
 
 [node name="Racket" parent="." unique_id=1761270920 instance=ExtResource("2_gwnis")]
-position = Vector2(146, 144)
 
 [node name="Ragdoll" parent="." unique_id=62554258 instance=ExtResource("3_k53q1")]

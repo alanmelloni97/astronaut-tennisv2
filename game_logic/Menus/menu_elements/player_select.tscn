@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cld25d5sn167u"]
 
 [ext_resource type="Script" uid="uid://b4068na67t3a8" path="res://game_logic/Menus/menu_elements/player_select.gd" id="1_d4yoc"]
-[ext_resource type="Texture2D" uid="uid://bldbfw8ikhqnx" path="res://Assets/ui/button arrow.png" id="2_ku4ym"]
-[ext_resource type="Texture2D" uid="uid://dbnvon1pe1lfj" path="res://Assets/ui/button arrow pressed.png" id="3_0ttw0"]
+[ext_resource type="Texture2D" uid="uid://6txwsrgriwi3" path="res://Assets/ui/arrow_left.png" id="2_jogjo"]
+[ext_resource type="Texture2D" uid="uid://cj8gy1ghnil2w" path="res://Assets/skins/ax 3/ax3.png" id="3_ldonb"]
 [ext_resource type="Texture2D" uid="uid://cbsj00tbqs61d" path="res://Assets/lock.webp" id="3_wfc4a"]
-[ext_resource type="Texture2D" uid="uid://ct62nl8fq474l" path="res://Assets/ui/button arrow hover.png" id="4_fbr1a"]
+[ext_resource type="Texture2D" uid="uid://cpn0b4nuolpe0" path="res://Assets/ui/arrow_right.png" id="4_ldonb"]
 [ext_resource type="Script" uid="uid://biivslgugk8h2" path="res://game_logic/Menus/menu_elements/selector.gd" id="6_ku4ym"]
 [ext_resource type="Texture2D" uid="uid://kcfvhk6njuc1" path="res://Assets/rackets/Racket red.png" id="7_ldonb"]
 [ext_resource type="Texture2D" uid="uid://cr6n7vyypy6x0" path="res://Assets/rackets/Racket blue.png" id="8_g54bk"]
@@ -16,34 +16,28 @@
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rovc6"]
 
-[node name="PlayerSelect" type="Control" unique_id=1806913641 node_paths=PackedStringArray("_player_texture", "suit_name", "lock_control", "racket_select")]
-layout_mode = 3
+[node name="PlayerSelect" type="PanelContainer" unique_id=2105652527 node_paths=PackedStringArray("_player_texture", "suit_name", "lock_control", "racket_select")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -328.5
+offset_right = 304.0
+offset_bottom = 328.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d4yoc")
-_player_texture = NodePath("VBoxContainer/SkinSelect/Control/PlayerTexture")
+_player_texture = NodePath("VBoxContainer/SkinSelect/Container/PlayerTexture")
 suit_name = NodePath("VBoxContainer/SuitName")
-lock_control = NodePath("VBoxContainer/SkinSelect/Control/LockControl")
+lock_control = NodePath("VBoxContainer/SkinSelect/Container/LockControl")
 racket_select = NodePath("VBoxContainer/RacketSelect")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=322469083]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -118.0
-offset_top = -77.5
-offset_right = 118.0
-offset_bottom = 77.5
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="SuitName" type="Label" parent="VBoxContainer" unique_id=771017302]
 layout_mode = 2
@@ -61,51 +55,32 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="LeftButton" type="TextureButton" parent="VBoxContainer/SkinSelect" unique_id=1448726480]
-custom_minimum_size = Vector2(50, 50)
+[node name="LeftButton" type="Button" parent="VBoxContainer/SkinSelect" unique_id=704657783]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 4
-texture_normal = ExtResource("2_ku4ym")
-texture_pressed = ExtResource("3_0ttw0")
-texture_hover = ExtResource("4_fbr1a")
-flip_h = true
+icon = ExtResource("2_jogjo")
+expand_icon = true
 
-[node name="Control" type="Control" parent="VBoxContainer/SkinSelect" unique_id=2143215719]
-custom_minimum_size = Vector2(600, 600)
+[node name="Container" type="MarginContainer" parent="VBoxContainer/SkinSelect" unique_id=591141188]
+custom_minimum_size = Vector2(416.21, 400)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
+size_flags_vertical = 4
 
-[node name="PlayerTexture" type="TextureRect" parent="VBoxContainer/SkinSelect/Control" unique_id=489337742]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -300.0
-offset_right = 300.0
-offset_bottom = 300.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PlayerTexture" type="TextureRect" parent="VBoxContainer/SkinSelect/Container" unique_id=489337742]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+texture = ExtResource("3_ldonb")
 stretch_mode = 5
 
-[node name="LockControl" type="VBoxContainer" parent="VBoxContainer/SkinSelect/Control" unique_id=921016599]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -187.5
-offset_right = 150.0
-offset_bottom = 187.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="LockControl" type="VBoxContainer" parent="VBoxContainer/SkinSelect/Container" unique_id=921016599]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="LockTexture" type="TextureRect" parent="VBoxContainer/SkinSelect/Control/LockControl" unique_id=1067759319]
+[node name="LockTexture" type="TextureRect" parent="VBoxContainer/SkinSelect/Container/LockControl" unique_id=1067759319]
 modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -115,9 +90,10 @@ texture = ExtResource("3_wfc4a")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="VBoxContainer/SkinSelect/Control/LockControl" unique_id=1213784193]
-custom_minimum_size = Vector2(500, 0)
+[node name="Label" type="Label" parent="VBoxContainer/SkinSelect/Container/LockControl" unique_id=1213784193]
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ku4ym")
@@ -127,14 +103,13 @@ vertical_alignment = 1
 autowrap_mode = 2
 uppercase = true
 
-[node name="RightButton" type="TextureButton" parent="VBoxContainer/SkinSelect" unique_id=451160084]
-custom_minimum_size = Vector2(50, 50)
+[node name="RightButton" type="Button" parent="VBoxContainer/SkinSelect" unique_id=478382411]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 4
-texture_normal = ExtResource("2_ku4ym")
-texture_pressed = ExtResource("3_0ttw0")
-texture_hover = ExtResource("4_fbr1a")
+icon = ExtResource("4_ldonb")
+expand_icon = true
 
 [node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=807736038]
 custom_minimum_size = Vector2(20, 20)
@@ -142,36 +117,33 @@ layout_mode = 2
 
 [node name="RacketSelect" type="HBoxContainer" parent="VBoxContainer" unique_id=545284011 node_paths=PackedStringArray("texture_rect")]
 layout_mode = 2
-size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("6_ku4ym")
 texture_rect = NodePath("RacketTexture")
 skins = Array[Texture2D]([ExtResource("7_ldonb"), ExtResource("8_g54bk"), ExtResource("9_o1wid"), ExtResource("10_kx03s"), ExtResource("11_hvsg0")])
 
-[node name="LeftButton" type="TextureButton" parent="VBoxContainer/RacketSelect" unique_id=523266153]
-custom_minimum_size = Vector2(50, 50)
+[node name="LeftButton" type="Button" parent="VBoxContainer/RacketSelect" unique_id=1419454214]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 0
 size_flags_vertical = 4
-texture_normal = ExtResource("2_ku4ym")
-texture_pressed = ExtResource("3_0ttw0")
-texture_hover = ExtResource("4_fbr1a")
-flip_h = true
+icon = ExtResource("2_jogjo")
+expand_icon = true
 
 [node name="RacketTexture" type="TextureRect" parent="VBoxContainer/RacketSelect" unique_id=441075277]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(100, 170)
 layout_mode = 2
+size_flags_horizontal = 3
 texture = SubResource("CompressedTexture2D_rovc6")
+expand_mode = 3
 stretch_mode = 5
 
-[node name="RightButton" type="TextureButton" parent="VBoxContainer/RacketSelect" unique_id=845309346]
-custom_minimum_size = Vector2(50, 50)
+[node name="RightButton" type="Button" parent="VBoxContainer/RacketSelect" unique_id=780192354]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-size_flags_horizontal = 2
 size_flags_vertical = 4
-texture_normal = ExtResource("2_ku4ym")
-texture_pressed = ExtResource("3_0ttw0")
-texture_hover = ExtResource("4_fbr1a")
+icon = ExtResource("4_ldonb")
+expand_icon = true
 
 [connection signal="pressed" from="VBoxContainer/SkinSelect/LeftButton" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SkinSelect/RightButton" to="." method="_on_right_button_pressed"]

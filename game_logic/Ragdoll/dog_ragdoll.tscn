@@ -13,15 +13,14 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_12ayb"]
 radius = 8.601646
-height = 36.57968
+height = 19.696716
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3rqqa"]
 radius = 37.0
 height = 222.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e133w"]
-radius = 59.0
-height = 138.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_dlou7"]
+radius = 63.07139
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1yskv"]
 radius = 11.0
@@ -32,8 +31,8 @@ radius = 11.0
 height = 46.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_raocx"]
-radius = 16.263458
-height = 84.4032
+radius = 11.77594
+height = 77.14343
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_124gt"]
 radius = 13.0
@@ -63,7 +62,7 @@ script = ExtResource("3_dlou7")
 dog_ragdoll = NodePath("..")
 
 [node name="Body" type="Node2D" parent="." unique_id=1017080323]
-metadata/_edit_lock_ = true
+position = Vector2(102, 64)
 
 [node name="joints" type="Node2D" parent="Body" unique_id=342467886]
 
@@ -120,7 +119,7 @@ linear_damp = 0.5
 texture = ExtResource("3_12ayb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Tail" unique_id=497507287]
-position = Vector2(0, 8)
+position = Vector2(14, -7)
 rotation = 0.88706577
 shape = SubResource("CapsuleShape2D_12ayb")
 
@@ -152,7 +151,8 @@ texture = ExtResource("7_v1lwt")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Body/Head" unique_id=290123391]
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_e133w")
+shape = SubResource("CircleShape2D_dlou7")
+debug_color = Color(0.95319957, 2.8878452e-07, 0.55726457, 0.41960785)
 
 [node name="LLleg" type="RigidBody2D" parent="Body" unique_id=462889625]
 position = Vector2(-73, 117)
@@ -199,7 +199,7 @@ rotation = 0.7853982
 texture = ExtResource("4_12ayb")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Body/URleg" unique_id=1121752434]
-position = Vector2(2.3841858e-06, 4.2426414)
+position = Vector2(-0.7071043, 0.70710754)
 rotation = 0.26919413
 shape = SubResource("CapsuleShape2D_raocx")
 

@@ -204,13 +204,13 @@ script = ExtResource("11_bhu2o")
 script = ExtResource("17_luomk")
 powerups = Array[ExtResource("12_am3y4")]([SubResource("Resource_l5n2q"), SubResource("Resource_cqvaw"), SubResource("Resource_x31ef"), SubResource("Resource_pt1jg"), SubResource("Resource_lemr6")])
 power_up_sc = ExtResource("12_k8npl")
-collision_shape_2d = NodePath("CollisionShape2D")
+collision_shape_2d = NodePath("SpawnArea")
 MIN_TIME_BETWEEN_SPAWNS = 10
 MAX_TIME_BETWEEN_SPAWNS = 15
 MAX_SIMULTANEOUS_POWERUPS = 5
 timer = NodePath("Timer")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
+[node name="SpawnArea" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
 position = Vector2(957.5, 373.5)
 shape = SubResource("RectangleShape2D_luomk")
 
@@ -463,8 +463,9 @@ occluder = SubResource("OccluderPolygon2D_r0jbq")
 
 [node name="Player1" parent="." unique_id=396626081 instance=ExtResource("1_o6mkr")]
 position = Vector2(277, 561)
-_dog_ragdoll_sc = null
 
 [node name="Player2" parent="." unique_id=24592340 instance=ExtResource("1_o6mkr")]
 position = Vector2(1561, 557)
-_dog_ragdoll_sc = null
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=120162559]
+position = Vector2(960, 540)

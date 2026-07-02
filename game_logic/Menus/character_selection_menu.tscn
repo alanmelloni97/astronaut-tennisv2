@@ -8,17 +8,17 @@
 
 [node name="CharacterSelectionMenu" type="CanvasLayer" unique_id=1838065517 node_paths=PackedStringArray("player_1_select", "player_2_select", "_tournament_table", "restart_tournament_button")]
 script = ExtResource("1_b4e5t")
-player_1_select = NodePath("MarginContainer/HBoxContainer2/Player1Select")
-player_2_select = NodePath("MarginContainer/HBoxContainer2/Player2Select")
-_tournament_table = NodePath("MarginContainer/HBoxContainer2/TournamentTable")
-restart_tournament_button = NodePath("MarginContainer/HBoxContainer/RestartTournamentButton")
+player_1_select = NodePath("MarginContainer/VBoxContainer/HBoxContainer2/Player1Select")
+player_2_select = NodePath("MarginContainer/VBoxContainer/HBoxContainer2/Player2Select")
+_tournament_table = NodePath("MarginContainer/VBoxContainer/HBoxContainer2/TournamentTable")
+restart_tournament_button = NodePath("MarginContainer/VBoxContainer/HBoxContainer/RestartTournamentButton")
 
 [node name="ButtonsHandler" type="Node" parent="." unique_id=1764109809 node_paths=PackedStringArray("_player_1_select", "_player_2_select", "_start_button", "_restart_tournament_button")]
 script = ExtResource("2_vwdgm")
-_player_1_select = NodePath("../MarginContainer/HBoxContainer2/Player1Select")
-_player_2_select = NodePath("../MarginContainer/HBoxContainer2/Player2Select")
-_start_button = NodePath("../MarginContainer/HBoxContainer/StartButton")
-_restart_tournament_button = NodePath("../MarginContainer/HBoxContainer/RestartTournamentButton")
+_player_1_select = NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/Player1Select")
+_player_2_select = NodePath("../MarginContainer/VBoxContainer/HBoxContainer2/Player2Select")
+_start_button = NodePath("../MarginContainer/VBoxContainer/HBoxContainer/StartButton")
+_restart_tournament_button = NodePath("../MarginContainer/VBoxContainer/HBoxContainer/RestartTournamentButton")
 
 [node name="Background" type="TextureRect" parent="." unique_id=36882906]
 offset_right = 1920.0
@@ -38,52 +38,57 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer" unique_id=513397622]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1852454319]
 layout_mode = 2
 
-[node name="Player1Select" parent="MarginContainer/HBoxContainer2" unique_id=359726694 instance=ExtResource("3_c6e8c")]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=513397622]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="Player2Select" parent="MarginContainer/HBoxContainer2" unique_id=1806913641 instance=ExtResource("3_c6e8c")]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-
-[node name="TournamentTable" parent="MarginContainer/HBoxContainer2" unique_id=398236205 instance=ExtResource("3_iapl6")]
+[node name="Player1Select" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=359726694 instance=ExtResource("3_c6e8c")]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=567689523]
+[node name="Player2Select" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1806913641 instance=ExtResource("3_c6e8c")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="TournamentTable" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=398236205 instance=ExtResource("3_iapl6")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=567689523]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 8
+size_flags_vertical = 4
 
-[node name="BackButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1022160309]
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1022160309]
 layout_mode = 2
 size_flags_vertical = 4
 text = "BACK"
 
-[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1062086887]
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1062086887]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 
-[node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=313890464]
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=313890464]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "START"
 
-[node name="Spacer2" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1791784119]
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1791784119]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 
-[node name="RestartTournamentButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=465025600]
+[node name="RestartTournamentButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=465025600]
 visible = false
 layout_mode = 2
 text = "RESTART TOURNAMENT"
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/RestartTournamentButton" to="." method="_on_new_tournament_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/RestartTournamentButton" to="." method="_on_new_tournament_button_pressed"]
