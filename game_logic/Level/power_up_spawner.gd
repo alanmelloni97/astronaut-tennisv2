@@ -30,7 +30,7 @@ func spawn():
 	var powerup: BallPowerUp = power_up_sc.instantiate()
 	powerup.global_position = spawn_point
 	powerup.power_up_data = powerup_data
-	get_tree().root.add_child(powerup)
+	add_child(powerup)
 
 
 func _on_timer_timeout():

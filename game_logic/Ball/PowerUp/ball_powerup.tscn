@@ -16,7 +16,7 @@ audio_stream_player_2d = NodePath("AudioStreamPlayer2D")
 powerup_sprites = NodePath("PowerupSprites")
 background_sprite = NodePath("PowerupSprites/BackgroundSprite")
 inner_sprite = NodePath("PowerupSprites/InnerSprite")
-ROTATION = 1.0
+ROTATION = 2.0
 timer = NodePath("Timer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1907335016]
@@ -33,5 +33,5 @@ texture = ExtResource("2_d2kg3")
 script = ExtResource("3_mfsqd")
 
 [node name="Timer" type="Timer" parent="." unique_id=77658750]
-wait_time = 45.0
+wait_time = 30.0
 autostart = true

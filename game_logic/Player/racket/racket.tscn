@@ -14,8 +14,8 @@
 friction = 0.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eay6m"]
-radius = 50.0
-height = 120.0
+radius = 52.0
+height = 128.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8cr5i"]
 radius = 15.0

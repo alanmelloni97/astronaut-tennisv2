@@ -33,12 +33,12 @@ func destroy():
 
 func _fade_in():
 	var tween: Tween = get_tree().create_tween()
-	tween.tween_property(powerup_sprites, "scale", Vector2.ONE, 1.5).from(Vector2.ZERO).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
+	tween.tween_property(powerup_sprites, "scale", Vector2.ONE, 1.0).from(Vector2.ZERO).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
 
 
 func _fade_out():
 	var tween: Tween = get_tree().create_tween()
-	tween.tween_property(powerup_sprites, "scale", Vector2.ZERO, 1.5).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	tween.tween_property(powerup_sprites, "scale", Vector2.ZERO, 1.0).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 	tween.tween_callback(queue_free)
 
 

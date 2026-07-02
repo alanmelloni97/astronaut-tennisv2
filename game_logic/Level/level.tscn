@@ -44,6 +44,7 @@
 [ext_resource type="Script" uid="uid://bqff6nk6p8ecf" path="res://game_logic/Level/tutorials.gd" id="32_qk0lb"]
 [ext_resource type="Texture2D" uid="uid://jq8rhks8begq" path="res://Assets/tutorial/WASD.png" id="33_vb7dm"]
 [ext_resource type="Texture2D" uid="uid://cab86s78gxmyn" path="res://Assets/tutorial/FLECHAS.png" id="34_xqwpk"]
+[ext_resource type="Script" uid="uid://cr03j6tt7slny" path="res://game_logic/Level/tutorial_sprite_tween.gd" id="36_shv3i"]
 [ext_resource type="Texture2D" uid="uid://2x3c4sxafnfj" path="res://Assets/backgrounds/background_game.png" id="38_vb7dm"]
 [ext_resource type="Script" uid="uid://d3wjxv138x665" path="res://game_logic/Level/navigation_region_2d.gd" id="39_t3ka0"]
 
@@ -163,7 +164,7 @@ _score_ui = NodePath("../World/Scores")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
-WIN_SCORE = 7
+WIN_SCORE = 2
 
 [node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "bounce_detector", "ball_manager", "stall_ball_detector")]
 script = ExtResource("2_1teg4")
@@ -207,7 +208,7 @@ power_up_sc = ExtResource("12_k8npl")
 collision_shape_2d = NodePath("SpawnArea")
 MIN_TIME_BETWEEN_SPAWNS = 10
 MAX_TIME_BETWEEN_SPAWNS = 15
-MAX_SIMULTANEOUS_POWERUPS = 5
+MAX_SIMULTANEOUS_POWERUPS = 4
 timer = NodePath("Timer")
 
 [node name="SpawnArea" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
@@ -235,12 +236,14 @@ z_index = 9
 position = Vector2(486, 163.40799)
 scale = Vector2(0.51066643, 0.51066643)
 texture = ExtResource("33_vb7dm")
+script = ExtResource("36_shv3i")
 
 [node name="ArrowsSprite" type="Sprite2D" parent="Tutorials/TwoPlayerTutorial" unique_id=448350962]
 z_index = 9
 position = Vector2(1429, 176.40799)
 scale = Vector2(0.51066643, 0.51066643)
 texture = ExtResource("34_xqwpk")
+script = ExtResource("36_shv3i")
 
 [node name="TournamentTutorial" type="Node" parent="Tutorials" unique_id=1982380707 node_paths=PackedStringArray("player_1", "wasd_sprite", "level")]
 script = ExtResource("30_r0jbq")
@@ -253,6 +256,7 @@ z_index = 9
 position = Vector2(486, 163.40799)
 scale = Vector2(0.51066643, 0.51066643)
 texture = ExtResource("33_vb7dm")
+script = ExtResource("36_shv3i")
 
 [node name="TouchJoysticks" parent="." unique_id=25295857 instance=ExtResource("24_6uec0")]
 
