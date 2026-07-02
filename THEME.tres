@@ -1,11 +1,23 @@
 [gd_resource type="Theme" format=3 uid="uid://qd2xvxleoi1v"]
 
 [ext_resource type="FontFile" uid="uid://b2c36202budqv" path="res://Assets/fonts/seven-segment-display-lcd.otf" id="1_rjqg8"]
+[ext_resource type="Texture2D" uid="uid://d2d4kohlvjp8h" path="res://Assets/ui/panel_black.png" id="2_rjqg8"]
 [ext_resource type="Texture2D" uid="uid://bb8rwufnu874v" path="res://Assets/ui/button.png" id="4_da70a"]
 [ext_resource type="Texture2D" uid="uid://c4ro64i3xigqd" path="res://Assets/ui/panel.png" id="6_l1t3l"]
 [ext_resource type="FontFile" uid="uid://c4ixiakxkuq12" path="res://Assets/fonts/UbuntuMono-Bold.ttf" id="8_da70a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rjqg8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ofoq3"]
+content_margin_left = 30.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
+texture = ExtResource("2_rjqg8")
+texture_margin_left = 80.0
+texture_margin_top = 80.0
+texture_margin_right = 80.0
+texture_margin_bottom = 80.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aloen"]
 texture = ExtResource("4_da70a")
@@ -20,7 +32,7 @@ texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
-modulate_color = Color(0.17211533, 0.1721153, 0.1721153, 1)
+modulate_color = Color(0.0052987626, 0.21389613, 0.28689805, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8b6om"]
 texture = ExtResource("4_da70a")
@@ -28,7 +40,7 @@ texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
-modulate_color = Color(0.27606508, 0.2760653, 0.27606517, 1)
+modulate_color = Color(0.01285274, 0.35232314, 0.46869004, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f7qtl"]
 texture = ExtResource("4_da70a")
@@ -36,18 +48,20 @@ texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
-modulate_color = Color(0.093160845, 0.093160845, 0.09316083, 1)
+modulate_color = Color(0.123900004, 0.17843, 0.21, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rt3dr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rjqg8"]
-content_margin_left = 20.0
-content_margin_right = 20.0
+content_margin_left = 30.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
 texture = ExtResource("6_l1t3l")
-texture_margin_left = 20.0
-texture_margin_top = 20.0
-texture_margin_right = 20.0
-texture_margin_bottom = 20.0
+texture_margin_left = 80.0
+texture_margin_top = 80.0
+texture_margin_right = 80.0
+texture_margin_bottom = 80.0
 
 [resource]
 default_font = ExtResource("8_da70a")
@@ -57,14 +71,19 @@ default_font_size = 60
 7SegmentLabel/font_sizes/font_size = 120
 7SegmentLabel/fonts/font = ExtResource("1_rjqg8")
 7SegmentLabel/styles/normal = SubResource("StyleBoxEmpty_rjqg8")
+BlackPanelContainer/base_type = &"PanelContainer"
+BlackPanelContainer/styles/panel = SubResource("StyleBoxTexture_ofoq3")
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_disabled_color = Color(0.53224194, 0.5322425, 0.5322422, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 10
 Button/styles/disabled = SubResource("StyleBoxTexture_aloen")
 Button/styles/hover = SubResource("StyleBoxTexture_ogoed")
 Button/styles/normal = SubResource("StyleBoxTexture_8b6om")
 Button/styles/pressed = SubResource("StyleBoxTexture_f7qtl")
 Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/shadow_outline_size = 13
 Label/styles/normal = SubResource("StyleBoxTexture_rt3dr")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_rjqg8")

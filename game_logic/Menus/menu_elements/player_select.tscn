@@ -12,8 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://dcy2c1njpse5t" path="res://Assets/rackets/Racket white.png" id="10_kx03s"]
 [ext_resource type="Texture2D" uid="uid://c1al8kkxkkxlc" path="res://Assets/rackets/carbon rod.png" id="11_hvsg0"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ku4ym"]
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rovc6"]
 
 [node name="PlayerSelect" type="PanelContainer" unique_id=2105652527 node_paths=PackedStringArray("_player_texture", "suit_name", "lock_control", "racket_select")]
@@ -64,7 +62,6 @@ icon = ExtResource("2_jogjo")
 expand_icon = true
 
 [node name="Container" type="MarginContainer" parent="VBoxContainer/SkinSelect" unique_id=591141188]
-custom_minimum_size = Vector2(416.21, 400)
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
@@ -73,6 +70,7 @@ size_flags_vertical = 4
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 texture = ExtResource("3_ldonb")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="LockControl" type="VBoxContainer" parent="VBoxContainer/SkinSelect/Container" unique_id=921016599]
@@ -82,7 +80,7 @@ size_flags_vertical = 4
 
 [node name="LockTexture" type="TextureRect" parent="VBoxContainer/SkinSelect/Container/LockControl" unique_id=1067759319]
 modulate = Color(0, 0, 0, 1)
-custom_minimum_size = Vector2(300, 300)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
@@ -94,9 +92,9 @@ stretch_mode = 5
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 10
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ku4ym")
+theme_override_constants/shadow_outline_size = 12
 text = "Play tournament to unlock skin"
 horizontal_alignment = 1
 vertical_alignment = 1

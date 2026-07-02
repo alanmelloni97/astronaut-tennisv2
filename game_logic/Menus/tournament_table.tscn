@@ -19,16 +19,25 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_type_variation = &"BlackPanelContainer"
 script = ExtResource("1_llimf")
 tournament_spot_sc = ExtResource("2_6nv31")
-tournament_table = NodePath("TournamentTable")
+tournament_table = NodePath("MarginContainer/TournamentTable")
 
-[node name="TournamentTable" type="VBoxContainer" parent="." unique_id=398236205]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=362677315]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TournamentTable" type="VBoxContainer" parent="MarginContainer" unique_id=398236205]
+custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 13
+theme_override_constants/separation = 12
 
-[node name="Tournament" type="Label" parent="TournamentTable" unique_id=1108026394]
+[node name="Tournament" type="Label" parent="MarginContainer/TournamentTable" unique_id=1108026394]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_llimf")
 text = "TOURNAMENT"
