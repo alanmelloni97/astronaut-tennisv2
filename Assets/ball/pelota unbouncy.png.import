@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo001fadk20m4"
-path="res://.godot/imported/powerup small.png-0c98a6cb26e7995b053a370248546152.ctex"
+uid="uid://bgun8kwshfrle"
+path="res://.godot/imported/pelota unbouncy.png-c0d015bb41de2d88340f55d29c32060d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/powerup small.png"
-dest_files=["res://.godot/imported/powerup small.png-0c98a6cb26e7995b053a370248546152.ctex"]
+source_file="res://Assets/ball/pelota unbouncy.png"
+dest_files=["res://.godot/imported/pelota unbouncy.png-c0d015bb41de2d88340f55d29c32060d.ctex"]
 
 [params]
 

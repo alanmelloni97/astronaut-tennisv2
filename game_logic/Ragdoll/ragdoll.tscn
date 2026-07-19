@@ -2,20 +2,20 @@
 
 [ext_resource type="Script" uid="uid://cqm8uhalwtk6o" path="res://game_logic/Ragdoll/ragdoll.gd" id="1_chfyy"]
 [ext_resource type="Script" uid="uid://jxh2kygs6iqf" path="res://game_logic/Ragdoll/skin/skinner_helper.gd" id="2_b8rpp"]
-[ext_resource type="Texture2D" uid="uid://cuw2s43632ww" path="res://Assets/skins/default/LRarm.png" id="3_yox0d"]
-[ext_resource type="Texture2D" uid="uid://cq35bv3qnm2c" path="res://Assets/skins/default/URarm.png" id="4_4x73t"]
-[ext_resource type="Texture2D" uid="uid://bhpb88msia746" path="res://Assets/skins/default/LLarm.png" id="5_11wd7"]
-[ext_resource type="Texture2D" uid="uid://lymvdib43xku" path="res://Assets/skins/default/ULarm.png" id="6_bihph"]
-[ext_resource type="Texture2D" uid="uid://bhbml848a53sp" path="res://Assets/skins/default/LLleg.png" id="7_hvxwb"]
-[ext_resource type="Texture2D" uid="uid://cuxvqrqns5et3" path="res://Assets/skins/default/LRleg.png" id="8_4xxwn"]
-[ext_resource type="Texture2D" uid="uid://bbbyeihtofb2r" path="res://Assets/skins/default/URleg.png" id="9_nswpi"]
-[ext_resource type="Texture2D" uid="uid://bmb55pd7hb7qs" path="res://Assets/skins/default/ULleg.png" id="10_e5g7o"]
-[ext_resource type="Texture2D" uid="uid://bqv7geyui0bh4" path="res://Assets/skins/default/body.png" id="11_jb63k"]
-[ext_resource type="Texture2D" uid="uid://dinild5ccfovs" path="res://Assets/skins/default/head.png" id="12_31bng"]
+[ext_resource type="Texture2D" uid="uid://cxgks8vypjvsf" path="res://Assets/skins/apollo/LRarm.png" id="3_depbg"]
+[ext_resource type="Texture2D" uid="uid://bpvejh6h6kwa7" path="res://Assets/skins/apollo/URarm.png" id="4_2j85r"]
+[ext_resource type="Texture2D" uid="uid://drlv7tmppwupc" path="res://Assets/skins/apollo/LLarm.png" id="5_a04as"]
+[ext_resource type="Texture2D" uid="uid://bhfikwuqdxfp5" path="res://Assets/skins/apollo/ULarm.png" id="6_in64i"]
+[ext_resource type="Texture2D" uid="uid://sqymiv7s6x0o" path="res://Assets/skins/apollo/LLleg.png" id="7_hlfcs"]
+[ext_resource type="Texture2D" uid="uid://dh1afmfay6j2j" path="res://Assets/skins/apollo/LRleg.png" id="8_mha6n"]
+[ext_resource type="Texture2D" uid="uid://bqdi015w8wwm6" path="res://Assets/skins/apollo/URleg.png" id="9_ewawf"]
+[ext_resource type="Texture2D" uid="uid://hqsoo4kfpp3s" path="res://Assets/skins/apollo/ULleg.png" id="10_ojhet"]
+[ext_resource type="Texture2D" uid="uid://bwcxphril1jbg" path="res://Assets/skins/apollo/body.png" id="11_povsn"]
+[ext_resource type="Texture2D" uid="uid://drju3tukpwrxy" path="res://Assets/skins/apollo/head.png" id="12_45p21"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uraha"]
 radius = 19.75
-height = 102.0
+height = 123.99997
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6r5pt"]
 radius = 19.75
@@ -23,11 +23,11 @@ height = 102.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nmq8d"]
 radius = 19.75
-height = 102.0
+height = 134.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s7j3o"]
-radius = 19.75
-height = 102.0
+radius = 19.0
+height = 98.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kq832"]
 radius = 19.75
@@ -42,11 +42,11 @@ radius = 19.75
 height = 102.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3rqqa"]
-radius = 54.0
-height = 192.0
+radius = 62.0
+height = 212.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k1geb"]
-radius = 48.04165
+radius = 53.037724
 
 [node name="Ragdoll" type="Node2D" unique_id=62554258 node_paths=PackedStringArray("_skinner_helper", "Rwrist", "Lwrist", "body")]
 z_index = 2
@@ -146,7 +146,7 @@ linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/LRarm" unique_id=1381984965]
 rotation = 3.1415927
-texture = ExtResource("3_yox0d")
+texture = ExtResource("3_depbg")
 flip_h = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Body/LRarm" unique_id=1745540239]
@@ -162,8 +162,7 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/URarm" unique_id=1448816685]
-texture = ExtResource("4_4x73t")
-flip_h = true
+texture = ExtResource("4_2j85r")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/URarm" unique_id=1165257190]
 rotation = 4.71238
@@ -178,7 +177,7 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/LLarm" unique_id=960778191]
-texture = ExtResource("5_11wd7")
+texture = ExtResource("5_a04as")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/LLarm" unique_id=66704152]
 rotation = 1.57079
@@ -193,14 +192,14 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/ULarm" unique_id=1180460072]
-texture = ExtResource("6_bihph")
+texture = ExtResource("6_in64i")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/ULarm" unique_id=877375178]
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_s7j3o")
 
 [node name="LLleg" type="RigidBody2D" parent="Body" unique_id=462889625]
-position = Vector2(-33, 227)
+position = Vector2(-33, 219)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.25
@@ -208,13 +207,13 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D5" type="Sprite2D" parent="Body/LLleg" unique_id=922296603]
-texture = ExtResource("7_hvxwb")
+texture = ExtResource("7_hlfcs")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/LLleg" unique_id=446053858]
 shape = SubResource("CapsuleShape2D_kq832")
 
 [node name="LRleg" type="RigidBody2D" parent="Body" unique_id=924807490]
-position = Vector2(34, 227)
+position = Vector2(34, 219)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.25
@@ -222,7 +221,7 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D4" type="Sprite2D" parent="Body/LRleg" unique_id=602806017]
-texture = ExtResource("8_4xxwn")
+texture = ExtResource("8_mha6n")
 flip_h = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Body/LRleg" unique_id=1564201038]
@@ -237,7 +236,7 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D3" type="Sprite2D" parent="Body/URleg" unique_id=198846197]
-texture = ExtResource("9_nswpi")
+texture = ExtResource("9_ewawf")
 flip_h = true
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Body/URleg" unique_id=1121752434]
@@ -252,7 +251,7 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D2" type="Sprite2D" parent="Body/ULleg" unique_id=1270417210]
-texture = ExtResource("10_e5g7o")
+texture = ExtResource("10_ojhet")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/ULleg" unique_id=346726132]
 shape = SubResource("CapsuleShape2D_ra4tn")
@@ -265,7 +264,7 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Body" unique_id=1403923878]
-texture = ExtResource("11_jb63k")
+texture = ExtResource("11_povsn")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Body/Body" unique_id=1908738488]
 shape = SubResource("CapsuleShape2D_3rqqa")
@@ -279,7 +278,7 @@ continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Head" unique_id=762559089]
-texture = ExtResource("12_31bng")
+texture = ExtResource("12_45p21")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Body/Head" unique_id=290123391]
 shape = SubResource("CircleShape2D_k1geb")

@@ -18,28 +18,28 @@
 [ext_resource type="PackedScene" uid="uid://0g8h07ct0gia" path="res://game_logic/Ball/PowerUp/ball_powerup.tscn" id="12_k8npl"]
 [ext_resource type="Script" uid="uid://byub6igigr88i" path="res://game_logic/Ball/Effects/ScaleEffect.gd" id="13_jghi6"]
 [ext_resource type="AudioStream" uid="uid://ctfbf50lxuvq6" path="res://Assets/sounds/powerup_big.wav" id="15_bhu2o"]
-[ext_resource type="Texture2D" uid="uid://cuf1llgs2dgqe" path="res://Assets/powerup big.png" id="15_vb7dm"]
+[ext_resource type="Texture2D" uid="uid://cuf1llgs2dgqe" path="res://Assets/ball/powerup big.png" id="15_vb7dm"]
 [ext_resource type="PhysicsMaterial" uid="uid://n201dib0xrmv" path="res://game_logic/Ball/physics materials/bouncy.tres" id="16_cqvaw"]
 [ext_resource type="AudioStream" uid="uid://f0woqda6bxmo" path="res://Assets/sounds/hit_bouncy.wav" id="16_pt1jg"]
 [ext_resource type="Script" uid="uid://b4ap0fr8j47m8" path="res://game_logic/Ball/Effects/MassEffect.gd" id="17_6uec0"]
 [ext_resource type="Script" uid="uid://dy6cpapp40twb" path="res://game_logic/Ball/Effects/BounceEffect.gd" id="17_232uv"]
-[ext_resource type="Texture2D" uid="uid://bo001fadk20m4" path="res://Assets/powerup small.png" id="17_ex85q"]
+[ext_resource type="Texture2D" uid="uid://bo001fadk20m4" path="res://Assets/ball/powerup small.png" id="17_ex85q"]
 [ext_resource type="Script" uid="uid://d2yxgudywfyhc" path="res://game_logic/Level/power_up_spawner.gd" id="17_luomk"]
 [ext_resource type="AudioStream" uid="uid://ccy1uob5dljw2" path="res://Assets/sounds/powerup_small.wav" id="17_shv3i"]
-[ext_resource type="Texture2D" uid="uid://cc61481tcaau7" path="res://Assets/powerup metal.png" id="18_r0jbq"]
 [ext_resource type="PhysicsMaterial" uid="uid://c1o0wcja6b3ln" path="res://game_logic/Ball/physics materials/no_bouncy.tres" id="19_r0jbq"]
 [ext_resource type="AudioStream" uid="uid://dwcsopnfo5yaw" path="res://Assets/sounds/hit_metal.wav" id="20_mddns"]
 [ext_resource type="AudioStream" uid="uid://b7orb1sym8sce" path="res://Assets/sounds/powerup_metal.wav" id="21_x31ef"]
 [ext_resource type="AudioStream" uid="uid://ds87lr4vcg1dt" path="res://Assets/sounds/powerup_bouncy.wav" id="22_03h4c"]
-[ext_resource type="Texture2D" uid="uid://c0k7luyfuq4tt" path="res://Assets/powerup bouncy.png" id="23_bhu2o"]
+[ext_resource type="Texture2D" uid="uid://c53bo0306sjqx" path="res://Assets/ball/pelota bouncy.png" id="23_shv3i"]
 [ext_resource type="PackedScene" uid="uid://b8nmqou14j2ss" path="res://game_logic/UI/Virtual joystick/touch_joysticks.tscn" id="24_6uec0"]
 [ext_resource type="Script" uid="uid://d1bu3vy2qkidn" path="res://game_logic/Level/continious_collision_detector.gd" id="25_232uv"]
 [ext_resource type="AudioStream" uid="uid://b2c0jtagax61j" path="res://Assets/sounds/hit_unbouncy.wav" id="25_fcifm"]
 [ext_resource type="AudioStream" uid="uid://btcdd3x5ngd0g" path="res://Assets/sounds/powerup_unbouncy.wav" id="26_50hjx"]
 [ext_resource type="Script" uid="uid://duoytmh0h0bgk" path="res://game_logic/UI/score_ui.gd" id="26_232uv"]
-[ext_resource type="Texture2D" uid="uid://cr1rbcp7y74lm" path="res://Assets/powerup unbouncy.png" id="27_shv3i"]
+[ext_resource type="Texture2D" uid="uid://bgun8kwshfrle" path="res://Assets/ball/pelota unbouncy.png" id="27_03h4c"]
 [ext_resource type="Texture2D" uid="uid://ciidw7i5yd55g" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="30_816bt"]
 [ext_resource type="Script" uid="uid://cbvlk0m26qlvt" path="res://game_logic/Level/tournament_tutorial.gd" id="30_r0jbq"]
+[ext_resource type="Texture2D" uid="uid://bufdo4widt72" path="res://Assets/ball/pelota metal.png" id="31_fcifm"]
 [ext_resource type="Script" uid="uid://djqsokdco83fu" path="res://game_logic/Level/two_player_tutorial.gd" id="32_0cmfq"]
 [ext_resource type="Script" uid="uid://bqff6nk6p8ecf" path="res://game_logic/Level/tutorials.gd" id="32_qk0lb"]
 [ext_resource type="Texture2D" uid="uid://jq8rhks8begq" path="res://Assets/tutorial/WASD.png" id="33_vb7dm"]
@@ -76,13 +76,13 @@ metadata/_custom_type_script = "uid://b615mceneh7q"
 script = ExtResource("17_232uv")
 phyisics_material = ExtResource("16_cqvaw")
 sound = ExtResource("16_pt1jg")
-color = Color(0, 1, 1, 1)
+texture = ExtResource("23_shv3i")
 metadata/_custom_type_script = "uid://dy6cpapp40twb"
 
 [sub_resource type="Resource" id="Resource_x31ef"]
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_mddns")
-texture = ExtResource("23_bhu2o")
+texture = ExtResource("23_shv3i")
 sound = ExtResource("22_03h4c")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
@@ -90,13 +90,13 @@ metadata/_custom_type_script = "uid://b615mceneh7q"
 script = ExtResource("17_232uv")
 phyisics_material = ExtResource("19_r0jbq")
 sound = ExtResource("25_fcifm")
-color = Color(0.7372549, 0.827451, 0.37254903, 1)
+texture = ExtResource("27_03h4c")
 metadata/_custom_type_script = "uid://dy6cpapp40twb"
 
 [sub_resource type="Resource" id="Resource_pt1jg"]
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_i4n7n")
-texture = ExtResource("27_shv3i")
+texture = ExtResource("27_03h4c")
 sound = ExtResource("26_50hjx")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
@@ -104,18 +104,18 @@ metadata/_custom_type_script = "uid://b615mceneh7q"
 script = ExtResource("17_6uec0")
 mass = 10.0
 sound = ExtResource("20_mddns")
-color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+texture = ExtResource("31_fcifm")
 metadata/_custom_type_script = "uid://b4ap0fr8j47m8"
 
 [sub_resource type="Resource" id="Resource_lemr6"]
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_816bt")
-texture = ExtResource("18_r0jbq")
+texture = ExtResource("31_fcifm")
 sound = ExtResource("21_x31ef")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_luomk"]
-size = Vector2(1683, 535)
+size = Vector2(1683, 515)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_0cmfq"]
 vertices = PackedVector2Array(1957.4063, -15.09375, 2008.5234, 1176.1875, 952.96094, 1097.7109, 949.03125, -24.898438)
@@ -132,8 +132,8 @@ size = Vector2(1007, 21)
 distance = -10.000732
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r0jbq"]
-radius = 33.0
-height = 504.0
+radius = 13.0
+height = 544.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nk1il"]
 size = Vector2(12, 1590.25)
@@ -142,7 +142,14 @@ size = Vector2(12, 1590.25)
 b = Vector2(-0.7076416, 161.92749)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_r0jbq"]
-polygon = PackedVector2Array(30, 146, 35, 150, 35, 1055, 928, 1055, 928, 678, 932, 664, 944, 652, 960, 647, 977, 652, 988, 664, 992, 681, 991, 1055, 1889, 1055, 1889, 152, 1910, 151, 1967, 1152, -113, 1169, -10, 119)
+polygon = PackedVector2Array(30, 146, 35, 150, 35, 1055, 928, 1055, 948, 1055, 949, 632, 971, 632, 973, 1055, 991, 1055, 1889, 1055, 1889, 152, 1910, 151, 1967, 1152, -113, 1169, -10, 119)
+
+[sub_resource type="GDScript" id="GDScript_shv3i"]
+script/source = "extends Camera2D
+
+func _ready() -> void:
+	process_callback = Camera2D.CAMERA2D_PROCESS_PHYSICS
+"
 
 [node name="Level" type="Node2D" unique_id=1489784123]
 script = ExtResource("1_nk1il")
@@ -212,7 +219,7 @@ MAX_SIMULTANEOUS_POWERUPS = 4
 timer = NodePath("Timer")
 
 [node name="SpawnArea" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
-position = Vector2(957.5, 373.5)
+position = Vector2(957.5, 363.5)
 shape = SubResource("RectangleShape2D_luomk")
 
 [node name="Timer" type="Timer" parent="PowerUpSpawner" unique_id=136537762]
@@ -393,51 +400,58 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("26_232uv")
 label_score_1 = NodePath("BackgroundScore1/Score1")
-label_score_2 = NodePath("BackgroundScore2/Score2")
-
-[node name="BackgroundScore2" type="Label" parent="World/Scores" unique_id=5556330]
-layout_mode = 0
-offset_left = 1629.0
-offset_top = 108.0
-offset_right = 1743.0
-offset_bottom = 296.0
-theme_type_variation = &"7SegmentLabel"
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "8"
-horizontal_alignment = 1
-
-[node name="Score2" type="Label" parent="World/Scores/BackgroundScore2" unique_id=1823296383]
-layout_mode = 0
-offset_right = 114.0
-offset_bottom = 188.0
-theme_type_variation = &"7SegmentLabel"
-text = "0"
-horizontal_alignment = 1
+label_score_2 = NodePath("BackgroundScore2")
 
 [node name="BackgroundScore1" type="Label" parent="World/Scores" unique_id=727496007]
+self_modulate = Color(1, 1, 1, 0.26666668)
 layout_mode = 0
-offset_left = 166.0
-offset_top = 107.0
-offset_right = 280.0
-offset_bottom = 295.0
+offset_left = 200.0
+offset_top = 103.0
+offset_right = 289.0
+offset_bottom = 226.0
 theme_type_variation = &"7SegmentLabel"
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
 text = "8"
 horizontal_alignment = 1
 
 [node name="Score1" type="Label" parent="World/Scores/BackgroundScore1" unique_id=2119136231]
 layout_mode = 0
-offset_left = -10.0
-offset_right = 123.0
-offset_bottom = 185.0
+offset_right = 90.0
+offset_bottom = 123.0
 theme_type_variation = &"7SegmentLabel"
+theme_override_font_sizes/font_size = 120
 text = "0"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackgroundScore2" type="Label" parent="World/Scores" unique_id=926021637]
+self_modulate = Color(1, 1, 1, 0.26666668)
+layout_mode = 0
+offset_left = 1620.0
+offset_top = 103.0
+offset_right = 1709.0
+offset_bottom = 226.0
+theme_type_variation = &"7SegmentLabel"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "8"
+horizontal_alignment = 1
+
+[node name="Score1" type="Label" parent="World/Scores/BackgroundScore2" unique_id=132537869]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 123.0
+theme_type_variation = &"7SegmentLabel"
+theme_override_font_sizes/font_size = 120
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Lights" type="Node2D" parent="World" unique_id=245549183]
 
 [node name="PointLight1" type="PointLight2D" parent="World/Lights" unique_id=1750763901]
-position = Vector2(335.5, 128.5)
+position = Vector2(384.00003, 109)
 scale = Vector2(0.22265619, 0.22265624)
 enabled = false
 color = Color(0.82459205, 0.858649, 0, 1)
@@ -454,7 +468,7 @@ range_item_cull_mask = 2
 texture = ExtResource("30_816bt")
 
 [node name="PointLight2" type="PointLight2D" parent="World/Lights" unique_id=857232675]
-position = Vector2(1582.5, 127.50001)
+position = Vector2(1535.9999, 107)
 scale = Vector2(0.2148438, 0.2148438)
 enabled = false
 color = Color(0.8235294, 0.85882354, 0, 1)
@@ -466,10 +480,11 @@ texture = ExtResource("30_816bt")
 occluder = SubResource("OccluderPolygon2D_r0jbq")
 
 [node name="Player1" parent="." unique_id=396626081 instance=ExtResource("1_o6mkr")]
-position = Vector2(277, 561)
+position = Vector2(478, 535)
 
 [node name="Player2" parent="." unique_id=24592340 instance=ExtResource("1_o6mkr")]
-position = Vector2(1561, 557)
+position = Vector2(1439, 536)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=120162559]
 position = Vector2(960, 540)
+script = SubResource("GDScript_shv3i")

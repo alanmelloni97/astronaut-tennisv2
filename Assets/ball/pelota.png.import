@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u78bf1elgyhg"
-path="res://.godot/imported/pelota.png-0f133eeb62245b8a11cfcbb79a487084.ctex"
+path="res://.godot/imported/pelota.png-42f8b6b6a033e73671a78bcc354c1a24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pelota.png"
-dest_files=["res://.godot/imported/pelota.png-0f133eeb62245b8a11cfcbb79a487084.ctex"]
+source_file="res://Assets/ball/pelota.png"
+dest_files=["res://.godot/imported/pelota.png-42f8b6b6a033e73671a78bcc354c1a24.ctex"]
 
 [params]
 

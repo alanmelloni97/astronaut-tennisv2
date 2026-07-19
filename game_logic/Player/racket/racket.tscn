@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://crvew7gomsi4a" path="res://game_logic/Player/input_manager.gd" id="3_xsmco"]
 [ext_resource type="Script" uid="uid://ds0srr1tfxcwg" path="res://game_logic/Player/ai_handler.gd" id="4_koyly"]
 [ext_resource type="Script" uid="uid://d0g5ximw8rnll" path="res://game_logic/Player/movement_handler.gd" id="4_xsmco"]
-[ext_resource type="Texture2D" uid="uid://c1al8kkxkkxlc" path="res://Assets/rackets/carbon rod.png" id="7_eay6m"]
 [ext_resource type="AudioStream" uid="uid://xky4f6qn7hpm" path="res://Assets/sounds/racket.wav" id="8_2bxvs"]
 [ext_resource type="Script" uid="uid://4xq1pwo5nsb4" path="res://game_logic/Player/racket/mobile_config.gd" id="9_eay6m"]
 [ext_resource type="Script" uid="uid://t4befjvx46oq" path="res://game_logic/Player/racket/racket_sound_manager.gd" id="9_uvl4i"]
@@ -14,15 +13,12 @@
 friction = 0.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eay6m"]
-radius = 52.0
-height = 128.0
+radius = 51.0
+height = 124.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8cr5i"]
 radius = 15.0
 height = 174.0
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ysqc3"]
-polygon = PackedVector2Array(18.900002, -86, -18.900002, -86, -28.1, -81, -30.4, -81, -42.4, -68, -43.7, -68, -52.5, -50.5, -52.5, -2, -44.5, 12.400002, -44.5, 14.900002, -31.5, 26.900002, -31.5, 28.199997, -17, 36, -15.5, 36, -14.5, 82, -14.5, 86, 13.699997, 86, 15.5, 82.5, 15.5, 35.199997, 28, 29, 30.400002, 29, 42.4, 16, 43.800003, 16, 52.5, -3.4000015, 52.5, -50.1, 44.5, -64.5, 44.5, -66.9, 31.5, -79, 31.5, -80.3)
 
 [node name="Racket" type="RigidBody2D" unique_id=1644144030 node_paths=PackedStringArray("movement_handler", "motion_manager", "ai_manager", "racket_shape", "rod_shape", "sprite", "collision_shape_2d", "navigation_position")]
 light_mask = 8
@@ -74,7 +70,6 @@ navigation_agent = NodePath("../../navigation_position/NavigationAgent2D")
 
 [node name="Racket" type="Sprite2D" parent="." unique_id=1074267406]
 position = Vector2(0, -55)
-texture = ExtResource("7_eay6m")
 
 [node name="RacketShape" type="CollisionShape2D" parent="." unique_id=1461080052]
 position = Vector2(0, -82)
@@ -83,10 +78,6 @@ shape = SubResource("CapsuleShape2D_eay6m")
 [node name="RodShape" type="CollisionShape2D" parent="." unique_id=1283662623]
 position = Vector2(0, -55)
 shape = SubResource("CapsuleShape2D_8cr5i")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=234241448]
-position = Vector2(-0.5, -55)
-occluder = SubResource("OccluderPolygon2D_ysqc3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=781712119]
 stream = ExtResource("8_2bxvs")

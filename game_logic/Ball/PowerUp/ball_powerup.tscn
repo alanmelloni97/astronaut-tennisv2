@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0g8h07ct0gia"]
 
 [ext_resource type="Script" uid="uid://dxsedyp6pjs4w" path="res://game_logic/Ball/PowerUp/ball_powerup.gd" id="1_fqi1l"]
-[ext_resource type="Texture2D" uid="uid://4m7vyqk1y15v" path="res://Assets/powerup.png" id="2_d2kg3"]
+[ext_resource type="Texture2D" uid="uid://4m7vyqk1y15v" path="res://Assets/ball/powerup.png" id="2_d2kg3"]
 [ext_resource type="Script" uid="uid://sdium2jk71ep" path="res://game_logic/Ball/PowerUp/audio_stream_player_2d.gd" id="3_mfsqd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yk81r"]

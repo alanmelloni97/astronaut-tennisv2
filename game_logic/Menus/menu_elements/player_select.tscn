@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://kcfvhk6njuc1" path="res://Assets/rackets/Racket red.png" id="7_ldonb"]
 [ext_resource type="Texture2D" uid="uid://cr6n7vyypy6x0" path="res://Assets/rackets/Racket blue.png" id="8_g54bk"]
 [ext_resource type="Texture2D" uid="uid://inydcigwru2l" path="res://Assets/rackets/Racket yellow.png" id="9_o1wid"]
-[ext_resource type="Texture2D" uid="uid://dcy2c1njpse5t" path="res://Assets/rackets/Racket white.png" id="10_kx03s"]
 [ext_resource type="Texture2D" uid="uid://c1al8kkxkkxlc" path="res://Assets/rackets/carbon rod.png" id="11_hvsg0"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rovc6"]
@@ -118,7 +117,7 @@ layout_mode = 2
 size_flags_vertical = 4
 script = ExtResource("6_ku4ym")
 texture_rect = NodePath("RacketTexture")
-skins = Array[Texture2D]([ExtResource("7_ldonb"), ExtResource("8_g54bk"), ExtResource("9_o1wid"), ExtResource("10_kx03s"), ExtResource("11_hvsg0")])
+skins = Array[Texture2D]([ExtResource("7_ldonb"), ExtResource("8_g54bk"), ExtResource("9_o1wid"), ExtResource("11_hvsg0")])
 
 [node name="LeftButton" type="Button" parent="VBoxContainer/RacketSelect" unique_id=1419454214]
 custom_minimum_size = Vector2(80, 80)

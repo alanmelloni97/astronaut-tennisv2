@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc61481tcaau7"
-path="res://.godot/imported/powerup metal.png-12391bd86ce59b3fc9a10549e47e8ce1.ctex"
+uid="uid://btun1jgf6vnae"
+path="res://.godot/imported/Racket yellow.png-d94662227dd8359af856c30f2937192f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/powerup metal.png"
-dest_files=["res://.godot/imported/powerup metal.png-12391bd86ce59b3fc9a10549e47e8ce1.ctex"]
+source_file="res://Assets/ball/Racket yellow.png"
+dest_files=["res://.godot/imported/Racket yellow.png-d94662227dd8359af856c30f2937192f.ctex"]
 
 [params]
 

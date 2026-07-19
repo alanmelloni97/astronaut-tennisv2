@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuxvqrqns5et3"
-path="res://.godot/imported/LRleg.png-6ce71f1353aee1684d79f1f6d399c051.ctex"
+uid="uid://bufdo4widt72"
+path="res://.godot/imported/pelota metal.png-9db490df43f17c0b071a3322d112b4b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/skins/default/LRleg.png"
-dest_files=["res://.godot/imported/LRleg.png-6ce71f1353aee1684d79f1f6d399c051.ctex"]
+source_file="res://Assets/ball/pelota metal.png"
+dest_files=["res://.godot/imported/pelota metal.png-9db490df43f17c0b071a3322d112b4b1.ctex"]
 
 [params]
 

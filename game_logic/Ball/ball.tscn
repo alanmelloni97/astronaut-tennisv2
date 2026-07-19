@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://cf2trema4h72c" path="res://game_logic/Ball/effects_manager.gd" id="4_4s4qd"]
 [ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://components/independent_transform.gd" id="5_0t0x3"]
 [ext_resource type="Script" uid="uid://do5ow3kwhws2f" path="res://game_logic/Ball/ai_obstacle_manager.gd" id="5_fxsfa"]
-[ext_resource type="Texture2D" uid="uid://u78bf1elgyhg" path="res://Assets/pelota.png" id="5_hsaat"]
+[ext_resource type="Texture2D" uid="uid://u78bf1elgyhg" path="res://Assets/ball/pelota.png" id="5_hsaat"]
 [ext_resource type="Script" uid="uid://l67cfjetdf8j" path="res://game_logic/Ball/remove_particles.gd" id="6_hbi5u"]
 [ext_resource type="Texture2D" uid="uid://dtxb5xc02o5wo" path="res://Assets/ball pieces/spritesheet particles.png" id="7_oompg"]
 [ext_resource type="AudioStream" uid="uid://yrvx2tolssav" path="res://game_logic/Ball/sounds/51461__andrenascimento__basket_ball_02_bounce.wav" id="8_hsaat"]
@@ -39,6 +39,7 @@ emission_sphere_radius = 38.15
 angle_min = 1.0728835e-05
 angle_max = 360.00003
 direction = Vector3(0, -1, 0)
+spread = 180.0
 initial_velocity_min = 20.0
 initial_velocity_max = 100.0
 angular_velocity_min = -1.6093254e-05
@@ -47,6 +48,9 @@ gravity = Vector3(0, 50, 0)
 scale_min = 0.5
 alpha_curve = SubResource("CurveTexture_hbi5u")
 anim_offset_max = 1.0
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
 
 [sub_resource type="Animation" id="Animation_bjqt2"]
 length = 0.001
@@ -123,7 +127,7 @@ remove_sound = NodePath("RemoveSound")
 collision_shape = NodePath("CollisionShape2D")
 sprite = NodePath("Sprite2D")
 bounce_sound = NodePath("BounceSound")
-initial_color = Color(0.5882353, 0.29411766, 0.039215688, 1)
+initial_color = Color(1, 1, 1, 1)
 
 [node name="SoundManager" type="Node" parent="." unique_id=1060499892 node_paths=PackedStringArray("audio_stream_player_2d", "ball")]
 script = ExtResource("3_rg84v")

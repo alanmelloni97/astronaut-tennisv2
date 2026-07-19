@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr1rbcp7y74lm"
-path="res://.godot/imported/powerup unbouncy.png-ca996bc2f3a28ea66b264ca11fcc9c64.ctex"
+uid="uid://d041nvflhgg43"
+path="res://.godot/imported/carbon rod.png-35d5963c1203d8cde97ec465fedde4fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/powerup unbouncy.png"
-dest_files=["res://.godot/imported/powerup unbouncy.png-ca996bc2f3a28ea66b264ca11fcc9c64.ctex"]
+source_file="res://Assets/ball/carbon rod.png"
+dest_files=["res://.godot/imported/carbon rod.png-35d5963c1203d8cde97ec465fedde4fc.ctex"]
 
 [params]
 

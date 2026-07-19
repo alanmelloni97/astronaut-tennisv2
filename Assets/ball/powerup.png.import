@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcy2c1njpse5t"
-path="res://.godot/imported/Racket white.png-ed92ebeefbdc1ba94f4c5b498e6b9de3.ctex"
+uid="uid://4m7vyqk1y15v"
+path="res://.godot/imported/powerup.png-0d18f27e17d458ccde4e2aee05b5f813.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/rackets/Racket white.png"
-dest_files=["res://.godot/imported/Racket white.png-ed92ebeefbdc1ba94f4c5b498e6b9de3.ctex"]
+source_file="res://Assets/ball/powerup.png"
+dest_files=["res://.godot/imported/powerup.png-0d18f27e17d458ccde4e2aee05b5f813.ctex"]
 
 [params]
 

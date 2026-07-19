@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq35bv3qnm2c"
-path="res://.godot/imported/URarm.png-e578947a63ac632783e18f8562549e45.ctex"
+uid="uid://bo001fadk20m4"
+path="res://.godot/imported/powerup small.png-4a9a43d852e3b764a162dbb553fffe77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/skins/default/URarm.png"
-dest_files=["res://.godot/imported/URarm.png-e578947a63ac632783e18f8562549e45.ctex"]
+source_file="res://Assets/ball/powerup small.png"
+dest_files=["res://.godot/imported/powerup small.png-4a9a43d852e3b764a162dbb553fffe77.ctex"]
 
 [params]
 

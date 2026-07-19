@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dinild5ccfovs"
-path="res://.godot/imported/head.png-7a6ec9033ba4a3246f71f5130267bff0.ctex"
+uid="uid://cf0f4yeisp8aq"
+path="res://.godot/imported/Racket red.png-d1893ea662ae182c4b5c0255f8e44f67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/skins/default/head.png"
-dest_files=["res://.godot/imported/head.png-7a6ec9033ba4a3246f71f5130267bff0.ctex"]
+source_file="res://Assets/ball/Racket red.png"
+dest_files=["res://.godot/imported/Racket red.png-d1893ea662ae182c4b5c0255f8e44f67.ctex"]
 
 [params]
 

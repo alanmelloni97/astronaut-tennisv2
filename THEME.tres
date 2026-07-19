@@ -32,7 +32,7 @@ texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
-modulate_color = Color(0.0052987626, 0.21389613, 0.28689805, 1)
+modulate_color = Color(0.005889832, 0.2881023, 0.37471378, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8b6om"]
 texture = ExtResource("4_da70a")
@@ -68,6 +68,9 @@ default_font = ExtResource("8_da70a")
 default_font_size = 60
 7SegmentLabel/base_type = &"Label"
 7SegmentLabel/colors/font_color = Color(0.8802099, 0, 0.15463024, 1)
+7SegmentLabel/constants/shadow_offset_x = 0
+7SegmentLabel/constants/shadow_offset_y = 0
+7SegmentLabel/constants/shadow_outline_size = 0
 7SegmentLabel/font_sizes/font_size = 120
 7SegmentLabel/fonts/font = ExtResource("1_rjqg8")
 7SegmentLabel/styles/normal = SubResource("StyleBoxEmpty_rjqg8")
