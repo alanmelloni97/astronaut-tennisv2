@@ -47,6 +47,8 @@
 [ext_resource type="Script" uid="uid://cr03j6tt7slny" path="res://game_logic/Level/tutorial_sprite_tween.gd" id="36_shv3i"]
 [ext_resource type="Texture2D" uid="uid://2x3c4sxafnfj" path="res://Assets/backgrounds/background_game.png" id="38_vb7dm"]
 [ext_resource type="Script" uid="uid://d3wjxv138x665" path="res://game_logic/Level/navigation_region_2d.gd" id="39_t3ka0"]
+[ext_resource type="Texture2D" uid="uid://bugdpy154qdky" path="res://Assets/ball_gate.png" id="43_03h4c"]
+[ext_resource type="Script" uid="uid://cpeetagww62tb" path="res://game_logic/Level/ball_gate.gd" id="44_fcifm"]
 
 [sub_resource type="Resource" id="Resource_du4cn"]
 script = ExtResource("13_jghi6")
@@ -117,6 +119,131 @@ metadata/_custom_type_script = "uid://b615mceneh7q"
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_luomk"]
 size = Vector2(1683, 515)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcifm"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50hjx"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rk6a"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isrne"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulnne"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxi62"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqw0j"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5okrb"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36qvi"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ervdu"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdes8"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40uwl"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnlmv"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gy87"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ufpc"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed1ne"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ud5j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcifm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50hjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rk6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isrne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulnne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxi62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqw0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5okrb")
+}],
+"loop": 0,
+"name": &"close",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36qvi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ervdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdes8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40uwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnlmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gy87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ufpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed1ne")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 24.0
+}]
+
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_0cmfq"]
 vertices = PackedVector2Array(1957.4063, -15.09375, 2008.5234, 1176.1875, 952.96094, 1097.7109, 949.03125, -24.898438)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
@@ -149,6 +276,16 @@ script/source = "extends Camera2D
 
 func _ready() -> void:
 	process_callback = Camera2D.CAMERA2D_PROCESS_PHYSICS
+"
+
+[sub_resource type="GDScript" id="GDScript_5ud5j"]
+script/source = "extends Node
+@export var score_manager: ScoreManager
+
+func _unhandled_input(_event: InputEvent) -> void:
+	if OS.is_debug_build():
+		if Input.is_key_pressed(KEY_KP_0):
+			score_manager.game_finished.emit(1)
 "
 
 [node name="Level" type="Node2D" unique_id=1489784123]
@@ -280,8 +417,17 @@ position = Vector2(960, 540)
 texture = ExtResource("38_vb7dm")
 metadata/_edit_lock_ = true
 
+[node name="BallGate" type="AnimatedSprite2D" parent="Background" unique_id=1117463632 node_paths=PackedStringArray("ball_manager")]
+position = Vector2(0, -411)
+sprite_frames = SubResource("SpriteFrames_5ud5j")
+animation = &"close"
+frame = 7
+frame_progress = 1.0
+script = ExtResource("44_fcifm")
+ball_manager = NodePath("../../BallHandler/BallManager")
+
 [node name="BallSpawnPoint" type="Marker2D" parent="." unique_id=1469462745]
-position = Vector2(960, 188)
+position = Vector2(960, 129)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1176074455]
 navigation_polygon = SubResource("NavigationPolygon_0cmfq")
@@ -488,3 +634,7 @@ position = Vector2(1439, 536)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=120162559]
 position = Vector2(960, 540)
 script = SubResource("GDScript_shv3i")
+
+[node name="_debug_shortcuts" type="Node" parent="." unique_id=518749732 node_paths=PackedStringArray("score_manager")]
+script = SubResource("GDScript_5ud5j")
+score_manager = NodePath("../ScoreHandler/ScoreManager")

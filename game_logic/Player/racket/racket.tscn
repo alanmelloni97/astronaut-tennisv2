@@ -13,12 +13,12 @@
 friction = 0.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eay6m"]
-radius = 51.0
-height = 124.0
+radius = 49.0
+height = 118.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8cr5i"]
-radius = 15.0
-height = 174.0
+radius = 13.0
+height = 170.0
 
 [node name="Racket" type="RigidBody2D" unique_id=1644144030 node_paths=PackedStringArray("movement_handler", "motion_manager", "ai_manager", "racket_shape", "rod_shape", "sprite", "collision_shape_2d", "navigation_position")]
 light_mask = 8
