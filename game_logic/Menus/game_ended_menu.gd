@@ -6,6 +6,7 @@ signal main_menu_pressed
 
 @export var _game_over_label: Label
 @export var _retry_button: Button
+@export var show_animation: MenuScaleAnimation
 
 
 func set_up_menu(winner: int, two_players: bool):
@@ -21,6 +22,10 @@ func set_up_menu(winner: int, two_players: bool):
 			_game_over_label.text = "YOU WIN!"
 		else:
 			_game_over_label.text = "YOU LOST"
+
+
+func show_animated():
+	show_animation.scale_in_animation()
 
 
 func _on_retry_button_pressed() -> void:

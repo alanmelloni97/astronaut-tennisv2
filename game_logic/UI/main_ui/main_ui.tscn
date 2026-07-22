@@ -33,8 +33,6 @@ expand_icon = true
 [node name="PauseMenu" parent="MarginContainer" unique_id=733302398 instance=ExtResource("3_u7gx0")]
 visible = false
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 
 [node name="GameOverMenu" parent="MarginContainer" unique_id=1942799696 instance=ExtResource("4_afxui")]
 visible = false

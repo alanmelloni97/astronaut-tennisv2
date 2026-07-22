@@ -39,7 +39,7 @@ func _set_ragdoll(player_type: PlayerType, skin: CharacterSkin):
 		racket.racket_shape.shape = _ragdoll.head_cs.shape
 		racket.racket_shape.position = Vector2.ZERO
 		_ragdoll.Rwrist.node_b = racket.get_path()
-		
+
 		if player_type == PlayerType.PLAYER_1:
 			_ragdoll.mirrored = true
 	else:

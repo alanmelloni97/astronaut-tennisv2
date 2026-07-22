@@ -17,12 +17,12 @@ func _ready() -> void:
 
 
 func show_game_over_menu(winner: int, two_players: bool):
-	_game_over_menu.show()
+	_game_over_menu.show_animated()
 	_game_over_menu.set_up_menu(winner, two_players)
 
 
 func _on_pause_button_pressed() -> void:
-	_pause_menu.show()
+	_pause_menu.show_animated()
 	game_paused.emit()
 
 
@@ -32,5 +32,5 @@ func _on_pause_menu_quit_game() -> void:
 
 
 func _on_pause_menu_unpaused() -> void:
-	_pause_menu.hide()
+	_pause_menu.hide_animated()
 	game_unpaused.emit()
