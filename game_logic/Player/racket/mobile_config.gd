@@ -2,11 +2,11 @@ class_name RacketBuildConfig
 extends Node
 
 @export var racket: Racket
-@export var DAMP: float
-@export var FORCE: int
+@export var touchscreen_damp: float
+@export var touchscreen_force: int
 
 
 func _ready() -> void:
 	if DisplayServer.is_touchscreen_available():
-		racket.linear_damp = DAMP
-		racket.motion_manager._FORCE_MULT = FORCE
+		racket.linear_damp = touchscreen_damp
+		racket.motion_manager._FORCE_MULT = touchscreen_force
