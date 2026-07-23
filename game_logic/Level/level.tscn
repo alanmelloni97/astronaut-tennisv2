@@ -286,6 +286,8 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if OS.is_debug_build():
 		if Input.is_key_pressed(KEY_KP_0):
 			score_manager.game_finished.emit(1)
+		elif Input.is_key_pressed(KEY_KP_1):
+			score_manager.game_finished.emit(2)
 "
 
 [node name="Level" type="Node2D" unique_id=1489784123]
@@ -458,7 +460,7 @@ shape = SubResource("RectangleShape2D_1teg4")
 [node name="Boundaries" type="Node2D" parent="World" unique_id=116601786]
 
 [node name="Floor" type="StaticBody2D" parent="World/Boundaries" unique_id=85477545]
-position = Vector2(975, 1056)
+position = Vector2(962, 1039)
 collision_layer = 8
 collision_mask = 0
 

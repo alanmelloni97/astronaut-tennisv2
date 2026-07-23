@@ -11,11 +11,11 @@
    inkscape:export-batch-name=""
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
    sodipodi:docname="tutorial.svg"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
      bordercolor="#000000"
@@ -26,27 +26,23 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showguides="false"
-     inkscape:zoom="0.48693448"
-     inkscape:cx="156.07849"
-     inkscape:cy="247.46656"
+     inkscape:zoom="0.8259678"
+     inkscape:cx="901.9722"
+     inkscape:cy="124.09685"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs1" />
-  <g
+     inkscape:current-layer="layer2" /><defs
+     id="defs1" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <g
+     id="layer1"><g
        id="g11"
        inkscape:label="WASD"
        style="stroke:#ffffff"
-       transform="matrix(4.0548737,0,0,4.0548737,-21.959143,-148.67255)">
-      <rect
+       transform="matrix(4.0548737,0,0,4.0548737,-21.959143,-148.67255)"><rect
          style="fill:none;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
          id="rect3"
          width="7.2138147"
@@ -54,8 +50,7 @@
          x="-4.1719542"
          y="24.032011"
          rx="1.2494648"
-         ry="1.2494648" />
-      <text
+         ry="1.2494648" /><text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:7.05556px;font-family:Calibri;-inkscape-font-specification:'Calibri Light';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
          x="-2.5048409"
@@ -65,12 +60,10 @@
            id="tspan7"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:'Calibri Light';stroke:#ffffff;stroke-width:0.5"
            x="-2.5048409"
-           y="29.867897">A</tspan></text>
-      <g
+           y="29.867897">A</tspan></text><g
          id="g8"
          transform="translate(9.5574062)"
-         style="stroke:#ffffff">
-        <rect
+         style="stroke:#ffffff"><rect
            style="fill:none;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            id="rect7"
            width="7.2138147"
@@ -78,8 +71,7 @@
            x="-4.1719542"
            y="24.032011"
            rx="1.2494648"
-           ry="1.2494648" />
-        <text
+           ry="1.2494648" /><text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:7.05556px;font-family:Calibri;-inkscape-font-specification:'Calibri Light';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            x="-2.0237014"
@@ -89,8 +81,7 @@
              id="tspan8"
              style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:'Calibri Light';stroke:#ffffff;stroke-width:0.5"
              x="-2.0237014"
-             y="29.867897">S</tspan></text>
-        <rect
+             y="29.867897">S</tspan></text><rect
            style="fill:none;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            id="rect8"
            width="7.2138147"
@@ -98,13 +89,10 @@
            x="-4.1719542"
            y="24.032011"
            rx="1.2494648"
-           ry="1.2494648" />
-      </g>
-      <g
+           ry="1.2494648" /></g><g
          id="g9"
          transform="translate(19.114812)"
-         style="stroke:#ffffff">
-        <rect
+         style="stroke:#ffffff"><rect
            style="fill:none;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            id="rect9"
            width="7.2138147"
@@ -112,8 +100,7 @@
            x="-4.1719542"
            y="24.032011"
            rx="1.2494648"
-           ry="1.2494648" />
-        <text
+           ry="1.2494648" /><text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:7.05556px;font-family:Calibri;-inkscape-font-specification:'Calibri Light';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            x="-2.5528681"
@@ -123,13 +110,10 @@
              id="tspan9"
              style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:'Calibri Light';stroke:#ffffff;stroke-width:0.5"
              x="-2.5528681"
-             y="29.867897">D</tspan></text>
-      </g>
-      <g
+             y="29.867897">D</tspan></text></g><g
          id="g10"
          transform="translate(9.5250005,-9.5250005)"
-         style="stroke:#ffffff">
-        <rect
+         style="stroke:#ffffff"><rect
            style="fill:none;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            id="rect10"
            width="7.2138147"
@@ -137,8 +121,7 @@
            x="-4.1719542"
            y="24.032011"
            rx="1.2494648"
-           ry="1.2494648" />
-        <text
+           ry="1.2494648" /><text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:7.05556px;font-family:Calibri;-inkscape-font-specification:'Calibri Light';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            x="-3.6592288"
@@ -148,15 +131,11 @@
              id="tspan10"
              style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:'Calibri Light';stroke:#ffffff;stroke-width:0.5"
              x="-3.6592288"
-             y="29.867897">W</tspan></text>
-      </g>
-    </g>
-    <g
+             y="29.867897">W</tspan></text></g></g><g
        id="g16"
        transform="matrix(4.0548737,0,0,4.0548737,122.93046,-148.67255)"
        inkscape:label="FLECHAS"
-       style="stroke:#ffffff">
-      <rect
+       style="stroke:#ffffff"><rect
          style="fill:none;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
          id="rect11"
          width="7.2138147"
@@ -164,12 +143,10 @@
          x="-4.1719542"
          y="24.032011"
          rx="1.2494648"
-         ry="1.2494648" />
-      <g
+         ry="1.2494648" /><g
          id="g13"
          transform="translate(9.5574062)"
-         style="stroke:#ffffff">
-        <rect
+         style="stroke:#ffffff"><rect
            style="fill:none;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            id="rect12"
            width="7.2138147"
@@ -177,8 +154,7 @@
            x="-4.1719542"
            y="24.032011"
            rx="1.2494648"
-           ry="1.2494648" />
-        <rect
+           ry="1.2494648" /><rect
            style="fill:none;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            id="rect13"
            width="7.2138147"
@@ -186,13 +162,10 @@
            x="-4.1719542"
            y="24.032011"
            rx="1.2494648"
-           ry="1.2494648" />
-      </g>
-      <g
+           ry="1.2494648" /></g><g
          id="g14"
          transform="translate(19.114812)"
-         style="stroke:#ffffff">
-        <rect
+         style="stroke:#ffffff"><rect
            style="fill:none;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            id="rect14"
            width="7.2138147"
@@ -200,13 +173,10 @@
            x="-4.1719542"
            y="24.032011"
            rx="1.2494648"
-           ry="1.2494648" />
-      </g>
-      <g
+           ry="1.2494648" /></g><g
          id="g15"
          transform="translate(9.5250005,-9.5250005)"
-         style="stroke:#ffffff">
-        <rect
+         style="stroke:#ffffff"><rect
            style="fill:none;stroke:#ffffff;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
            id="rect15"
            width="7.2138147"
@@ -214,68 +184,64 @@
            x="-4.1719542"
            y="24.032011"
            rx="1.2494648"
-           ry="1.2494648" />
-      </g>
-      <g
+           ry="1.2494648" /></g><g
          id="g17"
          transform="rotate(180,4.7359956,31.993683)"
-         style="stroke:#ffffff">
-        <path
+         style="stroke:#ffffff"><path
            style="fill:none;stroke:#ffffff;stroke-width:0.899997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
            d="m 0.4796341,38.70104 v -4.72496 l 1.457083,1.483304"
            id="path16"
-           sodipodi:nodetypes="ccc" />
-        <path
+           sodipodi:nodetypes="ccc" /><path
            style="fill:none;stroke:#ffffff;stroke-width:0.899997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
            d="M 0.47442014,38.681394 V 33.97608 l -1.45708524,1.483304"
            id="path17"
-           sodipodi:nodetypes="ccc" />
-      </g>
-      <g
+           sodipodi:nodetypes="ccc" /></g><g
          id="g19"
          transform="rotate(90,13.842621,41.045737)"
-         style="stroke:#ffffff">
-        <path
+         style="stroke:#ffffff"><path
            style="fill:none;stroke:#ffffff;stroke-width:0.899997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
            d="m 0.4796341,38.70104 v -4.72496 l 1.457083,1.483304"
            id="path18"
-           sodipodi:nodetypes="ccc" />
-        <path
+           sodipodi:nodetypes="ccc" /><path
            style="fill:none;stroke:#ffffff;stroke-width:0.899997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
            d="M 0.47442014,38.681394 V 33.97608 l -1.45708524,1.483304"
            id="path19"
-           sodipodi:nodetypes="ccc" />
-      </g>
-      <g
+           sodipodi:nodetypes="ccc" /></g><g
          id="g21"
          transform="rotate(-90,-4.3889195,32.51472)"
-         style="stroke:#ffffff">
-        <path
+         style="stroke:#ffffff"><path
            style="fill:none;stroke:#ffffff;stroke-width:0.899997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
            d="m 0.4796341,38.70104 v -4.72496 l 1.457083,1.483304"
            id="path20"
-           sodipodi:nodetypes="ccc" />
-        <path
+           sodipodi:nodetypes="ccc" /><path
            style="fill:none;stroke:#ffffff;stroke-width:0.899997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
            d="M 0.47442014,38.681394 V 33.97608 l -1.45708524,1.483304"
            id="path21"
-           sodipodi:nodetypes="ccc" />
-      </g>
-      <g
+           sodipodi:nodetypes="ccc" /></g><g
          id="g23"
          transform="translate(8.5179393,-18.224675)"
-         style="stroke:#ffffff">
-        <path
+         style="stroke:#ffffff"><path
            style="fill:none;stroke:#ffffff;stroke-width:0.899997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
            d="m 0.4796341,38.70104 v -4.72496 l 1.457083,1.483304"
            id="path22"
-           sodipodi:nodetypes="ccc" />
-        <path
+           sodipodi:nodetypes="ccc" /><path
            style="fill:none;stroke:#ffffff;stroke-width:0.899997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
            d="M 0.47442014,38.681394 V 33.97608 l -1.45708524,1.483304"
            id="path23"
-           sodipodi:nodetypes="ccc" />
-      </g>
-    </g>
-  </g>
-</svg>
+           sodipodi:nodetypes="ccc" /></g></g></g><g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="touch"><path
+       id="path2"
+       style="opacity:1;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:9, 9"
+       d="M 242.9552 -9.2211426 A 13.976006 13.976006 0 0 0 228.97879 4.7547485 A 13.976006 13.976006 0 0 0 238.33636 17.945675 L 238.33636 8.4227417 C 238.33636 8.4227417 238.6762 4.7887095 242.9552 4.7547485 C 247.2342 4.7207885 247.82725 8.4563314 247.82725 8.4563314 L 247.82725 17.854207 A 13.976006 13.976006 0 0 0 256.93109 4.7547485 A 13.976006 13.976006 0 0 0 242.9552 -9.2211426 z "
+       inkscape:export-filename="..\..\Assets\tutorial\hand.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" /><path
+       style="opacity:1;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 243.97801,76.843466 C 232.99412,61.392685 226.3339,45.982472 225.77108,44.658184 c 0,0 -0.98486,-3.396032 2.68288,-5.263851 3.6677,-1.86782 6.55434,2.648906 6.55434,2.648906 l 3.32811,6.248701 V 8.4225066 c 0,0 0.33959,-3.633756 4.61859,-3.667717 4.279,-0.03396 4.8722,3.701677 4.8722,3.701677 V 38.239681 30.632567 c 0,0 0.59542,-3.599797 4.77255,-3.599797 4.17711,0 4.72049,3.328112 4.72049,3.328112 v 7.98068 -5.535536 c 0,0 0.61129,-3.463954 4.75445,-3.463954 4.14314,0 4.72049,3.735639 4.72049,3.735639 v 5.16197 -3.735636 c 0,0 0.81505,-3.054429 4.89026,-3.054429 4.07525,0 4.61862,3.563834 4.61862,3.563834 v 26.989622 l -7.25588,13.303525 c 0,0 -0.43225,1.728978 -2.59347,1.728978 -2.16122,0 -22.4767,-0.192109 -22.4767,-0.192109 z"
+       id="path1"
+       sodipodi:nodetypes="ccscccscccscccscccscccsc"
+       inkscape:export-filename="..\..\Assets\tutorial\hand.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" /></g></svg>

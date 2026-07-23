@@ -1,5 +1,5 @@
 class_name BallRemoveParticles
-extends GPUParticles2D
+extends CPUParticles2D
 
 @export var ball: Ball
 
@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 func _on_ball_removed():
-	reparent(owner.get_parent())
+	reparent(ball.get_parent())
 	emitting = true
 
 

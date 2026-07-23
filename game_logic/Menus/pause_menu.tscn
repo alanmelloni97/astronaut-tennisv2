@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bqab60yf4u2yp" path="res://game_logic/Menus/pause_menu.gd" id="1_i2531"]
 [ext_resource type="Script" uid="uid://chu6i58wycf7u" path="res://game_logic/Menus/show_animation.gd" id="2_vcl4a"]
 
-[node name="PanelContainer" type="PanelContainer" unique_id=1156676726 node_paths=PackedStringArray("continue_button", "quit_button", "scale_animation")]
+[node name="PauseMenuContainer" type="PanelContainer" unique_id=1156676726 node_paths=PackedStringArray("continue_button", "quit_button", "scale_animation")]
 process_mode = 2
 custom_minimum_size = Vector2(0, 200)
 anchors_preset = 8
