@@ -23,6 +23,7 @@ boot_splash/minimum_display_time=1000
 Scenes="*uid://btdxfw2ejjx0y"
 Characters="*uid://cxyudux51rjxk"
 Signal_Debugger="*uid://csnlieyhcrp3b"
+GameState="*uid://bwvofcl4w84ob"
 
 [display]
 

@@ -1,16 +1,16 @@
 "
 TODO:
 sonidos
+pelota mucha gravedad
 
 BUG:
-	al estar tournament terminado sigue poniendo a jugar con los primeros en vez de laika: borrar savegame y ver que esta mal
-	fix fade in de personajes bloqueados
-	menu you win no spawnea en el centro
-	guardar que tutorial ya se mostro y no volver a mostrar
+	laika esta al reves
+	pintar laika verde al ganar el torneo
 
 MAYBE:
 sound delay
 sacar sonido de ultimo gol y poner sonido de ganar
+sonido en boton disabled para que se note que no se puede jugar
 
 
 ART:
@@ -19,6 +19,5 @@ ART:
 	pelota metalica
 	fotos de trajes para elegir
 	logo juego
-
-
+	pantalla de inicio
 	"

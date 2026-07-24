@@ -76,7 +76,6 @@ script = ExtResource("2_k1buq")
 name = "Laika"
 skin = ExtResource("4_ivnx7")
 ai_level = ExtResource("9_idtl2")
-beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [node name="Characters" type="Node" unique_id=990000372]

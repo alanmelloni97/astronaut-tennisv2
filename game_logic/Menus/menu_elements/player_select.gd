@@ -45,6 +45,8 @@ func update_skin():
 		current_skin_selectable = true
 	skin_updated.emit()
 
+	if not get_current_skin().is_unlocked:
+		return
 	if tween and tween.is_running():
 		tween.kill()
 	tween = get_tree().create_tween()

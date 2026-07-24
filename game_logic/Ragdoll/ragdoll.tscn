@@ -76,68 +76,68 @@ metadata/_edit_lock_ = true
 [node name="joints" type="Node2D" parent="Body" unique_id=342467886]
 
 [node name="RWrist" type="PinJoint2D" parent="Body/joints" unique_id=14532273]
-position = Vector2(238, -69)
+position = Vector2(252, -69)
 node_a = NodePath("../../LRarm")
 
 [node name="LWrist" type="PinJoint2D" parent="Body/joints" unique_id=1254751605]
-position = Vector2(-240, -70)
+position = Vector2(-250, -70)
 node_a = NodePath("../../LLarm")
 
 [node name="RElbow" type="PinJoint2D" parent="Body/joints" unique_id=644015966]
-position = Vector2(145.00005, -71.00002)
+position = Vector2(145.00002, -69)
 scale = Vector2(0.21, 0.21)
 node_a = NodePath("../../URarm")
 node_b = NodePath("../../LRarm")
 
-[node name="LShoulder" type="PinJoint2D" parent="Body/joints" unique_id=1079174461]
-position = Vector2(-51, -75)
-node_a = NodePath("../../Body")
-node_b = NodePath("../../ULarm")
-softness = 0.2
-
-[node name="Neck" type="PinJoint2D" parent="Body/joints" unique_id=155226632]
-position = Vector2(0, -94)
-node_a = NodePath("../../Body")
-node_b = NodePath("../../Head")
-softness = 0.2
-
 [node name="LElbow" type="PinJoint2D" parent="Body/joints" unique_id=417429876]
-position = Vector2(-143, -67)
+position = Vector2(-145, -72)
 node_a = NodePath("../../LLarm")
 node_b = NodePath("../../ULarm")
 softness = 0.2
 
+[node name="LShoulder" type="PinJoint2D" parent="Body/joints" unique_id=1079174461]
+position = Vector2(-65, -72)
+node_a = NodePath("../../Body")
+node_b = NodePath("../../ULarm")
+softness = 0.2
+
+[node name="RShoulder" type="PinJoint2D" parent="Body/joints" unique_id=1008153452]
+position = Vector2(63, -69)
+node_a = NodePath("../../Body")
+node_b = NodePath("../../URarm")
+
+[node name="Neck" type="PinJoint2D" parent="Body/joints" unique_id=155226632]
+position = Vector2(0, -105)
+node_a = NodePath("../../Body")
+node_b = NodePath("../../Head")
+softness = 0.2
+
 [node name="RKnee" type="PinJoint2D" parent="Body/joints" unique_id=1042626798]
-position = Vector2(33, 182)
+position = Vector2(34, 172)
 node_a = NodePath("../../URleg")
 node_b = NodePath("../../LRleg")
 softness = 0.2
 
 [node name="LKnee" type="PinJoint2D" parent="Body/joints" unique_id=57288818]
-position = Vector2(-31, 183)
+position = Vector2(-31, 172)
 node_a = NodePath("../../ULleg")
 node_b = NodePath("../../LLleg")
 softness = 0.2
 
-[node name="RShoulder" type="PinJoint2D" parent="Body/joints" unique_id=1008153452]
-position = Vector2(55, -71)
-node_a = NodePath("../../Body")
-node_b = NodePath("../../URarm")
-
 [node name="RAbductor" type="PinJoint2D" parent="Body/joints" unique_id=1566378545]
-position = Vector2(32, 91)
+position = Vector2(34, 96)
 node_a = NodePath("../../Body")
 node_b = NodePath("../../URleg")
 softness = 0.2
 
 [node name="LAbductor" type="PinJoint2D" parent="Body/joints" unique_id=499404346]
-position = Vector2(-29, 93)
+position = Vector2(-34, 97)
 node_a = NodePath("../../Body")
 node_b = NodePath("../../ULleg")
 softness = 0.2
 
 [node name="LRarm" type="RigidBody2D" parent="Body" unique_id=1210649468]
-position = Vector2(185, -69)
+position = Vector2(205, -67)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.2
@@ -154,7 +154,7 @@ rotation = 1.57079
 shape = SubResource("CapsuleShape2D_uraha")
 
 [node name="URarm" type="RigidBody2D" parent="Body" unique_id=1765000745]
-position = Vector2(100, -69)
+position = Vector2(105, -67)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.3
@@ -169,7 +169,7 @@ rotation = 4.71238
 shape = SubResource("CapsuleShape2D_6r5pt")
 
 [node name="LLarm" type="RigidBody2D" parent="Body" unique_id=1885476458]
-position = Vector2(-189, -70)
+position = Vector2(-209, -70)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.2
@@ -184,7 +184,7 @@ rotation = 1.57079
 shape = SubResource("CapsuleShape2D_nmq8d")
 
 [node name="ULarm" type="RigidBody2D" parent="Body" unique_id=1415407772]
-position = Vector2(-96, -70)
+position = Vector2(-105, -70)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.3
@@ -199,7 +199,7 @@ rotation = 1.57079
 shape = SubResource("CapsuleShape2D_s7j3o")
 
 [node name="LLleg" type="RigidBody2D" parent="Body" unique_id=462889625]
-position = Vector2(-33, 219)
+position = Vector2(-33, 220)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.25
@@ -213,7 +213,7 @@ texture = ExtResource("7_hlfcs")
 shape = SubResource("CapsuleShape2D_kq832")
 
 [node name="LRleg" type="RigidBody2D" parent="Body" unique_id=924807490]
-position = Vector2(34, 219)
+position = Vector2(34, 220)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.25
@@ -243,7 +243,7 @@ flip_h = true
 shape = SubResource("CapsuleShape2D_raocx")
 
 [node name="ULleg" type="RigidBody2D" parent="Body" unique_id=1381771636]
-position = Vector2(-32, 134)
+position = Vector2(-32, 136)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.3
@@ -270,7 +270,7 @@ texture = ExtResource("11_povsn")
 shape = SubResource("CapsuleShape2D_3rqqa")
 
 [node name="Head" type="RigidBody2D" parent="Body" unique_id=1866216087]
-position = Vector2(0, -133)
+position = Vector2(0, -144)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.3

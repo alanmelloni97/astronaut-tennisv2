@@ -6,6 +6,7 @@ extends Node2D
 @export var Rwrist: PinJoint2D
 @export var Lwrist: PinJoint2D
 @export var body: Node2D
+# used by dog only
 @export var head_cs: CollisionShape2D
 @export var mirror_manager: MirrorManager
 
