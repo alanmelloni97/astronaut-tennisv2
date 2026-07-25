@@ -3,10 +3,8 @@ extends Node
 
 @export var dog_ragdoll: Ragdoll
 
-var mirrored: bool
 
-
-func _ready() -> void:
+func mirror_dog() -> void:
 	for child in dog_ragdoll.find_children("*", "Node2D"):
 		if child is Node2D:
 			child.position.x *= -1

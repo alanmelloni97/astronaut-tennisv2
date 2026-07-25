@@ -263,7 +263,7 @@ radius = 13.0
 height = 544.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nk1il"]
-size = Vector2(12, 1590.25)
+size = Vector2(26, 1590.25)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_r0jbq"]
 b = Vector2(-0.7076416, 161.92749)
@@ -409,6 +409,7 @@ _level = NodePath("../..")
 _main_ui = NodePath("..")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1058688654]
+visible = false
 light_mask = 2
 position = Vector2(995.52, 650)
 texture = ExtResource("38_vb7dm")
@@ -514,7 +515,7 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/PlayerLimit" unique_id=1207909563]
-position = Vector2(-8, 226)
+position = Vector2(-9, 226)
 shape = SubResource("RectangleShape2D_nk1il")
 
 [node name="LeftTriangle" type="StaticBody2D" parent="World/Boundaries" unique_id=1627440436]
@@ -633,6 +634,7 @@ position = Vector2(1439, 536)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=120162559]
 position = Vector2(960, 540)
+zoom = Vector2(0.465, 0.465)
 script = SubResource("GDScript_shv3i")
 
 [node name="_debug_shortcuts" type="Node" parent="." unique_id=518749732 node_paths=PackedStringArray("score_manager")]

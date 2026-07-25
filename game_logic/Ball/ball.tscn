@@ -91,7 +91,6 @@ _data = {
 }
 
 [node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "remove_sound", "collision_shape", "sprite", "bounce_sound") groups=["Ball"]]
-z_index = 99
 collision_layer = 2
 collision_mask = 11
 physics_material_override = ExtResource("1_l4sn5")
@@ -131,7 +130,6 @@ scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("5_hsaat")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1368493303]
-position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_g3thm")
 
 [node name="AIMarker2D" type="Marker2D" parent="." unique_id=1789299442 node_paths=PackedStringArray("parent")]
@@ -194,8 +192,7 @@ animation_player = NodePath("AnimationPlayer")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SpawnerManager" unique_id=415829318]
 libraries/ = SubResource("AnimationLibrary_yip81")
 
-[node name="BuildConfig" type="Node" parent="." unique_id=1132013724 node_paths=PackedStringArray("remove_particles")]
+[node name="BuildConfig" type="Node" parent="." unique_id=1132013724]
 script = ExtResource("13_b57wf")
-remove_particles = NodePath("")
 
 [connection signal="finished" from="RemoveParticles" to="RemoveParticles" method="_on_finished"]
