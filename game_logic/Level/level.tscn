@@ -409,7 +409,6 @@ _level = NodePath("../..")
 _main_ui = NodePath("..")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1058688654]
-visible = false
 light_mask = 2
 position = Vector2(995.52, 650)
 texture = ExtResource("38_vb7dm")
@@ -429,7 +428,6 @@ ball_manager = NodePath("../../BallHandler/BallManager")
 position = Vector2(960, 129)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1176074455]
-visible = false
 navigation_polygon = SubResource("NavigationPolygon_0cmfq")
 script = ExtResource("39_t3ka0")
 
@@ -634,7 +632,6 @@ position = Vector2(1439, 536)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=120162559]
 position = Vector2(960, 540)
-zoom = Vector2(0.465, 0.465)
 script = SubResource("GDScript_shv3i")
 
 [node name="_debug_shortcuts" type="Node" parent="." unique_id=518749732 node_paths=PackedStringArray("score_manager")]
