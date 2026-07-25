@@ -39,7 +39,9 @@
 [ext_resource type="Texture2D" uid="uid://bgun8kwshfrle" path="res://Assets/ball/pelota unbouncy.png" id="27_03h4c"]
 [ext_resource type="Texture2D" uid="uid://ciidw7i5yd55g" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="30_816bt"]
 [ext_resource type="Texture2D" uid="uid://bufdo4widt72" path="res://Assets/ball/pelota metal.png" id="31_fcifm"]
+[ext_resource type="Script" uid="uid://dfl5jgryfcp4k" path="res://game_logic/Ball/Effects/GravityEffect.gd" id="32_50hjx"]
 [ext_resource type="Script" uid="uid://bqff6nk6p8ecf" path="res://game_logic/Level/tutorials.gd" id="32_qk0lb"]
+[ext_resource type="Texture2D" uid="uid://bja3qm0u60i3t" path="res://Assets/ball/pelota gravity.png" id="33_2rk6a"]
 [ext_resource type="Texture2D" uid="uid://jq8rhks8begq" path="res://Assets/tutorial/WASD.png" id="33_vb7dm"]
 [ext_resource type="Texture2D" uid="uid://cab86s78gxmyn" path="res://Assets/tutorial/FLECHAS.png" id="34_xqwpk"]
 [ext_resource type="Script" uid="uid://cr03j6tt7slny" path="res://game_logic/Level/tutorial_sprite_tween.gd" id="36_shv3i"]
@@ -113,6 +115,20 @@ metadata/_custom_type_script = "uid://b4ap0fr8j47m8"
 script = ExtResource("12_am3y4")
 effect = SubResource("Resource_816bt")
 texture = ExtResource("31_fcifm")
+sound = ExtResource("21_x31ef")
+metadata/_custom_type_script = "uid://b615mceneh7q"
+
+[sub_resource type="Resource" id="Resource_dgml8"]
+script = ExtResource("32_50hjx")
+gravity = 1.0
+sound = ExtResource("25_fcifm")
+texture = ExtResource("33_2rk6a")
+metadata/_custom_type_script = "uid://dfl5jgryfcp4k"
+
+[sub_resource type="Resource" id="Resource_21p8j"]
+script = ExtResource("12_am3y4")
+effect = SubResource("Resource_dgml8")
+texture = ExtResource("33_2rk6a")
 sound = ExtResource("21_x31ef")
 metadata/_custom_type_script = "uid://b615mceneh7q"
 
@@ -349,7 +365,7 @@ script = ExtResource("11_bhu2o")
 
 [node name="PowerUpSpawner" type="Node" parent="." unique_id=2083690736 node_paths=PackedStringArray("collision_shape_2d", "timer")]
 script = ExtResource("17_luomk")
-powerups = Array[ExtResource("12_am3y4")]([SubResource("Resource_l5n2q"), SubResource("Resource_cqvaw"), SubResource("Resource_x31ef"), SubResource("Resource_pt1jg"), SubResource("Resource_lemr6")])
+powerups = Array[ExtResource("12_am3y4")]([SubResource("Resource_l5n2q"), SubResource("Resource_cqvaw"), SubResource("Resource_x31ef"), SubResource("Resource_pt1jg"), SubResource("Resource_lemr6"), SubResource("Resource_21p8j")])
 power_up_sc = ExtResource("12_k8npl")
 collision_shape_2d = NodePath("SpawnArea")
 MIN_TIME_BETWEEN_SPAWNS = 10

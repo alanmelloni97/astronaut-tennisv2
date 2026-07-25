@@ -72,6 +72,10 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=893288937]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=567689523]
 layout_mode = 2
 size_flags_horizontal = 4

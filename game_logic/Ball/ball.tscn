@@ -91,6 +91,7 @@ _data = {
 }
 
 [node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "remove_sound", "collision_shape", "sprite", "bounce_sound") groups=["Ball"]]
+z_index = 99
 collision_layer = 2
 collision_mask = 11
 physics_material_override = ExtResource("1_l4sn5")

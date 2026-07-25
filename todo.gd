@@ -2,10 +2,13 @@
 TODO:
 sonidos
 pelota mucha gravedad
+video add
+menu items pausa y game won
+carbon rod unlock
+carbon rod bloqueado para laika
 
-BUG:
-	laika esta al reves
-	pintar laika verde al ganar el torneo
+BUGS:
+	laika y carbon rod no combinan
 
 MAYBE:
 sound delay
@@ -20,4 +23,11 @@ ART:
 	fotos de trajes para elegir
 	logo juego
 	pantalla de inicio
-	"
+	tubo de donde sale pelota
+	terminar laika
+
+
+
+
+
+"
