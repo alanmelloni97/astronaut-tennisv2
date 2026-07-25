@@ -11,10 +11,12 @@ extends RigidBody2D
 @export var collision_shape_2d: CollisionShape2D
 @export var navigation_position: Marker2D
 
+var is_dog: bool = false
+
 
 # this is horrible but no more changes are planned
 func _ready() -> void:
-	if sprite.texture == load("res://Assets/rackets/carbon rod.png"):
+	if sprite.texture == load("res://Assets/rackets/carbon rod.png") and not is_dog:
 		racket_shape.queue_free()
 	else:
 		rod_shape.queue_free()

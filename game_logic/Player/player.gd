@@ -17,16 +17,17 @@ func disable_input():
 	racket.movement_handler.disable_input()
 
 
-func set_up_player(player_type: PlayerType, skin: CharacterSkin, racket_skin: Texture2D, ai_level: AILevel = null):
+func set_up_player(player_type: PlayerType, char_skin: CharacterSkin, racket_skin: Texture2D, ai_level: AILevel = null):
 	racket.movement_handler.set_player_type(player_type)
-	_set_ragdoll(player_type, skin)
-	_set_racket(racket_skin)
+	_set_ragdoll(player_type, char_skin)
+	_set_racket(racket_skin, char_skin)
 	if player_type == PlayerType.AI_RIVAL:
-		_set_ai(ai_level, skin)
+		_set_ai(ai_level, char_skin)
 
 
-func _set_racket(skin: Texture2D):
-	racket.sprite.texture = skin
+func _set_racket(racket_skin: Texture2D, char_skin: CharacterSkin):
+	racket.is_dog = char_skin.dog
+	racket.sprite.texture = racket_skin
 
 
 func _set_ragdoll(player_type: PlayerType, skin: CharacterSkin):

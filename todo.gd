@@ -7,8 +7,6 @@ menu items pausa y game won
 carbon rod unlock
 carbon rod bloqueado para laika
 
-BUGS:
-	laika y carbon rod no combinan
 
 MAYBE:
 sound delay
