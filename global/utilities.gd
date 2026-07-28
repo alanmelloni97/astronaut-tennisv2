@@ -29,7 +29,13 @@ static func duplicate_astar_grid(old_grid: AStarGrid2D) -> AStarGrid2D:
 	return new_grid
 
 
-static func play_audio_post_mortem(audio_stream_player: AudioStreamPlayer2D, new_parent: Node) -> void:
+static func play_audio_2d_post_mortem(audio_stream_player_2d: AudioStreamPlayer2D, new_parent: Node) -> void:
+	audio_stream_player_2d.play()
+	audio_stream_player_2d.reparent(new_parent)
+	audio_stream_player_2d.finished.connect(audio_stream_player_2d.queue_free)
+
+
+static func play_audio_post_mortem(audio_stream_player: AudioStreamPlayer, new_parent: Node) -> void:
 	audio_stream_player.play()
 	audio_stream_player.reparent(new_parent)
 	audio_stream_player.finished.connect(audio_stream_player.queue_free)

@@ -76,11 +76,11 @@ metadata/_edit_lock_ = true
 [node name="joints" type="Node2D" parent="Body" unique_id=342467886]
 
 [node name="RWrist" type="PinJoint2D" parent="Body/joints" unique_id=14532273]
-position = Vector2(252, -69)
+position = Vector2(256, -68)
 node_a = NodePath("../../LRarm")
 
 [node name="LWrist" type="PinJoint2D" parent="Body/joints" unique_id=1254751605]
-position = Vector2(-250, -70)
+position = Vector2(-260, -70)
 node_a = NodePath("../../LLarm")
 
 [node name="RElbow" type="PinJoint2D" parent="Body/joints" unique_id=644015966]

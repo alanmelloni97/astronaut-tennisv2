@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://byuw8vbpfsr3f" path="res://game_logic/Level/score_handler.gd" id="3_uqeto"]
 [ext_resource type="Script" uid="uid://byy8vfben3kxo" path="res://game_logic/Level/level_handler.gd" id="4_wqlfs"]
 [ext_resource type="PackedScene" uid="uid://x11muvl3x6vi" path="res://game_logic/UI/main_ui/main_ui.tscn" id="5_d6qko"]
+[ext_resource type="AudioStream" uid="uid://pdtbnx2ipyy6" path="res://Assets/sounds/point.wav" id="5_isrne"]
 [ext_resource type="Script" uid="uid://bqlse54u8e0r8" path="res://game_logic/Level/bounce_detector.gd" id="6_nk1il"]
 [ext_resource type="Script" uid="uid://yjd3fkfu48mi" path="res://game_logic/Level/lights_handler.gd" id="7_1p6h5"]
 [ext_resource type="Script" uid="uid://c3jkt2u4aautb" path="res://game_logic/Level/ui_handler.gd" id="7_i5g78"]
@@ -318,22 +319,31 @@ _main_UI = NodePath("../MainUI")
 _level = NodePath("..")
 touch_joysticks = NodePath("../TouchJoysticks")
 
-[node name="ScoreHandler" type="Node" parent="." unique_id=2106818377 node_paths=PackedStringArray("bounce_detector", "_score_manager", "_score_ui")]
+[node name="ScoreHandler" type="Node" parent="." unique_id=2106818377 node_paths=PackedStringArray("bounce_detector", "_score_manager", "_score_ui", "point_sound", "game_over_sound")]
 script = ExtResource("3_uqeto")
 bounce_detector = NodePath("../BounceDetector")
 _score_manager = NodePath("ScoreManager")
 _score_ui = NodePath("../World/Scores")
+point_sound = NodePath("PointSound")
+game_over_sound = NodePath("GameOverSound")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
-WIN_SCORE = 7
+WIN_SCORE = 2
 
-[node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "bounce_detector", "ball_manager", "stall_ball_detector")]
+[node name="PointSound" type="AudioStreamPlayer" parent="ScoreHandler" unique_id=1625465825]
+stream = ExtResource("5_isrne")
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="ScoreHandler" unique_id=1769470551]
+stream = ExtResource("21_x31ef")
+
+[node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("_score_manager", "bounce_detector", "ball_manager", "stall_ball_detector", "stalled_ball_sound")]
 script = ExtResource("2_1teg4")
 _score_manager = NodePath("../ScoreHandler/ScoreManager")
 bounce_detector = NodePath("../BounceDetector")
 ball_manager = NodePath("BallManager")
 stall_ball_detector = NodePath("../StallBallDetector")
+stalled_ball_sound = NodePath("StalledBallSound")
 
 [node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("navigation_region", "_ball_spawn_point")]
 script = ExtResource("2_py82k")
@@ -341,6 +351,9 @@ ball_sc = ExtResource("3_py82k")
 navigation_region = NodePath("../../NavigationRegion2D")
 _ball_spawn_point = NodePath("../../BallSpawnPoint")
 INITIAL_IMPULSE = Vector2(700, -50)
+
+[node name="StalledBallSound" type="AudioStreamPlayer" parent="BallHandler" unique_id=176184837]
+stream = ExtResource("22_03h4c")
 
 [node name="LightsHandler" type="Node" parent="." unique_id=2121215875 node_paths=PackedStringArray("_lights_manager", "bounce_detector")]
 script = ExtResource("7_1p6h5")

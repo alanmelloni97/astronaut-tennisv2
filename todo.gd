@@ -1,16 +1,14 @@
 "
 TODO:
-sonidos
-pelota mucha gravedad
-video add
+
+video ad
 menu items pausa y game won
 carbon rod unlock
-carbon rod bloqueado para laika
+paleta bloqueado para laika
 
 
 MAYBE:
 sound delay
-sacar sonido de ultimo gol y poner sonido de ganar
 sonido en boton disabled para que se note que no se puede jugar
 
 
@@ -24,7 +22,8 @@ ART:
 	tubo de donde sale pelota
 	terminar laika
 
-
+AFTER:
+	joystick tutorial (no tutorial)
 
 
 
