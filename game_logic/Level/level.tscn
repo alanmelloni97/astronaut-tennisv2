@@ -121,7 +121,7 @@ metadata/_custom_type_script = "uid://b615mceneh7q"
 
 [sub_resource type="Resource" id="Resource_dgml8"]
 script = ExtResource("32_50hjx")
-gravity = 1.0
+gravity = 1.2
 sound = ExtResource("25_fcifm")
 texture = ExtResource("33_2rk6a")
 metadata/_custom_type_script = "uid://dfl5jgryfcp4k"
@@ -329,7 +329,7 @@ game_over_sound = NodePath("GameOverSound")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
-WIN_SCORE = 2
+WIN_SCORE = 1
 
 [node name="PointSound" type="AudioStreamPlayer" parent="ScoreHandler" unique_id=1625465825]
 stream = ExtResource("5_isrne")
@@ -445,7 +445,7 @@ texture = ExtResource("38_vb7dm")
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1543820245]
 
 [node name="BallGate" type="AnimatedSprite2D" parent="Background" unique_id=1117463632 node_paths=PackedStringArray("ball_manager")]
-position = Vector2(-35.52002, -522)
+position = Vector2(-33.52002, -522)
 sprite_frames = SubResource("SpriteFrames_5ud5j")
 animation = &"close"
 frame = 7

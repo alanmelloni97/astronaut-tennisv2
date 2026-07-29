@@ -6,6 +6,7 @@ signal game_unpaused
 signal game_quit
 signal game_ended
 signal retry_requested
+signal video_requested
 
 @export var _pause_menu: PauseMenu
 @export var _game_over_menu: GameOverMenu
@@ -14,6 +15,7 @@ signal retry_requested
 func _ready() -> void:
 	_game_over_menu.main_menu_pressed.connect(game_ended.emit)
 	_game_over_menu.retry_pressed.connect(retry_requested.emit)
+	_game_over_menu.watch_video_pressed.connect(video_requested.emit)
 
 
 func show_game_over_menu(winner: int, two_players: bool):

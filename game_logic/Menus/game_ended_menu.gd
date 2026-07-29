@@ -3,10 +3,12 @@ extends Control
 
 signal retry_pressed
 signal main_menu_pressed
+signal watch_video_pressed
 
 @export var _game_over_label: Label
 @export var _retry_button: Button
 @export var show_animation: MenuScaleAnimation
+@export var video_button: Button
 
 
 func set_up_menu(winner: int, two_players: bool):
@@ -21,6 +23,7 @@ func set_up_menu(winner: int, two_players: bool):
 			_retry_button.hide()
 			_game_over_label.text = "YOU WIN!"
 		else:
+			video_button.show()
 			_game_over_label.text = "YOU LOST"
 
 
@@ -34,3 +37,7 @@ func _on_retry_button_pressed() -> void:
 
 func _on_main_menu_button_pressed() -> void:
 	main_menu_pressed.emit()
+
+
+func _on_video_button_pressed() -> void:
+	watch_video_pressed.emit()

@@ -11,6 +11,7 @@ func _ready() -> void:
 	_main_ui.game_quit.connect(_on_game_quit)
 	_main_ui.game_ended.connect(_on_game_ended)
 	_main_ui.retry_requested.connect(_on_retry_requested)
+	_main_ui.video_requested.connect(_on_video_requested)
 
 
 func _on_game_paused():
@@ -34,3 +35,7 @@ func _on_game_ended():
 
 func _on_retry_requested():
 	_level.scene_requested.emit(Scenes.level)
+
+
+func _on_video_requested():
+	pass
