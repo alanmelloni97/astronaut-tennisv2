@@ -15,11 +15,13 @@ func _ready() -> void:
 
 
 func show_animated():
+	show()
 	scale_animation.scale_in_animation()
 
 
 func hide_animated():
 	scale_animation.scale_out_animation()
+	hide()
 
 
 func _on_continue_button_pressed() -> void:

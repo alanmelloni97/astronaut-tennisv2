@@ -293,6 +293,9 @@ script/source = "extends Camera2D
 
 func _ready() -> void:
 	process_callback = Camera2D.CAMERA2D_PROCESS_PHYSICS
+
+func _process(delta: float) -> void:
+	print(get_viewport().get_camera_2d())
 "
 
 [sub_resource type="GDScript" id="GDScript_5ud5j"]
@@ -329,7 +332,7 @@ game_over_sound = NodePath("GameOverSound")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
-WIN_SCORE = 1
+WIN_SCORE = 7
 
 [node name="PointSound" type="AudioStreamPlayer" parent="ScoreHandler" unique_id=1625465825]
 stream = ExtResource("5_isrne")
@@ -624,11 +627,10 @@ vertical_alignment = 1
 [node name="Lights" type="Node2D" parent="World" unique_id=245549183]
 
 [node name="PointLight1" type="PointLight2D" parent="World/Lights" unique_id=1750763901]
-position = Vector2(384.00003, 109)
-scale = Vector2(0.22265619, 0.22265624)
-enabled = false
-color = Color(0.82459205, 0.858649, 0, 1)
-energy = 5.0
+position = Vector2(385, 102)
+scale = Vector2(0.27343744, 0.27343744)
+color = Color(0.45, 0.2775, 0, 0.61960787)
+energy = 10.0
 range_item_cull_mask = 2
 texture = ExtResource("30_816bt")
 
@@ -641,11 +643,10 @@ range_item_cull_mask = 2
 texture = ExtResource("30_816bt")
 
 [node name="PointLight2" type="PointLight2D" parent="World/Lights" unique_id=857232675]
-position = Vector2(1535.9999, 107)
-scale = Vector2(0.2148438, 0.2148438)
-enabled = false
+position = Vector2(1540.5348, 107.99999)
+scale = Vector2(0.2619902, 0.26539934)
 color = Color(0.8235294, 0.85882354, 0, 1)
-energy = 5.0
+energy = 7.0
 range_item_cull_mask = 2
 texture = ExtResource("30_816bt")
 

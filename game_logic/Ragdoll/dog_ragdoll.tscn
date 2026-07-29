@@ -216,5 +216,3 @@ texture = ExtResource("5_dlou7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/ULleg" unique_id=346726132]
 shape = SubResource("CapsuleShape2D_124gt")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=901532545]

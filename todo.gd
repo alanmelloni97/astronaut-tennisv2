@@ -1,15 +1,11 @@
 "
 TODO:
 
-video ad
 menu items pausa y game won
-carbon rod unlock
-paleta bloqueado para laika
+tournament table embellecer
+sonidos, editar sonidos para que no haya delay
 
 BUG:
-	after restart pause: offset of screen
-	luces offset
-	particles offset
 
 
 MAYBE:
@@ -18,6 +14,7 @@ sonido en boton disabled para que se note que no se puede jugar
 
 
 ART:
+	apollo desturar rojo y azul
 	fondo menu
 	trajes metalicos
 	fotos de trajes para elegir
