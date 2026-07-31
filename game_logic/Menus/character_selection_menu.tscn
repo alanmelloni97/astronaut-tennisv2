@@ -103,6 +103,7 @@ layout_mode = 2
 [node name="RestartTournamentButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=465025600]
 visible = false
 layout_mode = 2
+theme_type_variation = &"WatchVideoButton"
 text = "RESTART TOURNAMENT"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

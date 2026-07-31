@@ -26,7 +26,6 @@ func _instantiate_scene(scene: PackedScene) -> Node:
 	# First remove current scene
 	if current_scene != null: # to be able to call on _ready
 		current_scene.queue_free()
-	print(scene)
 	return scene.instantiate()
 
 

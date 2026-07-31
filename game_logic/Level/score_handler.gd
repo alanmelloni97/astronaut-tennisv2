@@ -5,11 +5,14 @@ extends Node
 @export var _score_manager: ScoreManager
 @export var _score_ui: ScoreUI #HACK should have its handler
 @export var point_sound: AudioStreamPlayer
-@export var game_over_sound: AudioStreamPlayer
+@export var game_won_sound: AudioStreamPlayer
+@export var game_lost_sound: AudioStreamPlayer
+@export var level: Level
 
 
 func _ready() -> void:
 	bounce_detector.ball_double_bounced.connect(_on_double_bounced)
+	_score_manager.game_finished.connect(_play_sound)
 
 
 func _on_double_bounced(side: int):
@@ -20,13 +23,16 @@ func _on_double_bounced(side: int):
 		2:
 			_score_manager.add_point(1)
 			_score_ui.update_score(1, _score_manager.score[0])
-	_play_sound()
 
 
-func _play_sound():
+func _play_sound(winner):
 	# if a player wins, play gameoversound
-	if _score_manager.score.x == _score_manager.WIN_SCORE or \
-	_score_manager.score.y == _score_manager.WIN_SCORE:
-		game_over_sound.play()
+	var game_sound: AudioStreamPlayer
+	if level.two_player_mode:
+		game_sound = game_won_sound
 	else:
-		point_sound.play()
+		if winner == 1:
+			game_sound = game_won_sound
+		else:
+			game_sound = game_lost_sound
+	game_sound.play()

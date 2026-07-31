@@ -9,6 +9,7 @@ _joystick_left = NodePath("Virtual joystick left")
 _joystick_right = NodePath("Virtual joystick right")
 
 [node name="Virtual joystick left" parent="." unique_id=897090110 instance=ExtResource("1_nm4ss")]
+modulate = Color(0.99553055, 0.8769325, 0, 0.2)
 anchors_preset = -1
 anchor_top = 0.0
 anchor_right = 0.48000002
@@ -26,7 +27,7 @@ action_up = "move_up_1"
 action_down = "move_down_1"
 
 [node name="Virtual joystick right" parent="." unique_id=1443318009 instance=ExtResource("1_nm4ss")]
-modulate = Color(1, 1, 0.38431373, 1)
+modulate = Color(3.272891e-06, 0.90001863, 0.90377617, 0.2)
 anchors_preset = -1
 anchor_left = 0.51000005
 anchor_top = 0.0

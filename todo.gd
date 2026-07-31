@@ -1,16 +1,13 @@
 "
 TODO:
 
-menu items pausa y game won
-tournament table embellecer
-sonidos, editar sonidos para que no haya delay
+sonidos normalizar
 
 BUG:
 
 
 MAYBE:
 sound delay
-sonido en boton disabled para que se note que no se puede jugar
 
 
 ART:

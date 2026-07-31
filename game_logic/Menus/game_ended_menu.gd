@@ -15,16 +15,16 @@ func set_up_menu(winner: int, two_players: bool):
 	# by default menu shows 1 player lose status (retry button visible and YOU LOSE message)
 	if two_players:
 		if winner == 1:
-			_game_over_label.text = "PLAYER 1 WINS"
+			_game_over_label.text = "PLAYER 1 WINS!"
 		elif winner == 2:
-			_game_over_label.text = "PLAYER 2 WINS"
+			_game_over_label.text = "PLAYER 2 WINS!"
 	else:
 		if winner == 1:
 			_retry_button.hide()
 			_game_over_label.text = "YOU WIN!"
 		else:
 			video_button.show()
-			_game_over_label.text = "YOU LOST"
+			_game_over_label.text = "YOU LOSE"
 
 
 func show_animated():

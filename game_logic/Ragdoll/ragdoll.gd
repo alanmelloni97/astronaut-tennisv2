@@ -14,7 +14,6 @@ extends Node2D
 var mirrored: bool:
 	set(x):
 		mirror_manager.mirror_dog()
-		print(mirrored)
 var dog_head_collision_shape: Shape2D
 var skin: CharacterSkin:
 	set(skin):
