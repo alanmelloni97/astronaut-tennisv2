@@ -23,7 +23,8 @@ func set_up_menu(winner: int, two_players: bool):
 			_retry_button.hide()
 			_game_over_label.text = "YOU WIN!"
 		else:
-			video_button.show()
+			if OS.has_feature("ads"):
+				video_button.show()
 			_game_over_label.text = "YOU LOSE"
 
 

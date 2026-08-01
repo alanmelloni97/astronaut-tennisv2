@@ -12,7 +12,7 @@ extends Node
 
 func _ready() -> void:
 	bounce_detector.ball_double_bounced.connect(_on_double_bounced)
-	_score_manager.game_finished.connect(_play_sound)
+	_score_manager.game_finished.connect(_play_game_over_sound)
 
 
 func _on_double_bounced(side: int):
@@ -23,9 +23,17 @@ func _on_double_bounced(side: int):
 		2:
 			_score_manager.add_point(1)
 			_score_ui.update_score(1, _score_manager.score[0])
+	_play_point_sound()
 
 
-func _play_sound(winner):
+func _play_point_sound():
+	# if is not last point play sound
+	if not _score_manager.score[0] == _score_manager.WIN_SCORE \
+	and not _score_manager.score[1] == _score_manager.WIN_SCORE:
+		point_sound.play()
+
+
+func _play_game_over_sound(winner):
 	# if a player wins, play gameoversound
 	var game_sound: AudioStreamPlayer
 	if level.two_player_mode:

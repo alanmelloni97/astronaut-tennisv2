@@ -57,7 +57,7 @@ _ai_manager = NodePath("AIManager")
 [node name="MotionManager" type="Node" parent="MovementHandler" unique_id=954893411 node_paths=PackedStringArray("_rb")]
 script = ExtResource("2_o468d")
 _rb = NodePath("../..")
-_FORCE_MULT = 18000
+_FORCE_MULT = 19000
 
 [node name="InputManager" type="Node" parent="MovementHandler" unique_id=1846637120]
 script = ExtResource("3_xsmco")
