@@ -8,14 +8,12 @@ extends Label
 
 func set_character(character: Character) -> void:
 	text = "·" + character.name
-	if character == Characters.get_current_rival():
-		modulate = current_color
-		tween_color()
-		# case for last opponent, is current rival but also beated
-		if character.beated:
-			modulate = beated_color
-	elif not character.beated:
-		modulate = unbeated_color
+	if not character.beated:
+		if character == Characters.get_current_rival():
+			modulate = current_color
+			tween_color()
+		else:
+			modulate = unbeated_color
 	else:
 		modulate = beated_color
 

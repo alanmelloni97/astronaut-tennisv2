@@ -6,13 +6,15 @@ BUG:
 bug export windows, testear otros exports
 
 ART:
-	fotos de trajes para elegir
+	revisar pelota metal
 	logo juego
-	tubo de donde sale pelota y puertas estan medias medias
-	terminar laika
 
 PRELAUNCH:
+	fotos de trajes para elegir
 	balancear movimiento
+
+TEST LAUNCH:
+	que 0 y 1 no sirvan para ganar el nivel
 
 AFTER LAUNCH:
 	joystick tutorial (no tutorial)
