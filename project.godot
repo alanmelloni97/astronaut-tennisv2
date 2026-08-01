@@ -47,6 +47,12 @@ Powerups=""
 
 theme/custom="uid://qd2xvxleoi1v"
 
+[importer_defaults]
+
+wav={
+&"edit/normalize": true
+}
+
 [input]
 
 move_up_1={

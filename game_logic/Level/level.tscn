@@ -33,7 +33,7 @@
 [ext_resource type="AudioStream" uid="uid://dwcsopnfo5yaw" path="res://Assets/sounds/hit_metal.wav" id="20_mddns"]
 [ext_resource type="AudioStream" uid="uid://b7orb1sym8sce" path="res://Assets/sounds/powerup_metal.wav" id="21_x31ef"]
 [ext_resource type="Texture2D" uid="uid://c53bo0306sjqx" path="res://Assets/ball/pelota bouncy.png" id="23_shv3i"]
-[ext_resource type="PackedScene" uid="uid://b8nmqou14j2ss" path="res://game_logic/UI/Virtual joystick/touch_joysticks.tscn" id="24_6uec0"]
+[ext_resource type="PackedScene" uid="uid://b8nmqou14j2ss" path="res://game_logic/UI/virtual_joystick/touch_joysticks.tscn" id="24_6uec0"]
 [ext_resource type="Script" uid="uid://d1bu3vy2qkidn" path="res://game_logic/Level/continious_collision_detector.gd" id="25_232uv"]
 [ext_resource type="AudioStream" uid="uid://b2c0jtagax61j" path="res://Assets/sounds/hit_unbouncy.wav" id="25_fcifm"]
 [ext_resource type="AudioStream" uid="uid://c5yud477vde2q" path="res://Assets/sounds/TOY_Hand_Horn_Single_02_mono.wav" id="25_wxi62"]

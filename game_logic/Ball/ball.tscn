@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://do5ow3kwhws2f" path="res://game_logic/Ball/ai_obstacle_manager.gd" id="5_fxsfa"]
 [ext_resource type="Texture2D" uid="uid://u78bf1elgyhg" path="res://Assets/ball/pelota.png" id="5_hsaat"]
 [ext_resource type="Script" uid="uid://l67cfjetdf8j" path="res://game_logic/Ball/remove_particles.gd" id="6_hbi5u"]
+[ext_resource type="Texture2D" uid="uid://csb6ahuiiuqo6" path="res://Assets/ball pieces/spritesheet particles.png" id="8_fxsfa"]
 [ext_resource type="AudioStream" uid="uid://yrvx2tolssav" path="res://game_logic/Ball/sounds/51461__andrenascimento__basket_ball_02_bounce.wav" id="8_hsaat"]
 [ext_resource type="Script" uid="uid://dqtcdtkcbulfb" path="res://game_logic/Ball/spawner_manager.gd" id="10_bjqt2"]
 [ext_resource type="Script" uid="uid://dodb12c6f4vyn" path="res://game_logic/Ball/ball_build_config.gd" id="13_b57wf"]
@@ -21,9 +22,6 @@ particles_animation = true
 particles_anim_h_frames = 5
 particles_anim_v_frames = 1
 particles_anim_loop = false
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fxsfa"]
-load_path = "res://.godot/imported/spritesheet particles.png-c2ca149fd13357d88d980a04ac694870.ctex"
 
 [sub_resource type="Gradient" id="Gradient_b57wf"]
 offsets = PackedFloat32Array(0, 0.75609756, 1)
@@ -89,7 +87,7 @@ _data = {
 &"spawn": SubResource("Animation_o177p")
 }
 
-[node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "remove_sound", "collision_shape", "sprite", "bounce_sound") groups=["Ball"]]
+[node name="Ball" type="RigidBody2D" unique_id=365515873 node_paths=PackedStringArray("ai_marker_2d", "effects_manager", "collision_shape", "sprite", "bounce_sound") groups=["Ball"]]
 z_index = 99
 collision_layer = 2
 collision_mask = 11
@@ -100,7 +98,6 @@ max_contacts_reported = 5
 script = ExtResource("2_65gad")
 ai_marker_2d = NodePath("AIMarker2D")
 effects_manager = NodePath("EffectsManager")
-remove_sound = NodePath("")
 collision_shape = NodePath("CollisionShape2D")
 sprite = NodePath("Sprite2D")
 bounce_sound = NodePath("BounceSound")
@@ -158,7 +155,7 @@ parent = NodePath("..")
 material = SubResource("CanvasItemMaterial_bjqt2")
 emitting = false
 amount = 20
-texture = SubResource("CompressedTexture2D_fxsfa")
+texture = ExtResource("8_fxsfa")
 lifetime = 3.0
 one_shot = true
 explosiveness = 1.0

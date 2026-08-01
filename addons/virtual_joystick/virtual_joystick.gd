@@ -1,4 +1,4 @@
-class_name VirtualJoystick2
+class_name VirtualJoystickAddon
 extends Control
 ## A simple virtual joystick for touchscreens, with useful options.
 ## Github: https://github.com/MarcoFazioRandom/Virtual-Joystick-Godot

@@ -8,6 +8,8 @@ bug export windows, testear otros exports
 ART:
 	revisar pelota metal
 	logo juego
+	splashscreen
+
 
 PRELAUNCH:
 	fotos de trajes para elegir
