@@ -7,6 +7,11 @@ extends Node
 @export var FADE_DB: int
 
 var tween: Tween
+var aux_volume: float
+
+
+func _ready() -> void:
+	aux_volume = audio_stream_player.volume_db
 
 
 func stop_music():
@@ -22,4 +27,4 @@ func play_music():
 	if tween and tween.is_running():
 		tween.kill()
 	tween = get_tree().create_tween()
-	tween.tween_property(audio_stream_player, "volume_db", 0, FADE_IN_SECONDS).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	tween.tween_property(audio_stream_player, "volume_db", aux_volume, FADE_IN_SECONDS).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)

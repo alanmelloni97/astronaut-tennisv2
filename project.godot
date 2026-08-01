@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="tenis astronauta"
+config/name="AstroTennis"
 run/main_scene="uid://0tguoaxhermy"
 config/features=PackedStringArray("4.7", "Mobile")
 boot_splash/stretch_mode=0
@@ -20,10 +20,9 @@ boot_splash/minimum_display_time=1000
 
 [autoload]
 
-Scenes="*uid://btdxfw2ejjx0y"
-Characters="*uid://cxyudux51rjxk"
-Signal_Debugger="*uid://csnlieyhcrp3b"
 GameState="*uid://bwvofcl4w84ob"
+Characters="*uid://cxyudux51rjxk"
+Scenes="*uid://btdxfw2ejjx0y"
 
 [display]
 
@@ -36,7 +35,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg")
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg")
 
 [global_group]
 
@@ -95,6 +94,10 @@ move_right_2={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [layer_names]
 

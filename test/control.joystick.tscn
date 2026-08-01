@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ce8xaubsvyi75"]
+
+[node name="Control" type="Control" unique_id=810529467]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1222679704]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="HBoxContainer" unique_id=1008402014]
+layout_mode = 2
+size_flags_horizontal = 3
+joystick_mode = 1
+joystick_size = 250.0
+tip_size = 100.0
+
+[node name="VirtualJoystick2" type="VirtualJoystick" parent="HBoxContainer" unique_id=1379551030]
+layout_mode = 2
+size_flags_horizontal = 3
+joystick_mode = 1
+joystick_size = 250.0
+tip_size = 100.0

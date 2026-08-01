@@ -3,7 +3,7 @@ TODO:
 
 
 BUG:
-bug export windows, testear otros exports
+
 
 ART:
 	revisar pelota metal
@@ -21,6 +21,7 @@ TEST LAUNCH:
 AFTER LAUNCH:
 	joystick tutorial (no tutorial)
 	achivements
+	pelota pica sin ser detectada a veces
 
 
 "

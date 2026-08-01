@@ -1,8 +1,8 @@
 class_name TouchJoysticks
 extends CanvasLayer
 
-@export var _joystick_left: VirtualJoystickAddon
-@export var _joystick_right: VirtualJoystickAddon
+@export var _joystick_left: VirtualJoystick
+@export var _joystick_right: VirtualJoystick
 
 var two_players: bool:
 	set(x):

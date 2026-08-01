@@ -351,6 +351,7 @@ stream = ExtResource("5_isrne")
 
 [node name="GameWonSound" type="AudioStreamPlayer" parent="ScoreHandler" unique_id=1769470551]
 stream = ExtResource("6_5okrb")
+volume_db = -10.0
 
 [node name="GameLostSound" type="AudioStreamPlayer" parent="ScoreHandler" unique_id=705304298]
 stream = ExtResource("7_36qvi")
