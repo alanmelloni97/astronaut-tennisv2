@@ -15,7 +15,7 @@ run/main_scene="uid://0tguoaxhermy"
 config/features=PackedStringArray("4.7", "Mobile")
 boot_splash/stretch_mode=0
 boot_splash/image="uid://d16qec24qj64b"
-config/icon="uid://b52vlv8dpd60x"
+config/icon="uid://c46834jkvimjp"
 boot_splash/minimum_display_time=1000
 
 [autoload]
@@ -23,6 +23,8 @@ boot_splash/minimum_display_time=1000
 Characters="*uid://cxyudux51rjxk"
 Scenes="*uid://btdxfw2ejjx0y"
 GameState="*uid://bwvofcl4w84ob"
+CrazyGamesBridge="*uid://kh6wewaxvolh"
+CrazyGames="*uid://banh8sofjmlun"
 
 [display]
 
@@ -35,7 +37,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg")
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/admob/plugin.cfg", "res://addons/crazygames/plugin.cfg")
 
 [global_group]
 
@@ -95,6 +97,10 @@ move_right_2={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/admob/gdscript/sample/translations/admob_sample.en.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.pt_BR.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.es.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.zh_CN.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.ja.translation")
+
 [layer_names]
 
 2d_render/layer_2="points lights"
@@ -108,7 +114,7 @@ move_right_2={
 
 [physics]
 
-common/physics_ticks_per_second=120
+common/physics_ticks_per_second=240
 2d/physics_engine="GodotPhysics2D"
 3d/physics_engine="Jolt Physics"
 2d/default_gravity=400.0

@@ -3,10 +3,10 @@ extends Control
 
 signal skin_updated()
 
-@export var _player_texture: TextureRect
 @export var suit_name: Label
 @export var lock_control: Control
 @export var racket_select: Selector
+@export var _player_texture: TextureRect
 
 var tween: Tween
 var skins: Array[CharacterSkin]
@@ -45,12 +45,13 @@ func update_skin():
 		current_skin_selectable = true
 	skin_updated.emit()
 
-	if not get_current_skin().is_unlocked:
-		return
-	if tween and tween.is_running():
+	if tween:
 		tween.kill()
-	tween = get_tree().create_tween()
-	tween.tween_property(_player_texture, "modulate", _player_texture.modulate, 0.5).from(Color.TRANSPARENT)
+	if get_current_skin().is_unlocked:
+		tween = get_tree().create_tween()
+		tween.tween_property(_player_texture, "modulate", _player_texture.modulate, 0.5).from(
+			Color.TRANSPARENT
+		)
 
 
 func _on_left_button_pressed() -> void:

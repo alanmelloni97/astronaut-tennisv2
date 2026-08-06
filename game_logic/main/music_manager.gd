@@ -5,7 +5,6 @@ extends Node
 @export var FADE_IN_SECONDS: float
 @export var FADE_OUT_SECONDS: float
 @export var FADE_DB: int
-
 var tween: Tween
 var aux_volume: float
 

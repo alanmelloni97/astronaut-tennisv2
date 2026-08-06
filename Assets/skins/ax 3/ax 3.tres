@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://v0sa452yk36s" path="res://game_logic/Ragdoll/skin/skin_resource.gd" id="1_v3htk"]
 [ext_resource type="Texture2D" uid="uid://bfu4hyjdproa" path="res://Assets/skins/ax 3/body.png" id="1_w6y08"]
 [ext_resource type="Texture2D" uid="uid://c4wop7u11go8e" path="res://Assets/skins/ax 3/head.png" id="2_y8pgj"]
-[ext_resource type="Texture2D" uid="uid://cj8gy1ghnil2w" path="res://Assets/skins/ax 3/ax3.png" id="3_56taq"]
+[ext_resource type="Texture2D" uid="uid://d05k3a8ho8atx" path="res://Assets/skins/ax 3/ax3.png" id="3_56taq"]
 [ext_resource type="Texture2D" uid="uid://f1ut0wt53i64" path="res://Assets/skins/ax 3/LLarm.png" id="4_7hphf"]
 [ext_resource type="Texture2D" uid="uid://c2fuof41qyo2w" path="res://Assets/skins/ax 3/LLleg.png" id="5_s7wq3"]
 [ext_resource type="Texture2D" uid="uid://bvballqygmt4b" path="res://Assets/skins/ax 3/LRarm.png" id="6_otae3"]

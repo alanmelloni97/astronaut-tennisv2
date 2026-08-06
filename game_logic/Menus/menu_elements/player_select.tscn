@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4068na67t3a8" path="res://game_logic/Menus/menu_elements/player_select.gd" id="1_d4yoc"]
 [ext_resource type="Texture2D" uid="uid://6txwsrgriwi3" path="res://Assets/ui/arrow_left.png" id="2_jogjo"]
-[ext_resource type="Texture2D" uid="uid://cj8gy1ghnil2w" path="res://Assets/skins/ax 3/ax3.png" id="3_ldonb"]
+[ext_resource type="Texture2D" uid="uid://d05k3a8ho8atx" path="res://Assets/skins/ax 3/ax3.png" id="3_ldonb"]
 [ext_resource type="Texture2D" uid="uid://cbsj00tbqs61d" path="res://Assets/lock.webp" id="3_wfc4a"]
 [ext_resource type="Texture2D" uid="uid://cpn0b4nuolpe0" path="res://Assets/ui/arrow_right.png" id="4_ldonb"]
 [ext_resource type="Script" uid="uid://biivslgugk8h2" path="res://game_logic/Menus/menu_elements/selector.gd" id="6_ku4ym"]
@@ -13,7 +13,7 @@
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rovc6"]
 
-[node name="PlayerSelect" type="PanelContainer" unique_id=2105652527 node_paths=PackedStringArray("_player_texture", "suit_name", "lock_control", "racket_select")]
+[node name="PlayerSelect" type="PanelContainer" unique_id=2105652527 node_paths=PackedStringArray("suit_name", "lock_control", "racket_select", "_player_texture")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -26,10 +26,10 @@ offset_bottom = 473.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d4yoc")
-_player_texture = NodePath("VBoxContainer/SkinSelect/Container/PlayerTexture")
 suit_name = NodePath("VBoxContainer/SuitName")
 lock_control = NodePath("VBoxContainer/SkinSelect/Container/LockControl")
 racket_select = NodePath("VBoxContainer/RacketSelect")
+_player_texture = NodePath("VBoxContainer/SkinSelect/Container/PlayerTexture")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=322469083]
 layout_mode = 2
@@ -94,7 +94,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/shadow_outline_size = 12
-text = "Play tournament to unlock skin"
+text = "Play tournament to unlock suit"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

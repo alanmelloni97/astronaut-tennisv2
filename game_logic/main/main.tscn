@@ -7,12 +7,14 @@
 [ext_resource type="Script" uid="uid://do0w1w1hnkqgd" path="res://game_logic/main/specific_scene_logic.gd" id="5_k3v36"]
 [ext_resource type="Script" uid="uid://b0dvddvx114dr" path="res://game_logic/main/music_manager.gd" id="6_4dugh"]
 [ext_resource type="AudioStream" uid="uid://cebnl430nkr3" path="res://Assets/music/ivantraveso-competition-music-challenge-music-129796.mp3" id="7_bldp5"]
-[ext_resource type="PackedScene" uid="uid://bvo06k07h5pvx" path="res://game_logic/main/preloading.tscn" id="8_620kg"]
 [ext_resource type="AudioStream" uid="uid://cvum2b5sw74aw" path="res://Assets/sounds/UI_Click_Snappy_mono.wav" id="9_6jl4q"]
 [ext_resource type="Script" uid="uid://d3ddtgq87jpug" path="res://game_logic/main/platform_config.gd" id="9_phvla"]
 [ext_resource type="AudioStream" uid="uid://ekgvn2xkte8" path="res://Assets/sounds/UI_Click_Cut_mono.wav" id="10_6jl4q"]
 [ext_resource type="Script" uid="uid://cn3qv486giv3t" path="res://game_logic/main/debug_version_warning.gd" id="10_yyosa"]
+[ext_resource type="Script" uid="uid://dsxqhy2yc5ld3" path="res://game_logic/main/preloading.gd" id="11_6jl4q"]
+[ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://game_logic/Ball/ball.tscn" id="12_krguk"]
 [ext_resource type="Script" uid="uid://byrxmi71fifpd" path="res://game_logic/main/ui_sound_player.gd" id="12_ntpxs"]
+[ext_resource type="Script" uid="uid://bt54tbh5ncuyw" path="res://game_logic/main/node.gd" id="15_krguk"]
 
 [node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager", "specific_scene_logic", "music_manager")]
 script = ExtResource("1_yh5la")
@@ -63,7 +65,12 @@ stream = ExtResource("10_6jl4q")
 volume_db = -15.0
 pitch_scale = 0.54
 
-[node name="Preloading" parent="." unique_id=731860452 instance=ExtResource("8_620kg")]
+[node name="Preloading" type="Node" parent="." unique_id=731860452 node_paths=PackedStringArray("ball")]
+script = ExtResource("11_6jl4q")
+ball = NodePath("Ball")
+
+[node name="Ball" parent="Preloading" unique_id=365515873 instance=ExtResource("12_krguk")]
+position = Vector2(579, 374)
 
 [node name="PlatformConfig" type="Node" parent="." unique_id=1742208959]
 script = ExtResource("9_phvla")
@@ -76,10 +83,13 @@ label = NodePath("Label")
 
 [node name="Label" type="Label" parent="DebugVersionWarning" unique_id=1520612531]
 visible = false
+modulate = Color(1, 0, 0, 1)
 offset_left = 750.0
 offset_top = 36.0
 offset_right = 2344.0
 offset_bottom = 197.0
-theme_type_variation = &"7SegmentLabel"
 theme_override_font_sizes/font_size = 30
-text = "THIS IS A DEBUG VERSION"
+text = "THIS A DEBUG VERSION"
+
+[node name="Node" type="Node" parent="." unique_id=701284327]
+script = ExtResource("15_krguk")

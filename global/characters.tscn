@@ -81,4 +81,4 @@ metadata/_custom_type_script = "uid://5rdixxdoulx3"
 [node name="Characters" type="Node" unique_id=990000372]
 script = ExtResource("1_nyi4w")
 characters = Array[ExtResource("2_k1buq")]([SubResource("Resource_ivnx7"), SubResource("Resource_cc3by"), SubResource("Resource_82qhk"), SubResource("Resource_2cl63"), SubResource("Resource_exe54"), SubResource("Resource_8mtkk"), SubResource("Resource_c2d4n"), SubResource("Resource_0hpa8"), SubResource("Resource_rt06a")])
-skins = Array[ExtResource("12_21p8j")]([ExtResource("12_rt06a"), ExtResource("5_c2d4n"), ExtResource("4_o1ipo"), ExtResource("5_cc3by"), ExtResource("5_2cl63"), ExtResource("4_ivnx7")])
+skins = Array[ExtResource("12_21p8j")]([ExtResource("12_rt06a"), ExtResource("5_2cl63"), ExtResource("4_o1ipo"), ExtResource("5_c2d4n"), ExtResource("5_cc3by"), ExtResource("4_ivnx7")])

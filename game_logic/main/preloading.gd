@@ -1,6 +1,6 @@
 extends Node
 
-@onready var ball: Ball = $Ball
+@export var ball: Ball
 
 
 func _ready() -> void:
