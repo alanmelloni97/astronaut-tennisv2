@@ -323,12 +323,13 @@ func _unhandled_input(_event: InputEvent) -> void:
 [node name="Level" type="Node2D" unique_id=1489784123]
 script = ExtResource("1_nk1il")
 
-[node name="LevelHandler" type="Node" parent="." unique_id=632591484 node_paths=PackedStringArray("touch_joysticks", "_score_manager", "_player_1", "_player_2", "_level")]
+[node name="LevelHandler" type="Node" parent="." unique_id=632591484 node_paths=PackedStringArray("touch_joysticks", "_score_manager", "_player_1", "_player_2", "_main_ui", "_level")]
 script = ExtResource("4_wqlfs")
 touch_joysticks = NodePath("../TouchJoysticks")
 _score_manager = NodePath("../ScoreHandler/ScoreManager")
 _player_1 = NodePath("../Player1")
 _player_2 = NodePath("../Player2")
+_main_ui = NodePath("../MainUI")
 _level = NodePath("..")
 
 [node name="ScoreHandler" type="Node" parent="." unique_id=2106818377 node_paths=PackedStringArray("bounce_detector", "_score_manager", "_score_ui", "point_sound", "game_won_sound", "game_lost_sound", "level")]

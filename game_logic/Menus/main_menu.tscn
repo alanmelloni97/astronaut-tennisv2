@@ -45,17 +45,17 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 60
 text = "TOURNAMENT"
 
 [node name="2PlayerButtton" type="Button" parent="PanelContainer/Buttons" unique_id=1942199620]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 60
 text = "2 PLAYERS"
 
 [node name="QuitButton" type="Button" parent="PanelContainer/Buttons" unique_id=1039137632]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 60
 text = "QUIT
 "
 script = ExtResource("3_at0u2")

@@ -43,10 +43,9 @@ offset_bottom = 546.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(-13, 2)
-size_flags_horizontal = 4
 size_flags_vertical = 3
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
@@ -60,12 +59,10 @@ size_flags_vertical = 3
 [node name="Player1Select" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=359726694 instance=ExtResource("3_c6e8c")]
 layout_mode = 2
 size_flags_horizontal = 6
-size_flags_vertical = 4
 
 [node name="Player2Select" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1806913641 instance=ExtResource("3_c6e8c")]
 layout_mode = 2
 size_flags_horizontal = 6
-size_flags_vertical = 4
 
 [node name="TournamentTable" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=398236205 instance=ExtResource("3_iapl6")]
 layout_mode = 2

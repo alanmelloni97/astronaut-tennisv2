@@ -4,20 +4,16 @@ TODO:
 	logo
 	metalizado
 	pelota con crateres mas grandes
-	icono redondo para andoir ver godot docs
+	hacer dificultad en perfiles
+
 
 BUG:
 	pelota pica 3 veces en especial cuando es bouncy
 
 
 
-CLASE PABLO:
-	pelota metal
-	trajes metal
-	logo
-
-
 PRELAUNCH:
+	icono redondo para andoir ver godot docs
 	test mobile margins
 	balancear movimiento
 	steam
