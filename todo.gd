@@ -1,11 +1,9 @@
 "
 TODO:
 	labels
-	logo
 	metalizado
-	pelota con crateres mas grandes
 	hacer dificultad en perfiles
-
+	dar creditos
 
 BUG:
 	pelota pica 3 veces en especial cuando es bouncy
