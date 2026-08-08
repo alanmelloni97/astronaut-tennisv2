@@ -13,7 +13,6 @@ config_version=5
 config/name="AstroTennis"
 run/main_scene="uid://0tguoaxhermy"
 config/features=PackedStringArray("4.7", "Mobile")
-boot_splash/stretch_mode=0
 boot_splash/image="uid://d16qec24qj64b"
 config/icon="uid://c46834jkvimjp"
 boot_splash/minimum_display_time=1000
@@ -34,6 +33,10 @@ window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="AstroTennis"
 
 [editor_plugins]
 

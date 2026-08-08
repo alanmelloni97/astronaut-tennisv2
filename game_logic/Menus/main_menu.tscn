@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://drvurm8tf23h1" path="res://game_logic/Menus/main_menu.gd" id="1_jf8mj"]
 [ext_resource type="Texture2D" uid="uid://bsylxxijaxp5d" path="res://Assets/backgrounds/main_menu_background.png" id="2_11gta"]
 [ext_resource type="Script" uid="uid://2heu6o8gy3f8" path="res://game_logic/Menus/quit_button_web.gd" id="3_at0u2"]
-[ext_resource type="Texture2D" uid="uid://5w1d5qb5j75j" path="res://Assets/title.png" id="4_cxdly"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iel50"]
+load_path = "res://.godot/imported/title.png-a9c43f00d2655a5d316eda51387dfbea.ctex"
 
 [node name="MainMenu" type="CanvasLayer" unique_id=2023607876]
 script = ExtResource("1_jf8mj")
@@ -72,7 +74,7 @@ offset_right = 280.5
 offset_bottom = -123.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_cxdly")
+texture = SubResource("CompressedTexture2D_iel50")
 
 [connection signal="pressed" from="PanelContainer/Buttons/TournamentButton" to="." method="_on_tournament_button_pressed"]
 [connection signal="pressed" from="PanelContainer/Buttons/2PlayerButtton" to="." method="_on_player_buttton_pressed"]
