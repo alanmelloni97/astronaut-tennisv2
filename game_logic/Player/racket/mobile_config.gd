@@ -7,6 +7,6 @@ extends Node
 
 
 func _ready() -> void:
-	if DisplayServer.is_touchscreen_available():
+	if BuildConfig.difficulty == BuildConfig.Difficulty.CASUAL:
 		racket.linear_damp = touchscreen_damp
 		racket.motion_manager._FORCE_MULT = touchscreen_force

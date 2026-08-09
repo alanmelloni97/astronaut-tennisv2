@@ -17,8 +17,6 @@ PRELAUNCH:
 	steam
 	google play
 	crazygames
-	cover art
-	video
 
 
 TEST LAUNCH:
