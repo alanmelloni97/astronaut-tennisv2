@@ -57,7 +57,7 @@ _ai_manager = NodePath("AIManager")
 [node name="MotionManager" type="Node" parent="MovementHandler" unique_id=954893411 node_paths=PackedStringArray("_rb")]
 script = ExtResource("2_o468d")
 _rb = NodePath("../..")
-_FORCE_MULT = 19000
+_FORCE_MULT = 20000
 
 [node name="InputManager" type="Node" parent="MovementHandler" unique_id=1846637120]
 script = ExtResource("3_xsmco")
@@ -97,3 +97,7 @@ debug_path_custom_color = Color(1, 0, 0, 1)
 [node name="BuildConfig" type="Node" parent="." unique_id=244560580 node_paths=PackedStringArray("racket")]
 script = ExtResource("9_eay6m")
 racket = NodePath("..")
+touchscreen_damp = 3.0
+touchscreen_force = 25000
+casual_damp = 2.0
+casual_force = 23000

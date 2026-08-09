@@ -3,6 +3,7 @@ extends Node
 
 enum Difficulty {
 	REALISTIC,
+	TOUCHSCREEN,
 	CASUAL,
 }
 
@@ -10,5 +11,7 @@ var difficulty: Difficulty = Difficulty.REALISTIC
 
 
 func _ready() -> void:
-	if DisplayServer.is_touchscreen_available() or OS.has_feature("web_casual"):
+	if DisplayServer.is_touchscreen_available():
+		difficulty = Difficulty.TOUCHSCREEN
+	elif OS.has_feature("web_casual"):
 		difficulty = Difficulty.CASUAL
