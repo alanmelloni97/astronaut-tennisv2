@@ -25,11 +25,6 @@ Characters="*uid://cxyudux51rjxk"
 BuildConfig="*uid://b3284txojx8a0"
 GameState="*uid://bwvofcl4w84ob"
 
-[debug]
-
-settings/stdout/print_fps=true
-settings/stdout/print_gpu_profile=true
-
 [display]
 
 window/size/viewport_width=1920
@@ -147,5 +142,7 @@ common/physics_interpolation=true
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
