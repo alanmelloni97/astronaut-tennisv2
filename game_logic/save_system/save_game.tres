@@ -137,6 +137,7 @@ script = ExtResource("1_wgoqk")
 name = "Neil Armstrong"
 skin = ExtResource("6_cbk4a")
 ai_level = ExtResource("9_nc3dv")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_rt06a"]

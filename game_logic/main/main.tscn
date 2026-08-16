@@ -70,7 +70,7 @@ script = ExtResource("11_6jl4q")
 ball = NodePath("Ball")
 
 [node name="Ball" parent="Preloading" unique_id=365515873 instance=ExtResource("12_krguk")]
-position = Vector2(579, 374)
+position = Vector2(945, 517)
 
 [node name="PlatformConfig" type="Node" parent="." unique_id=1742208959]
 script = ExtResource("9_phvla")

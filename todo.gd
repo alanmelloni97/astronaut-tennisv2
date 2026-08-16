@@ -1,10 +1,6 @@
 "
 TODO:
 	metalizado
-	admob
-	investigar linea de carga splashscreen
-	joystick (y que puedan usar el menu)
-	logo dogseal
 
 
 BUG:
@@ -20,6 +16,8 @@ PRELAUNCH:
 AFTER LAUNCH:
 	joystick tutorial (no tutorial)
 	achivements
+	admob
+	logo dogseal
 
 
 "

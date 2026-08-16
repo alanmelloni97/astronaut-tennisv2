@@ -40,7 +40,6 @@
 [ext_resource type="AudioStream" uid="uid://btcdd3x5ngd0g" path="res://Assets/sounds/powerup_unbouncy.wav" id="26_50hjx"]
 [ext_resource type="Script" uid="uid://duoytmh0h0bgk" path="res://game_logic/UI/score_ui.gd" id="26_232uv"]
 [ext_resource type="Texture2D" uid="uid://bgun8kwshfrle" path="res://Assets/ball/pelota unbouncy.png" id="27_03h4c"]
-[ext_resource type="Texture2D" uid="uid://ciidw7i5yd55g" path="res://Assets/2d_lights_and_shadows_neutral_point_light.webp" id="30_816bt"]
 [ext_resource type="Texture2D" uid="uid://bufdo4widt72" path="res://Assets/ball/pelota metal.png" id="31_fcifm"]
 [ext_resource type="Script" uid="uid://dfl5jgryfcp4k" path="res://game_logic/Ball/Effects/GravityEffect.gd" id="32_50hjx"]
 [ext_resource type="Script" uid="uid://bqff6nk6p8ecf" path="res://game_logic/Level/tutorials.gd" id="32_qk0lb"]
@@ -56,6 +55,7 @@
 [ext_resource type="Script" uid="uid://d3wjxv138x665" path="res://game_logic/Level/navigation_region_2d.gd" id="39_t3ka0"]
 [ext_resource type="Texture2D" uid="uid://bugdpy154qdky" path="res://Assets/ball_gate.png" id="43_03h4c"]
 [ext_resource type="Script" uid="uid://cpeetagww62tb" path="res://game_logic/Level/ball_gate.gd" id="44_fcifm"]
+[ext_resource type="Texture2D" uid="uid://y2vp21fr5ckg" path="res://Assets/backgrounds/light.png" id="55_5okrb"]
 
 [sub_resource type="Resource" id="Resource_du4cn"]
 script = ExtResource("13_jghi6")
@@ -382,8 +382,8 @@ metadata/_custom_type_script = "uid://g42dx5ur7jin"
 
 [node name="LightsManager" type="Node" parent="LightsHandler" unique_id=279595935 node_paths=PackedStringArray("light_1", "light_2")]
 script = ExtResource("2_wqlfs")
-light_1 = NodePath("../../World/Lights/PointLight1")
-light_2 = NodePath("../../World/Lights/PointLight2")
+light_1 = NodePath("../../World/Lights/Light1")
+light_2 = NodePath("../../World/Lights/Light2")
 
 [node name="BounceDetector" type="Node" parent="." unique_id=130199060 node_paths=PackedStringArray("player_1", "player_2", "left_detector", "right_detector")]
 script = ExtResource("6_nk1il")
@@ -458,13 +458,13 @@ _main_ui = NodePath("..")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1058688654]
 light_mask = 2
-position = Vector2(960, 540)
+position = Vector2(995, 650)
 texture = ExtResource("38_vb7dm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1543820245]
 
 [node name="BallGate" type="AnimatedSprite2D" parent="Background" unique_id=1117463632 node_paths=PackedStringArray("ball_manager")]
-position = Vector2(2, -411)
+position = Vector2(-33, -521)
 sprite_frames = SubResource("SpriteFrames_5ud5j")
 animation = &"close"
 frame = 7
@@ -642,31 +642,17 @@ vertical_alignment = 1
 
 [node name="Lights" type="Node2D" parent="World" unique_id=245549183]
 
-[node name="PointLight1" type="PointLight2D" parent="World/Lights" unique_id=1750763901]
-position = Vector2(385, 102)
-scale = Vector2(0.27343744, 0.27343744)
-enabled = false
-color = Color(0.4509804, 0.2784314, 0, 0.61960787)
-energy = 7.0
-range_item_cull_mask = 2
-texture = ExtResource("30_816bt")
+[node name="Light1" type="Sprite2D" parent="World/Lights" unique_id=1349103445]
+visible = false
+position = Vector2(384, 103.00001)
+scale = Vector2(1.0526316, 1.0526315)
+texture = ExtResource("55_5okrb")
 
-[node name="DummyLight" type="PointLight2D" parent="World/Lights" unique_id=868606392]
-position = Vector2(335.5, 128.5)
-scale = Vector2(0.22265619, 0.22265624)
-color = Color(0.82459205, 0.858649, 0, 1)
-energy = 0.01
-range_item_cull_mask = 2
-texture = ExtResource("30_816bt")
-
-[node name="PointLight2" type="PointLight2D" parent="World/Lights" unique_id=857232675]
-position = Vector2(1540.5348, 107.99999)
-scale = Vector2(0.2619902, 0.26539934)
-enabled = false
-color = Color(0.4509804, 0.2784314, 0, 0.61960787)
-energy = 7.0
-range_item_cull_mask = 2
-texture = ExtResource("30_816bt")
+[node name="Light2" type="Sprite2D" parent="World/Lights" unique_id=108563077]
+visible = false
+position = Vector2(1540, 102)
+scale = Vector2(1.0526316, 1.0526315)
+texture = ExtResource("55_5okrb")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="World" unique_id=1642094665]
 visible = false

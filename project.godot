@@ -13,16 +13,22 @@ config_version=5
 config/name="AstroTennis"
 run/main_scene="uid://0tguoaxhermy"
 config/features=PackedStringArray("4.7", "Mobile")
+run/max_fps=60
 boot_splash/image="uid://d16qec24qj64b"
 config/icon="uid://c46834jkvimjp"
 boot_splash/minimum_display_time=1000
 
 [autoload]
 
-Characters="*uid://cxyudux51rjxk"
 Scenes="*uid://btdxfw2ejjx0y"
-GameState="*uid://bwvofcl4w84ob"
+Characters="*uid://cxyudux51rjxk"
 BuildConfig="*uid://b3284txojx8a0"
+GameState="*uid://bwvofcl4w84ob"
+
+[debug]
+
+settings/stdout/print_fps=true
+settings/stdout/print_gpu_profile=true
 
 [display]
 
@@ -133,13 +139,13 @@ locale/translations=PackedStringArray("res://addons/admob/gdscript/sample/transl
 
 [physics]
 
-common/physics_ticks_per_second=120
-2d/physics_engine="GodotPhysics2D"
 3d/physics_engine="Jolt Physics"
 2d/default_gravity=400.0
+2d/solver/solver_iterations=4
 common/physics_interpolation=true
 
 [rendering]
 
+rendering_device/driver.windows="d3d12"
 textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
