@@ -1,9 +1,10 @@
 "
 TODO:
-	labels
 	metalizado
 	admob
-	crazygames ads
+	investigar linea de carga splashscreen
+	joystick (y que puedan usar el menu)
+	logo dogseal
 
 
 BUG:

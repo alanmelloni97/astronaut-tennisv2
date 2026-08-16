@@ -22,9 +22,8 @@ boot_splash/minimum_display_time=1000
 Characters="*uid://cxyudux51rjxk"
 Scenes="*uid://btdxfw2ejjx0y"
 GameState="*uid://bwvofcl4w84ob"
-CrazyGamesBridge="*uid://kh6wewaxvolh"
-CrazyGames="*uid://banh8sofjmlun"
 BuildConfig="*uid://b3284txojx8a0"
+DebugMenu="*uid://cggqb75a8w8r"
 
 [display]
 
@@ -34,6 +33,7 @@ window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/vsync/vsync_mode=0
 
 [dotnet]
 
@@ -41,7 +41,7 @@ project/assembly_name="AstroTennis"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/admob/plugin.cfg", "res://addons/crazygames/plugin.cfg")
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/admob/plugin.cfg")
 
 [global_group]
 
@@ -134,7 +134,7 @@ locale/translations=PackedStringArray("res://addons/admob/gdscript/sample/transl
 
 [physics]
 
-common/physics_ticks_per_second=240
+common/physics_ticks_per_second=120
 2d/physics_engine="GodotPhysics2D"
 3d/physics_engine="Jolt Physics"
 2d/default_gravity=400.0

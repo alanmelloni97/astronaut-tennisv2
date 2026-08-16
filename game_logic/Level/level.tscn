@@ -458,13 +458,13 @@ _main_ui = NodePath("..")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1058688654]
 light_mask = 2
-position = Vector2(995.52, 650)
+position = Vector2(960, 540)
 texture = ExtResource("38_vb7dm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1543820245]
 
 [node name="BallGate" type="AnimatedSprite2D" parent="Background" unique_id=1117463632 node_paths=PackedStringArray("ball_manager")]
-position = Vector2(-33.52002, -522)
+position = Vector2(2, -411)
 sprite_frames = SubResource("SpriteFrames_5ud5j")
 animation = &"close"
 frame = 7

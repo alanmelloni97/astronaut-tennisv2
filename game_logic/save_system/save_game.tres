@@ -128,6 +128,7 @@ script = ExtResource("1_wgoqk")
 name = "Yuri Gagarin"
 skin = ExtResource("4_g3xsq")
 ai_level = ExtResource("9_nc3dv")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_kj8p8"]

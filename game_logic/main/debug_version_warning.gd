@@ -1,9 +1,7 @@
 class_name DebugVersionWarning
-extends CanvasLayer
-
-@export var label: Label
+extends Node
 
 
 func _ready() -> void:
-	if OS.is_debug_build():
-		label.show()
+	if not OS.is_debug_build():
+		queue_free()

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4068na67t3a8" path="res://game_logic/Menus/menu_elements/player_select.gd" id="1_d4yoc"]
 [ext_resource type="Texture2D" uid="uid://6txwsrgriwi3" path="res://Assets/ui/arrow_left.png" id="2_jogjo"]
+[ext_resource type="Texture2D" uid="uid://mwyx36xncmqm" path="res://Assets/ui/label_backround.png" id="2_ldonb"]
 [ext_resource type="Texture2D" uid="uid://d05k3a8ho8atx" path="res://Assets/skins/ax 3/ax3.png" id="3_ldonb"]
 [ext_resource type="Texture2D" uid="uid://cbsj00tbqs61d" path="res://Assets/lock.webp" id="3_wfc4a"]
 [ext_resource type="Texture2D" uid="uid://cpn0b4nuolpe0" path="res://Assets/ui/arrow_right.png" id="4_ldonb"]
@@ -10,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://cr6n7vyypy6x0" path="res://Assets/rackets/Racket blue.png" id="8_g54bk"]
 [ext_resource type="Texture2D" uid="uid://inydcigwru2l" path="res://Assets/rackets/Racket yellow.png" id="9_o1wid"]
 [ext_resource type="Texture2D" uid="uid://c1al8kkxkkxlc" path="res://Assets/rackets/carbon rod.png" id="11_hvsg0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5okrb"]
+texture = ExtResource("2_ldonb")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rovc6"]
 
@@ -39,6 +43,7 @@ size_flags_horizontal = 4
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxTexture_5okrb")
 text = "ASTRONAUT"
 uppercase = true
 

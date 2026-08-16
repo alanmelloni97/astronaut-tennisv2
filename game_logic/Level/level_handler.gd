@@ -13,7 +13,6 @@ func _ready() -> void:
 	_score_manager.game_finished.connect(_on_game_finished)
 	set_up_players()
 	touch_joysticks.two_players = _level.two_player_mode
-	CrazyGames.Game.gameplay_start()
 
 
 func set_up_players():
