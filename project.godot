@@ -23,7 +23,6 @@ Characters="*uid://cxyudux51rjxk"
 Scenes="*uid://btdxfw2ejjx0y"
 GameState="*uid://bwvofcl4w84ob"
 BuildConfig="*uid://b3284txojx8a0"
-DebugMenu="*uid://cggqb75a8w8r"
 
 [display]
 
@@ -142,8 +141,5 @@ common/physics_interpolation=true
 
 [rendering]
 
-rendering_device/driver.windows="d3d12"
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
