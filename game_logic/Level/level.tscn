@@ -620,10 +620,10 @@ vertical_alignment = 1
 [node name="BackgroundScore2" type="Label" parent="World/Scores" unique_id=926021637]
 self_modulate = Color(1, 1, 1, 0.26666668)
 layout_mode = 0
-offset_left = 1620.0
-offset_top = 103.0
-offset_right = 1709.0
-offset_bottom = 226.0
+offset_left = 1622.0
+offset_top = 96.0
+offset_right = 1711.0
+offset_bottom = 219.0
 theme_type_variation = &"7SegmentLabel"
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6

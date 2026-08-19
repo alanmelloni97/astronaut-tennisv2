@@ -107,7 +107,7 @@ node_a = NodePath("../../Body")
 node_b = NodePath("../../URarm")
 
 [node name="Neck" type="PinJoint2D" parent="Body/joints" unique_id=155226632]
-position = Vector2(0, -105)
+position = Vector2(-1, -115)
 node_a = NodePath("../../Body")
 node_b = NodePath("../../Head")
 softness = 0.2
@@ -142,7 +142,6 @@ collision_layer = 4
 collision_mask = 28
 mass = 0.5
 gravity_scale = 0.2
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/LRarm" unique_id=1381984965]
@@ -160,7 +159,6 @@ collision_layer = 4
 collision_mask = 28
 mass = 0.5
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/URarm" unique_id=1448816685]
@@ -176,7 +174,6 @@ collision_layer = 4
 collision_mask = 28
 mass = 0.5
 gravity_scale = 0.2
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/LLarm" unique_id=960778191]
@@ -192,7 +189,6 @@ collision_layer = 4
 collision_mask = 28
 mass = 0.5
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/ULarm" unique_id=1180460072]
@@ -208,7 +204,6 @@ collision_layer = 4
 collision_mask = 28
 mass = 0.5
 gravity_scale = 0.25
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D5" type="Sprite2D" parent="Body/LLleg" unique_id=922296603]
@@ -223,7 +218,6 @@ collision_layer = 4
 collision_mask = 28
 mass = 0.5
 gravity_scale = 0.25
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D4" type="Sprite2D" parent="Body/LRleg" unique_id=602806017]
@@ -238,7 +232,6 @@ position = Vector2(33, 136)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D3" type="Sprite2D" parent="Body/URleg" unique_id=198846197]
@@ -254,7 +247,6 @@ collision_layer = 4
 collision_mask = 28
 mass = 0.5
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D2" type="Sprite2D" parent="Body/ULleg" unique_id=1270417210]
@@ -268,7 +260,6 @@ collision_layer = 4
 collision_mask = 28
 mass = 0.5
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Body" unique_id=1403923878]
@@ -283,7 +274,6 @@ collision_layer = 4
 collision_mask = 28
 mass = 0.5
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Head" unique_id=762559089]

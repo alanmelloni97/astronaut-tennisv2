@@ -112,7 +112,6 @@ position = Vector2(116, -26)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D2" type="Sprite2D" parent="Body/Tail" unique_id=26129910]
@@ -127,7 +126,6 @@ shape = SubResource("CapsuleShape2D_12ayb")
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Body" unique_id=1403923878]
@@ -143,7 +141,6 @@ position = Vector2(-102, -64)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Head" unique_id=762559089]
@@ -159,7 +156,6 @@ position = Vector2(-73, 117)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.25
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D5" type="Sprite2D" parent="Body/LLleg" unique_id=922296603]
@@ -174,7 +170,6 @@ position = Vector2(113, 107)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.25
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D4" type="Sprite2D" parent="Body/LRleg" unique_id=602806017]
@@ -191,7 +186,6 @@ rotation = -0.7853982
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D3" type="Sprite2D" parent="Body/URleg" unique_id=198846197]
@@ -208,7 +202,6 @@ position = Vector2(-65, 57)
 collision_layer = 4
 collision_mask = 28
 gravity_scale = 0.3
-continuous_cd = 2
 linear_damp = 0.5
 
 [node name="Sprite2D2" type="Sprite2D" parent="Body/ULleg" unique_id=1270417210]

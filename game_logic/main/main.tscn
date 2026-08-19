@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://dsxqhy2yc5ld3" path="res://game_logic/main/preloading.gd" id="11_6jl4q"]
 [ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://game_logic/Ball/ball.tscn" id="12_krguk"]
 [ext_resource type="Script" uid="uid://byrxmi71fifpd" path="res://game_logic/main/ui_sound_player.gd" id="12_ntpxs"]
-[ext_resource type="PackedScene" uid="uid://cggqb75a8w8r" path="res://components/debug_menu/debug_menu.tscn" id="14_k05wu"]
+[ext_resource type="PackedScene" uid="uid://cggqb75a8w8r" path="res://components/debug_menu/debug_menu.tscn" id="15_krguk"]
 
 [node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager", "specific_scene_logic", "music_manager")]
 script = ExtResource("1_yh5la")
@@ -80,15 +80,14 @@ mobile_fullscreen = true
 [node name="DebugVisuals" type="Node" parent="." unique_id=363350970]
 script = ExtResource("10_yyosa")
 
-[node name="CanvasLayer" parent="DebugVisuals" unique_id=2123809624 instance=ExtResource("14_k05wu")]
+[node name="DebugStats" parent="DebugVisuals" unique_id=1089853796 instance=ExtResource("15_krguk")]
 
-[node name="DebugWarning" type="Label" parent="DebugVisuals/CanvasLayer" unique_id=1520612531]
-modulate = Color(1, 0, 0, 1)
+[node name="Label" type="Label" parent="DebugVisuals/DebugStats" unique_id=769429367]
+self_modulate = Color(0.7004348, 0.08621108, 0.12591219, 1)
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 39.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 30
-text = "THIS A DEBUG VERSION"
+text = "DEBUG VERSION"
 horizontal_alignment = 1
-vertical_alignment = 1
