@@ -5,6 +5,8 @@ extends CPUParticles2D
 
 
 func _ready() -> void:
+	if OS.get_name() == "Web":
+		queue_free()
 	ball._removed.connect(_on_ball_removed)
 
 
