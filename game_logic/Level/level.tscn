@@ -55,6 +55,8 @@
 [ext_resource type="Script" uid="uid://d3wjxv138x665" path="res://game_logic/Level/navigation_region_2d.gd" id="39_t3ka0"]
 [ext_resource type="Texture2D" uid="uid://bugdpy154qdky" path="res://Assets/ball_gate.png" id="43_03h4c"]
 [ext_resource type="Script" uid="uid://cpeetagww62tb" path="res://game_logic/Level/ball_gate.gd" id="44_fcifm"]
+[ext_resource type="Script" uid="uid://bx38ayxq0vdue" path="res://game_logic/Level/gameplay_start_tracker.gd" id="46_36qvi"]
+[ext_resource type="Script" uid="uid://e72vkh23him0" path="res://game_logic/Level/ad_handler.gd" id="47_ervdu"]
 [ext_resource type="Texture2D" uid="uid://y2vp21fr5ckg" path="res://Assets/backgrounds/light.png" id="55_5okrb"]
 
 [sub_resource type="Resource" id="Resource_du4cn"]
@@ -446,6 +448,18 @@ position = Vector2(1445, 312)
 scale = Vector2(0.5221675, 0.52216756)
 texture = ExtResource("38_50hjx")
 script = ExtResource("38_fcifm")
+
+[node name="GameplayStartTracker" type="Node" parent="." unique_id=887073589 node_paths=PackedStringArray("main_ui", "player_1", "player_2", "level")]
+process_mode = 3
+script = ExtResource("46_36qvi")
+main_ui = NodePath("../MainUI")
+player_1 = NodePath("../Player1")
+player_2 = NodePath("../Player2")
+level = NodePath("..")
+
+[node name="AdHandler" type="Node" parent="." unique_id=1442450406]
+process_mode = 3
+script = ExtResource("47_ervdu")
 
 [node name="TouchJoysticks" parent="." unique_id=25295857 instance=ExtResource("24_6uec0")]
 

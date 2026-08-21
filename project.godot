@@ -24,12 +24,12 @@ Scenes="*uid://btdxfw2ejjx0y"
 Characters="*uid://cxyudux51rjxk"
 BuildConfig="*uid://b3284txojx8a0"
 GameState="*uid://bwvofcl4w84ob"
+PokiSDK="*uid://c72j1j6g10y8w"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=4
 window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/mode="canvas_items"
@@ -42,7 +42,7 @@ project/assembly_name="AstroTennis"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/admob/plugin.cfg")
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/admob/plugin.cfg", "res://addons/poki-sdk/plugin.cfg")
 
 [global_group]
 

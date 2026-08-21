@@ -39,7 +39,6 @@ script = ExtResource("5_k3v36")
 scene_manager = NodePath("..")
 
 [node name="MusicManager" type="Node" parent="." unique_id=124095115 node_paths=PackedStringArray("audio_stream_player")]
-process_mode = 3
 script = ExtResource("6_4dugh")
 audio_stream_player = NodePath("AudioStreamPlayer")
 FADE_IN_SECONDS = 2.0

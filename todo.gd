@@ -1,7 +1,8 @@
 "
 TODO:
 	hacewr que nivel afecte a jugadores pero no a ia
-	probar compilar con size en vez de size extra
+	arreglar cabexas al reves
+	elegir personaje con teclas
 BUG:
 	pelota pica 3 veces en especial cuando es bouncy
 
