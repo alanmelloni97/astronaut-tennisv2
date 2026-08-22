@@ -13,11 +13,16 @@ enum PlayerType {
 
 
 # WRAPPERS
-func disable_input():
-	racket.movement_handler.disable_input()
+func disable_input(disable: bool):
+	racket.movement_handler.disable_input(disable)
 
 
-func set_up_player(player_type: PlayerType, char_skin: CharacterSkin, racket_skin: Texture2D, ai_level: AILevel = null):
+func set_up_player(
+	player_type: PlayerType,
+	char_skin: CharacterSkin,
+	racket_skin: Texture2D,
+	ai_level: AILevel = null,
+):
 	racket.movement_handler.set_player_type(player_type)
 	_set_ragdoll(player_type, char_skin)
 	_set_racket(racket_skin, char_skin)

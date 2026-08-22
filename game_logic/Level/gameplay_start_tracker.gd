@@ -37,6 +37,5 @@ func _on_gameplay_stopped():
 func _on_gameplay_start():
 	await get_tree().process_frame
 	await get_tree().process_frame
-	PokiSDK.commercialBreak()
 	PokiSDK.gameplayStart()
 	print("gameplay started")

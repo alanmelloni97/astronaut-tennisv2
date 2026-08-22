@@ -12,6 +12,8 @@ var player_1_skin: CharacterSkin
 var player_2_skin: CharacterSkin
 var racket_1_skin: Texture2D
 var racket_2_skin: Texture2D
+# hack for ad reward
+var ad_reward_saved_score: Vector2i
 
 
 func manage_before_changing_scene(current_scene: Node):
@@ -39,6 +41,9 @@ func manage_before_changing_scene(current_scene: Node):
 				# set character in the list as beated
 				Characters.get_current_rival().beated = true
 				scene_manager.save_requested.emit()
+		# ad watched
+		if current_scene.watched_ad:
+			ad_reward_saved_score = current_scene.current_score
 
 
 func manage_after_changing_scene(new_scene: Node):
@@ -56,6 +61,9 @@ func manage_after_changing_scene(new_scene: Node):
 		else:
 			new_scene.rival = Characters.get_current_rival()
 			new_scene.racket_2_skin = load("res://Assets/rackets/Racket red.png")
+		# ad reward
+		if ad_reward_saved_score != Vector2i.ZERO:
+			new_scene.current_score = ad_reward_saved_score
 
 
 func _restart_tournament():

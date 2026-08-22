@@ -18,5 +18,4 @@ AFTER LAUNCH:
 	logo dogseal
 	steam achievements
 
-
 "

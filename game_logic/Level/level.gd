@@ -11,3 +11,6 @@ var racket_1_skin: Texture2D
 var racket_2_skin: Texture2D
 var rival: Character
 var winner: int
+# Hack to account for ad reward
+var watched_ad: bool
+var current_score: Vector2i
