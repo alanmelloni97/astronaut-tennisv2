@@ -5,6 +5,8 @@ extends Node
 @export var _motion_manager: MotionManager
 @export var _ai_manager: RacketAIManager
 
+var player_type: Player.PlayerType
+
 
 func _physics_process(_delta: float) -> void:
 	var input: Vector2
@@ -17,6 +19,7 @@ func _physics_process(_delta: float) -> void:
 
 
 func set_player_type(type: Player.PlayerType):
+	player_type = type
 	match type:
 		Player.PlayerType.PLAYER_1:
 			_ai_manager.queue_free()

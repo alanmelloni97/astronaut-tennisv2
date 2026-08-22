@@ -1,10 +1,9 @@
 "
 TODO:
-	mute audio reinicia cancion en poki
-	hacewr que nivel afecte a jugadores pero no a ia
 	arreglar cabexas al reves
 	elegir personaje con teclas
 	guardar ultimo personaje elejido
+	hacer showcase inkscape template
 BUG:
 	pelota pica 3 veces en especial cuando es bouncy
 

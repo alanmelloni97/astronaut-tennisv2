@@ -6,9 +6,13 @@ extends Node
 @export var touchscreen_force: int
 @export var casual_damp: float
 @export var casual_force: int
+@export var movement_handler: MovementHandler
 
 
 func _ready() -> void:
+	# avoid affecting ai
+	if movement_handler.player_type == Player.PlayerType.AI_RIVAL:
+		return
 	if BuildConfig.difficulty == BuildConfig.Difficulty.TOUCHSCREEN:
 		racket.linear_damp = touchscreen_damp
 		racket.motion_manager._FORCE_MULT = touchscreen_force

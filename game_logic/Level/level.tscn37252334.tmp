@@ -1,0 +1,691 @@
+[gd_scene format=4 uid="uid://chadn3q8nxw76"]
+
+[ext_resource type="Script" uid="uid://c8pybqjk67mae" path="res://game_logic/Level/level.gd" id="1_nk1il"]
+[ext_resource type="PackedScene" uid="uid://s0tp4m1b6iun" path="res://game_logic/Player/player.tscn" id="1_o6mkr"]
+[ext_resource type="Script" uid="uid://dq6h2sb8bfine" path="res://game_logic/Level/ball_handler.gd" id="2_1teg4"]
+[ext_resource type="Script" uid="uid://dill5luto3ayb" path="res://game_logic/Level/ball_logic_handler.gd" id="2_py82k"]
+[ext_resource type="Script" uid="uid://g42dx5ur7jin" path="res://game_logic/Level/light_manager.gd" id="2_wqlfs"]
+[ext_resource type="Script" uid="uid://dsxp18paeb0yh" path="res://game_logic/Level/points_manager.gd" id="3_52x1o"]
+[ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://game_logic/Ball/ball.tscn" id="3_py82k"]
+[ext_resource type="Script" uid="uid://byuw8vbpfsr3f" path="res://game_logic/Level/score_handler.gd" id="3_uqeto"]
+[ext_resource type="Script" uid="uid://byy8vfben3kxo" path="res://game_logic/Level/level_handler.gd" id="4_wqlfs"]
+[ext_resource type="PackedScene" uid="uid://x11muvl3x6vi" path="res://game_logic/UI/main_ui/main_ui.tscn" id="5_d6qko"]
+[ext_resource type="AudioStream" uid="uid://pdtbnx2ipyy6" path="res://Assets/sounds/point.wav" id="5_isrne"]
+[ext_resource type="AudioStream" uid="uid://myo0df33nnfe" path="res://Assets/sounds/DM-CGS-12.wav" id="6_5okrb"]
+[ext_resource type="Script" uid="uid://bqlse54u8e0r8" path="res://game_logic/Level/bounce_detector.gd" id="6_nk1il"]
+[ext_resource type="Script" uid="uid://yjd3fkfu48mi" path="res://game_logic/Level/lights_handler.gd" id="7_1p6h5"]
+[ext_resource type="AudioStream" uid="uid://c0cnuirtia2td" path="res://Assets/sounds/AUDIENCE_Bhoos_01_stereo.wav" id="7_36qvi"]
+[ext_resource type="Script" uid="uid://c3jkt2u4aautb" path="res://game_logic/Level/ui_handler.gd" id="7_i5g78"]
+[ext_resource type="AudioStream" uid="uid://c0niq74s17dmn" path="res://Assets/sounds/DEMOLISH_Short_01_mono.wav" id="11_5okrb"]
+[ext_resource type="Script" uid="uid://btnplapf4f544" path="res://game_logic/Level/stall_ball_detector.gd" id="11_bhu2o"]
+[ext_resource type="Script" uid="uid://b615mceneh7q" path="res://game_logic/Ball/PowerUp/powerup_data.gd" id="12_am3y4"]
+[ext_resource type="PackedScene" uid="uid://0g8h07ct0gia" path="res://game_logic/Ball/PowerUp/ball_powerup.tscn" id="12_k8npl"]
+[ext_resource type="Script" uid="uid://byub6igigr88i" path="res://game_logic/Ball/Effects/ScaleEffect.gd" id="13_jghi6"]
+[ext_resource type="Texture2D" uid="uid://cuf1llgs2dgqe" path="res://Assets/ball/powerup big.png" id="15_vb7dm"]
+[ext_resource type="PhysicsMaterial" uid="uid://n201dib0xrmv" path="res://game_logic/Ball/physics materials/bouncy.tres" id="16_cqvaw"]
+[ext_resource type="AudioStream" uid="uid://f0woqda6bxmo" path="res://Assets/sounds/hit_bouncy.wav" id="16_pt1jg"]
+[ext_resource type="Script" uid="uid://b4ap0fr8j47m8" path="res://game_logic/Ball/Effects/MassEffect.gd" id="17_6uec0"]
+[ext_resource type="Script" uid="uid://dy6cpapp40twb" path="res://game_logic/Ball/Effects/BounceEffect.gd" id="17_232uv"]
+[ext_resource type="Texture2D" uid="uid://bo001fadk20m4" path="res://Assets/ball/powerup small.png" id="17_ex85q"]
+[ext_resource type="Script" uid="uid://d2yxgudywfyhc" path="res://game_logic/Level/power_up_spawner.gd" id="17_luomk"]
+[ext_resource type="AudioStream" uid="uid://c8mqi1x230wm3" path="res://Assets/sounds/lowDown.wav" id="18_ulnne"]
+[ext_resource type="PhysicsMaterial" uid="uid://c1o0wcja6b3ln" path="res://game_logic/Ball/physics materials/no_bouncy.tres" id="19_r0jbq"]
+[ext_resource type="AudioStream" uid="uid://dwcsopnfo5yaw" path="res://Assets/sounds/hit_metal.wav" id="20_mddns"]
+[ext_resource type="AudioStream" uid="uid://b7orb1sym8sce" path="res://Assets/sounds/powerup_metal.wav" id="21_x31ef"]
+[ext_resource type="Texture2D" uid="uid://c53bo0306sjqx" path="res://Assets/ball/pelota bouncy.png" id="23_shv3i"]
+[ext_resource type="PackedScene" uid="uid://b8nmqou14j2ss" path="res://game_logic/UI/virtual_joystick/touch_joysticks.tscn" id="24_6uec0"]
+[ext_resource type="Script" uid="uid://d1bu3vy2qkidn" path="res://game_logic/Level/continious_collision_detector.gd" id="25_232uv"]
+[ext_resource type="AudioStream" uid="uid://b2c0jtagax61j" path="res://Assets/sounds/hit_unbouncy.wav" id="25_fcifm"]
+[ext_resource type="AudioStream" uid="uid://c5yud477vde2q" path="res://Assets/sounds/TOY_Hand_Horn_Single_02_mono.wav" id="25_wxi62"]
+[ext_resource type="AudioStream" uid="uid://btcdd3x5ngd0g" path="res://Assets/sounds/powerup_unbouncy.wav" id="26_50hjx"]
+[ext_resource type="Script" uid="uid://duoytmh0h0bgk" path="res://game_logic/UI/score_ui.gd" id="26_232uv"]
+[ext_resource type="Texture2D" uid="uid://bgun8kwshfrle" path="res://Assets/ball/pelota unbouncy.png" id="27_03h4c"]
+[ext_resource type="Texture2D" uid="uid://bufdo4widt72" path="res://Assets/ball/pelota metal.png" id="31_fcifm"]
+[ext_resource type="Script" uid="uid://dfl5jgryfcp4k" path="res://game_logic/Ball/Effects/GravityEffect.gd" id="32_50hjx"]
+[ext_resource type="Script" uid="uid://bqff6nk6p8ecf" path="res://game_logic/Level/tutorials.gd" id="32_qk0lb"]
+[ext_resource type="Texture2D" uid="uid://bja3qm0u60i3t" path="res://Assets/ball/pelota gravity.png" id="33_2rk6a"]
+[ext_resource type="AudioStream" uid="uid://cmjfc8fdt5sw2" path="res://Assets/sounds/ACTION_Double_Jump_05_mono.wav" id="33_ulnne"]
+[ext_resource type="Texture2D" uid="uid://jq8rhks8begq" path="res://Assets/tutorial/WASD.png" id="33_vb7dm"]
+[ext_resource type="Texture2D" uid="uid://cab86s78gxmyn" path="res://Assets/tutorial/FLECHAS.png" id="34_xqwpk"]
+[ext_resource type="Script" uid="uid://cr03j6tt7slny" path="res://game_logic/Level/tutorial_sprite_tween.gd" id="36_shv3i"]
+[ext_resource type="AudioStream" uid="uid://c1p1pffw5k4dn" path="res://Assets/sounds/gravity_ball.wav" id="36_wxi62"]
+[ext_resource type="Texture2D" uid="uid://ekgoab0sqay5" path="res://Assets/tutorial/hand.png" id="38_50hjx"]
+[ext_resource type="Script" uid="uid://drqf6i8pojn53" path="res://game_logic/Level/touch_tutorial_anim.gd" id="38_fcifm"]
+[ext_resource type="Texture2D" uid="uid://2x3c4sxafnfj" path="res://Assets/backgrounds/background_game.png" id="38_vb7dm"]
+[ext_resource type="Script" uid="uid://d3wjxv138x665" path="res://game_logic/Level/navigation_region_2d.gd" id="39_t3ka0"]
+[ext_resource type="Texture2D" uid="uid://bugdpy154qdky" path="res://Assets/ball_gate.png" id="43_03h4c"]
+[ext_resource type="Script" uid="uid://cpeetagww62tb" path="res://game_logic/Level/ball_gate.gd" id="44_fcifm"]
+[ext_resource type="Script" uid="uid://bx38ayxq0vdue" path="res://game_logic/Level/gameplay_start_tracker.gd" id="46_36qvi"]
+[ext_resource type="Script" uid="uid://e72vkh23him0" path="res://game_logic/Level/ad_handler.gd" id="47_ervdu"]
+[ext_resource type="Texture2D" uid="uid://y2vp21fr5ckg" path="res://Assets/backgrounds/light.png" id="55_5okrb"]
+
+[sub_resource type="Resource" id="Resource_du4cn"]
+script = ExtResource("13_jghi6")
+scale = 1.7
+metadata/_custom_type_script = "uid://byub6igigr88i"
+
+[sub_resource type="Resource" id="Resource_l5n2q"]
+script = ExtResource("12_am3y4")
+effect = SubResource("Resource_du4cn")
+texture = ExtResource("15_vb7dm")
+sound = ExtResource("18_ulnne")
+metadata/_custom_type_script = "uid://b615mceneh7q"
+
+[sub_resource type="Resource" id="Resource_wfwu7"]
+script = ExtResource("13_jghi6")
+scale = 0.7
+metadata/_custom_type_script = "uid://byub6igigr88i"
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_bqw0j"]
+data = PackedByteArray("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")
+format = 3
+tags = {
+"artist": "Imphenzia",
+"comment": "www.imphenzia.com",
+"copyright": "Stefan Persson"
+}
+
+[sub_resource type="Resource" id="Resource_cqvaw"]
+script = ExtResource("12_am3y4")
+effect = SubResource("Resource_wfwu7")
+texture = ExtResource("17_ex85q")
+sound = SubResource("AudioStreamWAV_bqw0j")
+metadata/_custom_type_script = "uid://b615mceneh7q"
+
+[sub_resource type="Resource" id="Resource_mddns"]
+script = ExtResource("17_232uv")
+phyisics_material = ExtResource("16_cqvaw")
+sound = ExtResource("16_pt1jg")
+texture = ExtResource("23_shv3i")
+metadata/_custom_type_script = "uid://dy6cpapp40twb"
+
+[sub_resource type="Resource" id="Resource_x31ef"]
+script = ExtResource("12_am3y4")
+effect = SubResource("Resource_mddns")
+texture = ExtResource("23_shv3i")
+sound = ExtResource("25_wxi62")
+metadata/_custom_type_script = "uid://b615mceneh7q"
+
+[sub_resource type="Resource" id="Resource_i4n7n"]
+script = ExtResource("17_232uv")
+phyisics_material = ExtResource("19_r0jbq")
+sound = ExtResource("25_fcifm")
+texture = ExtResource("27_03h4c")
+metadata/_custom_type_script = "uid://dy6cpapp40twb"
+
+[sub_resource type="Resource" id="Resource_pt1jg"]
+script = ExtResource("12_am3y4")
+effect = SubResource("Resource_i4n7n")
+texture = ExtResource("27_03h4c")
+sound = ExtResource("26_50hjx")
+metadata/_custom_type_script = "uid://b615mceneh7q"
+
+[sub_resource type="Resource" id="Resource_816bt"]
+script = ExtResource("17_6uec0")
+mass = 10.0
+sound = ExtResource("20_mddns")
+texture = ExtResource("31_fcifm")
+metadata/_custom_type_script = "uid://b4ap0fr8j47m8"
+
+[sub_resource type="Resource" id="Resource_lemr6"]
+script = ExtResource("12_am3y4")
+effect = SubResource("Resource_816bt")
+texture = ExtResource("31_fcifm")
+sound = ExtResource("21_x31ef")
+metadata/_custom_type_script = "uid://b615mceneh7q"
+
+[sub_resource type="Resource" id="Resource_dgml8"]
+script = ExtResource("32_50hjx")
+gravity = 1.5
+sound = ExtResource("33_ulnne")
+texture = ExtResource("33_2rk6a")
+metadata/_custom_type_script = "uid://dfl5jgryfcp4k"
+
+[sub_resource type="Resource" id="Resource_21p8j"]
+script = ExtResource("12_am3y4")
+effect = SubResource("Resource_dgml8")
+texture = ExtResource("33_2rk6a")
+sound = ExtResource("36_wxi62")
+metadata/_custom_type_script = "uid://b615mceneh7q"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_luomk"]
+size = Vector2(1683, 515)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcifm"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50hjx"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rk6a"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isrne"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulnne"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxi62"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqw0j"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5okrb"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36qvi"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ervdu"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdes8"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40uwl"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnlmv"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gy87"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ufpc"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed1ne"]
+atlas = ExtResource("43_03h4c")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ud5j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcifm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50hjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rk6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isrne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulnne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxi62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqw0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5okrb")
+}],
+"loop": 0,
+"name": &"close",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36qvi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ervdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdes8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40uwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnlmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gy87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ufpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed1ne")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 24.0
+}]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_0cmfq"]
+vertices = PackedVector2Array(1957.4063, -15.09375, 2008.5234, 1176.1875, 952.96094, 1097.7109, 949.03125, -24.898438)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(943, 1107, 939, -35, 1967, -25, 2019, 1187)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py82k"]
+size = Vector2(998, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1teg4"]
+size = Vector2(1007, 21)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yfk6w"]
+distance = -10.000732
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r0jbq"]
+radius = 13.0
+height = 544.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nk1il"]
+size = Vector2(26, 1590.25)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r0jbq"]
+b = Vector2(-0.7076416, 161.92749)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_r0jbq"]
+polygon = PackedVector2Array(30, 146, 35, 150, 35, 1055, 928, 1055, 948, 1055, 949, 632, 971, 632, 973, 1055, 991, 1055, 1889, 1055, 1889, 152, 1910, 151, 1967, 1152, -113, 1169, -10, 119)
+
+[sub_resource type="GDScript" id="GDScript_shv3i"]
+script/source = "extends Camera2D
+
+func _ready() -> void:
+	process_callback = Camera2D.CAMERA2D_PROCESS_PHYSICS
+"
+
+[sub_resource type="GDScript" id="GDScript_5ud5j"]
+script/source = "extends Node
+@export var score_manager: ScoreManager
+
+func _unhandled_input(_event: InputEvent) -> void:
+	if OS.is_debug_build():
+		if Input.is_key_pressed(KEY_KP_0):
+			score_manager.game_finished.emit(1)
+		elif Input.is_key_pressed(KEY_KP_1):
+			score_manager.game_finished.emit(2)
+"
+
+[node name="Level" type="Node2D" unique_id=1489784123]
+script = ExtResource("1_nk1il")
+
+[node name="LevelHandler" type="Node" parent="." unique_id=632591484 node_paths=PackedStringArray("touch_joysticks", "ad_handler", "_score_manager", "_player_1", "_player_2", "_main_ui", "_level")]
+script = ExtResource("4_wqlfs")
+touch_joysticks = NodePath("../TouchJoysticks")
+ad_handler = NodePath("../AdHandler")
+_score_manager = NodePath("../ScoreHandler/ScoreManager")
+_player_1 = NodePath("../Player1")
+_player_2 = NodePath("../Player2")
+_main_ui = NodePath("../MainUI")
+_level = NodePath("..")
+
+[node name="ScoreHandler" type="Node" parent="." unique_id=2106818377 node_paths=PackedStringArray("bounce_detector", "point_sound", "game_won_sound", "game_lost_sound", "level", "_score_manager")]
+script = ExtResource("3_uqeto")
+bounce_detector = NodePath("../BounceDetector")
+point_sound = NodePath("PointSound")
+game_won_sound = NodePath("GameWonSound")
+game_lost_sound = NodePath("GameLostSound")
+level = NodePath("..")
+_score_manager = NodePath("ScoreManager")
+
+[node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
+script = ExtResource("3_52x1o")
+win_score = 7
+
+[node name="PointSound" type="AudioStreamPlayer" parent="ScoreHandler" unique_id=1625465825]
+stream = ExtResource("5_isrne")
+
+[node name="GameWonSound" type="AudioStreamPlayer" parent="ScoreHandler" unique_id=1769470551]
+stream = ExtResource("6_5okrb")
+volume_db = -10.0
+
+[node name="GameLostSound" type="AudioStreamPlayer" parent="ScoreHandler" unique_id=705304298]
+stream = ExtResource("7_36qvi")
+
+[node name="BallHandler" type="Node" parent="." unique_id=1804297647 node_paths=PackedStringArray("bounce_detector", "ball_manager", "stall_ball_detector", "stalled_ball_sound", "_score_manager")]
+script = ExtResource("2_1teg4")
+bounce_detector = NodePath("../BounceDetector")
+ball_manager = NodePath("BallManager")
+stall_ball_detector = NodePath("../StallBallDetector")
+stalled_ball_sound = NodePath("StalledBallSound")
+_score_manager = NodePath("../ScoreHandler/ScoreManager")
+
+[node name="BallManager" type="Node" parent="BallHandler" unique_id=1877533181 node_paths=PackedStringArray("navigation_region", "_ball_spawn_point")]
+script = ExtResource("2_py82k")
+ball_sc = ExtResource("3_py82k")
+navigation_region = NodePath("../../NavigationRegion2D")
+_ball_spawn_point = NodePath("../../BallSpawnPoint")
+INITIAL_IMPULSE = Vector2(700, -50)
+
+[node name="StalledBallSound" type="AudioStreamPlayer" parent="BallHandler" unique_id=176184837]
+stream = ExtResource("11_5okrb")
+
+[node name="LightsHandler" type="Node" parent="." unique_id=2121215875 node_paths=PackedStringArray("_lights_manager", "bounce_detector")]
+script = ExtResource("7_1p6h5")
+_lights_manager = NodePath("LightsManager")
+bounce_detector = NodePath("../BounceDetector")
+metadata/_custom_type_script = "uid://g42dx5ur7jin"
+
+[node name="LightsManager" type="Node" parent="LightsHandler" unique_id=279595935 node_paths=PackedStringArray("light_1", "light_2")]
+script = ExtResource("2_wqlfs")
+light_1 = NodePath("../../World/Lights/Light1")
+light_2 = NodePath("../../World/Lights/Light2")
+
+[node name="BounceDetector" type="Node" parent="." unique_id=130199060 node_paths=PackedStringArray("player_1", "player_2", "left_detector", "right_detector")]
+script = ExtResource("6_nk1il")
+player_1 = NodePath("../Player1")
+player_2 = NodePath("../Player2")
+left_detector = NodePath("../World/BounceDetectors/LeftDetector")
+right_detector = NodePath("../World/BounceDetectors/RightDetector")
+
+[node name="StallBallDetector" type="Node" parent="." unique_id=405561529]
+script = ExtResource("11_bhu2o")
+
+[node name="PowerUpSpawner" type="Node" parent="." unique_id=2083690736 node_paths=PackedStringArray("collision_shape_2d", "timer")]
+script = ExtResource("17_luomk")
+powerups = Array[ExtResource("12_am3y4")]([SubResource("Resource_l5n2q"), SubResource("Resource_cqvaw"), SubResource("Resource_x31ef"), SubResource("Resource_pt1jg"), SubResource("Resource_lemr6"), SubResource("Resource_21p8j")])
+power_up_sc = ExtResource("12_k8npl")
+collision_shape_2d = NodePath("SpawnArea")
+MIN_TIME_BETWEEN_SPAWNS = 10
+MAX_TIME_BETWEEN_SPAWNS = 15
+MAX_SIMULTANEOUS_POWERUPS = 4
+timer = NodePath("Timer")
+
+[node name="SpawnArea" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
+position = Vector2(957.5, 363.5)
+shape = SubResource("RectangleShape2D_luomk")
+
+[node name="Timer" type="Timer" parent="PowerUpSpawner" unique_id=136537762]
+
+[node name="Tutorials" type="Node" parent="." unique_id=124927822 node_paths=PackedStringArray("wasd_sprite", "arrows_sprite", "touch_tutorial_1", "touch_tutorial_2", "player_1", "player_2", "level")]
+script = ExtResource("32_qk0lb")
+wasd_sprite = NodePath("WASDSprite")
+arrows_sprite = NodePath("ArrowsSprite")
+touch_tutorial_1 = NodePath("TouchTutorial1")
+touch_tutorial_2 = NodePath("TouchTutorial2")
+player_1 = NodePath("../Player1")
+player_2 = NodePath("../Player2")
+level = NodePath("..")
+
+[node name="WASDSprite" type="Sprite2D" parent="Tutorials" unique_id=542582892]
+z_index = 9
+position = Vector2(486, 163.40799)
+scale = Vector2(0.51066643, 0.51066643)
+texture = ExtResource("33_vb7dm")
+script = ExtResource("36_shv3i")
+
+[node name="ArrowsSprite" type="Sprite2D" parent="Tutorials" unique_id=448350962]
+z_index = 9
+position = Vector2(1429, 164)
+scale = Vector2(0.51066643, 0.51066643)
+texture = ExtResource("34_xqwpk")
+script = ExtResource("36_shv3i")
+
+[node name="TouchTutorial1" type="Sprite2D" parent="Tutorials" unique_id=122247343]
+position = Vector2(503, 312)
+scale = Vector2(0.5221675, 0.52216756)
+texture = ExtResource("38_50hjx")
+script = ExtResource("38_fcifm")
+
+[node name="TouchTutorial2" type="Sprite2D" parent="Tutorials" unique_id=1567789476]
+position = Vector2(1445, 312)
+scale = Vector2(0.5221675, 0.52216756)
+texture = ExtResource("38_50hjx")
+script = ExtResource("38_fcifm")
+
+[node name="GameplayStartTracker" type="Node" parent="." unique_id=887073589 node_paths=PackedStringArray("main_ui", "player_1", "player_2", "level", "score_manager")]
+process_mode = 3
+script = ExtResource("46_36qvi")
+main_ui = NodePath("../MainUI")
+player_1 = NodePath("../Player1")
+player_2 = NodePath("../Player2")
+level = NodePath("..")
+score_manager = NodePath("../ScoreHandler/ScoreManager")
+
+[node name="AdHandler" type="Node" parent="." unique_id=1442450406 node_paths=PackedStringArray("main_ui")]
+process_mode = 3
+script = ExtResource("47_ervdu")
+main_ui = NodePath("../MainUI")
+
+[node name="TouchJoysticks" parent="." unique_id=25295857 instance=ExtResource("24_6uec0")]
+
+[node name="MainUI" parent="." unique_id=1468483608 instance=ExtResource("5_d6qko")]
+
+[node name="UIHandler" type="Node" parent="MainUI" unique_id=1149858996 node_paths=PackedStringArray("_level", "_main_ui")]
+script = ExtResource("7_i5g78")
+_level = NodePath("../..")
+_main_ui = NodePath("..")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1058688654]
+light_mask = 2
+position = Vector2(995, 650)
+texture = ExtResource("38_vb7dm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1543820245]
+
+[node name="BallGate" type="AnimatedSprite2D" parent="Background" unique_id=1117463632 node_paths=PackedStringArray("ball_manager")]
+position = Vector2(-33, -521)
+sprite_frames = SubResource("SpriteFrames_5ud5j")
+animation = &"close"
+frame = 7
+frame_progress = 1.0
+script = ExtResource("44_fcifm")
+ball_manager = NodePath("../../BallHandler/BallManager")
+
+[node name="BallSpawnPoint" type="Marker2D" parent="." unique_id=1469462745]
+position = Vector2(960, 129)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1176074455]
+navigation_polygon = SubResource("NavigationPolygon_0cmfq")
+script = ExtResource("39_t3ka0")
+
+[node name="World" type="Node2D" parent="." unique_id=937198056]
+
+[node name="BounceDetectors" type="Node2D" parent="World" unique_id=2075432708]
+
+[node name="LeftDetector" type="Area2D" parent="World/BounceDetectors" unique_id=1231978417]
+position = Vector2(122, 1053)
+collision_layer = 0
+collision_mask = 2
+priority = 9
+script = ExtResource("25_232uv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/BounceDetectors/LeftDetector" unique_id=1500246501]
+position = Vector2(337, -5.5)
+shape = SubResource("RectangleShape2D_py82k")
+
+[node name="RightDetector" type="Area2D" parent="World/BounceDetectors" unique_id=1106991513]
+position = Vector2(2429, 1026)
+collision_layer = 0
+collision_mask = 2
+priority = 9
+script = ExtResource("25_232uv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/BounceDetectors/RightDetector" unique_id=878119383]
+position = Vector2(-942.5, 22.5)
+shape = SubResource("RectangleShape2D_1teg4")
+
+[node name="Boundaries" type="Node2D" parent="World" unique_id=116601786]
+
+[node name="Floor" type="StaticBody2D" parent="World/Boundaries" unique_id=85477545]
+position = Vector2(962, 1039)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/Floor" unique_id=1628691251]
+shape = SubResource("WorldBoundaryShape2D_yfk6w")
+
+[node name="RightWall" type="StaticBody2D" parent="World/Boundaries" unique_id=677459952]
+position = Vector2(1878.9993, 579.00024)
+rotation = -1.5714552
+scale = Vector2(0.99999994, 0.99999994)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/RightWall" unique_id=144836305]
+shape = SubResource("WorldBoundaryShape2D_yfk6w")
+
+[node name="LeftWall" type="StaticBody2D" parent="World/Boundaries" unique_id=2086092369]
+position = Vector2(21, 605)
+rotation = 1.5707954
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/LeftWall" unique_id=2005845739]
+position = Vector2(-0.9999791, -23)
+shape = SubResource("WorldBoundaryShape2D_yfk6w")
+
+[node name="Roof" type="StaticBody2D" parent="World/Boundaries" unique_id=191144491]
+position = Vector2(972, 32)
+rotation = 3.14159
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/Roof" unique_id=1271043519]
+position = Vector2(-3.9999595, -16.00001)
+shape = SubResource("WorldBoundaryShape2D_yfk6w")
+
+[node name="Net" type="StaticBody2D" parent="World/Boundaries" unique_id=991656465]
+position = Vector2(935, 957)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/Net" unique_id=69671378]
+position = Vector2(25, -58)
+rotation = 3.1415882
+shape = SubResource("CapsuleShape2D_r0jbq")
+
+[node name="PlayerLimit" type="StaticBody2D" parent="World/Boundaries" unique_id=1002935705]
+position = Vector2(969, 549)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/PlayerLimit" unique_id=1207909563]
+position = Vector2(-9, 226)
+shape = SubResource("RectangleShape2D_nk1il")
+
+[node name="LeftTriangle" type="StaticBody2D" parent="World/Boundaries" unique_id=1627440436]
+position = Vector2(76, 54)
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/LeftTriangle" unique_id=8772890]
+position = Vector2(69, -17)
+rotation = 0.78539705
+shape = SubResource("SegmentShape2D_r0jbq")
+
+[node name="RightTraignle" type="StaticBody2D" parent="World/Boundaries" unique_id=1579520375]
+position = Vector2(1860, 88)
+rotation = 1.5707941
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Boundaries/RightTraignle" unique_id=1564973664]
+position = Vector2(66.00007, -32.999886)
+rotation = 0.78539705
+shape = SubResource("SegmentShape2D_r0jbq")
+
+[node name="Scores" type="Control" parent="World" unique_id=1974162289 node_paths=PackedStringArray("label_score_1", "label_score_2", "score_manager", "level")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("26_232uv")
+label_score_1 = NodePath("BackgroundScore1/Score1")
+label_score_2 = NodePath("BackgroundScore2/Score2")
+score_manager = NodePath("../../ScoreHandler/ScoreManager")
+level = NodePath("../..")
+
+[node name="BackgroundScore1" type="Label" parent="World/Scores" unique_id=727496007]
+self_modulate = Color(1, 1, 1, 0.26666668)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 103.0
+offset_right = 289.0
+offset_bottom = 226.0
+theme_type_variation = &"7SegmentLabel"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "8"
+horizontal_alignment = 1
+
+[node name="Score1" type="Label" parent="World/Scores/BackgroundScore1" unique_id=2119136231]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 123.0
+theme_type_variation = &"7SegmentLabel"
+theme_override_font_sizes/font_size = 120
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackgroundScore2" type="Label" parent="World/Scores" unique_id=926021637]
+self_modulate = Color(1, 1, 1, 0.26666668)
+layout_mode = 0
+offset_left = 1622.0
+offset_top = 96.0
+offset_right = 1711.0
+offset_bottom = 219.0
+theme_type_variation = &"7SegmentLabel"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "8"
+horizontal_alignment = 1
+
+[node name="Score2" type="Label" parent="World/Scores/BackgroundScore2" unique_id=132537869]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 123.0
+theme_type_variation = &"7SegmentLabel"
+theme_override_font_sizes/font_size = 120
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lights" type="Node2D" parent="World" unique_id=245549183]
+
+[node name="Light1" type="Sprite2D" parent="World/Lights" unique_id=1349103445]
+visible = false
+position = Vector2(384, 103.00001)
+scale = Vector2(1.0526316, 1.0526315)
+texture = ExtResource("55_5okrb")
+
+[node name="Light2" type="Sprite2D" parent="World/Lights" unique_id=108563077]
+visible = false
+position = Vector2(1540, 102)
+scale = Vector2(1.0526316, 1.0526315)
+texture = ExtResource("55_5okrb")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="World" unique_id=1642094665]
+visible = false
+occluder = SubResource("OccluderPolygon2D_r0jbq")
+
+[node name="Player1" parent="." unique_id=396626081 instance=ExtResource("1_o6mkr")]
+position = Vector2(478, 535)
+
+[node name="Player2" parent="." unique_id=24592340 instance=ExtResource("1_o6mkr")]
+position = Vector2(1439, 536)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=120162559]
+position = Vector2(960, 540)
+script = SubResource("GDScript_shv3i")
+
+[node name="_debug_shortcuts" type="Node" parent="." unique_id=518749732 node_paths=PackedStringArray("score_manager")]
+script = SubResource("GDScript_5ud5j")
+score_manager = NodePath("../ScoreHandler/ScoreManager")

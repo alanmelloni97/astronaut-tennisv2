@@ -59,10 +59,12 @@ size_flags_vertical = 3
 [node name="Player1Select" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=359726694 instance=ExtResource("3_c6e8c")]
 layout_mode = 2
 size_flags_horizontal = 6
+player_number = 1
 
 [node name="Player2Select" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1806913641 instance=ExtResource("3_c6e8c")]
 layout_mode = 2
 size_flags_horizontal = 6
+player_number = 2
 
 [node name="TournamentTable" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=398236205 instance=ExtResource("3_iapl6")]
 layout_mode = 2

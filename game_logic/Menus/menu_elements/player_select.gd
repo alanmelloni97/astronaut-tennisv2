@@ -10,7 +10,12 @@ signal skin_updated()
 @export var _player_texture: TextureRect
 
 var tween: Tween
-var skins: Array[CharacterSkin]
+var skins: Array[CharacterSkin]:
+	# then skins are set, update then with saved indexes
+	set(x):
+		skins = x
+		_load_indexes()
+		racket_select.update_skin()
 var current_skin_selectable: bool:
 	set = set_current_skin_selectable
 var current_skin_index: int:
@@ -20,6 +25,11 @@ var current_skin_index: int:
 			current_skin_index = 0
 		else:
 			current_skin_index = x
+
+
+func _ready() -> void:
+	skin_updated.connect(_save_indexes)
+	racket_select.skin_updated.connect(_save_indexes)
 
 
 func get_current_skin() -> CharacterSkin:
@@ -53,6 +63,16 @@ func update_skin():
 		tween.tween_property(_player_texture, "modulate", _player_texture.modulate, 0.5).from(
 			Color.TRANSPARENT
 		)
+
+
+func _load_indexes():
+	current_skin_index = GameState.character_indexes[player_number - 1]
+	racket_select.current_skin_index = GameState.racket_indexes[player_number - 1]
+
+
+func _save_indexes():
+	GameState.character_indexes[player_number - 1] = current_skin_index
+	GameState.racket_indexes[player_number - 1] = racket_select.current_skin_index
 
 
 func _on_left_button_pressed() -> void:
