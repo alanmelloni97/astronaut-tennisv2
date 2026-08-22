@@ -32,8 +32,8 @@ func _on_double_bounced(side: int):
 
 func _play_point_sound():
 	# if is not last point play sound
-	if not _score_manager.score[0] == _score_manager.WIN_SCORE \
-			and not _score_manager.score[1] == _score_manager.WIN_SCORE:
+	if not _score_manager.score[0] == _score_manager.win_score \
+			and not _score_manager.score[1] == _score_manager.win_score:
 		point_sound.play()
 
 

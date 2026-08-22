@@ -10,6 +10,7 @@ signal video_requested
 
 @export var margin_container: MarginContainer
 @export var mobile_margin: int
+@export var pause_button: Button
 @export var _pause_menu: PauseMenu
 @export var _game_over_menu: GameOverMenu
 
@@ -24,6 +25,11 @@ func _ready() -> void:
 func show_game_over_menu(winner: int, two_players: bool):
 	_game_over_menu.show_animated()
 	_game_over_menu.set_up_menu(winner, two_players)
+
+
+func hide_pause_menu():
+	pause_button.hide()
+	_pause_menu.hide()
 
 
 func _on_pause_button_pressed() -> void:

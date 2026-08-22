@@ -347,6 +347,7 @@ _score_ui = NodePath("../World/Scores")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
+win_score = 7
 
 [node name="PointSound" type="AudioStreamPlayer" parent="ScoreHandler" unique_id=1625465825]
 stream = ExtResource("5_isrne")

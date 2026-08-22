@@ -96,6 +96,7 @@ script = ExtResource("1_wgoqk")
 name = "Buzz Aldrin"
 skin = ExtResource("6_cbk4a")
 ai_level = ExtResource("5_3fchs")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_2cl63"]
@@ -103,6 +104,7 @@ script = ExtResource("1_wgoqk")
 name = "Alan Shepard"
 skin = ExtResource("7_j2tem")
 ai_level = ExtResource("5_3fchs")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_exe54"]
@@ -110,6 +112,7 @@ script = ExtResource("1_wgoqk")
 name = "Sally Ride"
 skin = ExtResource("3_qr63q")
 ai_level = ExtResource("8_vc0t1")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_8mtkk"]
@@ -117,6 +120,7 @@ script = ExtResource("1_wgoqk")
 name = "John Glenn"
 skin = ExtResource("7_j2tem")
 ai_level = ExtResource("8_vc0t1")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_c2d4n"]
@@ -124,6 +128,7 @@ script = ExtResource("1_wgoqk")
 name = "Yuri Gagarin"
 skin = ExtResource("4_g3xsq")
 ai_level = ExtResource("9_nc3dv")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_kj8p8"]
@@ -132,6 +137,7 @@ script = ExtResource("1_wgoqk")
 name = "Neil Armstrong"
 skin = ExtResource("6_cbk4a")
 ai_level = ExtResource("9_nc3dv")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_rt06a"]
@@ -139,6 +145,7 @@ script = ExtResource("1_wgoqk")
 name = "Laika"
 skin = ExtResource("10_bo8rb")
 ai_level = ExtResource("9_nc3dv")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_3ekrg"]

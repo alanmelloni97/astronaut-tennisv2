@@ -51,4 +51,8 @@ func _on_game_finished(winner: int):
 	_level.winner = winner
 	_player_1.disable_input(true)
 	_player_2.disable_input(true)
+	_main_ui.hide_pause_menu()
+
+	if get_tree().paused:
+		get_tree().paused = false
 	_main_ui.show_game_over_menu(winner, _level.two_player_mode)

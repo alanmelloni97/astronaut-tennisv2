@@ -16,9 +16,11 @@ func _ready() -> void:
 		get_tree().paused = true
 		Utilities.mute_game(true)
 		PokiSDK.commercialBreak()
+		print("comercial start")
 
 
-func _on_commercial_break_finished():
+func _on_commercial_break_finished(_response):
+	print("comercial finished")
 	Utilities.mute_game(false)
 	get_tree().paused = false
 
