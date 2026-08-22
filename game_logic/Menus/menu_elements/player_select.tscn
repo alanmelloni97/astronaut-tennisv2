@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cr6n7vyypy6x0" path="res://Assets/rackets/Racket blue.png" id="8_g54bk"]
 [ext_resource type="Texture2D" uid="uid://inydcigwru2l" path="res://Assets/rackets/Racket yellow.png" id="9_o1wid"]
 [ext_resource type="Texture2D" uid="uid://c1al8kkxkkxlc" path="res://Assets/rackets/carbon rod.png" id="11_hvsg0"]
+[ext_resource type="Script" uid="uid://dtd46ehdkcequ" path="res://game_logic/Menus/menu_elements/shortcut_designator.gd" id="12_g54bk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5okrb"]
 texture = ExtResource("2_ldonb")
@@ -144,6 +145,10 @@ layout_mode = 2
 size_flags_vertical = 4
 icon = ExtResource("4_ldonb")
 expand_icon = true
+
+[node name="ShortcutDesignator" type="Node" parent="." unique_id=683711653 node_paths=PackedStringArray("player_select")]
+script = ExtResource("12_g54bk")
+player_select = NodePath("..")
 
 [connection signal="pressed" from="VBoxContainer/SkinSelect/LeftButton" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SkinSelect/RightButton" to="." method="_on_right_button_pressed"]

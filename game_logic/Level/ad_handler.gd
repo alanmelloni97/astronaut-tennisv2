@@ -2,6 +2,7 @@ class_name AdHandler
 extends Node
 
 signal watched_ad
+signal rewarded_ad_failed
 
 @export var main_ui: MainUI
 
@@ -38,4 +39,5 @@ func _on_reward_break_done(response):
 		watched_ad.emit()
 	else:
 		print("No Reward.")
+		rewarded_ad_failed.emit()
 	PokiSDK.gameplayStart()

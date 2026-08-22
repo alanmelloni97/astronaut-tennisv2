@@ -335,7 +335,7 @@ _player_2 = NodePath("../Player2")
 _main_ui = NodePath("../MainUI")
 _level = NodePath("..")
 
-[node name="ScoreHandler" type="Node" parent="." unique_id=2106818377 node_paths=PackedStringArray("bounce_detector", "point_sound", "game_won_sound", "game_lost_sound", "level", "_score_manager", "_score_ui")]
+[node name="ScoreHandler" type="Node" parent="." unique_id=2106818377 node_paths=PackedStringArray("bounce_detector", "point_sound", "game_won_sound", "game_lost_sound", "level", "_score_manager")]
 script = ExtResource("3_uqeto")
 bounce_detector = NodePath("../BounceDetector")
 point_sound = NodePath("PointSound")
@@ -343,7 +343,6 @@ game_won_sound = NodePath("GameWonSound")
 game_lost_sound = NodePath("GameLostSound")
 level = NodePath("..")
 _score_manager = NodePath("ScoreManager")
-_score_ui = NodePath("../World/Scores")
 
 [node name="ScoreManager" type="Node" parent="ScoreHandler" unique_id=494718840]
 script = ExtResource("3_52x1o")
@@ -450,13 +449,14 @@ scale = Vector2(0.5221675, 0.52216756)
 texture = ExtResource("38_50hjx")
 script = ExtResource("38_fcifm")
 
-[node name="GameplayStartTracker" type="Node" parent="." unique_id=887073589 node_paths=PackedStringArray("main_ui", "player_1", "player_2", "level")]
+[node name="GameplayStartTracker" type="Node" parent="." unique_id=887073589 node_paths=PackedStringArray("main_ui", "player_1", "player_2", "level", "score_manager")]
 process_mode = 3
 script = ExtResource("46_36qvi")
 main_ui = NodePath("../MainUI")
 player_1 = NodePath("../Player1")
 player_2 = NodePath("../Player2")
 level = NodePath("..")
+score_manager = NodePath("../ScoreHandler/ScoreManager")
 
 [node name="AdHandler" type="Node" parent="." unique_id=1442450406 node_paths=PackedStringArray("main_ui")]
 process_mode = 3
@@ -601,7 +601,7 @@ position = Vector2(66.00007, -32.999886)
 rotation = 0.78539705
 shape = SubResource("SegmentShape2D_r0jbq")
 
-[node name="Scores" type="Control" parent="World" unique_id=1974162289 node_paths=PackedStringArray("label_score_1", "label_score_2")]
+[node name="Scores" type="Control" parent="World" unique_id=1974162289 node_paths=PackedStringArray("label_score_1", "label_score_2", "score_manager", "level")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -609,6 +609,8 @@ offset_bottom = 40.0
 script = ExtResource("26_232uv")
 label_score_1 = NodePath("BackgroundScore1/Score1")
 label_score_2 = NodePath("BackgroundScore2/Score2")
+score_manager = NodePath("../../ScoreHandler/ScoreManager")
+level = NodePath("../..")
 
 [node name="BackgroundScore1" type="Label" parent="World/Scores" unique_id=727496007]
 self_modulate = Color(1, 1, 1, 0.26666668)

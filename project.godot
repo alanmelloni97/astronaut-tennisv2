@@ -137,7 +137,7 @@ locale/translations=PackedStringArray("res://addons/admob/gdscript/sample/transl
 
 3d/physics_engine="Jolt Physics"
 2d/default_gravity=400.0
-2d/solver/solver_iterations=4
+2d/solver/solver_iterations=32
 common/physics_interpolation=true
 
 [rendering]

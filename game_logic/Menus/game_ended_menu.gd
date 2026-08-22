@@ -5,10 +5,10 @@ signal retry_pressed
 signal main_menu_pressed
 signal watch_video_pressed
 
-@export var _game_over_label: Label
-@export var _retry_button: Button
 @export var show_animation: MenuScaleAnimation
 @export var video_button: Button
+@export var _game_over_label: Label
+@export var _retry_button: Button
 
 
 func set_up_menu(winner: int, two_players: bool):

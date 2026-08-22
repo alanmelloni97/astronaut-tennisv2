@@ -3,6 +3,7 @@ extends Control
 
 signal skin_updated()
 
+@export var player_number: int
 @export var suit_name: Label
 @export var lock_control: Control
 @export var racket_select: Selector

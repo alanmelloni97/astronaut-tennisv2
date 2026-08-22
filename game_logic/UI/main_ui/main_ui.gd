@@ -32,6 +32,10 @@ func hide_pause_menu():
 	_pause_menu.hide()
 
 
+func hide_reward_ad_button():
+	_game_over_menu.video_button.hide()
+
+
 func _on_pause_button_pressed() -> void:
 	_pause_menu.show_animated()
 	game_paused.emit()

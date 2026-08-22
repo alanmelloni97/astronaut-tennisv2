@@ -13,6 +13,7 @@ extends Node
 func _ready() -> void:
 	_score_manager.game_finished.connect(_on_game_finished)
 	ad_handler.watched_ad.connect(_on_watched_ad)
+	ad_handler.rewarded_ad_failed.connect(_on_reward_ad_failed)
 	set_up_players()
 	touch_joysticks.two_players = _level.two_player_mode
 
@@ -43,8 +44,14 @@ func set_up_players():
 
 func _on_watched_ad():
 	_level.watched_ad = true
+	_score_manager.remove_points(2, 3)
 	_level.current_score = _score_manager.score
+	print("watched ad")
 	_level.scene_requested.emit(Scenes.level)
+
+
+func _on_reward_ad_failed():
+	_main_ui.hide_reward_ad_button()
 
 
 func _on_game_finished(winner: int):

@@ -5,6 +5,7 @@ extends Node
 @export var player_1: Player
 @export var player_2: Player
 @export var level: Level
+@export var score_manager: ScoreManager
 
 # tracks when gameplay starts and pauses to send signal to web sdks (poki, crazygames, etc.)
 var started: bool = false
@@ -13,8 +14,7 @@ var started: bool = false
 func _ready() -> void:
 	main_ui.game_paused.connect(_on_gameplay_stopped)
 	main_ui.game_unpaused.connect(_on_gameplay_start)
-	main_ui.game_ended.connect(_on_gameplay_stopped)
-	print(PokiSDK.sdk_handle)
+	score_manager.game_finished.connect(_on_gameplay_stopped.unbind(1))
 
 
 func _unhandled_input(_event: InputEvent) -> void:

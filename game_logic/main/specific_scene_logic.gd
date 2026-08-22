@@ -64,6 +64,7 @@ func manage_after_changing_scene(new_scene: Node):
 		# ad reward
 		if ad_reward_saved_score != Vector2i.ZERO:
 			new_scene.current_score = ad_reward_saved_score
+			ad_reward_saved_score = Vector2i.ZERO
 
 
 func _restart_tournament():

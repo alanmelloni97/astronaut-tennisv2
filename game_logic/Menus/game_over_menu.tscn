@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://chu6i58wycf7u" path="res://game_logic/Menus/show_animation.gd" id="2_0bkx5"]
 [ext_resource type="Texture2D" uid="uid://ul5akwjedlg0" path="res://Assets/ui/video icon.webp" id="2_0kvur"]
 
-[node name="GameOverMenu" type="PanelContainer" unique_id=126134748 node_paths=PackedStringArray("_game_over_label", "_retry_button", "show_animation", "video_button")]
+[node name="GameOverMenu" type="PanelContainer" unique_id=126134748 node_paths=PackedStringArray("show_animation", "video_button", "_game_over_label", "_retry_button")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -20,10 +20,10 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_wvg1o")
-_game_over_label = NodePath("VBoxContainer/GameOverMessage")
-_retry_button = NodePath("VBoxContainer/HBoxContainer/RetryButton")
 show_animation = NodePath("ScaleAnimation")
 video_button = NodePath("VBoxContainer/HBoxContainer/VideoButton")
+_game_over_label = NodePath("VBoxContainer/GameOverMessage")
+_retry_button = NodePath("VBoxContainer/HBoxContainer/RetryButton")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1906525608]
 layout_mode = 2
