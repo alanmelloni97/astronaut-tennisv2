@@ -28,7 +28,6 @@ physics_material_override = SubResource("PhysicsMaterial_wwm6y")
 gravity_scale = 0.1
 contact_monitor = true
 max_contacts_reported = 5
-linear_damp = 0.9
 script = ExtResource("1_gxsuo")
 movement_handler = NodePath("MovementHandler")
 motion_manager = NodePath("MovementHandler/MotionManager")
@@ -57,7 +56,6 @@ _ai_manager = NodePath("AIManager")
 [node name="MotionManager" type="Node" parent="MovementHandler" unique_id=954893411 node_paths=PackedStringArray("_rb")]
 script = ExtResource("2_o468d")
 _rb = NodePath("../..")
-_FORCE_MULT = 22000
 
 [node name="InputManager" type="Node" parent="MovementHandler" unique_id=1846637120]
 script = ExtResource("3_xsmco")
@@ -97,8 +95,10 @@ debug_path_custom_color = Color(1, 0, 0, 1)
 [node name="BuildConfig" type="Node" parent="." unique_id=244560580 node_paths=PackedStringArray("racket", "movement_handler")]
 script = ExtResource("9_eay6m")
 racket = NodePath("..")
+damp = 0.7
+force = 20000
 touchscreen_damp = 3.0
 touchscreen_force = 25000
-casual_damp = 0.7
-casual_force = 20000
+casual_damp = 2.0
+casual_force = 21000
 movement_handler = NodePath("../MovementHandler")

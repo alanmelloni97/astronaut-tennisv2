@@ -11,11 +11,7 @@ extends Node
 
 
 func _ready() -> void:
-	_score_manager.game_finished.connect(_on_game_finished)
-	ad_handler.watched_ad.connect(_on_watched_ad)
-	ad_handler.rewarded_ad_failed.connect(_on_reward_ad_failed)
-	set_up_players()
-	touch_joysticks.two_players = _level.two_player_mode
+	owner.ready.connect(_on_owner_ready)
 
 
 func set_up_players():
@@ -40,6 +36,14 @@ func set_up_players():
 			_level.racket_2_skin,
 			_level.rival.ai_level,
 		)
+
+
+func _on_owner_ready():
+	_score_manager.game_finished.connect(_on_game_finished)
+	ad_handler.watched_ad.connect(_on_watched_ad)
+	ad_handler.rewarded_ad_failed.connect(_on_reward_ad_failed)
+	set_up_players()
+	touch_joysticks.two_players = _level.two_player_mode
 
 
 func _on_watched_ad():

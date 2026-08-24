@@ -1,11 +1,9 @@
 "
 TODO:
-	arreglar cabexas al reves
 	elegir personaje con teclas
-	guardar ultimo personaje elejido
 	hacer showcase inkscape template
+	trailer para steam
 BUG:
-	pelota pica 3 veces en especial cuando es bouncy
 
 
 PRELAUNCH MOBILE:

@@ -18,4 +18,8 @@ func _ready() -> void:
 func main():
 	# Start game
 	save_system.load_game()
-	scene_manager._change_to_scene(Scenes.main_menu)
+	if OS.has_feature("poki"):
+		scene_manager._change_to_scene(Scenes.level)
+		get_tree().paused = true
+	else:
+		scene_manager._change_to_scene(Scenes.main_menu)

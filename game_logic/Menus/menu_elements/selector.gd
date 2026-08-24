@@ -18,6 +18,7 @@ var current_skin_index: int:
 
 func _ready() -> void:
 	update_skin()
+	_poki_remove_bar()
 
 
 func get_current_skin() -> Texture2D:
@@ -32,7 +33,13 @@ func update_skin():
 		tween.kill()
 	texture_rect.modulate = Color.WHITE # if tween was killed in the middle of animation restore original modulate
 	tween = create_tween()
-	tween.tween_property(texture_rect, "modulate", texture_rect.modulate, 0.5).from(Color.TRANSPARENT)
+	tween.tween_property(texture_rect, "modulate", texture_rect.modulate, 0.5).from(
+		Color.TRANSPARENT
+	)
+
+
+func _poki_remove_bar():
+	skins.pop_back()
 
 
 func _on_left_button_pressed() -> void:

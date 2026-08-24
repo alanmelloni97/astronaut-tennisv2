@@ -80,6 +80,7 @@ script = ExtResource("10_yyosa")
 
 [node name="Label" type="Label" parent="DebugVisuals" unique_id=769429367]
 self_modulate = Color(0.7004348, 0.08621108, 0.12591219, 1)
+z_index = 99
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 39.0

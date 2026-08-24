@@ -2,6 +2,8 @@ class_name RacketBuildConfig
 extends Node
 
 @export var racket: Racket
+@export var damp: float
+@export var force: int
 @export var touchscreen_damp: float
 @export var touchscreen_force: int
 @export var casual_damp: float
@@ -19,3 +21,6 @@ func _ready() -> void:
 	elif BuildConfig.difficulty == BuildConfig.Difficulty.CASUAL:
 		racket.linear_damp = casual_damp
 		racket.motion_manager._FORCE_MULT = casual_force
+	else:
+		racket.linear_damp = damp
+		racket.motion_manager._FORCE_MULT = force

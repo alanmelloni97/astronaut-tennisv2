@@ -5,11 +5,11 @@ extends Node2D
 signal scene_requested(scene: PackedScene)
 
 var two_player_mode: bool
-var player_1_skin: CharacterSkin
-var player_2_skin: CharacterSkin
-var racket_1_skin: Texture2D
-var racket_2_skin: Texture2D
-var rival: Character
+var player_1_skin: CharacterSkin = Characters.skins[0]
+var player_2_skin: CharacterSkin = Characters.skins[1]
+var racket_1_skin: Texture2D = load("res://Assets/rackets/Racket blue.png")
+var racket_2_skin: Texture2D = load("res://Assets/rackets/Racket red.png")
+var rival: Character = Characters.characters[0]
 var winner: int
 # Hack to account for ad reward
 var watched_ad: bool

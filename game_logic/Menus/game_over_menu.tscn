@@ -41,11 +41,11 @@ size_flags_horizontal = 4
 
 [node name="VideoButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=351246492]
 visible = false
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"WatchVideoButton"
-text = "CONTINUE"
+text = "CONTINUE (AD)"
 icon = ExtResource("2_0kvur")
 expand_icon = true
 

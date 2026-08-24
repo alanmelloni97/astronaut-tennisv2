@@ -107,7 +107,7 @@ node_a = NodePath("../../Body")
 node_b = NodePath("../../URarm")
 
 [node name="Neck" type="PinJoint2D" parent="Body/joints" unique_id=155226632]
-position = Vector2(-1, -115)
+position = Vector2(0, -106)
 node_a = NodePath("../../Body")
 node_b = NodePath("../../Head")
 softness = 0.2

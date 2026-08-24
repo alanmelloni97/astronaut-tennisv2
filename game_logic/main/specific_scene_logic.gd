@@ -8,9 +8,9 @@ signal request_music_stop
 @export var scene_manager: SceneManager
 
 var two_players_mode: bool = false
-var player_1_skin: CharacterSkin
+var player_1_skin: CharacterSkin = Characters.skins[0]
 var player_2_skin: CharacterSkin
-var racket_1_skin: Texture2D
+var racket_1_skin: Texture2D = load("res://Assets/rackets/Racket blue.png")
 var racket_2_skin: Texture2D
 # hack for ad reward
 var ad_reward_saved_score: Vector2i

@@ -403,8 +403,8 @@ powerups = Array[ExtResource("12_am3y4")]([SubResource("Resource_l5n2q"), SubRes
 power_up_sc = ExtResource("12_k8npl")
 collision_shape_2d = NodePath("SpawnArea")
 MIN_TIME_BETWEEN_SPAWNS = 10
-MAX_TIME_BETWEEN_SPAWNS = 15
-MAX_SIMULTANEOUS_POWERUPS = 4
+MAX_TIME_BETWEEN_SPAWNS = 20
+MAX_SIMULTANEOUS_POWERUPS = 3
 timer = NodePath("Timer")
 
 [node name="SpawnArea" type="CollisionShape2D" parent="PowerUpSpawner" unique_id=42909460]
@@ -414,6 +414,7 @@ shape = SubResource("RectangleShape2D_luomk")
 [node name="Timer" type="Timer" parent="PowerUpSpawner" unique_id=136537762]
 
 [node name="Tutorials" type="Node" parent="." unique_id=124927822 node_paths=PackedStringArray("wasd_sprite", "arrows_sprite", "touch_tutorial_1", "touch_tutorial_2", "player_1", "player_2", "level")]
+process_mode = 3
 script = ExtResource("32_qk0lb")
 wasd_sprite = NodePath("WASDSprite")
 arrows_sprite = NodePath("ArrowsSprite")
@@ -425,14 +426,14 @@ level = NodePath("..")
 
 [node name="WASDSprite" type="Sprite2D" parent="Tutorials" unique_id=542582892]
 z_index = 9
-position = Vector2(486, 163.40799)
+position = Vector2(486, 381.40796)
 scale = Vector2(0.51066643, 0.51066643)
 texture = ExtResource("33_vb7dm")
 script = ExtResource("36_shv3i")
 
 [node name="ArrowsSprite" type="Sprite2D" parent="Tutorials" unique_id=448350962]
 z_index = 9
-position = Vector2(1429, 164)
+position = Vector2(1429, 381.99994)
 scale = Vector2(0.51066643, 0.51066643)
 texture = ExtResource("34_xqwpk")
 script = ExtResource("36_shv3i")
@@ -683,6 +684,7 @@ position = Vector2(478, 535)
 position = Vector2(1439, 536)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=120162559]
+process_mode = 3
 position = Vector2(960, 540)
 script = SubResource("GDScript_shv3i")
 

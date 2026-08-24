@@ -8,6 +8,8 @@ extends Node
 @export var player_2: Player
 @export var level: Level
 
+var poki_paused: bool = true
+
 
 func _ready() -> void:
 	_check_if_should_show()
@@ -16,6 +18,13 @@ func _ready() -> void:
 
 
 func _unhandled_input(_event: InputEvent) -> void:
+	#ignore non actions
+	if not _event.is_action_type():
+		return
+	# start game if poki
+	if OS.has_feature("poki") and poki_paused:
+		get_tree().paused = false
+		poki_paused = false
 	# hide tutorials on player movement
 	if player_1.racket.movement_handler._input_manager.input_axis != Vector2.ZERO:
 		_hide_player_1()
@@ -44,7 +53,7 @@ func _check_if_hide_player_2():
 
 func _check_if_should_show():
 	if level.two_player_mode and GameState.two_player_tutorial_shown \
-	or not level.two_player_mode and GameState.tournament_tutorial_shown:
+			or not level.two_player_mode and GameState.tournament_tutorial_shown:
 		queue_free()
 
 
@@ -59,8 +68,11 @@ func _hide_player_2():
 
 
 func _are_tutorials_not_visible():
-	if not wasd_sprite.visible and not touch_tutorial_1.visible \
-	and not arrows_sprite.visible and not touch_tutorial_2.visible:
+	if (
+		not wasd_sprite.visible and not touch_tutorial_1.visible \
+				and not arrows_sprite.visible
+		and not touch_tutorial_2.visible
+	):
 		return true
 	return false
 
