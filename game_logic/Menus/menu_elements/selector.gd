@@ -18,7 +18,8 @@ var current_skin_index: int:
 
 func _ready() -> void:
 	update_skin()
-	_poki_remove_bar()
+	if OS.has_feature("poki"):
+		_poki_remove_bar()
 
 
 func get_current_skin() -> Texture2D:

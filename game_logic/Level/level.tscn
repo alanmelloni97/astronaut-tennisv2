@@ -426,14 +426,14 @@ level = NodePath("..")
 
 [node name="WASDSprite" type="Sprite2D" parent="Tutorials" unique_id=542582892]
 z_index = 9
-position = Vector2(486, 381.40796)
+position = Vector2(485.94196, 204.40797)
 scale = Vector2(0.51066643, 0.51066643)
 texture = ExtResource("33_vb7dm")
 script = ExtResource("36_shv3i")
 
 [node name="ArrowsSprite" type="Sprite2D" parent="Tutorials" unique_id=448350962]
 z_index = 9
-position = Vector2(1429, 381.99994)
+position = Vector2(1428.942, 204.99995)
 scale = Vector2(0.51066643, 0.51066643)
 texture = ExtResource("34_xqwpk")
 script = ExtResource("36_shv3i")

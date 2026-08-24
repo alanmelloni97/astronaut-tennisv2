@@ -7,8 +7,9 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iel50"]
 load_path = "res://.godot/imported/title.png-a9c43f00d2655a5d316eda51387dfbea.ctex"
 
-[node name="MainMenu" type="CanvasLayer" unique_id=2023607876]
+[node name="MainMenu" type="CanvasLayer" unique_id=2023607876 node_paths=PackedStringArray("tournament_button")]
 script = ExtResource("1_jf8mj")
+tournament_button = NodePath("PanelContainer/Buttons/TournamentButton")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1018398562]
 anchors_preset = 15
@@ -47,16 +48,20 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_bottom = NodePath("../2PlayerButtton")
 theme_override_font_sizes/font_size = 60
 text = "TOURNAMENT"
 
 [node name="2PlayerButtton" type="Button" parent="PanelContainer/Buttons" unique_id=1942199620]
 layout_mode = 2
+focus_neighbor_top = NodePath("../TournamentButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
 theme_override_font_sizes/font_size = 60
 text = "2 PLAYERS"
 
 [node name="QuitButton" type="Button" parent="PanelContainer/Buttons" unique_id=1039137632]
 layout_mode = 2
+focus_neighbor_top = NodePath("../2PlayerButtton")
 theme_override_font_sizes/font_size = 60
 text = "QUIT
 "

@@ -3,6 +3,8 @@ extends CanvasLayer
 
 signal scene_requested(scene: PackedScene)
 
+@export var tournament_button: Button
+
 var two_players_requested: bool = false
 
 
