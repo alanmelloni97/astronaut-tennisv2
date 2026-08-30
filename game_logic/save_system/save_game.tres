@@ -88,6 +88,7 @@ script = ExtResource("1_wgoqk")
 name = "Valentina Tereshkova"
 skin = ExtResource("4_g3xsq")
 ai_level = ExtResource("2_wtlky")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_82qhk"]
@@ -95,6 +96,7 @@ script = ExtResource("1_wgoqk")
 name = "Buzz Aldrin"
 skin = ExtResource("6_cbk4a")
 ai_level = ExtResource("5_3fchs")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_2cl63"]
@@ -102,6 +104,7 @@ script = ExtResource("1_wgoqk")
 name = "Alan Shepard"
 skin = ExtResource("7_j2tem")
 ai_level = ExtResource("5_3fchs")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_exe54"]
@@ -109,6 +112,7 @@ script = ExtResource("1_wgoqk")
 name = "Sally Ride"
 skin = ExtResource("3_qr63q")
 ai_level = ExtResource("8_vc0t1")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_8mtkk"]
@@ -116,6 +120,7 @@ script = ExtResource("1_wgoqk")
 name = "John Glenn"
 skin = ExtResource("7_j2tem")
 ai_level = ExtResource("8_vc0t1")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_c2d4n"]
@@ -123,6 +128,7 @@ script = ExtResource("1_wgoqk")
 name = "Yuri Gagarin"
 skin = ExtResource("4_g3xsq")
 ai_level = ExtResource("9_nc3dv")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_kj8p8"]
@@ -131,6 +137,7 @@ script = ExtResource("1_wgoqk")
 name = "Neil Armstrong"
 skin = ExtResource("6_cbk4a")
 ai_level = ExtResource("9_nc3dv")
+beated = true
 metadata/_custom_type_script = "uid://5rdixxdoulx3"
 
 [sub_resource type="Resource" id="Resource_rt06a"]
@@ -188,6 +195,7 @@ ul_arm = ExtResource("42_8yb66")
 ul_leg = ExtResource("43_8mtpr")
 ur_arm = ExtResource("44_e8n7q")
 ur_leg = ExtResource("45_xwegw")
+is_unlocked = true
 metadata/_custom_type_script = "uid://v0sa452yk36s"
 
 [sub_resource type="Resource" id="Resource_u4vwn"]
@@ -204,6 +212,7 @@ ul_arm = ExtResource("53_x1aa1")
 ul_leg = ExtResource("54_l1mx6")
 ur_arm = ExtResource("55_ty62q")
 ur_leg = ExtResource("56_5jv2l")
+is_unlocked = true
 metadata/_custom_type_script = "uid://v0sa452yk36s"
 
 [sub_resource type="Resource" id="Resource_qxht6"]
@@ -220,6 +229,7 @@ ul_arm = ExtResource("64_qdsgb")
 ul_leg = ExtResource("65_8s3bu")
 ur_arm = ExtResource("66_wbhdg")
 ur_leg = ExtResource("67_lregt")
+is_unlocked = true
 metadata/_custom_type_script = "uid://v0sa452yk36s"
 
 [sub_resource type="Resource" id="Resource_ql5gs"]

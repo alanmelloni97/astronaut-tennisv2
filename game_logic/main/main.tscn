@@ -14,6 +14,23 @@
 [ext_resource type="Script" uid="uid://dsxqhy2yc5ld3" path="res://game_logic/main/preloading.gd" id="11_6jl4q"]
 [ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://game_logic/Ball/ball.tscn" id="12_krguk"]
 [ext_resource type="Script" uid="uid://byrxmi71fifpd" path="res://game_logic/main/ui_sound_player.gd" id="12_ntpxs"]
+[ext_resource type="Script" uid="uid://rvba8d71vw2o" path="res://game_logic/main/ad_manager.gd" id="15_k05wu"]
+[ext_resource type="Script" uid="uid://pie13fr1k83f" path="res://game_logic/main/game_start_tracker.gd" id="15_krguk"]
+[ext_resource type="Script" uid="uid://chgbo2mu8dtw5" path="res://game_logic/main/ads_poki.gd" id="16_pi04w"]
+
+[sub_resource type="GDScript" id="GDScript_5ud5j"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager", "specific_scene_logic", "music_manager")]
 script = ExtResource("1_yh5la")
@@ -88,3 +105,15 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 30
 text = "DEBUG VERSION"
 horizontal_alignment = 1
+
+[node name="AchievementsTracker" type="Node" parent="." unique_id=1018201198]
+script = SubResource("GDScript_5ud5j")
+
+[node name="AdManager" type="Node" parent="." unique_id=683151221]
+script = ExtResource("15_k05wu")
+
+[node name="AdsPoki" type="Node" parent="AdManager" unique_id=815112755]
+script = ExtResource("16_pi04w")
+
+[node name="GameplayStartTracker" type="Node" parent="." unique_id=293705689]
+script = ExtResource("15_krguk")

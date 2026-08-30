@@ -7,7 +7,7 @@ extends Node
 
 func _ready() -> void:
 	# only apply on release
-	if not OS.is_debug_build() or not OS.has_feature("web"):
+	if not OS.is_debug_build() and not OS.has_feature("web"):
 		# Mobile
 		if DisplayServer.is_touchscreen_available():
 			if mobile_fullscreen:

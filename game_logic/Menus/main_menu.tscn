@@ -20,8 +20,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_11gta")
-expand_mode = 1
-stretch_mode = 5
+expand_mode = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1202099348]
 anchors_preset = -1

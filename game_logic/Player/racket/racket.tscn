@@ -95,7 +95,7 @@ debug_path_custom_color = Color(1, 0, 0, 1)
 [node name="BuildConfig" type="Node" parent="." unique_id=244560580 node_paths=PackedStringArray("racket", "movement_handler")]
 script = ExtResource("9_eay6m")
 racket = NodePath("..")
-damp = 0.7
+damp = 0.65
 force = 20000
 touchscreen_damp = 5.0
 touchscreen_force = 35000

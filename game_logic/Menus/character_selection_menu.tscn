@@ -28,7 +28,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_ho01r")
 expand_mode = 3
-stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=56222643]
 anchors_preset = 8

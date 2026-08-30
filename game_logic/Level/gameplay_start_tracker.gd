@@ -25,17 +25,15 @@ func _unhandled_input(_event: InputEvent) -> void:
 			):
 		if not started:
 			started = true
-			PokiSDK.gameplayStart()
-			print("gameplay started")
+			SignalBus.gameplay_started.emit()
 
 
 func _on_gameplay_stopped():
-	PokiSDK.gameplayStop()
-	print("gameplay stopped")
+	SignalBus.gameplay_stopped.emit()
 
 
 func _on_gameplay_start():
+	# await for some reason
 	await get_tree().process_frame
 	await get_tree().process_frame
-	PokiSDK.gameplayStart()
-	print("gameplay started")
+	SignalBus.gameplay_started.emit()

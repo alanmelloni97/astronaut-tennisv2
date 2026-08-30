@@ -8,37 +8,36 @@ signal rewarded_ad_failed
 
 
 func _ready() -> void:
-	main_ui.video_requested.connect(_on_video_requested)
 	if OS.has_feature("poki"):
-		PokiSDK.commercial_break_done.connect(_on_commercial_break_finished)
-		PokiSDK.commercial_break_failed.connect(_on_commercial_break_finished)
-		PokiSDK.rewarded_break_done.connect(_on_reward_break_done)
-
 		get_tree().paused = true
-		Utilities.mute_game(true)
-		if GameState.first_time_level:
-			GameState.first_time_level = false
-		else:
-			PokiSDK.commercialBreak()
+	main_ui.video_requested.connect(_on_video_requested)
+	SignalBus.commercial_ended.connect(_on_commercial_break_finished)
+	SignalBus.rewarded_ad_ended.connect(_on_reward_break_done)
+	Utilities.mute_game(true)
+	if GameState.first_time_level:
+		GameState.first_time_level = false
+	else:
+		SignalBus.commercial_requested.emit()
 
 
-func _on_commercial_break_finished(_response):
+func _on_commercial_break_finished():
 	Utilities.mute_game(false)
 	get_tree().paused = false
 
 
 func _on_video_requested():
 	Utilities.mute_game(true)
-	PokiSDK.rewardedBreak()
+	SignalBus.commercial_requested.emit()
+	
 
 
-func _on_reward_break_done(response):
+func _on_reward_break_done(succeeded: bool):
 	Utilities.mute_game(false)
-	print("Rewarded break done", response)
-	if response:
+	print("Rewarded break done", succeeded)
+	if succeeded:
 		print("Reward gained!")
 		watched_ad.emit()
 	else:
 		print("No Reward.")
 		rewarded_ad_failed.emit()
-	PokiSDK.gameplayStart()
+	SignalBus.gameplay_started.emit()
