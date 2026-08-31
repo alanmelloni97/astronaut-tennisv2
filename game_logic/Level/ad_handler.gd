@@ -30,7 +30,7 @@ func _on_video_requested():
 	SignalBus.commercial_requested.emit()
 	
 
-
+# WARNING: doesnt work, try testing on poki dev
 func _on_reward_break_done(succeeded: bool):
 	Utilities.mute_game(false)
 	print("Rewarded break done", succeeded)
