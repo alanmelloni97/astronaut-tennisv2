@@ -2,8 +2,9 @@ extends Node
 class_name AdsPoki
 
 func _ready() -> void:
-	if not OS.has_feature("poki"):
-		queue_free()
+	if process_mode == PROCESS_MODE_DISABLED:
+		return
+	print("pokiloaded")
 	SignalBus.commercial_requested.connect(_on_commercial_requested)
 	SignalBus.rewarded_ad_requested.connect(_on_rewarded_ad_requested)
 	PokiSDK.commercial_break_done.connect(_on_commercial_done.unbind(1))

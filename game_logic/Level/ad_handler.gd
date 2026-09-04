@@ -8,8 +8,8 @@ signal rewarded_ad_failed
 
 
 func _ready() -> void:
-	if OS.has_feature("poki"):
-		get_tree().paused = true
+	if not OS.has_feature("ads"):
+		return
 	main_ui.video_requested.connect(_on_video_requested)
 	SignalBus.commercial_ended.connect(_on_commercial_break_finished)
 	SignalBus.rewarded_ad_ended.connect(_on_reward_break_done)

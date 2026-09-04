@@ -14,23 +14,12 @@
 [ext_resource type="Script" uid="uid://dsxqhy2yc5ld3" path="res://game_logic/main/preloading.gd" id="11_6jl4q"]
 [ext_resource type="PackedScene" uid="uid://dmqyassdndgtm" path="res://game_logic/Ball/ball.tscn" id="12_krguk"]
 [ext_resource type="Script" uid="uid://byrxmi71fifpd" path="res://game_logic/main/ui_sound_player.gd" id="12_ntpxs"]
-[ext_resource type="Script" uid="uid://rvba8d71vw2o" path="res://game_logic/main/ad_manager.gd" id="15_k05wu"]
+[ext_resource type="Script" uid="uid://bdwho74cieura" path="res://game_logic/main/achievements_tracker.gd" id="15_8npie"]
+[ext_resource type="Script" uid="uid://wik0lqpnu2iw" path="res://game_logic/main/external_sdks.gd" id="15_e5dw1"]
 [ext_resource type="Script" uid="uid://pie13fr1k83f" path="res://game_logic/main/game_start_tracker.gd" id="15_krguk"]
+[ext_resource type="Script" uid="uid://cf0ht2kcst86m" path="res://game_logic/main/admob.gd" id="16_e7p3w"]
 [ext_resource type="Script" uid="uid://chgbo2mu8dtw5" path="res://game_logic/main/ads_poki.gd" id="16_pi04w"]
-
-[sub_resource type="GDScript" id="GDScript_5ud5j"]
-script/source = "extends Node
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
+[ext_resource type="Script" uid="uid://c4gd4314uddal" path="res://game_logic/main/ads_game_pix.gd" id="17_e7p3w"]
 
 [node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager", "specific_scene_logic", "music_manager")]
 script = ExtResource("1_yh5la")
@@ -107,13 +96,24 @@ text = "DEBUG VERSION"
 horizontal_alignment = 1
 
 [node name="AchievementsTracker" type="Node" parent="." unique_id=1018201198]
-script = SubResource("GDScript_5ud5j")
+script = ExtResource("15_8npie")
 
-[node name="AdManager" type="Node" parent="." unique_id=683151221]
-script = ExtResource("15_k05wu")
+[node name="ExternalSDKs" type="Node" parent="." unique_id=683151221]
+process_priority = -1
+script = ExtResource("15_e5dw1")
 
-[node name="AdsPoki" type="Node" parent="AdManager" unique_id=815112755]
+[node name="AdsPoki" type="Node" parent="ExternalSDKs" unique_id=815112755]
+process_mode = 4
 script = ExtResource("16_pi04w")
 
-[node name="GameplayStartTracker" type="Node" parent="." unique_id=293705689]
+[node name="AdsAdmob" type="Node" parent="ExternalSDKs" unique_id=680595110]
+process_mode = 4
+script = ExtResource("16_e7p3w")
+
+[node name="AdsGamePix" type="Node" parent="ExternalSDKs" unique_id=1637834171]
+process_mode = 4
+script = ExtResource("17_e7p3w")
+
+[node name="GameplayEventPoki" type="Node" parent="ExternalSDKs" unique_id=293705689]
+process_mode = 4
 script = ExtResource("15_krguk")

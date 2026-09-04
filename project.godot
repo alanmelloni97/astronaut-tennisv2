@@ -8,6 +8,10 @@
 
 config_version=5
 
+[admob]
+
+general/android/app_id="ca-app-pub-9902941209478401~2934530885"
+
 [application]
 
 config/name="AstroTennis"
@@ -26,6 +30,7 @@ BuildConfig="*uid://b3284txojx8a0"
 GameState="*uid://bwvofcl4w84ob"
 PokiSDK="*uid://dyf6sqvnrxg5l"
 SignalBus="*uid://fhpsdgmr1clw"
+GPX="*uid://cv5lsj6mo6obj"
 
 [display]
 
@@ -43,7 +48,7 @@ project/assembly_name="AstroTennis"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/playgama_bridge/plugin.cfg")
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/admob/plugin.cfg", "res://addons/gpx-godot-plugin/plugin.cfg")
 
 [global_group]
 
@@ -150,6 +155,10 @@ move_right_2={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":1,"axis":0,"axis_value":1.0,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/admob/gdscript/sample/translations/admob_sample.en.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.pt_BR.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.es.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.zh_CN.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.ja.translation")
 
 [layer_names]
 
