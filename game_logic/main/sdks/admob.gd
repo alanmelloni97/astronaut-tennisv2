@@ -1,8 +1,11 @@
 extends Node
+class_name AdsAdmob
 
 var _interstitial_ad : InterstitialAd
 var _full_screen_content_callback := FullScreenContentCallback.new()
+
 @warning_ignore_start("unused_parameter")
+
 func _ready() -> void:
 	if process_mode == PROCESS_MODE_DISABLED:
 		return

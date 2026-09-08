@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dkqcrsuuasj5k"]
+
+[ext_resource type="Script" uid="uid://cf0ht2kcst86m" path="res://game_logic/main/sdks/admob.gd" id="1_cvgkj"]
+
+[node name="AdsAdmob" type="Node" unique_id=1931366143]
+script = ExtResource("1_cvgkj")

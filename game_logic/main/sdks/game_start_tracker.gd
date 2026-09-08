@@ -1,5 +1,5 @@
 extends Node
-class_name GameStartTracker
+class_name GameStartTrackerPoki
 
 func _ready() -> void:
 	if process_mode == PROCESS_MODE_DISABLED:

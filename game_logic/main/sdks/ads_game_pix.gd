@@ -1,5 +1,5 @@
 extends Node
-
+class_name AdsGamepix
 func _ready() -> void:
 	if process_mode == PROCESS_MODE_DISABLED:
 		return
