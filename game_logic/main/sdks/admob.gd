@@ -7,9 +7,7 @@ var _full_screen_content_callback := FullScreenContentCallback.new()
 @warning_ignore_start("unused_parameter")
 
 func _ready() -> void:
-	if process_mode == PROCESS_MODE_DISABLED:
-		return
-	print("admob loaded")
+
 	SignalBus.commercial_requested.connect(_on_show_pressed)
 	
 	#The initializate needs to be done only once, ideally at app launch.
@@ -26,7 +24,10 @@ func _ready() -> void:
 	_full_screen_content_callback.on_ad_showed_full_screen_content = func() -> void:
 		print("on_ad_showed_full_screen_content")
 
+	_on_load_pressed()
+	
 func _on_load_pressed():
+	print("asd")
 	#free memory
 	if _interstitial_ad:
 		#always call this method on all AdFormats to free memory on Android/iOS
