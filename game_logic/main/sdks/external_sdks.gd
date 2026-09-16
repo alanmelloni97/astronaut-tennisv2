@@ -11,12 +11,8 @@ func _ready() -> void:
 	if OS.has_feature("poki"):
 		add_child(ads_poki.instantiate())
 		add_child(gameplay_event_poki.instantiate())
-		print("poki instantiated")
 	if OS.has_feature("android"):
 		add_child(ads_admob.instantiate())
-		print("admob instantiated")
 	if OS.has_feature("gamepix"):
 		add_child(ads_game_pix.instantiate())
-		print("gamepix instantiated")
-		
 		

@@ -3,16 +3,11 @@ class_name AdsAdmob
 
 var _interstitial_ad : InterstitialAd
 var _full_screen_content_callback := FullScreenContentCallback.new()
-
-@warning_ignore_start("unused_parameter")
-
 func _ready() -> void:
-
+	SignalBus.main_menu_loaded.connect(_on_load_pressed)
 	SignalBus.commercial_requested.connect(_on_show_pressed)
-	
 	#The initializate needs to be done only once, ideally at app launch.
 	MobileAds.initialize()
-	
 	_full_screen_content_callback.on_ad_clicked = func() -> void:
 		print("on_ad_clicked")
 	_full_screen_content_callback.on_ad_dismissed_full_screen_content = func() -> void:
@@ -24,10 +19,7 @@ func _ready() -> void:
 	_full_screen_content_callback.on_ad_showed_full_screen_content = func() -> void:
 		print("on_ad_showed_full_screen_content")
 
-	_on_load_pressed()
-	
 func _on_load_pressed():
-	print("asd")
 	#free memory
 	if _interstitial_ad:
 		#always call this method on all AdFormats to free memory on Android/iOS
@@ -45,13 +37,11 @@ func _on_load_pressed():
 		print(adError.message)
 
 	interstitial_ad_load_callback.on_ad_loaded = func(interstitial_ad : InterstitialAd) -> void:
-		print("interstitial ad loaded" + str(interstitial_ad._uid))
+		print("interstitial ad loaded " + str(interstitial_ad._uid))
 		_interstitial_ad = interstitial_ad
 		_interstitial_ad.full_screen_content_callback = _full_screen_content_callback
 
 	InterstitialAdLoader.new().load(unit_id, AdRequest.new(), interstitial_ad_load_callback)
-	
-	
 
 func _on_show_pressed():
 	if _interstitial_ad:
