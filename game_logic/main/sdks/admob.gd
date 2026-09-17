@@ -3,21 +3,17 @@ class_name AdsAdmob
 
 var _interstitial_ad : InterstitialAd
 var _full_screen_content_callback := FullScreenContentCallback.new()
+var first_load: bool = true
+
 func _ready() -> void:
-	SignalBus.main_menu_loaded.connect(_on_load_pressed)
 	SignalBus.commercial_requested.connect(_on_show_pressed)
-	#The initializate needs to be done only once, ideally at app launch.
-	MobileAds.initialize()
-	_full_screen_content_callback.on_ad_clicked = func() -> void:
-		print("on_ad_clicked")
-	_full_screen_content_callback.on_ad_dismissed_full_screen_content = func() -> void:
-		print("on_ad_dismissed_full_screen_content")
-	_full_screen_content_callback.on_ad_failed_to_show_full_screen_content = func(ad_error : AdError) -> void:
-		print("on_ad_failed_to_show_full_screen_content")
-	_full_screen_content_callback.on_ad_impression = func() -> void:
-		print("on_ad_impression")
-	_full_screen_content_callback.on_ad_showed_full_screen_content = func() -> void:
-		print("on_ad_showed_full_screen_content")
+	# Initialize Admob
+	var listener := OnInitializationCompleteListener.new()
+	# when initialized, call ad load, for some reason the plugin uses this instead of signals
+	listener.on_initialization_complete = func(status: InitializationStatus) -> void:
+		_on_load_pressed()
+	MobileAds.initialize(listener)
+
 
 func _on_load_pressed():
 	#free memory
@@ -46,3 +42,4 @@ func _on_load_pressed():
 func _on_show_pressed():
 	if _interstitial_ad:
 		_interstitial_ad.show()
+		_on_load_pressed()

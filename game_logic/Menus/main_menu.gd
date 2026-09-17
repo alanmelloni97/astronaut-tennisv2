@@ -7,8 +7,7 @@ signal scene_requested(scene: PackedScene)
 
 var two_players_requested: bool = false
 
-func _ready() -> void:
-	SignalBus.main_menu_loaded.emit()
+
 
 func _on_tournament_button_pressed() -> void:
 	scene_requested.emit(Scenes.character_selection)

@@ -23,3 +23,4 @@ func main():
 	#get_tree().paused = true
 	#else:
 	scene_manager._change_to_scene(Scenes.main_menu)
+	SignalBus.main_loaded.emit()

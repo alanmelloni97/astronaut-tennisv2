@@ -5,7 +5,7 @@ extends Node
 # Game Events
 signal gameplay_started
 signal gameplay_stopped
-signal main_menu_loaded
+signal main_loaded
 
 # Ads
 signal commercial_requested
