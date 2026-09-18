@@ -20,82 +20,82 @@ Assists with initializing the Google Mobile Ads SDK and requesting user consent 
 
 === "GDScript"
 
-    ```gdscript
-    func request_user_consent() -> void:
-    	var params := ConsentRequestParameters.new()
-    	# Optional debug settings:
-    	# var debug_settings := ConsentDebugSettings.new()
-    	# debug_settings.debug_geography = ConsentDebugSettings.DebugGeography.EEA
-    	# params.consent_debug_settings = debug_settings
-    	
-    	var on_update_listener := OnConsentInfoUpdateListener.new()
-    	on_update_listener.on_consent_info_update_success = func() -> void:
-    		if ConsentInformation.is_consent_form_available():
-    			load_and_show_form()
-    		else:
-    			initialize_ads()
-    			
-    	on_update_listener.on_consent_info_update_failure = func(error: FormError) -> void:
-    		initialize_ads()
-    		
-    	ConsentInformation.request_consent_info_update(params, on_update_listener)
+	```gdscript
+	func request_user_consent() -> void:
+		var params := ConsentRequestParameters.new()
+		# Optional debug settings:
+		# var debug_settings := ConsentDebugSettings.new()
+		# debug_settings.debug_geography = ConsentDebugSettings.DebugGeography.EEA
+		# params.consent_debug_settings = debug_settings
+		
+		var on_update_listener := OnConsentInfoUpdateListener.new()
+		on_update_listener.on_consent_info_update_success = func() -> void:
+			if ConsentInformation.is_consent_form_available():
+				load_and_show_form()
+			else:
+				initialize_ads()
+				
+		on_update_listener.on_consent_info_update_failure = func(error: FormError) -> void:
+			initialize_ads()
+			
+		ConsentInformation.request_consent_info_update(params, on_update_listener)
 
-    func load_and_show_form() -> void:
-    	var on_dismissed_listener := OnConsentFormDismissedListener.new()
-    	on_dismissed_listener.on_consent_form_dismissed = func(error: FormError) -> void:
-    		initialize_ads()
-    		
-    	ConsentForm.load_and_show_consent_form_if_required(on_dismissed_listener)
+	func load_and_show_form() -> void:
+		var on_dismissed_listener := OnConsentFormDismissedListener.new()
+		on_dismissed_listener.on_consent_form_dismissed = func(error: FormError) -> void:
+			initialize_ads()
+			
+		ConsentForm.load_and_show_consent_form_if_required(on_dismissed_listener)
 
-    func initialize_ads() -> void:
-    	var on_init_listener := OnInitializationCompleteListener.new()
-    	on_init_listener.on_initialization_complete = func(status: InitializationStatus) -> void:
-    		print("AdMob initialized!")
-    		
-    	var request_config := RequestConfiguration.new()
-    	MobileAds.set_request_configuration(request_config)
-    	MobileAds.initialize(on_init_listener)
-    ```
+	func initialize_ads() -> void:
+		var on_init_listener := OnInitializationCompleteListener.new()
+		on_init_listener.on_initialization_complete = func(status: InitializationStatus) -> void:
+			print("AdMob initialized!")
+			
+		var request_config := RequestConfiguration.new()
+		MobileAds.set_request_configuration(request_config)
+		MobileAds.initialize(on_init_listener)
+	```
 
 === "C#"
 
-    ```csharp
-    using Godot;
-    using PoingStudios.AdMob.Api;
-    using PoingStudios.AdMob.Api.Listeners;
-    using PoingStudios.AdMob.Api.Core;
-    using PoingStudios.AdMob.Api.Ump;
-    using PoingStudios.AdMob.Api.Ump.Listeners;
-    using PoingStudios.AdMob.Api.Ump.Core;
+	```csharp
+	using Godot;
+	using PoingStudios.AdMob.Api;
+	using PoingStudios.AdMob.Api.Listeners;
+	using PoingStudios.AdMob.Api.Core;
+	using PoingStudios.AdMob.Api.Ump;
+	using PoingStudios.AdMob.Api.Ump.Listeners;
+	using PoingStudios.AdMob.Api.Ump.Core;
 
-    public void RequestUserConsent()
-    {
-        var @params = new ConsentRequestParameters();
-        var onUpdateListener = new OnConsentInfoUpdateListener();
-        onUpdateListener.OnConsentInfoUpdateSuccess = () => {
-            if (ConsentInformation.IsConsentFormAvailable()) {
-                LoadAndShowForm();
-            } else {
-                InitializeAds();
-            }
-        };
-        onUpdateListener.OnConsentInfoUpdateFailure = (FormError error) => InitializeAds();
-        ConsentInformation.RequestConsentInfoUpdate(@params, onUpdateListener);
-    }
+	public void RequestUserConsent()
+	{
+		var @params = new ConsentRequestParameters();
+		var onUpdateListener = new OnConsentInfoUpdateListener();
+		onUpdateListener.OnConsentInfoUpdateSuccess = () => {
+			if (ConsentInformation.IsConsentFormAvailable()) {
+				LoadAndShowForm();
+			} else {
+				InitializeAds();
+			}
+		};
+		onUpdateListener.OnConsentInfoUpdateFailure = (FormError error) => InitializeAds();
+		ConsentInformation.RequestConsentInfoUpdate(@params, onUpdateListener);
+	}
 
-    private void LoadAndShowForm()
-    {
-        var onDismissedListener = new OnConsentFormDismissedListener();
-        onDismissedListener.OnConsentFormDismissed = (FormError error) => InitializeAds();
-        ConsentForm.LoadAndShowConsentFormIfRequired(onDismissedListener);
-    }
+	private void LoadAndShowForm()
+	{
+		var onDismissedListener = new OnConsentFormDismissedListener();
+		onDismissedListener.OnConsentFormDismissed = (FormError error) => InitializeAds();
+		ConsentForm.LoadAndShowConsentFormIfRequired(onDismissedListener);
+	}
 
-    private void InitializeAds()
-    {
-        var onInitListener = new OnInitializationCompleteListener();
-        onInitListener.OnInitializationComplete = (status) => GD.Print("AdMob initialized!");
-        var requestConfig = new RequestConfiguration();
-        MobileAds.SetRequestConfiguration(requestConfig);
-        MobileAds.Initialize(onInitListener);
-    }
-    ```
+	private void InitializeAds()
+	{
+		var onInitListener = new OnInitializationCompleteListener();
+		onInitListener.OnInitializationComplete = (status) => GD.Print("AdMob initialized!");
+		var requestConfig = new RequestConfiguration();
+		MobileAds.SetRequestConfiguration(requestConfig);
+		MobileAds.Initialize(onInitListener);
+	}
+	```
