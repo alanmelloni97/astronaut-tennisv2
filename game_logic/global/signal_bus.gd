@@ -13,6 +13,9 @@ signal commercial_ended(succeeded: bool)
 signal rewarded_ad_requested
 signal rewarded_ad_ended(succeeded: bool)
 
+# Review for android and ios
+signal review_requested
+
 # Achievements
 signal scored(player: int)
 signal game_won(score: Vector2)

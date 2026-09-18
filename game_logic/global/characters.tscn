@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cxyudux51rjxk"]
 
-[ext_resource type="Script" uid="uid://ds5c4ds1qowdh" path="res://global/characters.gd" id="1_nyi4w"]
+[ext_resource type="Script" uid="uid://ds5c4ds1qowdh" path="res://game_logic/global/characters.gd" id="1_nyi4w"]
 [ext_resource type="Script" uid="uid://5rdixxdoulx3" path="res://game_logic/Resources/character.gd" id="2_k1buq"]
 [ext_resource type="Resource" uid="uid://b7xe1bwim7ah7" path="res://game_logic/Player/racket/ai_levels/ai_level_1.tres" id="3_ivnx7"]
 [ext_resource type="Resource" uid="uid://ikwxwmujax5d" path="res://Assets/skins/laika/laika_skin.tres" id="4_ivnx7"]

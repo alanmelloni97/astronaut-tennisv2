@@ -1,6 +1,10 @@
 extends Node
 class_name AdsAdmob
 
+@export var interstitial_ad_id_prod: String = ""
+@export var rewarded_ad_id_prod: String = ""
+var interstitial_ad_id_debug: String = "ca-app-pub-3940256099942544/1033173712"
+var rewarded_ad_id_debug: String = "ca-app-pub-3940256099942544/5224354917"
 var interstitial_ad: InterstitialAd
 var interstitial_loader := InterstitialAdLoader.new()
 
@@ -14,7 +18,7 @@ func _ready() -> void:
 	listener.on_initialization_complete = func(_status: InitializationStatus) -> void:
 		_loads_ads()
 	MobileAds.initialize(listener)
-
+	
 
 func _loads_ads():
 	_load_interstitial()
@@ -22,7 +26,12 @@ func _loads_ads():
 
 
 func _load_interstitial() -> void:
-	var ad_unit_id := "ca-app-pub-3940256099942544/1033173712" # Test ID
+	# set ad id
+	var ad_unit_id: String
+	if OS.is_debug_build():
+		ad_unit_id = interstitial_ad_id_debug
+	else:
+		ad_unit_id = interstitial_ad_id_prod
 	var callback := InterstitialAdLoadCallback.new()
 	
 	callback.on_ad_loaded = func(ad: InterstitialAd) -> void:
@@ -68,7 +77,12 @@ var rewarded_ad: RewardedAd
 var rewarded_loader := RewardedAdLoader.new()
 
 func _load_rewarded_ad() -> void:
-	var ad_unit_id := "ca-app-pub-3940256099942544/5224354917" # Test ID
+	# set ad id
+	var ad_unit_id: String
+	if OS.is_debug_build():
+		ad_unit_id = interstitial_ad_id_debug
+	else:
+		ad_unit_id = interstitial_ad_id_prod
 	var callback := RewardedAdLoadCallback.new()
 
 	callback.on_ad_loaded = func(ad: RewardedAd) -> void:

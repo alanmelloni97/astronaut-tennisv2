@@ -37,7 +37,7 @@ func _on_video_requested():
 	SignalBus.rewarded_ad_requested.emit()
 	
 
-func _on_interstitial_finished(succeeded: bool):
+func _on_interstitial_finished(_succeeded: bool):
 	Utilities.mute_game(false)
 	get_tree().paused = false
 

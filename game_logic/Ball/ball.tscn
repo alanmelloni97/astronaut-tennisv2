@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cfiuoebp1eicf" path="res://game_logic/Ball/ball.gd" id="2_65gad"]
 [ext_resource type="Script" uid="uid://bh2kguq210h0h" path="res://game_logic/Ball/ball_sound_manager.gd" id="3_rg84v"]
 [ext_resource type="Script" uid="uid://cf2trema4h72c" path="res://game_logic/Ball/effects_manager.gd" id="4_4s4qd"]
-[ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://components/independent_transform.gd" id="5_0t0x3"]
+[ext_resource type="Script" uid="uid://cxda475ijimfw" path="res://game_logic/components/independent_transform.gd" id="5_0t0x3"]
 [ext_resource type="Script" uid="uid://do5ow3kwhws2f" path="res://game_logic/Ball/ai_obstacle_manager.gd" id="5_fxsfa"]
 [ext_resource type="Texture2D" uid="uid://u78bf1elgyhg" path="res://Assets/ball/pelota.png" id="5_hsaat"]
 [ext_resource type="Script" uid="uid://l67cfjetdf8j" path="res://game_logic/Ball/remove_particles.gd" id="6_hbi5u"]

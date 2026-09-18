@@ -1,6 +1,7 @@
 extends Node
 class_name AchievementsManager
 
+# Achievements must have same name in steam, google play and here
 enum Achievement{
 	FIRST_POINT,
 	FIRST_WIN,
