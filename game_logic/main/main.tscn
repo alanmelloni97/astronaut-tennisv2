@@ -20,7 +20,6 @@
 [ext_resource type="Script" uid="uid://tl1toomrpjvf" path="res://game_logic/main/steam_achievements.gd" id="16_os3ce"]
 [ext_resource type="PackedScene" uid="uid://48ipqf2tsls1" path="res://game_logic/main/sdks/ads_poki.tscn" id="17_8npie"]
 [ext_resource type="PackedScene" uid="uid://dkqcrsuuasj5k" path="res://game_logic/main/sdks/ads_admob.tscn" id="18_os3ce"]
-[ext_resource type="PackedScene" uid="uid://cahstybhe4stl" path="res://game_logic/main/sdks/ads_gamepix.tscn" id="19_6v4id"]
 [ext_resource type="PackedScene" uid="uid://dx2dhgnamrklu" path="res://game_logic/main/sdks/gameplay_event_poki.tscn" id="20_q83kw"]
 
 [node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager", "specific_scene_logic", "music_manager")]
@@ -111,7 +110,6 @@ achievements_tracker = NodePath("..")
 [node name="ExternalSDKs" type="Node" parent="." unique_id=683151221]
 process_priority = -1
 script = ExtResource("15_e5dw1")
-ads_poki = ExtResource("17_8npie")
 ads_admob = ExtResource("18_os3ce")
-ads_game_pix = ExtResource("19_6v4id")
+ads_poki = ExtResource("17_8npie")
 gameplay_event_poki = ExtResource("20_q83kw")

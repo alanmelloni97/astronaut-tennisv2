@@ -459,10 +459,11 @@ player_2 = NodePath("../Player2")
 level = NodePath("..")
 score_manager = NodePath("../ScoreHandler/ScoreManager")
 
-[node name="AdHandler" type="Node" parent="." unique_id=1442450406 node_paths=PackedStringArray("main_ui")]
+[node name="AdHandler" type="Node" parent="." unique_id=1442450406 node_paths=PackedStringArray("main_ui", "level")]
 process_mode = 3
 script = ExtResource("47_ervdu")
 main_ui = NodePath("../MainUI")
+level = NodePath("..")
 
 [node name="TouchJoysticks" parent="." unique_id=25295857 instance=ExtResource("24_6uec0")]
 

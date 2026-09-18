@@ -5,6 +5,7 @@ signal watched_ad
 signal rewarded_ad_failed
 
 @export var main_ui: MainUI
+@export var level: Level
 
 
 func _ready() -> void:
@@ -18,6 +19,10 @@ func _ready() -> void:
 	if GameState.first_time_level:
 		GameState.first_time_level = false
 	else:
+		# if the level has been reloaded from a rewarded ad, dont request interstitial
+		# so that it doesnt show inmediately after rewarded ad
+		if not level.current_score == Vector2i.ZERO:
+			return
 		_request_interstitial()
 		
 		

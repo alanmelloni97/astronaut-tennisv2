@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://cahstybhe4stl"]
-
-[ext_resource type="Script" uid="uid://c4gd4314uddal" path="res://game_logic/main/sdks/ads_game_pix.gd" id="1_vncnv"]
-
-[node name="AdsGamepix" type="Node" unique_id=440165987]
-script = ExtResource("1_vncnv")
