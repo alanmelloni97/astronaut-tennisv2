@@ -1,6 +1,6 @@
 "
 TODO:
-	steam achievements
+	andoird achievements
 BUG:
 	pelota pica 3 veces
 

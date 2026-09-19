@@ -18,10 +18,9 @@
 [ext_resource type="Script" uid="uid://wik0lqpnu2iw" path="res://game_logic/main/sdks/external_sdks.gd" id="15_e5dw1"]
 [ext_resource type="Script" uid="uid://ewm4wfxtdt0x" path="res://game_logic/main/achievements_tracker.gd" id="16_6v4id"]
 [ext_resource type="Script" uid="uid://tl1toomrpjvf" path="res://game_logic/main/steam_achievements.gd" id="16_os3ce"]
-[ext_resource type="Script" uid="uid://cf0ht2kcst86m" path="res://game_logic/main/sdks/admob.gd" id="19_6v4id"]
-[ext_resource type="Script" uid="uid://chgbo2mu8dtw5" path="res://game_logic/main/sdks/ads_poki.gd" id="20_q83kw"]
-[ext_resource type="Script" uid="uid://pie13fr1k83f" path="res://game_logic/main/sdks/game_start_tracker.gd" id="21_ab0iv"]
-[ext_resource type="Script" uid="uid://cknx5gb864keg" path="res://game_logic/main/steam_initializer.gd" id="22_24jfu"]
+[ext_resource type="PackedScene" uid="uid://48ipqf2tsls1" path="res://game_logic/main/sdks/ads_poki.tscn" id="17_8npie"]
+[ext_resource type="PackedScene" uid="uid://dkqcrsuuasj5k" path="res://game_logic/main/sdks/ads_admob.tscn" id="18_os3ce"]
+[ext_resource type="PackedScene" uid="uid://dx2dhgnamrklu" path="res://game_logic/main/sdks/gameplay_event_poki.tscn" id="20_q83kw"]
 
 [node name="Main" type="Node" unique_id=1384278331 node_paths=PackedStringArray("save_system", "scene_manager", "specific_scene_logic", "music_manager")]
 script = ExtResource("1_yh5la")
@@ -104,41 +103,13 @@ script = ExtResource("15_8npie")
 script = ExtResource("16_6v4id")
 ach_man = NodePath("..")
 
-[node name="SteamAchievements" type="Node" parent="AchievementsManager" unique_id=390196412]
+[node name="SteamAchievements" type="Node" parent="AchievementsManager" unique_id=390196412 node_paths=PackedStringArray("achievements_tracker")]
 script = ExtResource("16_os3ce")
+achievements_tracker = NodePath("..")
 
-[node name="ExternalSDKs" type="Node" parent="." unique_id=683151221 node_paths=PackedStringArray("steam_achievements", "steam_initializer", "ads_admob", "ads_poki", "gameplay_events_poki")]
+[node name="ExternalSDKs" type="Node" parent="." unique_id=683151221]
 process_priority = -1
 script = ExtResource("15_e5dw1")
-steam_achievements = NodePath("SteamAchievements")
-steam_initializer = NodePath("SteamInitializer")
-ads_admob = NodePath("AdsAdmob")
-ads_poki = NodePath("AdsPoki")
-gameplay_events_poki = NodePath("GameplayEventsPoki")
-
-[node name="SteamAchievements" type="Node" parent="ExternalSDKs" unique_id=1133105663 node_paths=PackedStringArray("ach_man")]
-process_mode = 4
-script = ExtResource("16_os3ce")
-ach_man = NodePath("../../AchievementsManager")
-metadata/_custom_type_script = "uid://tl1toomrpjvf"
-
-[node name="SteamInitializer" type="Node" parent="ExternalSDKs" unique_id=383772066]
-process_mode = 4
-script = ExtResource("22_24jfu")
-
-[node name="AdsAdmob" type="Node" parent="ExternalSDKs" unique_id=2083937622]
-process_mode = 4
-script = ExtResource("19_6v4id")
-interstitial_ad_id_prod = "ca-app-pub-9902941209478401/1988175520"
-rewarded_ad_id_prod = "ca-app-pub-9902941209478401/2024903778"
-metadata/_custom_type_script = "uid://cf0ht2kcst86m"
-
-[node name="AdsPoki" type="Node" parent="ExternalSDKs" unique_id=686454969]
-process_mode = 4
-script = ExtResource("20_q83kw")
-metadata/_custom_type_script = "uid://chgbo2mu8dtw5"
-
-[node name="GameplayEventsPoki" type="Node" parent="ExternalSDKs" unique_id=450617292]
-process_mode = 4
-script = ExtResource("21_ab0iv")
-metadata/_custom_type_script = "uid://pie13fr1k83f"
+ads_admob = ExtResource("18_os3ce")
+ads_poki = ExtResource("17_8npie")
+gameplay_event_poki = ExtResource("20_q83kw")

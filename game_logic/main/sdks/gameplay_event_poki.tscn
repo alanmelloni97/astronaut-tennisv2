@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://dx2dhgnamrklu"]
-
-[ext_resource type="Script" uid="uid://pie13fr1k83f" path="res://game_logic/main/sdks/game_start_tracker.gd" id="1_gmht1"]
-
-[node name="GameplayEventPoki" type="Node" unique_id=1133107678]
-script = ExtResource("1_gmht1")

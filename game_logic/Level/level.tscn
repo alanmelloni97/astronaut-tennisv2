@@ -466,8 +466,10 @@ script = ExtResource("47_ervdu")
 main_ui = NodePath("../MainUI")
 level = NodePath("..")
 
-[node name="GlobalSignalConnector" type="Node" parent="." unique_id=20296671]
+[node name="GlobalSignalConnector" type="Node" parent="." unique_id=20296671 node_paths=PackedStringArray("score_manager", "level")]
 script = ExtResource("48_bdes8")
+score_manager = NodePath("../ScoreHandler/ScoreManager")
+level = NodePath("..")
 
 [node name="TouchJoysticks" parent="." unique_id=25295857 instance=ExtResource("24_6uec0")]
 

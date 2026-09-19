@@ -31,6 +31,10 @@ GameState="*uid://bwvofcl4w84ob"
 PokiSDK="*uid://dyf6sqvnrxg5l"
 SignalBus="*uid://fhpsdgmr1clw"
 
+[debug]
+
+file_logging/enable_file_logging=true
+
 [display]
 
 window/size/viewport_width=1920
@@ -184,5 +188,3 @@ environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 [steam]
 
 initialization/app_data/app_id=5109050
-initialization/processes/initialize_on_startup=true
-initialization/processes/embed_callbacks=true

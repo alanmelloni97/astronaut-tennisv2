@@ -1,7 +1,7 @@
 extends Node
-class_name GameStartTrackerPoki
+class_name GameplayEventsPoki
 
-func _ready() -> void:
+func start() -> void:
 	if process_mode == PROCESS_MODE_DISABLED:
 		return
 	SignalBus.gameplay_started.connect(_on_gameplay_start)

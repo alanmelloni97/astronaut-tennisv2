@@ -1,7 +1,7 @@
 extends Node
 class_name AdsPoki
 
-func _ready() -> void:
+func start() -> void:
 	if process_mode == PROCESS_MODE_DISABLED:
 		return
 	print("pokiloaded")

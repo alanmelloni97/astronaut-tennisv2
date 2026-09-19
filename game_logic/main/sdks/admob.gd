@@ -9,7 +9,7 @@ var interstitial_ad: InterstitialAd
 var interstitial_loader := InterstitialAdLoader.new()
 
 
-func _ready() -> void:
+func start() -> void:
 	SignalBus.commercial_requested.connect(_show_interstitial)
 	SignalBus.rewarded_ad_requested.connect(_show_rewarded_ad)
 	# Initialize Admob

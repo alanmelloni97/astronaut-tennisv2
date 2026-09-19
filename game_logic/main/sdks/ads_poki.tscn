@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://48ipqf2tsls1"]
-
-[ext_resource type="Script" uid="uid://chgbo2mu8dtw5" path="res://game_logic/main/sdks/ads_poki.gd" id="1_ca12t"]
-
-[node name="AdsPoki" type="Node" unique_id=340241817]
-script = ExtResource("1_ca12t")
