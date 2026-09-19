@@ -30,6 +30,7 @@ BuildConfig="*uid://b3284txojx8a0"
 GameState="*uid://bwvofcl4w84ob"
 PokiSDK="*uid://dyf6sqvnrxg5l"
 SignalBus="*uid://fhpsdgmr1clw"
+GodotPlayGameServices="*uid://mm4iw7cfaghc"
 
 [debug]
 

@@ -8,10 +8,7 @@ extends RigidBody2D
 @export var racket_shape: CollisionShape2D
 @export var rod_shape: CollisionShape2D
 # used by dog player and racket setter
-@export var sprite: Sprite2D:
-	set(x):
-		sprite = x
-		_on_sprite_set()
+@export var sprite: Sprite2D
 @export var collision_shape_2d: CollisionShape2D
 @export var navigation_position: Marker2D
 
@@ -20,7 +17,7 @@ var is_dog: bool = false
 
 
 # this is horrible but no more changes are planned
-func _on_sprite_set() -> void:
+func set_collision_shape() -> void:
 	if sprite.texture == load("res://Assets/rackets/carbon rod.png"):
 		racket_shape.queue_free()
 	else:

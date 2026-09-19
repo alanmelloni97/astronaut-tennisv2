@@ -33,6 +33,7 @@ func set_up_player(
 func _set_racket(racket_skin: Texture2D, char_skin: CharacterSkin):
 	racket.is_dog = char_skin.dog
 	racket.sprite.texture = racket_skin
+	racket.set_collision_shape()
 
 
 func _set_ragdoll(player_type: PlayerType, skin: CharacterSkin):
