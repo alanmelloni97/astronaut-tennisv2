@@ -8,7 +8,7 @@ extends Node
 @export var player_2: Player
 @export var level: Level
 
-var poki_paused: bool = true
+var poki_paused: bool = false
 
 
 func _ready() -> void:

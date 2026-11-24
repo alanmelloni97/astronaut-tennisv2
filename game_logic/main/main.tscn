@@ -104,9 +104,6 @@ script = ExtResource("15_8npie")
 script = ExtResource("16_6v4id")
 ach_man = NodePath("..")
 
-[node name="SteamAchievements" type="Node" parent="AchievementsManager" unique_id=390196412]
-script = ExtResource("16_os3ce")
-
 [node name="ExternalSDKs" type="Node" parent="." unique_id=683151221 node_paths=PackedStringArray("steam_achievements", "steam_initializer", "ads_admob", "ads_poki", "gameplay_events_poki")]
 process_priority = -1
 script = ExtResource("15_e5dw1")
@@ -126,12 +123,18 @@ metadata/_custom_type_script = "uid://tl1toomrpjvf"
 process_mode = 4
 script = ExtResource("22_24jfu")
 
-[node name="AdsAdmob" type="Node" parent="ExternalSDKs" unique_id=2083937622]
+[node name="AdsAdmob" type="Node" parent="ExternalSDKs" unique_id=2083937622 node_paths=PackedStringArray("interstitial_timer")]
 process_mode = 4
 script = ExtResource("19_6v4id")
 interstitial_ad_id_prod = "ca-app-pub-9902941209478401/1988175520"
 rewarded_ad_id_prod = "ca-app-pub-9902941209478401/2024903778"
+interstitial_timer = NodePath("InterstitialTimer")
 metadata/_custom_type_script = "uid://cf0ht2kcst86m"
+
+[node name="InterstitialTimer" type="Timer" parent="ExternalSDKs/AdsAdmob" unique_id=562713039]
+process_mode = 3
+wait_time = 600.0
+autostart = true
 
 [node name="AdsPoki" type="Node" parent="ExternalSDKs" unique_id=686454969]
 process_mode = 4

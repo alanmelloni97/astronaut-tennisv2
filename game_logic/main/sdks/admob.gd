@@ -3,10 +3,21 @@ class_name AdsAdmob
 
 @export var interstitial_ad_id_prod: String = ""
 @export var rewarded_ad_id_prod: String = ""
+@export_group("internal")
+@export var interstitial_timer: Timer
 var interstitial_ad_id_debug: String = "ca-app-pub-3940256099942544/1033173712"
 var rewarded_ad_id_debug: String = "ca-app-pub-3940256099942544/5224354917"
 var interstitial_ad: InterstitialAd
 var interstitial_loader := InterstitialAdLoader.new()
+var timeout_ready: bool
+
+
+func _ready() -> void:
+	interstitial_timer.timeout.connect(_on_timer_timeout)
+
+
+func _on_timer_timeout():
+	timeout_ready = true
 
 
 func start() -> void:
@@ -18,7 +29,7 @@ func start() -> void:
 	listener.on_initialization_complete = func(_status: InitializationStatus) -> void:
 		_loads_ads()
 	MobileAds.initialize(listener)
-	
+
 
 func _loads_ads():
 	_load_interstitial()
@@ -33,15 +44,15 @@ func _load_interstitial() -> void:
 	else:
 		ad_unit_id = interstitial_ad_id_prod
 	var callback := InterstitialAdLoadCallback.new()
-	
+
 	callback.on_ad_loaded = func(ad: InterstitialAd) -> void:
 		interstitial_ad = ad
 		print("Interstitial loaded. Ready to show.")
 		_setup_interstitial_callbacks()
-		
+
 	callback.on_ad_failed_to_load = func(error: LoadAdError) -> void:
 		print("Interstitial failed to load: ", error.message)
-		
+
 	interstitial_loader.load(ad_unit_id, AdRequest.new(), callback)
 
 
@@ -67,22 +78,30 @@ func _setup_interstitial_callbacks() -> void:
 
 
 func _show_interstitial() -> void:
+	if not timeout_ready:
+		print("time for next ad: ", interstitial_timer.time_left)
+		SignalBus.commercial_ended.emit(false)
+		return
 	if interstitial_ad:
 		interstitial_ad.show()
+		interstitial_timer.start()
+		timeout_ready = false
 	else:
 		print("Interstitial not loaded yet.")
 		SignalBus.commercial_ended.emit(false)
-		
+
+
 var rewarded_ad: RewardedAd
 var rewarded_loader := RewardedAdLoader.new()
+
 
 func _load_rewarded_ad() -> void:
 	# set ad id
 	var ad_unit_id: String
 	if OS.is_debug_build():
-		ad_unit_id = interstitial_ad_id_debug
+		ad_unit_id = rewarded_ad_id_debug
 	else:
-		ad_unit_id = interstitial_ad_id_prod
+		ad_unit_id = rewarded_ad_id_prod
 	var callback := RewardedAdLoadCallback.new()
 
 	callback.on_ad_loaded = func(ad: RewardedAd) -> void:
@@ -95,6 +114,7 @@ func _load_rewarded_ad() -> void:
 
 	rewarded_loader.load(ad_unit_id, AdRequest.new(), callback)
 
+
 func setup_rewarded_callbacks() -> void:
 	if not rewarded_ad:
 		return
@@ -103,7 +123,7 @@ func setup_rewarded_callbacks() -> void:
 		print("Rewarded ad dismissed.")
 		rewarded_ad.destroy()
 		rewarded_ad = null
-		SignalBus.rewarded_ad_ended.emit(true)	# dismiss is when pressing the x after video played
+		SignalBus.rewarded_ad_ended.emit(true) # dismiss is when pressing the x after video played
 		_load_rewarded_ad()
 	callbacks.on_ad_failed_to_show_full_screen_content = func(error: AdError) -> void:
 		print("Rewarded ad failed to show: ", error.message)
@@ -111,7 +131,6 @@ func setup_rewarded_callbacks() -> void:
 		rewarded_ad = null
 		SignalBus.rewarded_ad_ended.emit(false)
 		_load_rewarded_ad()
-		
 
 	rewarded_ad.full_screen_content_callback = callbacks
 
